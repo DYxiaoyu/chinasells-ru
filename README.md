@@ -1,12 +1,23 @@
-# 汇盈聚金官网
+# China Sells — официальный сайт (RU)
 
-这是汇盈聚金企业官网的静态站点文件，可直接部署到 Render Static Site。
+Статический сайт на русском языке для покупателей, оптовых и корпоративных клиентов из России и стран СНГ. Развёртывается на Render Static Site.
 
-## Render 设置建议
+## Структура
+
+- `index.html` — главная страница
+- `about.html` — о компании, услуги, схема работы, преимущества и FAQ
+- `cases.html` — кейсы партнёров-производителей
+- `img/` — изображения и фото
+
+## Настройки Render
 
 - Service type: Static Site
 - Publish directory: `.`
-- Build command: 留空
-- Custom domain: `www.hyjjls.cn`
+- Build command: пусто
+- Custom domain: подключается отдельно после подтверждения
 
-页面入口为 `index.html`，关于我们页面为 `about.html`。
+## Контакты
+
+- WhatsApp: https://wa.me/8619895947232
+- Telegram: https://t.me/aliyachinabiz
+- Email: hello@chinasells.ru

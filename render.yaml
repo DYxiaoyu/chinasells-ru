@@ -1,8 +1,6 @@
 services:
   - type: web
-    name: hyjj-official-site
+    name: chinasells-ru
     runtime: static
     staticPublishPath: .
     autoDeployTrigger: commit
-    domains:
-      - www.hyjjls.cn

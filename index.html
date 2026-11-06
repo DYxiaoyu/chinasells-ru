@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>汇盈聚金 - 中俄跨境供应链服务商</title>
+  <title>China Sells — поставки из Китая под ключ | Партнёр для бизнеса</title>
+  <meta name="description" content="China Sells — подбор производителей в Китае, инспекция фабрик и образцов, контракты, сертификация, логистика и таможня. Поставки для оптовых и корпоративных покупателей из России.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='6'%20fill='%23071f3b'/%3E%3Cpath%20d='M16%206%20L26%2016%20L16%2026%20L6%2016%20Z'%20fill='%23d7a84f'/%3E%3C/svg%3E">
   <style>
     :root {
@@ -35,7 +36,7 @@
       min-width: 320px;
       color: var(--ink);
       background: var(--paper);
-      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
@@ -77,16 +78,29 @@
     }
 
     .brand-mark {
-      width: 40px;
-      height: 40px;
-      background: url("logo.png") center / contain no-repeat;
+      width: 38px;
+      height: 38px;
+      flex: 0 0 auto;
+      display: block;
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 18px;
+      letter-spacing: 0.5px;
+    }
+
+    .brand strong em {
+      font-style: normal;
+      color: var(--gold-2);
     }
 
     .brand small {
       display: block;
       color: rgba(255, 255, 255, 0.58);
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 500;
+      letter-spacing: 0.4px;
       text-transform: uppercase;
     }
 
@@ -115,13 +129,12 @@
       background: rgba(255, 255, 255, 0.1);
     }
 
-    /* 供应商入驻 CTA 按钮 */
     .nav-links a.nav-cta {
       margin-left: 10px;
       padding: 0 18px;
       color: #fff;
       font-weight: 600;
-      border-radius: 6px;
+      border-radius: 4px;
       background: linear-gradient(120deg, #B45309 0%, #D97706 100%);
       box-shadow: 0 2px 10px rgba(217, 119, 6, 0.35);
       transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
@@ -136,7 +149,6 @@
       transform: translateY(-1px);
     }
 
-    /* 移动端汉堡按钮（桌面隐藏） */
     .nav-toggle {
       display: none;
       align-items: center;
@@ -144,7 +156,7 @@
       width: 44px;
       height: 44px;
       border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 8px;
+      border-radius: 6px;
       background: rgba(255, 255, 255, 0.06);
       color: var(--gold-2);
       cursor: pointer;
@@ -164,12 +176,12 @@
 
     .hero {
       min-height: 760px;
-      padding: 148px 0 72px;
+      padding: 148px 0 104px;
       color: var(--white);
       background:
-        linear-gradient(90deg, rgba(5, 15, 30, 0.96) 0%, rgba(7, 31, 59, 0.84) 38%, rgba(7, 31, 59, 0.22) 68%, rgba(7, 31, 59, 0.08) 100%),
-        linear-gradient(180deg, rgba(5, 15, 30, 0.15), rgba(5, 15, 30, 0.7)),
-        url("bg-hero.png") right bottom / cover no-repeat;
+        linear-gradient(90deg, rgba(5, 15, 30, 0.96) 0%, rgba(7, 31, 59, 0.84) 40%, rgba(7, 31, 59, 0.24) 70%, rgba(7, 31, 59, 0.1) 100%),
+        linear-gradient(180deg, rgba(5, 15, 30, 0.18), rgba(5, 15, 30, 0.72)),
+        url("img/ru-hero.jpg") right bottom / cover no-repeat;
       position: relative;
       overflow: hidden;
     }
@@ -180,7 +192,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      height: 96px;
+      height: 72px;
       background: linear-gradient(180deg, rgba(246, 248, 251, 0), var(--paper));
       pointer-events: none;
     }
@@ -193,7 +205,7 @@
     }
 
     .hero-content {
-      width: min(690px, 100%);
+      width: min(720px, 100%);
     }
 
     .eyebrow {
@@ -202,8 +214,10 @@
       gap: 10px;
       margin-bottom: 26px;
       color: var(--gold-2);
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
     }
 
     .eyebrow::before {
@@ -211,14 +225,15 @@
       width: 42px;
       height: 1px;
       background: var(--gold-2);
+      flex: 0 0 auto;
     }
 
     .hero h1 {
-      max-width: 680px;
-      font-size: 64px;
-      line-height: 1.08;
+      max-width: 700px;
+      font-size: 56px;
+      line-height: 1.1;
       font-weight: 800;
-      letter-spacing: 0;
+      letter-spacing: -0.5px;
     }
 
     .hero h1 span {
@@ -229,7 +244,7 @@
       max-width: 620px;
       margin-top: 24px;
       color: rgba(255, 255, 255, 0.78);
-      font-size: 19px;
+      font-size: 18px;
       line-height: 1.85;
     }
 
@@ -238,7 +253,7 @@
       flex-wrap: wrap;
       align-items: center;
       gap: 14px;
-      margin-top: 42px;
+      margin-top: 40px;
     }
 
     .btn {
@@ -273,8 +288,8 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1px;
-      width: min(760px, 100%);
-      margin-top: 74px;
+      width: min(780px, 100%);
+      margin-top: 72px;
       background: rgba(255, 255, 255, 0.16);
       border: 1px solid rgba(255, 255, 255, 0.16);
     }
@@ -283,15 +298,16 @@
       display: flex;
       flex-direction: column;
       padding: 26px 24px;
-      background: rgba(6, 22, 42, 0.62);
+      background: rgba(6, 22, 42, 0.74);
     }
 
     .proof-number {
       display: block;
       color: var(--gold-2);
-      font-size: 34px;
+      font-size: 30px;
       line-height: 1.12;
       font-weight: 800;
+      letter-spacing: -0.3px;
     }
 
     .proof-label {
@@ -315,13 +331,13 @@
     .section-dark {
       color: var(--white);
       background:
-        linear-gradient(135deg, rgba(7, 31, 59, 0.98), rgba(8, 20, 38, 0.98)),
-        url("bg-hero.png") center bottom / cover no-repeat;
+        linear-gradient(135deg, rgba(7, 31, 59, 0.97), rgba(8, 20, 38, 0.98)),
+        url("img/ru-hero.jpg") center bottom / cover no-repeat;
     }
 
     .section-head {
       display: grid;
-      grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.65fr);
+      grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.65fr);
       align-items: end;
       gap: 48px;
       margin-bottom: 44px;
@@ -329,18 +345,19 @@
 
     .section-kicker {
       color: var(--gold);
-      font-size: 13px;
+      font-size: 12.5px;
       font-weight: 800;
+      letter-spacing: 0.8px;
       text-transform: uppercase;
     }
 
     .section-title {
       margin-top: 10px;
       color: var(--ink);
-      font-size: 42px;
-      line-height: 1.18;
+      font-size: 35px;
+      line-height: 1.2;
       font-weight: 800;
-      letter-spacing: 0;
+      letter-spacing: -0.4px;
     }
 
     .section-dark .section-title,
@@ -350,7 +367,7 @@
 
     .section-copy {
       color: var(--muted);
-      font-size: 16px;
+      font-size: 15.5px;
       line-height: 1.9;
     }
 
@@ -364,7 +381,7 @@
     }
 
     .capability-card {
-      min-height: 260px;
+      min-height: 264px;
       padding: 32px 28px;
       border-right: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
@@ -386,13 +403,13 @@
 
     .capability-card h3 {
       color: var(--ink);
-      font-size: 19px;
+      font-size: 18.5px;
       margin-bottom: 14px;
     }
 
     .capability-card p {
       color: var(--muted);
-      font-size: 14px;
+      font-size: 13.5px;
       line-height: 1.85;
     }
 
@@ -411,7 +428,7 @@
 
     .supplier-panel h3 {
       color: var(--gold-2);
-      font-size: 22px;
+      font-size: 21px;
       margin-bottom: 22px;
     }
 
@@ -423,13 +440,13 @@
     .supplier-row strong {
       display: block;
       color: var(--white);
-      font-size: 17px;
+      font-size: 16px;
       margin-bottom: 6px;
     }
 
     .supplier-row span {
       color: rgba(255, 255, 255, 0.68);
-      font-size: 14px;
+      font-size: 13.5px;
       line-height: 1.8;
     }
 
@@ -453,14 +470,15 @@
       justify-content: center;
       border-right: 1px solid rgba(255, 255, 255, 0.13);
       color: var(--gold-2);
-      font-size: 22px;
+      font-size: 21px;
       font-weight: 800;
     }
 
     .process-text {
       padding: 24px 28px;
       color: rgba(255, 255, 255, 0.82);
-      font-size: 16px;
+      font-size: 15px;
+      line-height: 1.7;
     }
 
     .contact-band {
@@ -474,16 +492,21 @@
       box-shadow: var(--shadow);
     }
 
+    .contact-band .section-kicker {
+      color: var(--gold-2);
+    }
+
     .contact-band h2 {
-      font-size: 38px;
-      line-height: 1.2;
+      margin-top: 10px;
+      font-size: 32px;
+      line-height: 1.22;
       margin-bottom: 18px;
     }
 
     .contact-band p {
-      max-width: 640px;
+      max-width: 620px;
       color: rgba(255, 255, 255, 0.68);
-      font-size: 16px;
+      font-size: 15.5px;
       line-height: 1.9;
     }
 
@@ -492,6 +515,7 @@
       gap: 1px;
       background: rgba(255, 255, 255, 0.14);
       border: 1px solid rgba(255, 255, 255, 0.14);
+      align-content: start;
     }
 
     .contact-item {
@@ -502,25 +526,30 @@
     .contact-label {
       display: block;
       color: var(--gold-2);
-      font-size: 12px;
+      font-size: 11.5px;
       font-weight: 800;
+      letter-spacing: 0.8px;
       margin-bottom: 5px;
+      text-transform: uppercase;
     }
 
     .contact-value {
       display: block;
-      color: rgba(255, 255, 255, 0.88);
+      color: rgba(255, 255, 255, 0.9);
       font-size: 14px;
       line-height: 1.65;
       word-break: break-word;
     }
 
-    /* ===== 首页：关于我们精简区块 ===== */
+    .contact-value a:hover {
+      color: var(--gold-2);
+    }
+
     .about-home {
       display: grid;
       grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
       gap: 56px;
-      align-items: center;
+      align-items: start;
     }
 
     .about-home-text .section-title {
@@ -536,8 +565,8 @@
       align-items: center;
       gap: 8px;
       margin-top: 12px;
-      color: #b45309;
-      font-size: 15px;
+      color: var(--gold);
+      font-size: 14.5px;
       font-weight: 700;
     }
 
@@ -562,20 +591,19 @@
     .about-metric strong {
       display: block;
       color: var(--gold);
-      font-size: 30px;
+      font-size: 27px;
       font-weight: 800;
-      line-height: 1;
+      line-height: 1.05;
     }
 
     .about-metric span {
       display: block;
       margin-top: 10px;
       color: var(--muted);
-      font-size: 13px;
+      font-size: 12.5px;
       line-height: 1.6;
     }
 
-    /* ===== 首页：合作案例精简区块 ===== */
     .cases-home-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -608,19 +636,19 @@
     .case-mini h3 {
       margin-bottom: 6px;
       color: var(--ink);
-      font-size: 16px;
+      font-size: 15.5px;
     }
 
     .case-mini-tag {
       margin-bottom: 10px;
-      color: #b45309;
+      color: var(--gold);
       font-size: 12px;
       font-weight: 700;
     }
 
     .case-mini p {
       color: var(--muted);
-      font-size: 13px;
+      font-size: 12.5px;
       line-height: 1.75;
     }
 
@@ -644,10 +672,6 @@
       justify-content: space-between;
       gap: 20px;
       flex-wrap: wrap;
-    }
-
-    .mobile-only {
-      display: none;
     }
 
     @media (max-width: 900px) {
@@ -703,8 +727,8 @@
         min-height: auto;
         padding: 104px 0 56px;
         background:
-          linear-gradient(180deg, rgba(5, 15, 30, 0.96) 0%, rgba(7, 31, 59, 0.82) 56%, rgba(7, 31, 59, 0.6) 100%),
-          url("bg-hero.png") 64% bottom / cover no-repeat;
+          linear-gradient(180deg, rgba(5, 15, 30, 0.96) 0%, rgba(7, 31, 59, 0.84) 56%, rgba(7, 31, 59, 0.62) 100%),
+          url("img/ru-hero.jpg") 68% bottom / cover no-repeat;
       }
 
       .container {
@@ -712,7 +736,8 @@
       }
 
       .hero h1 {
-        font-size: 44px;
+        font-size: 40px;
+        letter-spacing: -0.3px;
       }
 
       .hero-lead {
@@ -749,12 +774,21 @@
         padding-top: 0;
       }
 
+      .capability-grid {
+        border-left: none;
+        grid-template-columns: 1fr;
+      }
+
+      .capability-card {
+        border-left: 1px solid var(--line);
+      }
+
       .section {
         padding: 68px 0;
       }
 
       .section-title {
-        font-size: 32px;
+        font-size: 31px;
       }
 
       .capability-card {
@@ -763,6 +797,10 @@
 
       .contact-band {
         padding: 34px 24px;
+      }
+
+      .contact-band h2 {
+        font-size: 28px;
       }
     }
 
@@ -780,7 +818,7 @@
       }
 
       .hero h1 {
-        font-size: 36px;
+        font-size: 33px;
       }
 
       .hero-actions {
@@ -812,6 +850,10 @@
         padding: 20px;
       }
 
+      .proof-number {
+        font-size: 26px;
+      }
+
       .process-step {
         grid-template-columns: 58px 1fr;
       }
@@ -822,33 +864,41 @@
       }
 
       .contact-band h2 {
-        font-size: 30px;
+        font-size: 26px;
+      }
+
+      .about-metric strong {
+        font-size: 22px;
       }
     }
   </style>
 </head>
 <body>
   <header class="site-header">
-    <nav class="nav" aria-label="主导航">
-      <a class="brand" href="#hero">
-        <span class="brand-mark" aria-hidden="true"></span>
+    <nav class="nav" aria-label="Основная навигация">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M24 7 L40 16 L40 32 L24 41 L8 32 L8 16 Z" stroke="#d7a84f" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M24 7 L40 16 L24 25 L8 16 Z" fill="#d7a84f"/>
+          <path d="M24 25 L24 41 M8 16 L24 25 L40 16" stroke="#f2c76d" stroke-width="2.2" stroke-linejoin="round"/>
+        </svg>
         <span>
-          <strong>汇盈聚金</strong>
-          <small>Huiying Jijin Global Trade</small>
+          <strong>CHINA <em>SELLS</em></strong>
+          <small>Найдём · Проверим · Доставим</small>
         </span>
       </a>
-      <button class="nav-toggle" type="button" aria-label="打开导航菜单" aria-expanded="false" aria-controls="navMenu">
+      <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="navMenu">
         <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
       <ul class="nav-links" id="navMenu">
-        <li><a class="active" href="#hero">首页</a></li>
-        <li><a href="#about">关于我们</a></li>
-        <li><a href="#capability">服务能力</a></li>
-        <li><a href="#cases">合作案例</a></li>
-        <li><a href="#cooperation">合作流程</a></li>
-        <li><a href="#contact">联系我们</a></li>
-        <li><a class="nav-cta" href="https://hyjj.shop/join" target="_blank" rel="noreferrer">供应商入驻</a></li>
+        <li><a class="active" href="#hero">Главная</a></li>
+        <li><a href="about.html">О компании</a></li>
+        <li><a href="#capability">Возможности</a></li>
+        <li><a href="#cases">Кейсы</a></li>
+        <li><a href="#process">Схема работы</a></li>
+        <li><a href="#contact">Контакты</a></li>
+        <li><a class="nav-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Оставить заявку</a></li>
       </ul>
     </nav>
   </header>
@@ -857,27 +907,27 @@
     <section class="hero" id="hero">
       <div class="container">
         <div class="hero-content">
-          <div class="eyebrow">中俄跨境贸易与供应链服务</div>
-          <h1>连接中国制造与俄罗斯市场的<span>长期合作伙伴</span></h1>
-          <p class="hero-lead">汇盈聚金以中国本地采购能力、俄罗斯本土运营网络和跨境履约经验，为客户提供从供应商筛选、商务谈判、验厂验货、文件认证到物流清关的一体化服务。</p>
+          <div class="eyebrow">Поставки из Китая под ключ</div>
+          <h1>Ваш надёжный партнёр для <span>бизнеса с Китаем</span></h1>
+          <p class="hero-lead">Опираясь на локальные закупки в Китае, собственную сеть в России и опыт трансграничного исполнения, мы ведём полный цикл: подбор поставщиков, переговоры, инспекцию фабрик и товаров, сертификацию документов, логистику и таможенное оформление.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">预约沟通</a>
-            <a class="btn btn-secondary" href="about.html">查看公司能力</a>
+            <a class="btn btn-primary" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Оставить заявку</a>
+            <a class="btn btn-secondary" href="about.html">О компании</a>
           </div>
         </div>
 
-        <div class="hero-proof" aria-label="核心能力数据">
+        <div class="hero-proof" aria-label="Ключевые показатели">
           <div class="proof-item">
             <span class="proof-number">10+</span>
-            <span class="proof-label">年家纺及跨境贸易经验</span>
+            <span class="proof-label">лет опыта в домашнем текстиле и трансграничной торговле</span>
           </div>
           <div class="proof-item">
-            <span class="proof-number">10000m²<br>+3000m²</span>
-            <span class="proof-label">俄罗斯自有仓储空间</span>
+            <span class="proof-number">10 000 м²<br>+ 3000 м²</span>
+            <span class="proof-label">собственных складских площадей в России</span>
           </div>
           <div class="proof-item">
             <span class="proof-number">200+</span>
-            <span class="proof-label">俄罗斯市场运营团队</span>
+            <span class="proof-label">специалистов команды на рынке России</span>
           </div>
         </div>
       </div>
@@ -887,29 +937,29 @@
       <div class="container">
         <div class="about-home">
           <div class="about-home-text">
-            <div class="section-kicker">About Us</div>
-            <h2 class="section-title">立足南通产业带，深耕中俄贸易的跨境供应链服务商</h2>
-            <p class="section-copy">汇盈聚金（江苏）国际贸易有限公司位于江苏南通，在中国和俄罗斯均设有办公场地，围绕采购、谈判、生产、验货、文件、物流与仓储等环节提供持续支持。</p>
-            <p class="section-copy">团队拥有 10 年家用纺织品行业经验，并已从家纺拓展至纺织品、电子产品、设备等更多品类；与俄罗斯本土企业签约合作，支持卢布结算，降低跨境合作的沟通与结算门槛。</p>
-            <a class="text-link" href="about.html">了解更多公司介绍</a>
+            <div class="section-kicker">О компании</div>
+            <h2 class="section-title">Кросс-бордерный поставщик из Наньтуна — торговля с Россией</h2>
+            <p class="section-copy">Huiying Jijin (Jiangsu) International Trade Co., Ltd. расположена в Наньтуне, провинция Цзянсу, с офисами в Китае и России. Мы обеспечиваем постоянную поддержку на всех этапах: закупки, переговоры, производство, инспекция, документы, логистика и складирование.</p>
+            <p class="section-copy">Команда имеет 10-летний опыт в отрасли домашнего текстиля и расширила ассортимент от текстиля до электроники, оборудования и других категорий. Мы работаем по контрактам с российскими компаниями и поддерживаем расчёты в рублях, снижая барьеры коммуникации и платежей.</p>
+            <a class="text-link" href="about.html">Подробнее о компании</a>
           </div>
 
           <div class="about-metrics">
             <div class="about-metric">
-              <strong>6000万</strong>
-              <span>家用纺织品年营业额（人民币）</span>
+              <strong>60 млн ¥</strong>
+              <span>годовой оборот домашнего текстиля</span>
             </div>
             <div class="about-metric">
-              <strong>3亿</strong>
-              <span>俄罗斯线上商城年采购额（人民币）</span>
+              <strong>300 млн ¥</strong>
+              <span>годовой объём закупок российского онлайн-магазина</span>
             </div>
             <div class="about-metric">
               <strong>600+</strong>
-              <span>累计服务客户数量</span>
+              <span>всего обслужено клиентов</span>
             </div>
             <div class="about-metric">
               <strong>~100</strong>
-              <span>年均活跃稳定客户</span>
+              <span>стабильные активные клиенты в год</span>
             </div>
           </div>
         </div>
@@ -920,10 +970,10 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <div class="section-kicker">Infrastructure</div>
-            <h2 class="section-title">以本地化资源，承接跨境贸易的复杂环节</h2>
+            <div class="section-kicker">Инфраструктура</div>
+            <h2 class="section-title">Локальные ресурсы для трансграничной торговли</h2>
           </div>
-          <p class="section-copy">我们不只提供信息撮合，而是参与采购、生产、质检、文件、仓储与配送等关键节点，帮助客户降低跨境沟通成本和履约风险。</p>
+          <p class="section-copy">Мы не просто сводим стороны, а участвуем в ключевых узлах — закупках, производстве, контроле качества, документах, складировании и доставке, помогая снижать расходы на коммуникацию и риски исполнения.</p>
         </div>
 
         <div class="capability-grid">
@@ -931,29 +981,29 @@
             <div class="capability-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-8h6v8"/><path d="M3 8h18"/></svg>
             </div>
-            <h3>双地团队</h3>
-            <p>中国团队负责供应商筛选、验厂验货与生产跟进，俄罗斯团队负责本地沟通、仓储与市场协同。</p>
+            <h3>Команды в двух странах</h3>
+            <p>Китайская команда отвечает за подбор поставщиков, инспекцию фабрик и контроль производства, российская — за локальную коммуникацию, склад и работу с рынком.</p>
           </article>
           <article class="capability-card">
             <div class="capability-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16"/><path d="M4 15h16"/><path d="M6 15V5h12v10"/><path d="M8 9h8"/><path d="M8 12h8"/></svg>
             </div>
-            <h3>仓储履约</h3>
-            <p>俄罗斯自有仓库支持货物存放、订单调拨与本地配送，提升跨境链路的确定性。</p>
+            <h3>Склад и исполнение</h3>
+            <p>Собственные склады в России поддерживают хранение товаров, распределение заказов и локальную доставку, повышая предсказуемость цепочки.</p>
           </article>
           <article class="capability-card">
             <div class="capability-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M5 17h14"/><path d="M7 7c0 4 10 4 10 0"/><path d="M7 17c0-4 10-4 10 0"/></svg>
             </div>
-            <h3>合规结算</h3>
-            <p>与俄罗斯本土企业签约合作，支持卢布结算，并协助合同、规格证书、海关等文件处理。</p>
+            <h3>Комплаенс и рубли</h3>
+            <p>Работаем по контрактам с российскими компаниями, поддерживаем расчёты в рублях и помогаем с договорами, сертификатами и таможенными документами.</p>
           </article>
           <article class="capability-card">
             <div class="capability-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 7 8 20l-5-5"/><path d="M16 7h5v5"/></svg>
             </div>
-            <h3>平台与推广</h3>
-            <p>具备 Ozon、Wildberries 等平台运营经验，并拥有白俄罗斯合作伙伴及内容推广资源。</p>
+            <h3>Площадки и продвижение</h3>
+            <p>Имеем опыт работы на Ozon и Wildberries, а также партнёров в Беларуси и ресурсы для контентного продвижения.</p>
           </article>
         </div>
       </div>
@@ -963,108 +1013,108 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <div class="section-kicker">Cooperation Cases</div>
-            <h2 class="section-title">与头部制造企业长期同行，沉淀可验证的合作案例</h2>
+            <div class="section-kicker">Кейсы сотрудничества</div>
+            <h2 class="section-title">Партнёрство с ведущими производителями — проверяемые кейсы</h2>
           </div>
-          <p class="section-copy">合作企业均位于南通及周边产业带，具备真实制造能力、权威资质与可追溯的项目记录，覆盖体育器材、帽饰、家纺面料、服装、电动工具五大核心品类。</p>
+          <p class="section-copy">Все партнёры расположены в промышленном поясе Наньтуна, обладают реальными производственными мощностями, авторитетной сертификацией и отслеживаемой историей проектов в пяти ключевых категориях.</p>
         </div>
 
         <div class="cases-home-grid">
           <article class="case-mini">
-            <img src="img/case-ironman.jpg" alt="铁人运动用品生产车间">
+            <img src="img/case-ironman.jpg" alt="Производственная база Nantong Ironman — спортивное оборудование">
             <div class="case-mini-body">
-              <h3>铁人运动</h3>
-              <span class="case-mini-tag">体育器材·健身设备</span>
-              <p>占地 260 亩、专利 500 余项，军运会、冬运会、全运会供货。</p>
+              <h3>Наньтун Ironman</h3>
+              <span class="case-mini-tag">Спортивное оборудование</span>
+              <p>Территория 260 му, более 500 патентов, поставки на военные, зимние и национальные игры.</p>
             </div>
           </article>
 
           <article class="case-mini">
-            <img src="img/case-fumei.jpg" alt="富美服饰帽饰产品">
+            <img src="img/case-fumei.jpg" alt="Шоурум Nantong Fumei — головные уборы">
             <div class="case-mini-body">
-              <h3>富美服饰</h3>
-              <span class="case-mini-tag">帽饰全品类</span>
-              <p>5 大基地、年产能 1000 万顶，北京冬奥、亚冬会帽饰供货。</p>
+              <h3>Наньтун Фумэй</h3>
+              <span class="case-mini-tag">Головные уборы</span>
+              <p>Пять баз, мощность 10 млн изделий в год, поставки вязаных шапок на Олимпиаду в Пекине.</p>
             </div>
           </article>
 
           <article class="case-mini">
-            <img src="img/case-goldensun.jpg" alt="金太阳纺织大楼">
+            <img src="img/case-goldensun.jpg" alt="Штаб-квартира Jiangsu Golden Sun — текстильные технологии">
             <div class="case-mini-body">
-              <h3>金太阳纺织</h3>
-              <span class="case-mini-tag">家纺面料</span>
-              <p>九大类数千面料、专利 200 余项，国家级工业设计中心。</p>
+              <h3>Golden Sun</h3>
+              <span class="case-mini-tag">Домашний текстиль</span>
+              <p>Девять категорий, тысячи тканей, более 200 патентов, национальный центр промышленного дизайна.</p>
             </div>
           </article>
 
           <article class="case-mini">
-            <img src="img/case-sanrun.jpg" alt="三润服装园区">
+            <img src="img/case-sanrun.jpg" alt="Парк Jiangsu Sanrun Garment Group">
             <div class="case-mini-body">
-              <h3>三润服装</h3>
-              <span class="case-mini-tag">女装成衣</span>
-              <p>96 条自有产线、海内外多厂布局，通过 UL、SGS、BV 验厂。</p>
+              <h3>Цзянсу Санжунь</h3>
+              <span class="case-mini-tag">Женская одежда</span>
+              <p>96 собственных линий, фабрики в нескольких странах, аудиты UL, SGS и BV.</p>
             </div>
           </article>
 
           <article class="case-mini">
-            <img src="img/case-dongcheng.jpg" alt="东成工具智能制造车间">
+            <img src="img/case-dongcheng.jpg" alt="Цех автоматической сварки Jiangsu Dongcheng — электроинструмент">
             <div class="case-mini-body">
-              <h3>东成工具</h3>
-              <span class="case-mini-tag">电动工具</span>
-              <p>700 余款整机、专利 3300 余项，支持全链路定制。</p>
+              <h3>Цзянсу Дунчэн</h3>
+              <span class="case-mini-tag">Электроинструмент</span>
+              <p>Более 700 моделей, свыше 3300 патентов, индивидуальные решения полного цикла.</p>
             </div>
           </article>
         </div>
 
         <div class="cases-more">
-          <a class="btn btn-primary" href="cases.html">查看全部案例详情</a>
+          <a class="btn btn-primary" href="cases.html">Смотреть все кейсы</a>
         </div>
       </div>
     </section>
 
-    <section class="section section-dark" id="cooperation">
+    <section class="section section-dark" id="process">
       <div class="container">
         <div class="section-head">
           <div>
-            <div class="section-kicker">Cooperation</div>
-            <h2 class="section-title">寻找能在俄罗斯市场长期增长的优质供应商</h2>
+            <div class="section-kicker">Схема работы</div>
+            <h2 class="section-title">Как мы ведём ваш заказ — от запроса до поставки</h2>
           </div>
-          <p class="section-copy">我们关注有稳定生产能力、清晰产品优势和内容传播空间的合作伙伴。合作不止于一次交易，更重视可持续的产品供给和市场反馈。</p>
+          <p class="section-copy">China Sells берёт на себя не просто посредничество, а полную координацию: проработку запроса, инспекцию фабрики, переговоры, контракт и исполнение поставки.</p>
         </div>
 
         <div class="process-layout">
           <aside class="supplier-panel">
-            <h3>合作对象</h3>
+            <h3>Что мы берём на себя</h3>
             <div class="supplier-row">
-              <strong>独特产品或非标准品</strong>
-              <span>产品在功能、设计、工艺或供应链上具有差异化，适合进入俄罗斯市场。</span>
+              <strong>Подбор и проверка поставщиков</strong>
+              <span>Сравниваем фабрики по цене, качеству и срокам, проверяем документы и репутацию, отбираем образцы.</span>
             </div>
             <div class="supplier-row">
-              <strong>具备生产故事的工厂</strong>
-              <span>企业历史、生产过程、技术实力或品牌故事适合用于客户沟通和内容推广。</span>
+              <strong>Контроль производства</strong>
+              <span>Проводим выездную инспекцию, предоставляем фото и видео-отчёты или прямую трансляцию с производства.</span>
             </div>
             <div class="supplier-row">
-              <strong>重视长期合作</strong>
-              <span>愿意配合样品、资料、质检、交付和持续优化，建立稳定供给关系。</span>
+              <strong>Логистика и документы</strong>
+              <span>Организуем доставку, таможенное оформление, сертификацию и расчёты в рублях.</span>
             </div>
           </aside>
 
           <div class="process-list">
             <div class="process-step">
               <div class="process-num">01</div>
-              <div class="process-text">提交产品目录、公司介绍与基础资质信息</div>
+              <div class="process-text">Фиксируем требования: продукция, количество, сроки и бюджет, схема закупки</div>
             </div>
             <div class="process-step">
               <div class="process-num">02</div>
-              <div class="process-text">提供生产照片、视频或样品资料，完成初步市场评估</div>
+              <div class="process-text">Подбираем поставщика: сравнение фабрик, первичные переговоры и отбор образцов</div>
             </div>
             <div class="process-step">
               <div class="process-num">03</div>
-              <div class="process-text">沟通价格、交期、认证、结算和物流方案</div>
+              <div class="process-text">Контроль и контракт: инспекция фабрики и образцов, согласование договора и сертификатов</div>
             </div>
             <div class="process-step">
               <div class="process-num">04</div>
-              <div class="process-text">确定合作路径，推进样品、订单与长期供货计划</div>
+              <div class="process-text">Логистика и доставка: таможня, сертификация и доставка на ваш склад или на наш склад в России</div>
             </div>
           </div>
         </div>
@@ -1075,27 +1125,31 @@
       <div class="container">
         <div class="contact-band">
           <div>
-            <div class="section-kicker">Contact</div>
-            <h2>把需求交给我们，从供应链开始推进下一步。</h2>
-            <p>无论您是俄罗斯采购方、中国供应商，还是希望进入俄罗斯市场的品牌方，都可以先与我们沟通产品方向、订单规模和合作模式。</p>
+            <div class="section-kicker">Контакты</div>
+            <h2>Передайте задачу нам — начнём с цепочки поставок</h2>
+            <p>Независимо от того, оптовый ли вы покупатель, корпоративный клиент или бренд, выходящий на рынок России, — обсудите с нами направление продукции, масштаб заказа и формат сотрудничества.</p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="mailto:zhanglu@hyjjglobal.com">发送邮件</a>
-              <a class="btn btn-secondary" href="tel:+8615250694693">电话联系</a>
+              <a class="btn btn-primary" href="https://wa.me/8619895947232" target="_blank" rel="noreferrer">Написать в WhatsApp</a>
+              <a class="btn btn-secondary" href="https://t.me/aliyachinabiz" target="_blank" rel="noreferrer">Telegram</a>
             </div>
           </div>
 
           <div class="contact-list">
             <div class="contact-item">
-              <span class="contact-label">电话</span>
-              <span class="contact-value">+86 15250694693</span>
+              <span class="contact-label">WhatsApp</span>
+              <span class="contact-value"><a href="https://wa.me/8619895947232" target="_blank" rel="noreferrer">+86 198 9594 7232</a></span>
             </div>
             <div class="contact-item">
-              <span class="contact-label">邮箱</span>
-              <span class="contact-value">zhanglu@hyjjglobal.com</span>
+              <span class="contact-label">Telegram</span>
+              <span class="contact-value"><a href="https://t.me/aliyachinabiz" target="_blank" rel="noreferrer">@aliyachinabiz</a></span>
             </div>
             <div class="contact-item">
-              <span class="contact-label">地址</span>
-              <span class="contact-value">江苏省南通市崇川区文峰街道崇川路88号国际贸易中心3606</span>
+              <span class="contact-label">Email</span>
+              <span class="contact-value"><a href="mailto:hello@chinasells.ru">hello@chinasells.ru</a></span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Адрес</span>
+              <span class="contact-value">Международный торговый центр, ул. Чунчуань 88, Наньтун, Цзянсу, Китай</span>
             </div>
           </div>
         </div>
@@ -1105,7 +1159,8 @@
 
   <footer class="footer">
     <div class="footer-inner">
-      <span>© 2026 汇盈聚金（江苏）国际贸易有限公司 Huiying Jijin. All rights reserved.</span>
+      <span>© 2026 Huiying Jijin (Jiangsu) International Trade Co., Ltd. Все права защищены.</span>
+      <span>China Sells — надёжный партнёр для бизнеса с Китаем</span>
     </div>
   </footer>
 
@@ -1113,14 +1168,13 @@
     const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll(".nav-links a[href^='#']");
 
-    // 移动端汉堡菜单开合
     const navToggle = document.querySelector(".nav-toggle");
     const navMenu = document.querySelector(".nav-links");
     navToggle.addEventListener("click", function () {
       const open = navMenu.classList.toggle("open");
       navToggle.classList.toggle("open", open);
       navToggle.setAttribute("aria-expanded", open);
-      navToggle.setAttribute("aria-label", open ? "关闭导航菜单" : "打开导航菜单");
+      navToggle.setAttribute("aria-label", open ? "Закрыть меню" : "Открыть меню");
     });
     navMenu.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
@@ -1143,13 +1197,12 @@
       });
     });
 
-    // 发送邮件：复制邮箱到剪贴板，兼容手机浏览器
     document.querySelectorAll('a[href^="mailto:"]').forEach(function (btn) {
-      btn.addEventListener('click', function (e) {
+      btn.addEventListener('click', function () {
         var email = btn.getAttribute('href').replace('mailto:', '');
         if (navigator.clipboard) {
           navigator.clipboard.writeText(email).then(function () {
-            showToast('邮箱已复制：' + email + '，请粘贴到邮件 App');
+            showToast('Email скопирован: ' + email);
           });
         }
       });

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>关于我们 - 汇盈聚金</title>
+  <title>О компании — China Sells | Поставки из Китая для бизнеса в России</title>
+  <meta name="description" content="China Sells — компания с офисами в Китае и России: закупки, переговоры, инспекция фабрик, сертификация, логистика и склад. Полный цикл поставок из Китая.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='6'%20fill='%23071f3b'/%3E%3Cpath%20d='M16%206%20L26%2016%20L16%2026%20L6%2016%20Z'%20fill='%23d7a84f'/%3E%3C/svg%3E">
   <style>
     :root {
@@ -33,7 +34,7 @@
       min-width: 320px;
       color: var(--ink);
       background: var(--paper);
-      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
@@ -74,16 +75,29 @@
     }
 
     .brand-mark {
-      width: 40px;
-      height: 40px;
-      background: url("logo.png") center / contain no-repeat;
+      width: 38px;
+      height: 38px;
+      flex: 0 0 auto;
+      display: block;
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 18px;
+      letter-spacing: 0.5px;
+    }
+
+    .brand strong em {
+      font-style: normal;
+      color: var(--gold-2);
     }
 
     .brand small {
       display: block;
       color: rgba(255, 255, 255, 0.58);
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 500;
+      letter-spacing: 0.4px;
       text-transform: uppercase;
     }
 
@@ -112,13 +126,12 @@
       background: rgba(255, 255, 255, 0.1);
     }
 
-    /* 供应商入驻 CTA 按钮 */
     .nav-links a.nav-cta {
       margin-left: 10px;
       padding: 0 18px;
       color: #fff;
       font-weight: 600;
-      border-radius: 6px;
+      border-radius: 4px;
       background: linear-gradient(120deg, #B45309 0%, #D97706 100%);
       box-shadow: 0 2px 10px rgba(217, 119, 6, 0.35);
       transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
@@ -133,7 +146,6 @@
       transform: translateY(-1px);
     }
 
-    /* 移动端汉堡按钮（桌面隐藏） */
     .nav-toggle {
       display: none;
       align-items: center;
@@ -141,7 +153,7 @@
       width: 44px;
       height: 44px;
       border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 8px;
+      border-radius: 6px;
       background: rgba(255, 255, 255, 0.06);
       color: var(--gold-2);
       cursor: pointer;
@@ -164,9 +176,9 @@
       padding: 156px 0 92px;
       color: var(--white);
       background:
-        linear-gradient(90deg, rgba(5, 15, 30, 0.96) 0%, rgba(7, 31, 59, 0.84) 38%, rgba(7, 31, 59, 0.22) 68%, rgba(7, 31, 59, 0.08) 100%),
-        linear-gradient(180deg, rgba(5, 15, 30, 0.15), rgba(5, 15, 30, 0.7)),
-        url("bg-hero.png") right 50% / cover no-repeat;
+        linear-gradient(90deg, rgba(5, 15, 30, 0.96) 0%, rgba(7, 31, 59, 0.84) 40%, rgba(7, 31, 59, 0.24) 70%, rgba(7, 31, 59, 0.1) 100%),
+        linear-gradient(180deg, rgba(5, 15, 30, 0.18), rgba(5, 15, 30, 0.72)),
+        url("img/ru-hero.jpg") right 50% / cover no-repeat;
     }
 
     .container {
@@ -175,7 +187,7 @@
     }
 
     .page-hero-content {
-      width: min(690px, 100%);
+      width: min(720px, 100%);
     }
 
     .eyebrow {
@@ -184,8 +196,10 @@
       gap: 10px;
       margin-bottom: 26px;
       color: var(--gold-2);
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
     }
 
     .eyebrow::before {
@@ -193,33 +207,30 @@
       width: 42px;
       height: 1px;
       background: var(--gold-2);
+      flex: 0 0 auto;
     }
 
     .page-hero h1 {
-      font-size: 58px;
-      line-height: 1.1;
+      font-size: 48px;
+      line-height: 1.12;
       font-weight: 800;
-      letter-spacing: 0;
+      letter-spacing: -0.6px;
     }
 
     .page-hero p {
-      max-width: 620px;
+      max-width: 640px;
       margin-top: 22px;
-      color: rgba(255, 255, 255, 0.76);
-      font-size: 18px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 17.5px;
       line-height: 1.9;
     }
 
     .section {
-      padding: 44px 0;
+      padding: 60px 0;
     }
 
     section.section:not(.section-white):not(.section-dark) {
       background: linear-gradient(180deg, #ffffff 0%, #f6f8fb 15%, #f6f8fb 85%, #ffffff 100%);
-    }
-
-    .section-dark {
-      background: linear-gradient(180deg, #071f3b 0%, #0a2a4e 50%, #071f3b 100%);
     }
 
     .section-white {
@@ -228,20 +239,21 @@
 
     .section-dark {
       color: var(--white);
-      background: var(--navy);
+      background: linear-gradient(180deg, #071f3b 0%, #0a2a4e 50%, #071f3b 100%);
     }
 
     .intro-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
       gap: 64px;
-      align-items: center;
+      align-items: start;
     }
 
     .section-kicker {
       color: var(--gold);
-      font-size: 13px;
+      font-size: 12.5px;
       font-weight: 800;
+      letter-spacing: 0.8px;
       text-transform: uppercase;
     }
 
@@ -249,10 +261,10 @@
       margin-top: 10px;
       margin-bottom: 24px;
       color: var(--ink);
-      font-size: 42px;
-      line-height: 1.18;
+      font-size: 34px;
+      line-height: 1.2;
       font-weight: 800;
-      letter-spacing: 0;
+      letter-spacing: -0.4px;
     }
 
     .section-dark .section-title {
@@ -262,10 +274,10 @@
     .body-copy {
       margin-top: 18px;
       display: grid;
-      gap: 8px;
+      gap: 12px;
       color: #3e4c5f;
-      font-size: 14px;
-      line-height: 1.65;
+      font-size: 14.5px;
+      line-height: 1.85;
     }
 
     .body-copy strong {
@@ -283,8 +295,7 @@
     }
 
     .metric {
-      min-height: auto;
-      padding: 16px;
+      padding: 20px 18px;
       border-right: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
@@ -292,22 +303,22 @@
     .metric strong {
       display: block;
       color: var(--blue);
-      font-size: 24px;
-      word-break: break-all;
-      line-height: 1.1;
+      font-size: 21px;
+      line-height: 1.15;
       margin-bottom: 10px;
+      word-break: break-word;
     }
 
     .metric span {
       display: block;
       color: var(--muted);
-      font-size: 13px;
-      line-height: 1.65;
+      font-size: 12.5px;
+      line-height: 1.6;
     }
 
     .capability-table {
       display: grid;
-      grid-template-columns: 280px 1fr;
+      grid-template-columns: 300px 1fr;
       border-top: 1px solid var(--line);
       border-left: 1px solid var(--line);
       background: var(--white);
@@ -320,22 +331,23 @@
 
     .capability-name,
     .capability-desc {
-      padding: 14px 20px;
+      padding: 18px 22px;
       border-right: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
 
     .capability-name {
       color: var(--ink);
-      font-size: 18px;
+      font-size: 16.5px;
       font-weight: 800;
       background: #fbfcfe;
+      line-height: 1.45;
     }
 
     .capability-desc {
       color: #405066;
       font-size: 14px;
-      line-height: 1.65;
+      line-height: 1.8;
     }
 
     .timeline {
@@ -358,7 +370,7 @@
       justify-content: center;
       border-right: 1px solid rgba(255, 255, 255, 0.13);
       color: var(--gold-2);
-      font-size: 22px;
+      font-size: 21px;
       font-weight: 800;
     }
 
@@ -370,7 +382,7 @@
       display: block;
       margin-bottom: 6px;
       color: var(--white);
-      font-size: 18px;
+      font-size: 17px;
     }
 
     .timeline-text span {
@@ -390,46 +402,47 @@
     }
 
     .problem {
-      min-height: auto;
-      padding: 18px;
+      padding: 24px 22px;
       border-right: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
 
     .problem h3 {
       color: var(--ink);
-      font-size: 18px;
+      font-size: 16.5px;
       margin-bottom: 10px;
+      line-height: 1.4;
     }
 
     .problem p {
       color: var(--muted);
-      font-size: 13px;
-      line-height: 1.6;
+      font-size: 13.5px;
+      line-height: 1.75;
     }
 
     .faq-list {
-      max-width: 900px;
+      max-width: 940px;
       margin: 44px auto 0;
       border-top: 1px solid var(--line);
     }
 
     .faq-item {
       display: grid;
-      grid-template-columns: 300px 1fr;
-      gap: 20px;
-      padding: 16px 0;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      padding: 20px 0;
       border-bottom: 1px solid var(--line);
     }
 
     .faq-item h3 {
-      font-size: 17px;
+      font-size: 16px;
       color: var(--ink);
+      line-height: 1.5;
     }
 
     .faq-item p {
       color: var(--muted);
-      font-size: 15px;
+      font-size: 14.5px;
       line-height: 1.85;
     }
 
@@ -442,19 +455,20 @@
       color: var(--white);
       background:
         linear-gradient(135deg, rgba(7, 31, 59, 0.97), rgba(8, 20, 38, 0.97)),
-        url("bg-hero.png") center bottom / cover no-repeat;
+        url("img/ru-hero.jpg") center bottom / cover no-repeat;
       box-shadow: var(--shadow);
     }
 
     .cta h2 {
-      font-size: 34px;
-      line-height: 1.22;
+      font-size: 30px;
+      line-height: 1.24;
       margin-bottom: 12px;
     }
 
     .cta p {
       color: rgba(255, 255, 255, 0.7);
-      font-size: 16px;
+      font-size: 15.5px;
+      line-height: 1.8;
     }
 
     .btn {
@@ -552,16 +566,17 @@
       .page-hero {
         padding: 104px 0 70px;
         background:
-          linear-gradient(180deg, rgba(5, 15, 30, 0.96) 0%, rgba(7, 31, 59, 0.82) 56%, rgba(7, 31, 59, 0.6) 100%),
-          url("bg-hero.png") 64% bottom / cover no-repeat;
-      }
-
-      .page-hero-content {
-        margin-left: 0;
+          linear-gradient(180deg, rgba(5, 15, 30, 0.96) 0%, rgba(7, 31, 59, 0.84) 56%, rgba(7, 31, 59, 0.62) 100%),
+          url("img/ru-hero.jpg") 68% bottom / cover no-repeat;
       }
 
       .page-hero h1 {
-        font-size: 42px;
+        font-size: 38px;
+        letter-spacing: -0.3px;
+      }
+
+      .page-hero p {
+        font-size: 16px;
       }
 
       .intro-grid,
@@ -573,24 +588,32 @@
       }
 
       .section {
-        padding: 48px 0;
+        padding: 52px 0;
       }
 
       .section-title {
-        font-size: 32px;
+        font-size: 30px;
       }
 
       .capability-name,
       .capability-desc {
-        padding: 12px 16px;
+        padding: 14px 18px;
       }
 
       .capability-name {
         border-bottom: none;
       }
 
+      .faq-item {
+        gap: 8px;
+      }
+
       .cta {
         padding: 36px 24px;
+      }
+
+      .cta h2 {
+        font-size: 26px;
       }
     }
 
@@ -608,11 +631,11 @@
       }
 
       .page-hero h1 {
-        font-size: 35px;
+        font-size: 32px;
       }
 
       .metric-panel {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
       }
 
       .timeline-step {
@@ -620,37 +643,45 @@
       }
 
       .timeline-text {
-        padding: 20px;
+        padding: 18px 20px;
       }
 
       .btn {
         width: 100%;
+      }
+
+      .cta {
+        text-align: left;
       }
     }
   </style>
 </head>
 <body>
   <header class="site-header">
-    <nav class="nav" aria-label="主导航">
+    <nav class="nav" aria-label="Основная навигация">
       <a class="brand" href="index.html">
-        <span class="brand-mark" aria-hidden="true"></span>
+        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M24 7 L40 16 L40 32 L24 41 L8 32 L8 16 Z" stroke="#d7a84f" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M24 7 L40 16 L24 25 L8 16 Z" fill="#d7a84f"/>
+          <path d="M24 25 L24 41 M8 16 L24 25 L40 16" stroke="#f2c76d" stroke-width="2.2" stroke-linejoin="round"/>
+        </svg>
         <span>
-          <strong>汇盈聚金</strong>
-          <small>Huiying Jijin Global Trade</small>
+          <strong>CHINA <em>SELLS</em></strong>
+          <small>Найдём · Проверим · Доставим</small>
         </span>
       </a>
-      <button class="nav-toggle" type="button" aria-label="打开导航菜单" aria-expanded="false" aria-controls="navMenu">
+      <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="navMenu">
         <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
       <ul class="nav-links" id="navMenu">
-        <li><a href="index.html">首页</a></li>
-        <li><a class="active" href="about.html">关于我们</a></li>
-        <li><a href="index.html#capability">服务能力</a></li>
-        <li><a href="cases.html">合作案例</a></li>
-        <li><a href="index.html#cooperation">合作流程</a></li>
-        <li><a href="index.html#contact">联系我们</a></li>
-        <li><a class="nav-cta" href="https://hyjj.shop/join" target="_blank" rel="noreferrer">供应商入驻</a></li>
+        <li><a href="index.html">Главная</a></li>
+        <li><a class="active" href="about.html">О компании</a></li>
+        <li><a href="index.html#capability">Возможности</a></li>
+        <li><a href="cases.html">Кейсы</a></li>
+        <li><a href="index.html#process">Схема работы</a></li>
+        <li><a href="index.html#contact">Контакты</a></li>
+        <li><a class="nav-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Оставить заявку</a></li>
       </ul>
     </nav>
   </header>
@@ -659,9 +690,9 @@
     <section class="page-hero">
       <div class="container">
         <div class="page-hero-content">
-          <div class="eyebrow">About Huiying Jijin</div>
-          <h1>扎根中俄两地，服务跨境采购、贸易与履约。</h1>
-          <p>汇盈聚金专注中俄贸易服务，以真实的本地资源、稳定的供应商筛选能力和全链路履约经验，帮助客户更高效地完成跨境采购与市场拓展。</p>
+          <div class="eyebrow">О компании China Sells</div>
+          <h1>Работаем в Китае и России — от закупки до поставки.</h1>
+          <p>China Sells специализируется на поставках из Китая: реальные локальные ресурсы, устойчивый отбор поставщиков и опыт полного цикла помогают клиентам быстрее закрывать закупки и выводить товар на рынок.</p>
         </div>
       </div>
     </section>
@@ -669,39 +700,39 @@
     <section class="section section-white">
       <div class="container intro-grid">
         <div>
-          <div class="section-kicker">Company Profile</div>
-          <h2 class="section-title">从家纺行业经验出发，拓展至全品类跨境供应链服务</h2>
+          <div class="section-kicker">Профиль компании</div>
+          <h2 class="section-title">От опыта в домашнем текстиле — к полному циклу трансграничных поставок</h2>
           <div class="body-copy">
-            <p><strong>汇盈聚金</strong>是一家专注中俄贸易的企业，在中国和俄罗斯均设有办公场地，能够围绕采购、谈判、生产、验货、文件、物流和仓储等环节提供持续支持。</p>
-            <p>团队拥有10年家用纺织品行业经验，并已从家纺拓展到纺织品、电子产品、设备等更多品类，帮助客户按需寻找可靠生产厂家，匹配更合适的价格、交期和质量条件。</p>
-            <p>公司与俄罗斯本土企业签约合作，可提供完整资质信息和注册地址，并支持卢布结算，降低跨境合作中的沟通与结算门槛。</p>
+            <p><strong>China Sells</strong> — компания, специализирующаяся на торговле с Китаем, с офисами в Китае и России. Мы обеспечиваем постоянную поддержку на всех этапах: закупки, переговоры, производство, инспекция, документы, логистика и складирование.</p>
+            <p>Команда имеет 10-летний опыт в отрасли домашнего текстиля и расширила ассортимент до тканей, электроники и оборудования — помогаем находить надёжных производителей с подходящей ценой, сроками и качеством.</p>
+            <p>Работаем по контрактам с российскими компаниями, предоставляем полные данные и юридический адрес, поддерживаем расчёты в рублях — это снижает барьеры коммуникации и платежей.</p>
           </div>
         </div>
 
-        <aside class="metric-panel" aria-label="核心经营数据">
+        <aside class="metric-panel" aria-label="Ключевые показатели">
           <div class="metric">
-            <strong>6000万</strong>
-            <span>家用纺织品年营业额人民币</span>
+            <strong>60 млн ¥</strong>
+            <span>годовой оборот домашнего текстиля</span>
           </div>
           <div class="metric">
-            <strong>3亿</strong>
-            <span>俄罗斯线上商城年采购额人民币</span>
+            <strong>300 млн ¥</strong>
+            <span>годовой объём закупок российского онлайн-магазина</span>
           </div>
           <div class="metric">
             <strong>600+</strong>
-            <span>累计服务客户数量</span>
+            <span>всего обслужено клиентов</span>
           </div>
           <div class="metric">
             <strong>~100</strong>
-            <span>年均活跃稳定客户</span>
+            <span>стабильные активные клиенты в год</span>
           </div>
           <div class="metric">
-            <strong>10万+</strong>
-            <span>俄罗斯自有工厂数月内可生产抱枕数量</span>
+            <strong>100 тыс.+</strong>
+            <span>подушек в месяц — мощность собственного завода в России</span>
           </div>
           <div class="metric">
-            <strong>10000m²<br>+3000m²</strong>
-            <span>俄罗斯自有仓储空间</span>
+            <strong>10 000 м²<br>+ 3000 м²</strong>
+            <span>собственные складские площади в России</span>
           </div>
         </aside>
       </div>
@@ -709,29 +740,29 @@
 
     <section class="section">
       <div class="container">
-        <div class="section-kicker">Services</div>
-        <h2 class="section-title">我们的产品与服务</h2>
+        <div class="section-kicker">Услуги</div>
+        <h2 class="section-title">Наши продукты и услуги</h2>
 
         <div class="capability-table">
           <div class="capability-row">
-            <div class="capability-name">采购与供应商开发</div>
-            <div class="capability-desc">按客户需求在中国寻找靠谱生产厂家，比较不同供应商的价格、条件、交期和质量基础，形成更可执行的采购方案。</div>
+            <div class="capability-name">Закупки и развитие поставщиков</div>
+            <div class="capability-desc">По запросу клиента находим в Китае надёжных производителей, сравниваем цены, условия, сроки и базу качества, формируем исполнимый план закупки.</div>
           </div>
           <div class="capability-row">
-            <div class="capability-name">商务谈判与合同协同</div>
-            <div class="capability-desc">代表客户与工厂沟通价格、交期、质量、合同细节及后续生产配合，减少跨语言、跨地区沟通成本。</div>
+            <div class="capability-name">Переговоры и работа с контрактом</div>
+            <div class="capability-desc">Представляем интересы клиента в переговорах с фабрикой: цена, сроки, качество, детали договора и дальнейшее производственное взаимодействие — без языковых и региональных издержек.</div>
           </div>
           <div class="capability-row">
-            <div class="capability-name">验厂验货与质量跟进</div>
-            <div class="capability-desc">出货前可进行实地验厂验货，提供图片、视频或直播反馈，帮助客户掌握真实生产情况。</div>
+            <div class="capability-name">Инспекция фабрик и товаров</div>
+            <div class="capability-desc">Перед отгрузкой проводим выездную инспекцию фабрики и товара, предоставляем фото, видео или прямую трансляцию реального производства.</div>
           </div>
           <div class="capability-row">
-            <div class="capability-name">认证、清关与物流</div>
-            <div class="capability-desc">协助处理合同、规格证书、海关文件等资料，并提供物流运输、清关、认证和俄罗斯全境配送服务。</div>
+            <div class="capability-name">Сертификация, таможня и логистика</div>
+            <div class="capability-desc">Помогаем с договорами, сертификатами соответствия и таможенными документами; организуем перевозку, оформление, сертификацию и доставку по всей России.</div>
           </div>
           <div class="capability-row">
-            <div class="capability-name">本地仓储与线上渠道</div>
-            <div class="capability-desc">俄罗斯本地仓储可供客户存放货物，同时已运营本土线上商城，正在筹备跨境直购店。</div>
+            <div class="capability-name">Локальный склад и онлайн-каналы</div>
+            <div class="capability-desc">Собственный склад в России позволяет хранить товар клиента; мы уже ведём локальный онлайн-магазин и готовим магазин прямой закупки.</div>
           </div>
         </div>
       </div>
@@ -739,43 +770,43 @@
 
     <section class="section section-dark">
       <div class="container">
-        <div class="section-kicker">Workflow</div>
-        <h2 class="section-title">合作流程清晰，关键节点可视化</h2>
+        <div class="section-kicker">Схема работы</div>
+        <h2 class="section-title">Прозрачный процесс, ключевые этапы под контролем</h2>
 
         <div class="timeline">
           <div class="timeline-step">
             <div class="timeline-index">01</div>
             <div class="timeline-text">
-              <strong>需求沟通</strong>
-              <span>客户提出产品、价格、数量、交期或供应链问题，我们协助梳理采购目标。</span>
+              <strong>Запрос и требования</strong>
+              <span>Клиент описывает продукт, цену, количество, сроки или проблему в цепочке — мы помогаем структурировать цель закупки.</span>
             </div>
           </div>
           <div class="timeline-step">
             <div class="timeline-index">02</div>
             <div class="timeline-text">
-              <strong>方案制定</strong>
-              <span>筛选工厂、对比价格条件、进行前期洽谈，并明确样品、认证、运输和结算方式。</span>
+              <strong>Формирование решения</strong>
+              <span>Отбираем фабрики, сравниваем цены и условия, ведём первичные переговоры, фиксируем образцы, сертификацию, перевозку и схему расчётов.</span>
             </div>
           </div>
           <div class="timeline-step">
             <div class="timeline-index">03</div>
             <div class="timeline-text">
-              <strong>验厂验货</strong>
-              <span>组织验厂和样品检验，可提供图片、视频报告或直播，帮助客户确认供应商与产品情况。</span>
+              <strong>Инспекция фабрики и образцов</strong>
+              <span>Организуем выезд на фабрику и проверку образцов, предоставляем фото, видео-отчёт или трансляцию производства.</span>
             </div>
           </div>
           <div class="timeline-step">
             <div class="timeline-index">04</div>
             <div class="timeline-text">
-              <strong>合同与生产跟进</strong>
-              <span>与客户和工厂推进合同签署，全程监控生产、质量和发货节点。</span>
+              <strong>Контракт и контроль производства</strong>
+              <span>Согласуем договор с клиентом и фабрикой, контролируем производство, качество и отгрузку на всех этапах.</span>
             </div>
           </div>
           <div class="timeline-step">
             <div class="timeline-index">05</div>
             <div class="timeline-text">
-              <strong>物流、清关与交付</strong>
-              <span>负责物流、清关和认证，最终送货到客户仓库，或存放至我方俄罗斯仓库。</span>
+              <strong>Логистика, таможня и доставка</strong>
+              <span>Отвечаем за логистику, таможенное оформление и сертификацию, доставляем на склад клиента или на наш склад в России.</span>
             </div>
           </div>
         </div>
@@ -784,33 +815,33 @@
 
     <section class="section section-white">
       <div class="container">
-        <div class="section-kicker">Advantages</div>
-        <h2 class="section-title">我们解决的是跨境贸易中的真实难题</h2>
+        <div class="section-kicker">Преимущества</div>
+        <h2 class="section-title">Мы решаем реальные задачи трансграничной торговли</h2>
 
         <div class="problem-grid">
           <article class="problem">
-            <h3>担心选错工厂</h3>
-            <p>通过实地考察、供应商对比和样品确认，让客户更直观看到供应链真实情况。</p>
+            <h3>Сомнения в выборе фабрики</h3>
+            <p>Выездная проверка, сравнение поставщиков и подтверждение образцов дают клиенту прямую картину реального производства.</p>
           </article>
           <article class="problem">
-            <h3>不会与中方沟通</h3>
-            <p>我们承担谈判、条件确认、生产跟进和异常沟通，帮助客户争取更合适的合作条件。</p>
+            <h3>Языковой барьер с Китаем</h3>
+            <p>Берём на себя переговоры, согласование условий, контроль производства и решение спорных ситуаций, помогая получить более выгодные условия.</p>
           </article>
           <article class="problem">
-            <h3>文件认证不熟悉</h3>
-            <p>协助处理合同、规格证书、海关文件等资料，降低跨境履约过程中的不确定性。</p>
+            <h3>Непонятная сертификация</h3>
+            <p>Помогаем с договорами, сертификатами соответствия и таможенными документами, снижая неопределённость исполнения.</p>
           </article>
           <article class="problem">
-            <h3>国际运输复杂</h3>
-            <p>从工厂到俄罗斯仓储及配送的完整链路均可协同推进，减少多方对接成本。</p>
+            <h3>Сложная международная логистика</h3>
+            <p>Ведём всю цепочку от фабрики до склада в России и дальнейшей доставки — меньше контрагентов и издержек на координацию.</p>
           </article>
           <article class="problem">
-            <h3>需要卢布结算</h3>
-            <p>与俄罗斯本土公司签约合作，支持卢布结算，更贴近当地客户的交易习惯。</p>
+            <h3>Нужны расчёты в рублях</h3>
+            <p>Работаем по контрактам с российскими компаниями и поддерживаем расчёты в рублях — ближе к привычной практике местного бизнеса.</p>
           </article>
           <article class="problem">
-            <h3>缺少本地仓储</h3>
-            <p>俄罗斯自有仓储支持货物寄存、调拨和后续履约，为长期贸易提供基础设施。</p>
+            <h3>Нет локального склада</h3>
+            <p>Собственный склад в России поддерживает хранение, перераспределение и дальнейшее исполнение заказов, создавая инфраструктуру для долгосрочной торговли.</p>
           </article>
         </div>
       </div>
@@ -819,28 +850,28 @@
     <section class="section">
       <div class="container">
         <div class="section-kicker">FAQ</div>
-        <h2 class="section-title">常见问题</h2>
+        <h2 class="section-title">Частые вопросы</h2>
 
         <div class="faq-list">
           <div class="faq-item">
-            <h3>最低起订量是多少？</h3>
-            <p>具体起订量根据产品类型和供应商要求而定，请联系我们获取详细信息。</p>
+            <h3>Какой минимальный объём заказа (MOQ)?</h3>
+            <p>Конкретный MOQ зависит от типа продукции и требований поставщика. Свяжитесь с нами для подробной информации.</p>
           </div>
           <div class="faq-item">
-            <h3>交货周期多长？</h3>
-            <p>交货周期取决于产品类型、数量和运输距离，一般需要2-8周。</p>
+            <h3>Каковы сроки поставки?</h3>
+            <p>Сроки зависят от типа продукции, объёма и расстояния; обычно это 2–8 недель.</p>
           </div>
           <div class="faq-item">
-            <h3>商品出现质量问题怎么处理？</h3>
-            <p>我们会在发货前进行严格验货，如有问题可协助与工厂协商处理。</p>
+            <h3>Что делать при проблемах с качеством?</h3>
+            <p>Мы проводим строгую инспекцию перед отгрузкой; при обнаружении проблем помогаем согласовать решение с фабрикой.</p>
           </div>
           <div class="faq-item">
-            <h3>付款方式是什么？</h3>
-            <p>与俄罗斯本土公司签约，支持卢布结算。具体条件可根据订单和合作模式沟通。</p>
+            <h3>Какие способы оплаты?</h3>
+            <p>Работаем по контрактам с российскими компаниями и поддерживаем расчёты в рублях. Условия обсуждаются под конкретный заказ и формат сотрудничества.</p>
           </div>
           <div class="faq-item">
-            <h3>是否承接小微企业和初创公司订单？</h3>
-            <p>是的，我们欢迎各类规模的客户合作，会根据产品、预算和订单阶段匹配合适方案。</p>
+            <h3>Работаете ли с малым бизнесом и стартапами?</h3>
+            <p>Да, мы открыты для клиентов любого масштаба и подбираем решение под продукт, бюджет и этап заказа.</p>
           </div>
         </div>
       </div>
@@ -850,10 +881,10 @@
       <div class="container">
         <div class="cta">
           <div>
-            <h2>准备开始合作了吗？</h2>
-            <p>发送采购需求或产品资料，我们会协助评估下一步合作路径。</p>
+            <h2>Готовы начать сотрудничество?</h2>
+            <p>Отправьте запрос на закупку или материалы о продукции — поможем оценить дальнейшие шаги.</p>
           </div>
-          <a class="btn btn-primary" href="index.html#contact">立即联系</a>
+          <a class="btn btn-primary" href="https://wa.me/8619895947232" target="_blank" rel="noreferrer">Связаться</a>
         </div>
       </div>
     </section>
@@ -861,7 +892,8 @@
 
   <footer class="footer">
     <div class="footer-inner">
-      <span>© 2026 汇盈聚金（江苏）国际贸易有限公司 Huiying Jijin. All rights reserved.</span>
+      <span>© 2026 Huiying Jijin (Jiangsu) International Trade Co., Ltd. Все права защищены.</span>
+      <span>China Sells — надёжный партнёр для бизнеса с Китаем</span>
     </div>
   </footer>
   <script>
@@ -871,7 +903,7 @@
       var open = navMenu.classList.toggle("open");
       navToggle.classList.toggle("open", open);
       navToggle.setAttribute("aria-expanded", open);
-      navToggle.setAttribute("aria-label", open ? "关闭导航菜单" : "打开导航菜单");
+      navToggle.setAttribute("aria-label", open ? "Закрыть меню" : "Открыть меню");
     });
     navMenu.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {

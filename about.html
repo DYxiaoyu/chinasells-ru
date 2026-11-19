@@ -178,7 +178,7 @@
       background:
         linear-gradient(90deg, rgba(5, 15, 30, 0.96) 0%, rgba(7, 31, 59, 0.84) 40%, rgba(7, 31, 59, 0.24) 70%, rgba(7, 31, 59, 0.1) 100%),
         linear-gradient(180deg, rgba(5, 15, 30, 0.18), rgba(5, 15, 30, 0.72)),
-        url("img/ru-hero.jpg") right 50% / cover no-repeat;
+        url("img/ru-hero.webp") right 50% / cover no-repeat;
     }
 
     .container {
@@ -455,7 +455,7 @@
       color: var(--white);
       background:
         linear-gradient(135deg, rgba(7, 31, 59, 0.97), rgba(8, 20, 38, 0.97)),
-        url("img/ru-hero.jpg") center bottom / cover no-repeat;
+        url("img/ru-hero.webp") center bottom / cover no-repeat;
       box-shadow: var(--shadow);
     }
 
@@ -567,7 +567,7 @@
         padding: 104px 0 70px;
         background:
           linear-gradient(180deg, rgba(5, 15, 30, 0.96) 0%, rgba(7, 31, 59, 0.84) 56%, rgba(7, 31, 59, 0.62) 100%),
-          url("img/ru-hero.jpg") 68% bottom / cover no-repeat;
+          url("img/ru-hero.webp") 68% bottom / cover no-repeat;
       }
 
       .page-hero h1 {
@@ -654,7 +654,240 @@
         text-align: left;
       }
     }
+  
+    /* ==== 优化：返回顶部 ==== */
+    .to-top {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 60;
+      width: 46px;
+      height: 46px;
+      border: 0;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--gold-2);
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 10px 26px rgba(6, 24, 45, 0.28);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: opacity .25s ease, transform .25s ease, visibility .25s;
+    }
+
+    .to-top.show {
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+    }
+
+    .to-top:hover {
+      background: var(--blue);
+    }
+
+    @media (max-width: 560px) {
+      .to-top {
+        right: 16px;
+        bottom: 16px;
+        width: 42px;
+        height: 42px;
+      }
+    }
+  
+    /* ==== Обновление: стили новых блоков ==== */
+    .cred-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .cred-card {
+      padding: 26px 24px 28px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--gold);
+      box-shadow: 0 12px 34px rgba(6, 24, 45, 0.06);
+    }
+
+    .cred-card h3 {
+      margin-bottom: 10px;
+      color: var(--ink);
+      font-size: 17px;
+      line-height: 1.45;
+    }
+
+    .cred-card p {
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.8;
+    }
+
+    .party-note {
+      margin-top: 20px;
+      padding: 16px 20px;
+      background: rgba(215, 168, 79, 0.08);
+      border-left: 3px solid var(--gold);
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.8;
+    }
+
+    .party-note strong {
+      color: var(--ink);
+    }
+
+    .social-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 11px 18px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      color: var(--ink);
+      font-size: 13.5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: border-color .2s, color .2s, transform .2s;
+    }
+
+    .social-link:hover {
+      border-color: var(--gold);
+      color: var(--blue);
+      transform: translateY(-2px);
+    }
+
+    .social-link svg {
+      width: 15px;
+      height: 15px;
+      color: var(--gold);
+    }
+
+    .social-note {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 36px;
+    }
+
+    .value-card {
+      padding: 30px 26px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .value-card h3 {
+      margin-bottom: 12px;
+      color: var(--gold-2);
+      font-size: 18px;
+    }
+
+    .value-card p {
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    @media (max-width: 900px) {
+      .cred-grid,
+      .value-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  
+    /* ==== 语言切换 ==== */
+    .nav-links a.nav-lang {
+      margin-left: 8px;
+      min-height: 30px;
+      padding: 0 12px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 999px;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+    }
+
+    .nav-links a.nav-lang:hover,
+    .nav-links a.nav-lang.active {
+      color: var(--gold-2);
+      border-color: var(--gold);
+      background: rgba(215, 168, 79, 0.14);
+    }
   </style>
+
+  <!-- ==== 优化：性能预连接 ==== -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- ==== 优化：SEO 元信息 ==== -->
+  <meta name="description" content="China Sells — компания с офисами в Китае и России: закупки, контроль качества, документы, логистика и складские мощности 13 000 м² в России.">
+  <link rel="canonical" href="https://chinasells.ru/about.html">
+  <link rel="alternate" hreflang="ru" href="https://chinasells.ru/about.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.hyjjls.cn/about.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://www.hyjjls.cn/about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="China Sells">
+  <meta property="og:title" content="О компании — China Sells">
+  <meta property="og:description" content="China Sells — компания с офисами в Китае и России: закупки, контроль качества, документы, логистика и складские мощности 13 000 м² в России.">
+  <meta property="og:url" content="https://chinasells.ru/about.html">
+  <meta property="og:image" content="https://chinasells.ru/img/ru-hero.jpg">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="О компании — China Sells">
+  <meta name="twitter:description" content="China Sells — компания с офисами в Китае и России: закупки, контроль качества, документы, логистика и складские мощности 13 000 м² в России.">
+  <meta name="twitter:image" content="https://chinasells.ru/img/ru-hero.jpg">
+
+  <!-- ==== 优化：结构化数据 ==== -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://chinasells.ru/#organization",
+  "name": "China Sells",
+  "alternateName": "Huiying Jujin (Jiangsu) International Trade Co., Ltd.",
+  "url": "https://chinasells.ru/",
+  "logo": "https://chinasells.ru/logo.png",
+  "description": "Поставки из Китая под ключ: подбор производителей, инспекция фабрик, контракты, сертификация, логистика и таможня.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Наньтун",
+    "addressRegion": "Цзянсу",
+    "addressCountry": "CN"
+  },
+  "areaServed": ["RU", "CN"]
+}
+  </script>
+
+  <!-- ==== Google tag (gtag.js)：Google Ads + GA4 ==== -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18539818418"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18539818418', {
+      'linker': { 'domains': ['hyjjls.cn','www.hyjjls.cn','chinasells.ru','www.chinasells.ru','hyjj.shop'] },
+      'cookie_flags': 'SameSite=None;Secure'
+    });
+    /* TODO GA4：拿到 G- 衡量 ID 后，将下面一行取消注释并替换 ID
+    gtag('config', 'G-XXXXXXXXXX', { 'linker': { 'domains': ['hyjjls.cn','www.hyjjls.cn','chinasells.ru','www.chinasells.ru','hyjj.shop'] } });
+    */
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -681,6 +914,7 @@
         <li><a href="cases.html">Кейсы</a></li>
         <li><a href="index.html#process">Схема работы</a></li>
         <li><a href="index.html#contact">Контакты</a></li>
+        <li><a class="nav-lang" href="https://www.hyjjls.cn/" hreflang="zh-CN" title="中文版">CN</a></li>
         <li><a class="nav-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Оставить заявку</a></li>
       </ul>
     </nav>
@@ -778,35 +1012,42 @@
             <div class="timeline-index">01</div>
             <div class="timeline-text">
               <strong>Запрос и требования</strong>
-              <span>Клиент описывает продукт, цену, количество, сроки или проблему в цепочке — мы помогаем структурировать цель закупки.</span>
+              <span>Вы описываете товар, объём, сроки и бюджет — мы уточняем требования и фиксируем критерии приёмки.</span>
             </div>
           </div>
           <div class="timeline-step">
             <div class="timeline-index">02</div>
             <div class="timeline-text">
-              <strong>Формирование решения</strong>
-              <span>Отбираем фабрики, сравниваем цены и условия, ведём первичные переговоры, фиксируем образцы, сертификацию, перевозку и схему расчётов.</span>
+              <strong>Подбор фабрик и расчёт</strong>
+              <span>Отбираем производителей, сравниваем цены, сроки и качество, присылаем смету с разбивкой по статьям.</span>
             </div>
           </div>
           <div class="timeline-step">
             <div class="timeline-index">03</div>
             <div class="timeline-text">
-              <strong>Инспекция фабрики и образцов</strong>
-              <span>Организуем выезд на фабрику и проверку образцов, предоставляем фото, видео-отчёт или трансляцию производства.</span>
+              <strong>Образец и согласование</strong>
+              <span>Изготавливаем и отправляем образец, согласуем материал, цвет, упаковку и маркировку до старта партии.</span>
             </div>
           </div>
           <div class="timeline-step">
             <div class="timeline-index">04</div>
             <div class="timeline-text">
-              <strong>Контракт и контроль производства</strong>
-              <span>Согласуем договор с клиентом и фабрикой, контролируем производство, качество и отгрузку на всех этапах.</span>
+              <strong>Инспекция фабрики и партии</strong>
+              <span>Проверяем производство и готовую партию: фото, видео-отчёт или онлайн-трансляция с фабрики.</span>
             </div>
           </div>
           <div class="timeline-step">
             <div class="timeline-index">05</div>
             <div class="timeline-text">
+              <strong>Контракт и контроль производства</strong>
+              <span>Заключаем договор и контролируем график производства, качество и статус готовности партии.</span>
+            </div>
+          </div>
+          <div class="timeline-step">
+            <div class="timeline-index">06</div>
+            <div class="timeline-text">
               <strong>Логистика, таможня и доставка</strong>
-              <span>Отвечаем за логистику, таможенное оформление и сертификацию, доставляем на склад клиента или на наш склад в России.</span>
+              <span>Оформляем документы и сертификаты, доставляем на ваш склад или размещаем на нашем складе в России.</span>
             </div>
           </div>
         </div>
@@ -842,6 +1083,29 @@
           <article class="problem">
             <h3>Нет локального склада</h3>
             <p>Собственный склад в России поддерживает хранение, перераспределение и дальнейшее исполнение заказов, создавая инфраструктуру для долгосрочной торговли.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-kicker">Наш принцип</div>
+        <h2 class="section-title">Новая торговля — на доверии</h2>
+        <p class="section-copy">Сложность кросс-бордера не в поиске товара, а в доверии между сторонами. Мы открыто показываем стоимость, процесс и результат каждой сделки.</p>
+
+        <div class="value-grid">
+          <article class="value-card">
+            <h3>Прозрачная смета</h3>
+            <p>Закупка, логистика, таможня и хранение — отдельными строками. Без скрытых наценок и «сюрпризов» в счёте.</p>
+          </article>
+          <article class="value-card">
+            <h3>Проверяемый процесс</h3>
+            <p>Образцы, инспекции и погрузка фиксируются фото и видео — любой этап можно перепроверить и подтвердить.</p>
+          </article>
+          <article class="value-card">
+            <h3>Долгосрочный подход</h3>
+            <p>Работаем на повторные поставки, а не на одну сделку. Готовы вкладываться в долгое партнёрство.</p>
           </article>
         </div>
       </div>
@@ -912,6 +1176,43 @@
         navToggle.setAttribute("aria-expanded", "false");
       });
     });
+  </script>
+
+  <button class="to-top" type="button" aria-label="返回顶部" title="返回顶部">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script>
+    /* ==== 优化：返回顶部 ==== */
+    (function () {
+      var btn = document.querySelector('.to-top');
+      if (!btn) return;
+      function toggle() { btn.classList.toggle('show', window.pageYOffset > 600); }
+      window.addEventListener('scroll', toggle, { passive: true });
+      toggle();
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+  </script>
+
+  <script>
+    /* ==== 优化：行为埋点（表单入口 / 联系方式） ==== */
+    document.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest ? e.target.closest('a') : null;
+      if (!a || typeof gtag !== 'function') return;
+      var href = a.getAttribute('href') || '';
+      var label = (a.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 40);
+      if (href.indexOf('hyjj.shop') > -1) {
+        gtag('event', 'enquiry_entry_click', { event_category: 'lead', event_label: label || href, link_url: href });
+      } else if (href.indexOf('tel:') === 0) {
+        gtag('event', 'contact', { event_category: 'contact', method: 'phone' });
+      } else if (href.indexOf('mailto:') === 0) {
+        gtag('event', 'contact', { event_category: 'contact', method: 'email' });
+      } else if (/(wa\.me|whatsapp|t\.me|telegram|vk\.com|instagram|youtube|tiktok)/i.test(href)) {
+        gtag('event', 'contact', { event_category: 'contact', method: 'social', link_url: href });
+      }
+    }, false);
   </script>
 </body>
 </html>

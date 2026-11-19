@@ -179,7 +179,7 @@
       background:
         linear-gradient(90deg, rgba(5, 15, 30, 0.96) 0%, rgba(7, 31, 59, 0.86) 42%, rgba(7, 31, 59, 0.26) 72%, rgba(7, 31, 59, 0.1) 100%),
         linear-gradient(180deg, rgba(5, 15, 30, 0.18), rgba(5, 15, 30, 0.72)),
-        url("img/ru-hero.jpg") right 55% / cover no-repeat;
+        url("img/ru-hero.webp") right 55% / cover no-repeat;
     }
 
     .container {
@@ -548,7 +548,7 @@
       color: var(--white);
       background:
         linear-gradient(135deg, rgba(7, 31, 59, 0.97), rgba(8, 20, 38, 0.97)),
-        url("img/ru-hero.jpg") center bottom / cover no-repeat;
+        url("img/ru-hero.webp") center bottom / cover no-repeat;
       box-shadow: var(--shadow);
     }
 
@@ -638,7 +638,7 @@
         padding: 104px 0 72px;
         background:
           linear-gradient(180deg, rgba(5, 15, 30, 0.96) 0%, rgba(7, 31, 59, 0.86) 56%, rgba(7, 31, 59, 0.64) 100%),
-          url("img/ru-hero.jpg") 68% bottom / cover no-repeat;
+          url("img/ru-hero.webp") 68% bottom / cover no-repeat;
       }
 
       .page-hero h1 {
@@ -777,7 +777,240 @@
         padding: 20px 18px;
       }
     }
+  
+    /* ==== 优化：返回顶部 ==== */
+    .to-top {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 60;
+      width: 46px;
+      height: 46px;
+      border: 0;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--gold-2);
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 10px 26px rgba(6, 24, 45, 0.28);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: opacity .25s ease, transform .25s ease, visibility .25s;
+    }
+
+    .to-top.show {
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+    }
+
+    .to-top:hover {
+      background: var(--blue);
+    }
+
+    @media (max-width: 560px) {
+      .to-top {
+        right: 16px;
+        bottom: 16px;
+        width: 42px;
+        height: 42px;
+      }
+    }
+  
+    /* ==== Обновление: стили новых блоков ==== */
+    .cred-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .cred-card {
+      padding: 26px 24px 28px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--gold);
+      box-shadow: 0 12px 34px rgba(6, 24, 45, 0.06);
+    }
+
+    .cred-card h3 {
+      margin-bottom: 10px;
+      color: var(--ink);
+      font-size: 17px;
+      line-height: 1.45;
+    }
+
+    .cred-card p {
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.8;
+    }
+
+    .party-note {
+      margin-top: 20px;
+      padding: 16px 20px;
+      background: rgba(215, 168, 79, 0.08);
+      border-left: 3px solid var(--gold);
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.8;
+    }
+
+    .party-note strong {
+      color: var(--ink);
+    }
+
+    .social-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 11px 18px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      color: var(--ink);
+      font-size: 13.5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: border-color .2s, color .2s, transform .2s;
+    }
+
+    .social-link:hover {
+      border-color: var(--gold);
+      color: var(--blue);
+      transform: translateY(-2px);
+    }
+
+    .social-link svg {
+      width: 15px;
+      height: 15px;
+      color: var(--gold);
+    }
+
+    .social-note {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 36px;
+    }
+
+    .value-card {
+      padding: 30px 26px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .value-card h3 {
+      margin-bottom: 12px;
+      color: var(--gold-2);
+      font-size: 18px;
+    }
+
+    .value-card p {
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    @media (max-width: 900px) {
+      .cred-grid,
+      .value-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  
+    /* ==== 语言切换 ==== */
+    .nav-links a.nav-lang {
+      margin-left: 8px;
+      min-height: 30px;
+      padding: 0 12px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 999px;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+    }
+
+    .nav-links a.nav-lang:hover,
+    .nav-links a.nav-lang.active {
+      color: var(--gold-2);
+      border-color: var(--gold);
+      background: rgba(215, 168, 79, 0.14);
+    }
   </style>
+
+  <!-- ==== 优化：性能预连接 ==== -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+  <!-- ==== 优化：SEO 元信息 ==== -->
+  <meta name="description" content="Проверенные кейсы сотрудничества China Sells с ведущими производителями промышленного пояса Наньтуна: спорттовары, головные уборы, домашний текстиль, одежда, электроинструмент.">
+  <link rel="canonical" href="https://chinasells.ru/cases.html">
+  <link rel="alternate" hreflang="ru" href="https://chinasells.ru/cases.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.hyjjls.cn/cases.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://www.hyjjls.cn/cases.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="China Sells">
+  <meta property="og:title" content="Кейсы — China Sells">
+  <meta property="og:description" content="Проверенные кейсы сотрудничества China Sells с ведущими производителями промышленного пояса Наньтуна: спорттовары, головные уборы, домашний текстиль, одежда, электроинструмент.">
+  <meta property="og:url" content="https://chinasells.ru/cases.html">
+  <meta property="og:image" content="https://chinasells.ru/img/ru-hero.jpg">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Кейсы — China Sells">
+  <meta name="twitter:description" content="Проверенные кейсы сотрудничества China Sells с ведущими производителями промышленного пояса Наньтуна: спорттовары, головные уборы, домашний текстиль, одежда, электроинструмент.">
+  <meta name="twitter:image" content="https://chinasells.ru/img/ru-hero.jpg">
+
+  <!-- ==== 优化：结构化数据 ==== -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://chinasells.ru/#organization",
+  "name": "China Sells",
+  "alternateName": "Huiying Jujin (Jiangsu) International Trade Co., Ltd.",
+  "url": "https://chinasells.ru/",
+  "logo": "https://chinasells.ru/logo.png",
+  "description": "Поставки из Китая под ключ: подбор производителей, инспекция фабрик, контракты, сертификация, логистика и таможня.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Наньтун",
+    "addressRegion": "Цзянсу",
+    "addressCountry": "CN"
+  },
+  "areaServed": ["RU", "CN"]
+}
+  </script>
+
+  <!-- ==== Google tag (gtag.js)：Google Ads + GA4 ==== -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18539818418"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18539818418', {
+      'linker': { 'domains': ['hyjjls.cn','www.hyjjls.cn','chinasells.ru','www.chinasells.ru','hyjj.shop'] },
+      'cookie_flags': 'SameSite=None;Secure'
+    });
+    /* TODO GA4：拿到 G- 衡量 ID 后，将下面一行取消注释并替换 ID
+    gtag('config', 'G-XXXXXXXXXX', { 'linker': { 'domains': ['hyjjls.cn','www.hyjjls.cn','chinasells.ru','www.chinasells.ru','hyjj.shop'] } });
+    */
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -804,6 +1037,7 @@
         <li><a class="active" href="cases.html">Кейсы</a></li>
         <li><a href="#process">Схема работы</a></li>
         <li><a href="#contact">Контакты</a></li>
+        <li><a class="nav-lang" href="https://www.hyjjls.cn/" hreflang="zh-CN" title="中文版">CN</a></li>
         <li><a class="nav-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Оставить заявку</a></li>
       </ul>
     </nav>
@@ -887,7 +1121,7 @@
 
           <article class="case-card">
             <div class="case-media">
-              <img src="img/case-ironman.jpg" alt="Производственная база Nantong Ironman — спортивное оборудование">
+              <img src="img/case-ironman.jpg" alt="Производственная база Nantong Ironman — спортивное оборудование" loading="lazy" decoding="async" width="800" height="533">
             </div>
             <div class="case-head">
               <div class="case-index">01</div>
@@ -958,7 +1192,7 @@
 
           <article class="case-card">
             <div class="case-media">
-              <img src="img/case-fumei.jpg" alt="Шоурум Nantong Fumei — головные уборы">
+              <img src="img/case-fumei.jpg" alt="Шоурум Nantong Fumei — головные уборы" loading="lazy" decoding="async" width="800" height="400">
             </div>
             <div class="case-head">
               <div class="case-index">02</div>
@@ -1027,7 +1261,7 @@
 
           <article class="case-card">
             <div class="case-media">
-              <img src="img/case-goldensun.jpg" alt="Штаб-квартира Jiangsu Golden Sun — текстильные технологии">
+              <img src="img/case-goldensun.jpg" alt="Штаб-квартира Jiangsu Golden Sun — текстильные технологии" loading="lazy" decoding="async" width="800" height="450">
             </div>
             <div class="case-head">
               <div class="case-index">03</div>
@@ -1094,7 +1328,7 @@
 
           <article class="case-card">
             <div class="case-media">
-              <img src="img/case-sanrun.jpg" alt="Парк Jiangsu Sanrun Garment Group — женская одежда">
+              <img src="img/case-sanrun.jpg" alt="Парк Jiangsu Sanrun Garment Group — женская одежда" loading="lazy" decoding="async" width="750" height="422">
             </div>
             <div class="case-head">
               <div class="case-index">04</div>
@@ -1161,7 +1395,7 @@
 
           <article class="case-card">
             <div class="case-media">
-              <img src="img/case-dongcheng.jpg" alt="Цех автоматической сварки Jiangsu Dongcheng — электроинструмент">
+              <img src="img/case-dongcheng.jpg" alt="Цех автоматической сварки Jiangsu Dongcheng — электроинструмент" loading="lazy" decoding="async" width="800" height="450">
             </div>
             <div class="case-head">
               <div class="case-index">05</div>
@@ -1266,6 +1500,43 @@
         navToggle.setAttribute("aria-expanded", "false");
       });
     });
+  </script>
+
+  <button class="to-top" type="button" aria-label="返回顶部" title="返回顶部">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script>
+    /* ==== 优化：返回顶部 ==== */
+    (function () {
+      var btn = document.querySelector('.to-top');
+      if (!btn) return;
+      function toggle() { btn.classList.toggle('show', window.pageYOffset > 600); }
+      window.addEventListener('scroll', toggle, { passive: true });
+      toggle();
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+  </script>
+
+  <script>
+    /* ==== 优化：行为埋点（表单入口 / 联系方式） ==== */
+    document.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest ? e.target.closest('a') : null;
+      if (!a || typeof gtag !== 'function') return;
+      var href = a.getAttribute('href') || '';
+      var label = (a.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 40);
+      if (href.indexOf('hyjj.shop') > -1) {
+        gtag('event', 'enquiry_entry_click', { event_category: 'lead', event_label: label || href, link_url: href });
+      } else if (href.indexOf('tel:') === 0) {
+        gtag('event', 'contact', { event_category: 'contact', method: 'phone' });
+      } else if (href.indexOf('mailto:') === 0) {
+        gtag('event', 'contact', { event_category: 'contact', method: 'email' });
+      } else if (/(wa\.me|whatsapp|t\.me|telegram|vk\.com|instagram|youtube|tiktok)/i.test(href)) {
+        gtag('event', 'contact', { event_category: 'contact', method: 'social', link_url: href });
+      }
+    }, false);
   </script>
 </body>
 </html>

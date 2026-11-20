@@ -25,4 +25,12 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://chinasells.ru/cases.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.hyjjls.cn/cases.html"/>
   </url>
+  <url>
+    <loc>https://chinasells.ru/categories.html</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://chinasells.ru/categories.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.hyjjls.cn/"/>
+  </url>
 </urlset>

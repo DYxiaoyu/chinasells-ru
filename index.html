@@ -1127,7 +1127,101 @@
       border-color: var(--gold);
       background: rgba(215, 168, 79, 0.14);
     }
-  </style>
+  /* ===================== Aliya IP · hero ===================== */
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:26px;align-items:center;}
+.hero-left{min-width:0;}
+.hero-person{position:relative;align-self:end;}
+.hero-person-glow{position:absolute;right:-60px;bottom:-20px;width:330px;height:330px;border-radius:50%;
+  background:radial-gradient(circle,rgba(215,168,79,.30),rgba(215,168,79,0) 68%);pointer-events:none;z-index:1;}
+.hero-person-photo{position:relative;z-index:2;width:min(318px,100%);margin-left:auto;}
+.hero-person-photo img{display:block;width:100%;height:auto;filter:drop-shadow(0 24px 44px rgba(0,0,0,.45));}
+.hero-person-card{position:relative;z-index:3;margin-top:-96px;padding:17px 18px 19px;
+  border:1px solid rgba(255,255,255,.14);border-left:2px solid var(--gold);
+  background:linear-gradient(140deg,rgba(6,22,42,.93),rgba(7,31,59,.76));
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  box-shadow:0 18px 44px rgba(3,10,20,.45);}
+.hp-kicker{display:block;color:var(--gold-2);font-size:10.5px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;}
+.hp-name{display:block;margin-top:6px;font-size:26px;line-height:1.1;font-weight:800;letter-spacing:-.4px;color:#fff;}
+.hp-role{display:block;margin-top:5px;color:rgba(255,255,255,.82);font-size:12px;line-height:1.5;}
+.hp-foot{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:14px;padding-top:13px;border-top:1px solid rgba(255,255,255,.12);font-size:11.5px;}
+.hp-foot a{color:var(--gold-2);font-weight:700;text-decoration:none;}
+.hp-foot a:hover{text-decoration:underline;}
+
+/* ===================== Aliya IP · detail ===================== */
+.aliya-sec{position:relative;overflow:hidden;padding:100px 0;color:#fff;
+  background:radial-gradient(1100px 480px at 80% 8%,rgba(215,168,79,.16),rgba(215,168,79,0) 62%),
+             linear-gradient(155deg,#061a33 0%,#050f1e 55%,#07223f 100%);}
+.aliya-inner{display:grid;grid-template-columns:360px minmax(0,1fr);gap:64px;align-items:center;}
+.aliya-photo{position:relative;}
+.aliya-ring{position:absolute;z-index:1;left:52%;top:44%;width:400px;height:400px;margin:-200px 0 0 -200px;
+  border-radius:50%;border:1px solid rgba(215,168,79,.26);}
+.aliya-ring-2{width:500px;height:500px;margin:-250px 0 0 -250px;border-color:rgba(215,168,79,.13);}
+.aliya-photo img{position:relative;z-index:2;display:block;width:100%;height:auto;
+  filter:drop-shadow(0 30px 60px rgba(0,0,0,.5));}
+.aliya-tag{position:absolute;z-index:3;left:0;top:20px;bottom:auto;padding:9px 14px;border-left:2px solid var(--gold);
+  background:rgba(6,22,42,.82);color:var(--gold-2);font-size:10.5px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;}
+.aliya-copy{min-width:0;}
+.aliya-kicker{color:var(--gold-2);font-size:12.5px;font-weight:800;letter-spacing:.9px;text-transform:uppercase;}
+.aliya-name{margin-top:12px;font-size:44px;line-height:1.04;font-weight:800;letter-spacing:-1px;color:#fff;}
+.aliya-role{margin-top:10px;color:var(--gold-2);font-size:14px;font-weight:700;}
+.aliya-lead{margin-top:18px;max-width:640px;color:rgba(255,255,255,.74);font-size:15.5px;line-height:1.9;}
+.aliya-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 30px;margin-top:34px;}
+.aliya-item{display:grid;grid-template-columns:24px minmax(0,1fr);gap:10px;}
+.aliya-num{padding-top:3px;color:var(--gold);font-size:11px;font-weight:800;letter-spacing:.6px;}
+.aliya-item h4{margin:0 0 6px;font-size:15px;color:#fff;}
+.aliya-item p{margin:0;color:rgba(255,255,255,.60);font-size:13px;line-height:1.75;}
+.aliya-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:36px;}
+.aliya-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;}
+.aliya-chip{display:inline-flex;align-items:center;gap:7px;padding:8px 13px;border:1px solid rgba(255,255,255,.18);
+  border-radius:999px;color:rgba(255,255,255,.86);font-size:12.5px;font-weight:600;text-decoration:none;
+  transition:border-color .2s ease,color .2s ease,background .2s ease;}
+.aliya-chip:hover{border-color:var(--gold);color:var(--gold-2);background:rgba(215,168,79,.08);}
+
+/* ===================== categories overview ===================== */
+.cat-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);box-shadow:var(--shadow);}
+.cat-card{display:flex;flex-direction:column;padding:24px 20px 20px;background:var(--white);
+  text-decoration:none;transition:background .2s ease;}
+.cat-card:hover{background:#fbfcfe;}
+.cat-ico{width:34px;height:34px;margin-bottom:16px;color:var(--gold);}
+.cat-ico svg{width:100%;height:100%;}
+.cat-card h3{margin:0 0 8px;font-size:14.5px;line-height:1.35;color:var(--ink);}
+.cat-card p{margin:0;flex:1;color:var(--muted);font-size:11.5px;line-height:1.7;}
+.cat-arrow{margin-top:12px;color:#c9d3e0;font-size:13px;transition:color .2s ease,transform .2s ease;}
+.cat-card:hover .cat-arrow{color:var(--gold);transform:translateX(3px);}
+.cat-more{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px;
+  margin-top:36px;padding:26px 32px;border:1px solid rgba(255,255,255,.1);
+  background:linear-gradient(120deg,#071f3b,#0b315c);box-shadow:var(--shadow);}
+.cat-more p{margin:0;color:rgba(255,255,255,.9);font-size:15px;font-weight:700;}
+.cat-more span{display:block;margin-top:5px;color:rgba(255,255,255,.58);font-size:12.5px;font-weight:400;}
+
+/* ===================== case card clickable ===================== */
+.case-mini{position:relative;text-decoration:none;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;}
+.case-mini:hover{transform:translateY(-4px);box-shadow:0 24px 52px rgba(6,24,45,.18);border-color:rgba(215,168,79,.6);}
+.case-mini::after{content:"";position:absolute;top:12px;right:12px;width:28px;height:28px;border-radius:50%;
+  background:rgba(6,22,42,.88) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f2c76d'><path d='M8 5v14l11-7z'/></svg>") center/13px no-repeat;
+  border:1px solid rgba(242,199,109,.5);}
+
+@media (max-width:1080px){
+  .hero-grid{grid-template-columns:1fr;}
+  .hero-person-photo,.hero-person-glow{display:none;}
+  .hero-person-card{margin-top:30px;}
+  .aliya-inner{grid-template-columns:1fr;gap:34px;}
+  .aliya-photo{max-width:320px;}
+  .aliya-name{font-size:34px;}
+  .aliya-ring,.aliya-ring-2{display:none;}
+  .cat-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media (max-width:640px){
+  .aliya-sec{padding:64px 0;}
+  .aliya-list{grid-template-columns:1fr;gap:18px;}
+  .aliya-name{font-size:29px;}
+  .cat-grid{grid-template-columns:1fr;}
+  .cat-more{padding:22px 20px;}
+  .cat-more .btn{width:100%;}
+  .hero-person-card{margin-top:24px;}
+}
+</style>
 
   <!-- ==== 优化：性能预连接 ==== -->
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
@@ -1212,6 +1306,7 @@
         <li><a class="active" href="#hero">Главная</a></li>
         <li><a href="about.html">О компании</a></li>
         <li><a href="#capability">Возможности</a></li>
+        <li><a href="categories.html">Категории</a></li>
         <li><a href="#cases">Кейсы</a></li>
         <li><a href="#process">Схема работы</a></li>
         <li><a href="#contact">Контакты</a></li>
@@ -1224,6 +1319,8 @@
   <main>
     <section class="hero" id="hero">
       <div class="container">
+        <div class="hero-grid">
+        <div class="hero-left">
         <div class="hero-content">
           <div class="eyebrow">Поставки из Китая под ключ</div>
           <h1>Ваш надёжный партнёр для <span>бизнеса с Китаем</span></h1>
@@ -1247,6 +1344,24 @@
             <span class="proof-number">200+</span>
             <span class="proof-label">специалистов команды на рынке России</span>
           </div>
+        </div>
+        </div>
+        <aside class="hero-person" aria-label="Личный менеджер">
+          <div class="hero-person-glow" aria-hidden="true"></div>
+          <div class="hero-person-photo">
+            <img src="img/aliya-hero.webp" srcset="img/aliya-hero.webp 1x, img/aliya-hero@2x.webp 2x"
+                 alt="Алия — заместитель генерального директора China Sells" width="380" height="548" decoding="async">
+          </div>
+          <div class="hero-person-card">
+            <span class="hp-kicker">Личный менеджер</span>
+            <strong class="hp-name">Алия</strong>
+            <span class="hp-role">Заместитель генерального директора</span>
+            <div class="hp-foot">
+              <a href="mailto:aliya@chinasells.ru">aliya@chinasells.ru</a>
+              <a href="https://t.me/aliyachinabiz" target="_blank" rel="noopener noreferrer">Telegram</a>
+            </div>
+          </div>
+        </aside>
         </div>
       </div>
     </section>
@@ -1367,69 +1482,109 @@
         <div class="section-head">
           <div>
             <div class="section-kicker">Категории продукции</div>
-            <h2 class="section-title">Что мы предоставим для вашего бизнеса</h2>
+            <h2 class="section-title">Что мы закупаем и поставляем</h2>
           </div>
-          <p class="section-copy">Подбираем и поставляем оптовые партии по ключевым категориям — с контролем фабрик, сертификацией и выпуском под вашим брендом. Список ниже — не ограничение: ассортимент постоянно расширяем под запросы рынка и берём в работу другие товары.</p>
+          <p class="section-copy">Работаем по десяти основным направлениям — от домашнего текстиля до электроинструмента и медтехники. Внутри каждого направления десятки подкатегорий: подбираем фабрику под конкретную позицию, а не «что есть на складе». Список не является ограничением.</p>
         </div>
 
-        <div class="offer-grid">
-          <article class="offer-card">
-            <div class="offer-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
+        <div class="cat-grid">
+          <a class="cat-card" href="categories.html#clothing">
+            <div class="cat-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
             </div>
             <h3>Одежда и обувь</h3>
-            <p>Отбор сертифицированных тканей и фурнитуры, контроль качества. Модели под тренды рынка, OEM, кастомизация цветов и размеров, стабильные поставки.</p>
-          </article>
+            <p>Женская · Мужская · Детская · Обувь</p>
+            <span class="cat-arrow" aria-hidden="true">→</span>
+          </a>
 
-          <article class="offer-card">
-            <div class="offer-icon">
+          <a class="cat-card" href="categories.html#textile">
+            <div class="cat-ico">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 9h18M9 4v16"/></svg>
             </div>
-            <h3>Текстиль и ткани</h3>
-            <p>Прямая работа с ткацкими фабриками, ткани со склада и под заказ. Контроль качества каждой партии, сертифицированные материалы.</p>
-          </article>
-
-          <article class="offer-card">
-            <div class="offer-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
-            </div>
             <h3>Домашний текстиль</h3>
-            <p>Постельные принадлежности, полотенца, столовый текстиль. Экспортные стандарты, кастомизация рисунков, размеров и упаковки, заказы любого объёма.</p>
-          </article>
+            <p>Постельное · Полотенца · Пледы · Шторы</p>
+            <span class="cat-arrow" aria-hidden="true">→</span>
+          </a>
 
-          <article class="offer-card">
-            <div class="offer-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"/><path d="M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v2H7v-2a2 2 0 0 0-4 0Z"/><path d="M5 18v2"/><path d="M19 18v2"/></svg>
+          <a class="cat-card" href="categories.html#home">
+            <div class="cat-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h12v9a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3z"/><path d="M16 10h2a2 2 0 0 1 0 4h-2"/></svg>
             </div>
-            <h3>Мебель и фурнитура</h3>
-            <p>Проверенные производители, контроль конструкций, покрытий и фурнитуры. Индивидуальные размеры, независимая инспекция, гибкий минимальный заказ.</p>
-          </article>
+            <h3>Товары для дома</h3>
+            <p>Посуда · Хранение · Кухня · Декор</p>
+            <span class="cat-arrow" aria-hidden="true">→</span>
+          </a>
 
-          <article class="offer-card">
-            <div class="offer-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+          <a class="cat-card" href="categories.html#electronics">
+            <div class="cat-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
             </div>
             <h3>Электроника и техника</h3>
-            <p>Координация поставок, контроль сборки и тестов. Документы, сертификаты и упаковка под рынок назначения, персональное сопровождение заказов.</p>
-          </article>
+            <p>Бытовая техника · Гаджеты · Освещение</p>
+            <span class="cat-arrow" aria-hidden="true">→</span>
+          </a>
 
-          <article class="offer-card">
-            <div class="offer-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 11 1 9a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2l1-9"/><path d="M3.5 11h17l-1.5-6a2 2 0 0 0-2-1.5H7a2 2 0 0 0-2 1.5Z"/><path d="M12 15v3"/></svg>
+          <a class="cat-card" href="categories.html#furniture">
+            <div class="cat-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3"/><path d="M3 15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4a2 2 0 0 0-4 0v1H7v-1a2 2 0 0 0-4 0z"/><path d="M6 17v3M18 17v3"/></svg>
             </div>
-            <h3>Товары для дома и быта</h3>
-            <p>Керамика, силикон, дерево, бамбук, пластик. Экологичное сырьё, сочетание дизайна и практичности, регулярное обновление моделей.</p>
-          </article>
+            <h3>Мебель и фурнитура</h3>
+            <p>Корпусная · Мягкая · Фурнитура</p>
+            <span class="cat-arrow" aria-hidden="true">→</span>
+          </a>
 
-          <article class="offer-card-wide">
-            <div class="offer-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"/><path d="m7.5 4.27 9 5.15"/></svg>
+          <a class="cat-card" href="categories.html#sport">
+            <div class="cat-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 7v10M17.5 7v10M3 10v4M21 10v4M6.5 12h11"/></svg>
             </div>
-            <div>
-              <h3>Другие товары</h3>
-              <p>Постоянно расширяем ассортимент под запросы рынка. Все изделия проверяются на соответствие заявленным характеристикам. Поможем подобрать позиции и сопроводим сделку от образца до отгрузки.</p>
+            <h3>Спорт и фитнес</h3>
+            <p>Тренажёры · Туризм · Реабилитация</p>
+            <span class="cat-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="cat-card" href="categories.html#tools">
+            <div class="cat-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4a5 5 0 0 1 5 5l-3 1-1-1-9 9-3-3 9-9-1-1z"/><path d="m5 15 4 4"/></svg>
             </div>
-          </article>
+            <h3>Инструмент и оборудование</h3>
+            <p>Электроинструмент · Ручной · Оснастка</p>
+            <span class="cat-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="cat-card" href="categories.html#medical">
+            <div class="cat-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>
+            </div>
+            <h3>Медицина и уход</h3>
+            <p>Медтехника · Реабилитация · Гигиена</p>
+            <span class="cat-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="cat-card" href="categories.html#packaging">
+            <div class="cat-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 7.7 4.73a2 2 0 0 0 2 0L20.7 7"/></svg>
+            </div>
+            <h3>Упаковка и расходники</h3>
+            <p>Тара · Упаковка · Одноразовые</p>
+            <span class="cat-arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="cat-card" href="categories.html#auto">
+            <div class="cat-ico">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 15l1.6-5h12.8L21 15"/><rect x="3" y="15" width="18" height="4" rx="1.5"/><path d="M7 19v2M17 19v2"/><path d="M8 15h8"/></svg>
+            </div>
+            <h3>Авто и мото</h3>
+            <p>Аксессуары · Тюнинг · Расходники</p>
+            <span class="cat-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="cat-more">
+          <div>
+            <p>10 категорий · 60+ подкатегорий</p>
+            <span>Не нашли нужную позицию? Подробный каталог направлений — на отдельной странице. Берём в работу и другие товары под запрос.</span>
+          </div>
+          <a class="btn btn-primary" href="categories.html">Смотреть все категории</a>
         </div>
       </div>
     </section>
@@ -1445,54 +1600,117 @@
         </div>
 
         <div class="cases-home-grid">
-          <article class="case-mini">
+          <a class="case-mini" href="https://www.youtube.com/@aliya.chinabiz" target="_blank" rel="noopener noreferrer">
             <img src="img/case-ironman.jpg" alt="Производственная база Nantong Ironman — спортивное оборудование" loading="lazy" decoding="async" width="800" height="533">
             <div class="case-mini-body">
               <h3>Наньтун Ironman</h3>
               <span class="case-mini-tag">Спортивное оборудование</span>
               <p>Территория 260 му, более 500 патентов, поставки на военные, зимние и национальные игры.</p>
             </div>
-          </article>
+          </a>
 
-          <article class="case-mini">
+          <a class="case-mini" href="https://www.youtube.com/@aliya.chinabiz" target="_blank" rel="noopener noreferrer">
             <img src="img/case-fumei.jpg" alt="Шоурум Nantong Fumei — головные уборы" loading="lazy" decoding="async" width="800" height="400">
             <div class="case-mini-body">
               <h3>Наньтун Фумэй</h3>
               <span class="case-mini-tag">Головные уборы</span>
               <p>Пять баз, мощность 10 млн изделий в год, поставки вязаных шапок на Олимпиаду в Пекине.</p>
             </div>
-          </article>
+          </a>
 
-          <article class="case-mini">
+          <a class="case-mini" href="https://www.youtube.com/@aliya.chinabiz" target="_blank" rel="noopener noreferrer">
             <img src="img/case-goldensun.jpg" alt="Штаб-квартира Jiangsu Golden Sun — текстильные технологии" loading="lazy" decoding="async" width="800" height="450">
             <div class="case-mini-body">
               <h3>Golden Sun</h3>
               <span class="case-mini-tag">Домашний текстиль</span>
               <p>Девять категорий, тысячи тканей, более 200 патентов, национальный центр промышленного дизайна.</p>
             </div>
-          </article>
+          </a>
 
-          <article class="case-mini">
+          <a class="case-mini" href="https://www.youtube.com/@aliya.chinabiz" target="_blank" rel="noopener noreferrer">
             <img src="img/case-sanrun.jpg" alt="Парк Jiangsu Sanrun Garment Group" loading="lazy" decoding="async" width="750" height="422">
             <div class="case-mini-body">
               <h3>Цзянсу Санжунь</h3>
               <span class="case-mini-tag">Женская одежда</span>
               <p>96 собственных линий, фабрики в нескольких странах, аудиты UL, SGS и BV.</p>
             </div>
-          </article>
+          </a>
 
-          <article class="case-mini">
+          <a class="case-mini" href="https://www.youtube.com/@aliya.chinabiz" target="_blank" rel="noopener noreferrer">
             <img src="img/case-dongcheng.jpg" alt="Цех автоматической сварки Jiangsu Dongcheng — электроинструмент" loading="lazy" decoding="async" width="800" height="450">
             <div class="case-mini-body">
-              <h3>Цзянсу Дунчэн</h3>
+           
+    
+   <h3>Цзянсу Дунчэн</h3>
               <span class="case-mini-tag">Электроинструмент</span>
               <p>Более 700 моделей, свыше 3300 патентов, индивидуальные решения полного цикла.</p>
             </div>
-          </article>
+          </a>
         </div>
 
         <div class="cases-more">
           <a class="btn btn-primary" href="cases.html">Смотреть все кейсы</a>
+        </div>
+      </div>
+    </section>
+<section class="aliya-sec" id="manager">
+      <div class="container">
+        <div class="aliya-inner">
+          <div class="aliya-photo">
+            <div class="aliya-ring aliya-ring-2" aria-hidden="true"></div>
+            <div class="aliya-ring" aria-hidden="true"></div>
+            <img src="img/aliya.webp" srcset="img/aliya.webp 1x, img/aliya@2x.webp 2x"
+                 alt="Алия — личный менеджер по закупкам в Китае" width="620" height="895" loading="lazy" decoding="async">
+            <span class="aliya-tag">Ваш человек в цепочке</span>
+          </div>
+
+          <div class="aliya-copy">
+            <div class="aliya-kicker">Ваш персональный менеджер</div>
+            <h2 class="aliya-name">Алия</h2>
+            <div class="aliya-role">Заместитель генерального директора</div>
+            <p class="aliya-lead">Один ответственный человек на весь цикл — от подбора фабрики до приёмки на складе. Я согласую цену и сроки, проверяю партию до оплаты и держу вас в курсе на каждом этапе. Вам не нужно пересказывать задачу новому сотруднику: заказ ведёт один человек.</p>
+
+            <div class="aliya-list">
+              <div class="aliya-item">
+                <span class="aliya-num">01</span>
+                <div>
+                  <h4>Подбор фабрик и переговоры</h4>
+                  <p>Сравниваю 3–5 производителей, беру образцы, согласовываю цену, сроки и минимальную партию.</p>
+                </div>
+              </div>
+              <div class="aliya-item">
+                <span class="aliya-num">02</span>
+                <div>
+                  <h4>Инспекция и контроль качества</h4>
+                  <p>Проверяю партию на фабрике до оплаты: материалы, размеры, дефекты и упаковку.</p>
+                </div>
+              </div>
+              <div class="aliya-item">
+                <span class="aliya-num">03</span>
+                <div>
+                  <h4>Контракт, сертификация, таможня</h4>
+                  <p>Договор, документы, сертификаты соответствия и таможенное оформление под рынок России.</p>
+                </div>
+              </div>
+              <div class="aliya-item">
+                <span class="aliya-num">04</span>
+                <div>
+                  <h4>Логистика и приёмка на складе</h4>
+                  <p>Консолидация груза, маршрут, расчёты в рублях и приёмка на собственном складе в России.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="aliya-actions">
+              <a class="btn btn-primary" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Оставить заявку</a>
+              <a class="btn btn-secondary" href="https://t.me/aliyachinabiz" target="_blank" rel="noreferrer">Написать в Telegram</a>
+            </div>
+            <div class="aliya-chips">
+              <a class="aliya-chip" href="mailto:aliya@chinasells.ru">✉ aliya@chinasells.ru</a>
+              <a class="aliya-chip" href="https://wa.me/8619895947232" target="_blank" rel="noreferrer">WhatsApp +86 198 9594 7232</a>
+              <a class="aliya-chip" href="https://t.me/aliyachinabiz" target="_blank" rel="noreferrer">Telegram @aliyachinabiz</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1572,6 +1790,10 @@
             <div class="contact-item">
               <span class="contact-label">Email</span>
               <span class="contact-value"><a href="mailto:hello@chinasells.ru">hello@chinasells.ru</a></span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Алия · личный менеджер</span>
+              <span class="contact-value"><a href="mailto:aliya@chinasells.ru">aliya@chinasells.ru</a></span>
             </div>
             <div class="contact-item">
               <span class="contact-label">Адрес</span>

@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Категории поставок из Китая — каталог направлений | CHINA SELLS</title>
+  <meta name="description" content="Каталог категорий закупок из Китая: одежда и обувь, домашний текстиль, товары для дома, электроника, мебель, инструмент, медтехника, упаковка, авто. Подбор фабрики, инспекция и доставка в Россию.">
+  <meta name="keywords" content="поставки из Китая, категории товаров, оптом из Китая, текстиль из Китая, электроинструмент из Китая, каталог поставок">
+  <link rel="canonical" href="https://chinasells.ru/categories.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Категории поставок из Китая — каталог направлений | CHINA SELLS">
+  <meta property="og:description" content="Десять направлений закупок из Китая с подбором фабрики, инспекцией партии и доставкой в Россию.">
+  <meta property="og:url" content="https://chinasells.ru/categories.html">
+  <meta property="og:image" content="https://chinasells.ru/img/cat-clothing.webp">
+  <link rel="alternate" hreflang="ru" href="https://chinasells.ru/categories.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://www.hyjjls.cn/">
+  <link rel="alternate" hreflang="x-default" href="https://chinasells.ru/categories.html">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    :root {
+      --ink: #081426;
+      --navy: #071f3b;
+      --navy-2: #0b315c;
+      --blue: #14508f;
+      --gold: #d7a84f;
+      --gold-2: #f2c76d;
+      --paper: #f6f8fb;
+      --line: #dfe6ef;
+      --muted: #66758a;
+      --white: #ffffff;
+      --shadow: 0 24px 70px rgba(6, 24, 45, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      min-width: 320px;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(5, 17, 32, 0.88);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      width: min(1180px, calc(100% - 40px));
+      height: 72px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--white);
+      font-weight: 700;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      flex: 0 0 auto;
+      display: block;
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 18px;
+      letter-spacing: 0.5px;
+    }
+
+    .brand strong em {
+      font-style: normal;
+      color: var(--gold-2);
+    }
+
+    .brand small {
+      display: block;
+      color: rgba(255, 255, 255, 0.58);
+      font-size: 10.5px;
+      font-weight: 500;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 0 14px;
+      border-radius: 4px;
+      color: rgba(255, 255, 255, 0.74);
+      font-size: 14px;
+      transition: color 0.2s ease, background 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links a.nav-cta {
+      margin-left: 10px;
+      padding: 0 18px;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 4px;
+      background: linear-gradient(120deg, #B45309 0%, #D97706 100%);
+      box-shadow: 0 2px 10px rgba(217, 119, 6, 0.35);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    }
+
+    .nav-links a.nav-cta:hover,
+    .nav-links a.nav-cta.active {
+      color: #fff;
+      background: linear-gradient(120deg, #B45309 0%, #D97706 100%);
+      filter: brightness(1.08);
+      box-shadow: 0 4px 14px rgba(217, 119, 6, 0.45);
+      transform: translateY(-1px);
+    }
+
+    .nav-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--gold-2);
+      cursor: pointer;
+    }
+
+    .nav-toggle .icon-close {
+      display: none;
+    }
+
+    .nav-toggle.open .icon-menu {
+      display: none;
+    }
+
+    .nav-toggle.open .icon-close {
+      display: block;
+    }
+
+    .hero {
+      min-height: 760px;
+      padding: 148px 0 104px;
+      color: var(--white);
+      background:
+        linear-gradient(90deg, rgba(5, 15, 30, 0.96) 0%, rgba(7, 31, 59, 0.84) 40%, rgba(7, 31, 59, 0.24) 70%, rgba(7, 31, 59, 0.1) 100%),
+        linear-gradient(180deg, rgba(5, 15, 30, 0.18), rgba(5, 15, 30, 0.72)),
+        url("img/ru-hero.webp") right bottom / cover no-repeat;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 72px;
+      background: linear-gradient(180deg, rgba(246, 248, 251, 0), var(--paper));
+      pointer-events: none;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content {
+      width: min(720px, 100%);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 26px;
+      color: var(--gold-2);
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 42px;
+      height: 1px;
+      background: var(--gold-2);
+      flex: 0 0 auto;
+    }
+
+    .hero h1 {
+      max-width: 700px;
+      font-size: 56px;
+      line-height: 1.1;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 span {
+      color: var(--gold-2);
+    }
+
+    .hero-lead {
+      max-width: 620px;
+      margin-top: 24px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 18px;
+      line-height: 1.85;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin-top: 40px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 24px;
+      border-radius: 4px;
+      font-size: 15px;
+      font-weight: 700;
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #121821;
+      box-shadow: 0 16px 38px rgba(215, 168, 79, 0.24);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .hero-proof {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      width: min(780px, 100%);
+      margin-top: 72px;
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .proof-item {
+      display: flex;
+      flex-direction: column;
+      padding: 26px 24px;
+      background: rgba(6, 22, 42, 0.74);
+    }
+
+    .proof-number {
+      display: block;
+      color: var(--gold-2);
+      font-size: 30px;
+      line-height: 1.12;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+    }
+
+    .proof-label {
+      margin-top: auto;
+      padding-top: 16px;
+      display: block;
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .section {
+      padding: 96px 0;
+      background: var(--paper);
+    }
+
+    .section-white {
+      background: var(--white);
+    }
+
+    .section-dark {
+      color: var(--white);
+      background:
+        linear-gradient(135deg, rgba(7, 31, 59, 0.97), rgba(8, 20, 38, 0.98)),
+        url("img/ru-hero.webp") center bottom / cover no-repeat;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.65fr);
+      align-items: end;
+      gap: 48px;
+      margin-bottom: 44px;
+    }
+
+    .section-kicker {
+      color: var(--gold);
+      font-size: 12.5px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      margin-top: 10px;
+      color: var(--ink);
+      font-size: 35px;
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: -0.4px;
+    }
+
+    .section-dark .section-title,
+    .section-dark .section-copy {
+      color: var(--white);
+    }
+
+    .section-copy {
+      color: var(--muted);
+      font-size: 15.5px;
+      line-height: 1.9;
+    }
+
+    .capability-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .capability-card {
+      min-height: 264px;
+      padding: 32px 28px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .capability-icon {
+      width: 44px;
+      height: 44px;
+      margin-bottom: 32px;
+      color: var(--gold);
+    }
+
+    .capability-icon svg,
+    .icon svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .capability-card h3 {
+      color: var(--ink);
+      font-size: 18.5px;
+      margin-bottom: 14px;
+    }
+
+    .capability-card p {
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.85;
+    }
+
+    .process-layout {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1fr);
+      gap: 56px;
+      align-items: start;
+    }
+
+    .supplier-panel {
+      padding: 34px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.13);
+    }
+
+    .supplier-panel h3 {
+      color: var(--gold-2);
+      font-size: 21px;
+      margin-bottom: 22px;
+    }
+
+    .supplier-row {
+      padding: 20px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .supplier-row strong {
+      display: block;
+      color: var(--white);
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .supplier-row span {
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 13.5px;
+      line-height: 1.8;
+    }
+
+    .process-list {
+      display: grid;
+      gap: 1px;
+      background: rgba(255, 255, 255, 0.13);
+      border: 1px solid rgba(255, 255, 255, 0.13);
+    }
+
+    .process-step {
+      display: grid;
+      grid-template-columns: 76px 1fr;
+      min-height: 104px;
+      background: rgba(5, 17, 32, 0.62);
+    }
+
+    .process-num {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid rgba(255, 255, 255, 0.13);
+      color: var(--gold-2);
+      font-size: 21px;
+      font-weight: 800;
+    }
+
+    .process-text {
+      padding: 24px 28px;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .contact-band {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      gap: 46px;
+      align-items: stretch;
+      padding: 54px;
+      background: var(--navy);
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-band .section-kicker {
+      color: var(--gold-2);
+    }
+
+    .contact-band h2 {
+      margin-top: 10px;
+      font-size: 32px;
+      line-height: 1.22;
+      margin-bottom: 18px;
+    }
+
+    .contact-band p {
+      max-width: 620px;
+      color: rgba(255, 255, 255, 0.68);
+      font-size: 15.5px;
+      line-height: 1.9;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 1px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      align-content: start;
+    }
+
+    .contact-item {
+      padding: 18px 20px;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .contact-label {
+      display: block;
+      color: var(--gold-2);
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+
+    .contact-value {
+      display: block;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 14px;
+      line-height: 1.65;
+      word-break: break-word;
+    }
+
+    .contact-value a:hover {
+      color: var(--gold-2);
+    }
+
+    .about-home {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+      gap: 56px;
+      align-items: start;
+    }
+
+    .about-home-text .section-title {
+      margin-bottom: 22px;
+    }
+
+    .about-home-text p {
+      margin-bottom: 16px;
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 12px;
+      color: var(--gold);
+      font-size: 14.5px;
+      font-weight: 700;
+    }
+
+    .text-link::after {
+      content: "→";
+    }
+
+    .about-metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .about-metric {
+      padding: 26px 24px;
+      background: var(--white);
+    }
+
+    .about-metric strong {
+      display: block;
+      color: var(--gold);
+      font-size: 27px;
+      font-weight: 800;
+      line-height: 1.05;
+    }
+
+    .about-metric span {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.6;
+    }
+
+    .cases-home-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+    }
+
+    .case-mini {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background: var(--white);
+      border: 1px solid var(--line);
+      box-shadow: 0 14px 40px rgba(6, 24, 45, 0.08);
+    }
+
+    .case-mini img {
+      display: block;
+      width: 100%;
+      height: 128px;
+      object-fit: cover;
+    }
+
+    .case-mini-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 18px 16px 20px;
+    }
+
+    .case-mini h3 {
+      margin-bottom: 6px;
+      color: var(--ink);
+      font-size: 15.5px;
+    }
+
+    .case-mini-tag {
+      margin-bottom: 10px;
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .case-mini p {
+      color: var(--muted);
+      font-size: 12.5px;
+      line-height: 1.75;
+    }
+
+    .cases-more {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .offer-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .offer-card {
+      padding: 26px 26px 28px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .offer-icon {
+      width: 38px;
+      height: 38px;
+      margin-bottom: 18px;
+      color: var(--gold);
+    }
+
+    .offer-icon svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .offer-card h3 {
+      margin-bottom: 8px;
+      color: var(--ink);
+      font-size: 16.5px;
+    }
+
+    .offer-card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    .offer-card-wide {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      padding: 24px 28px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .offer-card-wide .offer-icon {
+      flex-shrink: 0;
+      margin-bottom: 0;
+    }
+
+    .offer-card-wide h3 {
+      margin-bottom: 6px;
+    }
+
+    .offer-card-wide p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    .footer {
+      padding: 16px 0;
+      background: #050d18;
+      color: rgba(255, 255, 255, 0.52);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .footer-inner {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      html { scroll-padding-top: 84px; }
+      .nav {
+        width: min(100% - 28px, 1180px);
+        height: 64px;
+        padding: 0;
+      }
+
+      .nav-toggle {
+        display: inline-flex;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2px;
+        padding: 12px 16px 20px;
+        background: rgba(5, 17, 32, 0.98);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 24px 50px rgba(3, 10, 20, 0.5);
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition: opacity 0.22s ease, transform 0.22s ease;
+      }
+
+      .nav-links.open {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+
+      .nav-links a {
+        width: 100%;
+        min-height: 46px;
+        padding: 0 14px;
+        font-size: 15px;
+      }
+
+      .nav-links a.nav-cta {
+        margin: 6px 0 0;
+        justify-content: center;
+        min-height: 48px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 104px 0 56px;
+        background:
+          linear-gradient(180deg, rgba(5, 15, 30, 0.96) 0%, rgba(7, 31, 59, 0.84) 56%, rgba(7, 31, 59, 0.62) 100%),
+          url("img/ru-hero.webp") 68% bottom / cover no-repeat;
+      }
+
+      .container {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .hero h1 {
+        font-size: 40px;
+        letter-spacing: -0.3px;
+      }
+
+      .hero-lead {
+        font-size: 16px;
+      }
+
+      .hero-proof,
+      .capability-grid,
+      .section-head,
+      .about-home,
+      .process-layout,
+      .contact-band {
+        grid-template-columns: 1fr;
+      }
+
+      .cases-home-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .offer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .case-mini:last-child {
+        grid-column: 1 / -1;
+      }
+
+      .case-mini:last-child img {
+        height: 170px;
+      }
+
+      .hero-proof {
+        margin-top: 46px;
+      }
+
+      .proof-label {
+        margin-top: 14px;
+        padding-top: 0;
+      }
+
+      .capability-grid {
+        border-left: none;
+        grid-template-columns: 1fr;
+      }
+
+      .capability-card {
+        border-left: 1px solid var(--line);
+      }
+
+      .section {
+        padding: 68px 0;
+      }
+
+      .section-title {
+        font-size: 31px;
+      }
+
+      .capability-card {
+        min-height: auto;
+      }
+
+      .contact-band {
+        padding: 34px 24px;
+      }
+
+      .contact-band h2 {
+        font-size: 28px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .brand strong {
+        font-size: 15px;
+      }
+
+      .brand small {
+        display: none;
+      }
+
+      .nav-links {
+        padding: 10px 14px 18px;
+      }
+
+      .hero h1 {
+        font-size: 33px;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-proof {
+        grid-template-columns: 1fr;
+      }
+
+      .cases-home-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .offer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .offer-card-wide {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+      }
+
+      .case-mini:last-child {
+        grid-column: auto;
+      }
+
+      .case-mini:last-child img {
+        height: 128px;
+      }
+
+      .proof-item {
+        padding: 20px;
+      }
+
+      .proof-number {
+        font-size: 26px;
+      }
+
+      .process-step {
+        grid-template-columns: 58px 1fr;
+      }
+
+      .process-text {
+        padding: 18px;
+        font-size: 14px;
+      }
+
+      .contact-band h2 {
+        font-size: 26px;
+      }
+
+      .about-metric strong {
+        font-size: 22px;
+      }
+    }
+  
+    /* ==== 优化：返回顶部 ==== */
+    .to-top {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 60;
+      width: 46px;
+      height: 46px;
+      border: 0;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--gold-2);
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 10px 26px rgba(6, 24, 45, 0.28);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: opacity .25s ease, transform .25s ease, visibility .25s;
+    }
+
+    .to-top.show {
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+    }
+
+    .to-top:hover {
+      background: var(--blue);
+    }
+
+    @media (max-width: 560px) {
+      .to-top {
+        right: 16px;
+        bottom: 16px;
+        width: 42px;
+        height: 42px;
+      }
+    }
+  
+    /* ==== Обновление: стили новых блоков ==== */
+    .cred-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .cred-card {
+      padding: 26px 24px 28px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--gold);
+      box-shadow: 0 12px 34px rgba(6, 24, 45, 0.06);
+    }
+
+    .cred-card h3 {
+      margin-bottom: 10px;
+      color: var(--ink);
+      font-size: 17px;
+      line-height: 1.45;
+    }
+
+    .cred-card p {
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.8;
+    }
+
+    .party-note {
+      margin-top: 20px;
+      padding: 16px 20px;
+      background: rgba(215, 168, 79, 0.08);
+      border-left: 3px solid var(--gold);
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.8;
+    }
+
+    .party-note strong {
+      color: var(--ink);
+    }
+
+    .social-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 11px 18px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      color: var(--ink);
+      font-size: 13.5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: border-color .2s, color .2s, transform .2s;
+    }
+
+    .social-link:hover {
+      border-color: var(--gold);
+      color: var(--blue);
+      transform: translateY(-2px);
+    }
+
+    .social-link svg {
+      width: 15px;
+      height: 15px;
+      color: var(--gold);
+    }
+
+    .social-note {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 36px;
+    }
+
+    .value-card {
+      padding: 30px 26px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .value-card h3 {
+      margin-bottom: 12px;
+      color: var(--gold-2);
+      font-size: 18px;
+    }
+
+    .value-card p {
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    @media (max-width: 900px) {
+      .cred-grid,
+      .value-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  
+    /* ==== 语言切换 ==== */
+    .nav-links a.nav-lang {
+      margin-left: 8px;
+      min-height: 30px;
+      padding: 0 12px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 999px;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+    }
+
+    .nav-links a.nav-lang:hover,
+    .nav-links a.nav-lang.active {
+      color: var(--gold-2);
+      border-color: var(--gold);
+      background: rgba(215, 168, 79, 0.14);
+    }
+  /* ===================== Aliya IP · hero ===================== */
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:26px;align-items:center;}
+.hero-left{min-width:0;}
+.hero-person{position:relative;align-self:end;}
+.hero-person-glow{position:absolute;right:-60px;bottom:-20px;width:330px;height:330px;border-radius:50%;
+  background:radial-gradient(circle,rgba(215,168,79,.30),rgba(215,168,79,0) 68%);pointer-events:none;z-index:1;}
+.hero-person-photo{position:relative;z-index:2;width:min(318px,100%);margin-left:auto;}
+.hero-person-photo img{display:block;width:100%;height:auto;filter:drop-shadow(0 24px 44px rgba(0,0,0,.45));}
+.hero-person-card{position:relative;z-index:3;margin-top:-96px;padding:17px 18px 19px;
+  border:1px solid rgba(255,255,255,.14);border-left:2px solid var(--gold);
+  background:linear-gradient(140deg,rgba(6,22,42,.93),rgba(7,31,59,.76));
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  box-shadow:0 18px 44px rgba(3,10,20,.45);}
+.hp-kicker{display:block;color:var(--gold-2);font-size:10.5px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;}
+.hp-name{display:block;margin-top:6px;font-size:26px;line-height:1.1;font-weight:800;letter-spacing:-.4px;color:#fff;}
+.hp-role{display:block;margin-top:5px;color:rgba(255,255,255,.82);font-size:12px;line-height:1.5;}
+.hp-foot{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:14px;padding-top:13px;border-top:1px solid rgba(255,255,255,.12);font-size:11.5px;}
+.hp-foot a{color:var(--gold-2);font-weight:700;text-decoration:none;}
+.hp-foot a:hover{text-decoration:underline;}
+
+/* ===================== Aliya IP · detail ===================== */
+.aliya-sec{position:relative;overflow:hidden;padding:100px 0;color:#fff;
+  background:radial-gradient(1100px 480px at 80% 8%,rgba(215,168,79,.16),rgba(215,168,79,0) 62%),
+             linear-gradient(155deg,#061a33 0%,#050f1e 55%,#07223f 100%);}
+.aliya-inner{display:grid;grid-template-columns:360px minmax(0,1fr);gap:64px;align-items:center;}
+.aliya-photo{position:relative;}
+.aliya-ring{position:absolute;z-index:1;left:52%;top:44%;width:400px;height:400px;margin:-200px 0 0 -200px;
+  border-radius:50%;border:1px solid rgba(215,168,79,.26);}
+.aliya-ring-2{width:500px;height:500px;margin:-250px 0 0 -250px;border-color:rgba(215,168,79,.13);}
+.aliya-photo img{position:relative;z-index:2;display:block;width:100%;height:auto;
+  filter:drop-shadow(0 30px 60px rgba(0,0,0,.5));}
+.aliya-tag{position:absolute;z-index:3;left:0;top:20px;bottom:auto;padding:9px 14px;border-left:2px solid var(--gold);
+  background:rgba(6,22,42,.82);color:var(--gold-2);font-size:10.5px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;}
+.aliya-copy{min-width:0;}
+.aliya-kicker{color:var(--gold-2);font-size:12.5px;font-weight:800;letter-spacing:.9px;text-transform:uppercase;}
+.aliya-name{margin-top:12px;font-size:44px;line-height:1.04;font-weight:800;letter-spacing:-1px;color:#fff;}
+.aliya-role{margin-top:10px;color:var(--gold-2);font-size:14px;font-weight:700;}
+.aliya-lead{margin-top:18px;max-width:640px;color:rgba(255,255,255,.74);font-size:15.5px;line-height:1.9;}
+.aliya-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 30px;margin-top:34px;}
+.aliya-item{display:grid;grid-template-columns:24px minmax(0,1fr);gap:10px;}
+.aliya-num{padding-top:3px;color:var(--gold);font-size:11px;font-weight:800;letter-spacing:.6px;}
+.aliya-item h4{margin:0 0 6px;font-size:15px;color:#fff;}
+.aliya-item p{margin:0;color:rgba(255,255,255,.60);font-size:13px;line-height:1.75;}
+.aliya-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:36px;}
+.aliya-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;}
+.aliya-chip{display:inline-flex;align-items:center;gap:7px;padding:8px 13px;border:1px solid rgba(255,255,255,.18);
+  border-radius:999px;color:rgba(255,255,255,.86);font-size:12.5px;font-weight:600;text-decoration:none;
+  transition:border-color .2s ease,color .2s ease,background .2s ease;}
+.aliya-chip:hover{border-color:var(--gold);color:var(--gold-2);background:rgba(215,168,79,.08);}
+
+/* ===================== categories overview ===================== */
+.cat-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);box-shadow:var(--shadow);}
+.cat-card{display:flex;flex-direction:column;padding:24px 20px 20px;background:var(--white);
+  text-decoration:none;transition:background .2s ease;}
+.cat-card:hover{background:#fbfcfe;}
+.cat-ico{width:34px;height:34px;margin-bottom:16px;color:var(--gold);}
+.cat-ico svg{width:100%;height:100%;}
+.cat-card h3{margin:0 0 8px;font-size:14.5px;line-height:1.35;color:var(--ink);}
+.cat-card p{margin:0;flex:1;color:var(--muted);font-size:11.5px;line-height:1.7;}
+.cat-arrow{margin-top:12px;color:#c9d3e0;font-size:13px;transition:color .2s ease,transform .2s ease;}
+.cat-card:hover .cat-arrow{color:var(--gold);transform:translateX(3px);}
+.cat-more{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px;
+  margin-top:36px;padding:26px 32px;border:1px solid rgba(255,255,255,.1);
+  background:linear-gradient(120deg,#071f3b,#0b315c);box-shadow:var(--shadow);}
+.cat-more p{margin:0;color:rgba(255,255,255,.9);font-size:15px;font-weight:700;}
+.cat-more span{display:block;margin-top:5px;color:rgba(255,255,255,.58);font-size:12.5px;font-weight:400;}
+
+/* ===================== case card clickable ===================== */
+.case-mini{position:relative;text-decoration:none;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;}
+.case-mini:hover{transform:translateY(-4px);box-shadow:0 24px 52px rgba(6,24,45,.18);border-color:rgba(215,168,79,.6);}
+.case-mini::after{content:"";position:absolute;top:12px;right:12px;width:28px;height:28px;border-radius:50%;
+  background:rgba(6,22,42,.88) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f2c76d'><path d='M8 5v14l11-7z'/></svg>") center/13px no-repeat;
+  border:1px solid rgba(242,199,109,.5);}
+
+@media (max-width:1080px){
+  .hero-grid{grid-template-columns:1fr;}
+  .hero-person-photo,.hero-person-glow{display:none;}
+  .hero-person-card{margin-top:30px;}
+  .aliya-inner{grid-template-columns:1fr;gap:34px;}
+  .aliya-photo{max-width:320px;}
+  .aliya-name{font-size:34px;}
+  .aliya-ring,.aliya-ring-2{display:none;}
+  .cat-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media (max-width:640px){
+  .aliya-sec{padding:64px 0;}
+  .aliya-list{grid-template-columns:1fr;gap:18px;}
+  .aliya-name{font-size:29px;}
+  .cat-grid{grid-template-columns:1fr;}
+  .cat-more{padding:22px 20px;}
+  .cat-more .btn{width:100%;}
+  .hero-person-card{margin-top:24px;}
+}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18539818418"></script>
+  <!-- Google tag (AW-18539353293) -->
+  <script async src="https://www.googletagmanager.com/gtm.js?id=AW-18539353293"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18539353293');
+    gtag('config', 'AW-18539818418', {
+      'linker': { 'domains': ['hyjjls.cn','www.hyjjls.cn','chinasells.ru','www.chinasells.ru','hyjj.shop'] },
+      'cookie_flags': 'SameSite=None;Secure'
+    });
+    /* TODO GA4：拿到 G- 衡量 ID 后，将下面一行取消注释并替换 ID
+    gtag('config', 'G-XXXXXXXXXX', { 'linker': { 'domains': ['hyjjls.cn','www.hyjjls.cn','chinasells.ru','www.chinasells.ru','hyjj.shop'] } });
+    */
+  </script>
+
+<style>
+/* ---------- catalog page ---------- */
+.cat-hero{position:relative;overflow:hidden;padding:120px 0 68px;color:#fff;
+  background:radial-gradient(900px 400px at 78% 6%,rgba(215,168,79,.20),rgba(215,168,79,0) 62%),
+             linear-gradient(150deg,#061a33 0%,#050f1e 58%,#07223f 100%);}
+.cat-hero .breadcrumb{color:rgba(255,255,255,.46);font-size:12.5px;letter-spacing:.4px;}
+.cat-hero .breadcrumb a{color:rgba(255,255,255,.6);text-decoration:none;}
+.cat-hero .breadcrumb a:hover{color:var(--gold-2);}
+.cat-hero h1{margin-top:16px;max-width:760px;font-size:44px;line-height:1.14;font-weight:800;letter-spacing:-.8px;}
+.cat-hero p{margin-top:18px;max-width:640px;color:rgba(255,255,255,.74);font-size:15.5px;line-height:1.9;}
+.cat-jump{display:flex;flex-wrap:wrap;gap:8px;margin-top:34px;}
+.cat-jump a{padding:8px 14px;border:1px solid rgba(255,255,255,.16);border-radius:999px;
+  color:rgba(255,255,255,.8);font-size:12.5px;font-weight:600;text-decoration:none;
+  transition:border-color .2s ease,color .2s ease,background .2s ease;}
+.cat-jump a:hover{border-color:var(--gold);color:var(--gold-2);background:rgba(215,168,79,.08);}
+.cat-body-wrap{padding:0 0 40px;}
+.cat-block{padding:64px 0;border-bottom:1px solid var(--line);}
+.cat-block:last-child{border-bottom:none;}
+.cat-row{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:52px;align-items:center;}
+.cat-row.is-reverse{grid-template-columns:minmax(0,1fr) minmax(0,420px);}
+.cat-row.is-reverse .cat-thumb{order:2;}
+.cat-thumb{position:relative;box-shadow:0 22px 54px rgba(6,24,45,.16);overflow:hidden;}
+.cat-thumb img{display:block;width:100%;height:auto;}
+.cat-index{position:absolute;left:16px;bottom:12px;color:rgba(255,255,255,.9);
+  font-size:13px;font-weight:800;letter-spacing:2px;text-shadow:0 2px 10px rgba(0,0,0,.6);}
+.cat-body h2{margin:0;color:var(--ink);font-size:29px;line-height:1.2;font-weight:800;letter-spacing:-.4px;}
+.cat-body p{margin-top:14px;color:var(--muted);font-size:14.5px;line-height:1.85;}
+.cat-subs{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;}
+.sub-pill{display:inline-flex;align-items:center;padding:7px 12px;border:1px solid var(--line);
+  background:#fff;color:var(--ink);font-size:12.5px;font-weight:600;}
+.cat-cta{display:inline-flex;align-items:center;gap:8px;margin-top:26px;color:var(--blue);
+  font-size:14px;font-weight:800;text-decoration:none;border-bottom:1px solid rgba(20,80,143,.25);padding-bottom:4px;}
+.cat-cta:hover{color:var(--gold);border-color:var(--gold);}
+.cat-tail{padding:72px 0 96px;}
+@media (max-width:1000px){
+  .cat-hero{padding:96px 0 52px;}
+  .cat-hero h1{font-size:33px;}
+  .cat-row{grid-template-columns:1fr;gap:26px;}
+  .cat-row.is-reverse .cat-thumb{order:0;}
+  .cat-block{padding:44px 0;}
+  .cat-body h2{font-size:24px;}
+}
+@media (max-width:640px){
+  .cat-hero h1{font-size:27px;}
+  .cat-subs{gap:6px;}
+  .sub-pill{font-size:12px;padding:6px 10px;}
+}
+</style>
+
+</head>
+
+<body>
+<header class="site-header">
+    <nav class="nav" aria-label="Основная навигация">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M24 7 L40 16 L40 32 L24 41 L8 32 L8 16 Z" stroke="#d7a84f" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M24 7 L40 16 L24 25 L8 16 Z" fill="#d7a84f"/>
+          <path d="M24 25 L24 41 M8 16 L24 25 L40 16" stroke="#f2c76d" stroke-width="2.2" stroke-linejoin="round"/>
+        </svg>
+        <span>
+          <strong>CHINA <em>SELLS</em></strong>
+          <small>Найдём · Проверим · Доставим</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="navMenu">
+        <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <ul class="nav-links" id="navMenu">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="about.html">О компании</a></li>
+        <li><a href="#capability">Возможности</a></li>
+        <li><a class="active" href="categories.html">Категории</a></li>
+        <li><a href="#cases">Кейсы</a></li>
+        <li><a href="#process">Схема работы</a></li>
+        <li><a href="#contact">Контакты</a></li>
+        <li><a class="nav-lang" href="https://www.hyjjls.cn/" hreflang="zh-CN" title="中文版">CN</a></li>
+        <li><a class="nav-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Оставить заявку</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="cat-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="index.html">Главная</a> · Категории</div>
+        <h1>Категории поставок из Китая</h1>
+        <p>Десять направлений, по которым мы ведём закупки: от домашнего текстиля и одежды до электроинструмента, медтехники и автотоваров. Внутри каждого направления — десятки подкатегорий. Подбираем фабрику под конкретную позицию, проверяем партию до оплаты и доставляем на склад в России.</p>
+        <div class="cat-jump"><a href="#clothing">Одежда и обувь</a><a href="#textile">Домашний текстиль и ткани</a><a href="#home">Товары для дома</a><a href="#electronics">Электроника и бытовая техника</a><a href="#furniture">Мебель и фурнитура</a><a href="#sport">Спорт, фитнес и реабилитация</a><a href="#tools">Инструмент и оборудование</a><a href="#medical">Медицина и уход</a><a href="#packaging">Упаковка и расходники</a><a href="#auto">Авто и мото</a></div>
+      </div>
+    </section>
+
+    <section class="cat-body-wrap">
+      <div class="container">
+
+      <div class="cat-block" id="clothing">
+        <div class="cat-row">
+          <div class="cat-thumb">
+            <img src="img/cat-clothing.webp" srcset="img/cat-clothing.webp 1x, img/cat-clothing@2x.webp 2x"
+                 alt="Одежда и обувь — поставки из Китая" width="760" height="506" loading="lazy" decoding="async">
+            <span class="cat-index">01</span>
+          </div>
+          <div class="cat-body">
+            <h2>Одежда и обувь</h2>
+            <p>Женская, мужская и детская одежда, спортивные линейки, обувь и бельё. Работаем как с готовыми моделями фабрик, так и с OEM-производством под вашим брендом — с подбором тканей и фурнитуры.</p>
+            <div class="cat-subs"><span class="sub-pill">Женская одежда</span><span class="sub-pill">Мужская одежда</span><span class="sub-pill">Детская одежда</span><span class="sub-pill">Спортивная одежда</span><span class="sub-pill">Обувь</span><span class="sub-pill">Нижнее бельё и носки</span><span class="sub-pill">Аксессуары</span></div>
+            <a class="cat-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Запросить цену и образцы →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cat-block" id="textile">
+        <div class="cat-row is-reverse">
+          <div class="cat-thumb">
+            <img src="img/cat-textile.webp" srcset="img/cat-textile.webp 1x, img/cat-textile@2x.webp 2x"
+                 alt="Домашний текстиль и ткани — поставки из Китая" width="760" height="506" loading="lazy" decoding="async">
+            <span class="cat-index">02</span>
+          </div>
+          <div class="cat-body">
+            <h2>Домашний текстиль и ткани</h2>
+            <p>Прямая работа с ткацкими фабриками Наньтуна: постельное бельё, полотенца, пледы, подушки и шторы. Кастомизация рисунка, размера и упаковки — от пробной партии до регулярных поставок.</p>
+            <div class="cat-subs"><span class="sub-pill">Постельное бельё</span><span class="sub-pill">Полотенца</span><span class="sub-pill">Пледы и одеяла</span><span class="sub-pill">Подушки</span><span class="sub-pill">Шторы и тюль</span><span class="sub-pill">Ткани и материалы</span><span class="sub-pill">Кухонный текстиль</span></div>
+            <a class="cat-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Запросить цену и образцы →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cat-block" id="home">
+        <div class="cat-row">
+          <div class="cat-thumb">
+            <img src="img/cat-home.webp" srcset="img/cat-home.webp 1x, img/cat-home@2x.webp 2x"
+                 alt="Товары для дома — поставки из Китая" width="760" height="506" loading="lazy" decoding="async">
+            <span class="cat-index">03</span>
+          </div>
+          <div class="cat-body">
+            <h2>Товары для дома</h2>
+            <p>Посуда, кухонные принадлежности, системы хранения, товары для уборки и декора. Керамика, стекло, силикон, дерево и бамбук — с проверкой на пищевой контакт и соответствие нормам.</p>
+            <div class="cat-subs"><span class="sub-pill">Посуда</span><span class="sub-pill">Кухонные принадлежности</span><span class="sub-pill">Хранение и органайзеры</span><span class="sub-pill">Уборка и бытовая химия</span><span class="sub-pill">Декор и текстиль для дома</span><span class="sub-pill">Товары для ванной</span></div>
+            <a class="cat-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Запросить цену и образцы →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cat-block" id="electronics">
+        <div class="cat-row is-reverse">
+          <div class="cat-thumb">
+            <img src="img/cat-electronics.webp" srcset="img/cat-electronics.webp 1x, img/cat-electronics@2x.webp 2x"
+                 alt="Электроника и бытовая техника — поставки из Китая" width="760" height="506" loading="lazy" decoding="async">
+            <span class="cat-index">04</span>
+          </div>
+          <div class="cat-body">
+            <h2>Электроника и бытовая техника</h2>
+            <p>Мелкая бытовая техника, аудио, освещение, умные устройства и аксессуары. Проверяем сборку и тесты на фабрике, комплектуем документы и сертификаты под рынок России.</p>
+            <div class="cat-subs"><span class="sub-pill">Бытовая техника</span><span class="sub-pill">Мелкая техника</span><span class="sub-pill">Аудио и наушники</span><span class="sub-pill">Освещение и лампы</span><span class="sub-pill">Умные устройства</span><span class="sub-pill">Аксессуары и зарядки</span></div>
+            <a class="cat-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Запросить цену и образцы →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cat-block" id="furniture">
+        <div class="cat-row">
+          <div class="cat-thumb">
+            <img src="img/cat-furniture.webp" srcset="img/cat-furniture.webp 1x, img/cat-furniture@2x.webp 2x"
+                 alt="Мебель и фурнитура — поставки из Китая" width="760" height="506" loading="lazy" decoding="async">
+            <span class="cat-index">05</span>
+          </div>
+          <div class="cat-body">
+            <h2>Мебель и фурнитура</h2>
+            <p>Корпусная и мягкая мебель, офисные линейки, комплектующие и фурнитура. Контроль конструкции, покрытия и механизмов, независимая инспекция перед отгрузкой.</p>
+            <div class="cat-subs"><span class="sub-pill">Корпусная мебель</span><span class="sub-pill">Мягкая мебель</span><span class="sub-pill">Офисная мебель</span><span class="sub-pill">Комплектующие</span><span class="sub-pill">Мебельная фурнитура</span><span class="sub-pill">Дверная фурнитура</span></div>
+            <a class="cat-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Запросить цену и образцы →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cat-block" id="sport">
+        <div class="cat-row is-reverse">
+          <div class="cat-thumb">
+            <img src="img/cat-sport.webp" srcset="img/cat-sport.webp 1x, img/cat-sport@2x.webp 2x"
+                 alt="Спорт, фитнес и реабилитация — поставки из Китая" width="760" height="506" loading="lazy" decoding="async">
+            <span class="cat-index">06</span>
+          </div>
+          <div class="cat-body">
+            <h2>Спорт, фитнес и реабилитация</h2>
+            <p>Тренажёры, фитнес-аксессуары, туристическое снаряжение и оборудование для восстановления. Подбираем фабрику под конкретный вид нагрузки и требования к материалам.</p>
+            <div class="cat-subs"><span class="sub-pill">Тренажёры</span><span class="sub-pill">Фитнес-аксессуары</span><span class="sub-pill">Туризм и кемпинг</span><span class="sub-pill">Реабилитация</span><span class="sub-pill">Спортивные аксессуары</span></div>
+            <a class="cat-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Запросить цену и образцы →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cat-block" id="tools">
+        <div class="cat-row">
+          <div class="cat-thumb">
+            <img src="img/cat-tools.webp" srcset="img/cat-tools.webp 1x, img/cat-tools@2x.webp 2x"
+                 alt="Инструмент и оборудование — поставки из Китая" width="760" height="506" loading="lazy" decoding="async">
+            <span class="cat-index">07</span>
+          </div>
+          <div class="cat-body">
+            <h2>Инструмент и оборудование</h2>
+            <p>Электроинструмент, ручной инструмент, оснастка и расходники, станки. Приоритетное направление — работаем с производителями уровня Dongcheng, проверяем партию до оплаты.</p>
+            <div class="cat-subs"><span class="sub-pill">Электроинструмент</span><span class="sub-pill">Ручной инструмент</span><span class="sub-pill">Оснастка и расходники</span><span class="sub-pill">Станки и оборудование</span><span class="sub-pill">Сварочное оборудование</span><span class="sub-pill">Измерительный инструмент</span></div>
+            <a class="cat-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Запросить цену и образцы →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cat-block" id="medical">
+        <div class="cat-row is-reverse">
+          <div class="cat-thumb">
+            <img src="img/cat-medical.webp" srcset="img/cat-medical.webp 1x, img/cat-medical@2x.webp 2x"
+                 alt="Медицина и уход — поставки из Китая" width="760" height="506" loading="lazy" decoding="async">
+            <span class="cat-index">08</span>
+          </div>
+          <div class="cat-body">
+            <h2>Медицина и уход</h2>
+            <p>Медтехника для дома, реабилитационное оборудование, товары ухода и расходные материалы. Проверяем комплектацию, документы и соответствие требованиям для ввоза.</p>
+            <div class="cat-subs"><span class="sub-pill">Медтехника для дома</span><span class="sub-pill">Реабилитация</span><span class="sub-pill">Уход и гигиена</span><span class="sub-pill">Расходные материалы</span><span class="sub-pill">Диагностика</span></div>
+            <a class="cat-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Запросить цену и образцы →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cat-block" id="packaging">
+        <div class="cat-row">
+          <div class="cat-thumb">
+            <img src="img/cat-packaging.webp" srcset="img/cat-packaging.webp 1x, img/cat-packaging@2x.webp 2x"
+                 alt="Упаковка и расходники — поставки из Китая" width="760" height="506" loading="lazy" decoding="async">
+            <span class="cat-index">09</span>
+          </div>
+          <div class="cat-body">
+            <h2>Упаковка и расходники</h2>
+            <p>Картонная тара, гибкая упаковка, стрейч-плёнка, скотч и одноразовая посуда. Помогаем с брендированной упаковкой под ваш логотип и требования маркетплейсов.</p>
+            <div class="cat-subs"><span class="sub-pill">Картонная тара</span><span class="sub-pill">Гибкая упаковка</span><span class="sub-pill">Стрейч и скотч</span><span class="sub-pill">Одноразовая посуда</span><span class="sub-pill">Брендированная упаковка</span></div>
+            <a class="cat-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Запросить цену и образцы →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cat-block" id="auto">
+        <div class="cat-row is-reverse">
+          <div class="cat-thumb">
+            <img src="img/cat-auto.webp" srcset="img/cat-auto.webp 1x, img/cat-auto@2x.webp 2x"
+                 alt="Авто и мото — поставки из Китая" width="760" height="506" loading="lazy" decoding="async">
+            <span class="cat-index">10</span>
+          </div>
+          <div class="cat-body">
+            <h2>Авто и мото</h2>
+            <p>Аксессуары, тюнинг, расходники, электроника и инструмент для СТО. Подбираем позиции под конкретные марки и модели, контролируем совместимость и комплектацию.</p>
+            <div class="cat-subs"><span class="sub-pill">Аксессуары</span><span class="sub-pill">Тюнинг</span><span class="sub-pill">Расходники</span><span class="sub-pill">Электроника для авто</span><span class="sub-pill">Инструмент для СТО</span></div>
+            <a class="cat-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Запросить цену и образцы →</a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="cat-tail">
+      <div class="container">
+        <div class="cat-more">
+          <div>
+            <p>Не нашли нужную позицию в каталоге?</p>
+            <span>Берём в работу и другие товары под запрос. Опишите позицию, объём и требования — подберём фабрику и вернёмся с ценой и образцами.</span>
+          </div>
+          <a class="btn btn-primary" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Оставить заявку</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<footer class="footer">
+    <div class="footer-inner">
+      <span>© 2026 Huiying Jujin (Jiangsu) International Trade Co., Ltd. Все права защищены.</span>
+      <span>China Sells — надёжный партнёр для бизнеса с Китаем</span>
+    </div>
+  </footer>
+
+</body>
+</html>

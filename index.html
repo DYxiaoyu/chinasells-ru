@@ -1135,20 +1135,26 @@
   background:radial-gradient(circle,rgba(215,168,79,.30),rgba(215,168,79,0) 68%);pointer-events:none;z-index:1;}
 .hero-person-photo{position:relative;z-index:2;width:min(318px,100%);margin-left:auto;}
 .hero-person-photo img{display:block;width:100%;height:auto;filter:drop-shadow(0 24px 44px rgba(0,0,0,.45));}
-.hero-person-card{position:relative;z-index:3;margin-top:-84px;padding:17px 18px 19px;
-  border:1px solid rgba(255,255,255,.14);border-left:2px solid var(--gold);
-  background:linear-gradient(140deg,rgba(6,22,42,.93),rgba(7,31,59,.76));
-  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
-  box-shadow:0 18px 44px rgba(3,10,20,.45);}
-.hero-person-card::before{content:"";position:absolute;left:-2px;right:-2px;bottom:100%;height:56px;
-  background:linear-gradient(to top,rgba(7,31,59,.82),rgba(7,31,59,.34) 45%,rgba(7,31,59,0));
+.hero-person-card{position:relative;z-index:3;margin-top:-84px;padding:20px 22px 22px;border-radius:16px;
+  border:1px solid rgba(255,255,255,.07);
+  background:linear-gradient(155deg,rgba(6,22,42,.7) 0%,rgba(7,31,59,.9) 58%,rgba(6,22,42,.95) 100%);
+  -webkit-backdrop-filter:blur(14px) saturate(125%);backdrop-filter:blur(14px) saturate(125%);
+  box-shadow:0 26px 60px rgba(3,10,20,.5),inset 0 1px 0 rgba(255,255,255,.07);}
+.hero-person-card::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;border-radius:16px 16px 0 0;
+  background:linear-gradient(90deg,rgba(215,168,79,0),rgba(215,168,79,.8) 18%,rgba(242,199,109,.95) 52%,rgba(215,168,79,0));}
+.hero-person-card::after{content:"";position:absolute;left:-2px;right:-2px;bottom:calc(100% + 0px);height:70px;
+  background:linear-gradient(to top,rgba(7,31,59,.8),rgba(7,31,59,.32) 46%,rgba(7,31,59,0));
   pointer-events:none;}
-.hp-kicker{display:block;color:var(--gold-2);font-size:10.5px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;}
-.hp-name{display:block;margin-top:6px;font-size:26px;line-height:1.1;font-weight:800;letter-spacing:-.4px;color:#fff;}
-.hp-role{display:block;margin-top:5px;color:rgba(255,255,255,.82);font-size:12px;line-height:1.5;}
-.hp-foot{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:14px;padding-top:13px;border-top:1px solid rgba(255,255,255,.12);font-size:11.5px;}
-.hp-foot a{color:var(--gold-2);font-weight:700;text-decoration:none;}
-.hp-foot a:hover{text-decoration:underline;}
+.hp-kicker{display:flex;align-items:center;gap:8px;color:var(--gold-2);font-size:10px;font-weight:800;letter-spacing:2.1px;text-transform:uppercase;}
+.hp-kicker::before{content:"";width:16px;height:1.5px;background:linear-gradient(90deg,var(--gold),rgba(215,168,79,0));}
+.hp-name{display:block;margin-top:9px;font-size:27px;line-height:1.05;font-weight:800;letter-spacing:-.6px;color:#fff;}
+.hp-role{display:block;margin-top:7px;color:rgba(255,255,255,.72);font-size:12px;line-height:1.55;letter-spacing:.2px;}
+.hp-foot{display:flex;flex-wrap:wrap;gap:8px;margin-top:17px;}
+.hp-foot a{display:inline-flex;align-items:center;gap:6px;padding:7px 13px;border-radius:999px;
+  background:rgba(255,255,255,.055);border:1px solid rgba(215,168,79,.26);
+  color:var(--gold-2);font-size:11.5px;font-weight:700;letter-spacing:.1px;text-decoration:none;
+  transition:background .2s ease,border-color .2s ease,color .2s ease;}
+.hp-foot a:hover{background:rgba(215,168,79,.13);border-color:var(--gold);color:#fff;text-decoration:none;}
 
 /* ===================== Aliya IP · detail ===================== */
 .aliya-sec{position:relative;overflow:hidden;padding:100px 0;color:#fff;
@@ -1629,7 +1635,7 @@
 
         <div class="cases-home-grid">
           <a class="case-mini" href="https://www.youtube.com/@aliya.chinabiz" target="_blank" rel="noopener noreferrer">
-            <img src="img/case-ironman.jpg" alt="Производственная база Nantong Ironman — спортивное оборудование" loading="lazy" decoding="async" width="800" height="533">
+            <img src="img/case-ironman.jpg" srcset="img/case-ironman.jpg 1x, img/case-ironman@2x.jpg 2x" alt="Производственная база Nantong Ironman — спортивное оборудование" loading="lazy" decoding="async" width="800" height="533">
             <div class="case-mini-body">
               <h3>Наньтун Ironman</h3>
               <span class="case-mini-tag">Спортивное оборудование</span>
@@ -1638,7 +1644,7 @@
           </a>
 
           <a class="case-mini" href="https://www.youtube.com/@aliya.chinabiz" target="_blank" rel="noopener noreferrer">
-            <img src="img/case-fumei.jpg" alt="Шоурум Nantong Fumei — головные уборы" loading="lazy" decoding="async" width="800" height="400">
+            <img src="img/case-fumei.jpg" srcset="img/case-fumei.jpg 1x, img/case-fumei@2x.jpg 2x" alt="Шоурум Nantong Fumei — головные уборы" loading="lazy" decoding="async" width="800" height="300">
             <div class="case-mini-body">
               <h3>Наньтун Фумэй</h3>
               <span class="case-mini-tag">Головные уборы</span>
@@ -1647,7 +1653,7 @@
           </a>
 
           <a class="case-mini" href="https://www.youtube.com/@aliya.chinabiz" target="_blank" rel="noopener noreferrer">
-            <img src="img/case-goldensun.jpg" alt="Штаб-квартира Jiangsu Golden Sun — текстильные технологии" loading="lazy" decoding="async" width="800" height="450">
+            <img src="img/case-goldensun.jpg" srcset="img/case-goldensun.jpg 1x, img/case-goldensun@2x.jpg 2x" alt="Штаб-квартира Jiangsu Golden Sun — текстильные технологии" loading="lazy" decoding="async" width="800" height="450">
             <div class="case-mini-body">
               <h3>Golden Sun</h3>
               <span class="case-mini-tag">Домашний текстиль</span>
@@ -1656,7 +1662,7 @@
           </a>
 
           <a class="case-mini" href="https://www.youtube.com/@aliya.chinabiz" target="_blank" rel="noopener noreferrer">
-            <img src="img/case-sanrun.jpg" alt="Парк Jiangsu Sanrun Garment Group" loading="lazy" decoding="async" width="750" height="422">
+            <img src="img/case-sanrun.jpg" srcset="img/case-sanrun.jpg 1x, img/case-sanrun@2x.jpg 2x" alt="Парк Jiangsu Sanrun Garment Group" loading="lazy" decoding="async" width="800" height="450">
             <div class="case-mini-body">
               <h3>Цзянсу Санжунь</h3>
               <span class="case-mini-tag">Женская одежда</span>
@@ -1665,7 +1671,7 @@
           </a>
 
           <a class="case-mini" href="https://www.youtube.com/@aliya.chinabiz" target="_blank" rel="noopener noreferrer">
-            <img src="img/case-dongcheng.jpg" alt="Цех автоматической сварки Jiangsu Dongcheng — электроинструмент" loading="lazy" decoding="async" width="800" height="450">
+            <img src="img/case-dongcheng.jpg" srcset="img/case-dongcheng.jpg 1x, img/case-dongcheng@2x.jpg 2x" alt="Цех автоматической сварки Jiangsu Dongcheng — электроинструмент" loading="lazy" decoding="async" width="800" height="375">
             <div class="case-mini-body">
            
     

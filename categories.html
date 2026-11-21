@@ -753,7 +753,19 @@
       flex-wrap: wrap;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width:1180px){
+  .nav{width:min(100% - 28px,1180px);height:64px;padding:0;}
+  .nav-toggle{display:inline-flex;}
+  .nav-links{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:2px;
+    padding:12px 16px 20px;background:#051120;border-bottom:1px solid rgba(255,255,255,.12);
+    box-shadow:0 24px 50px rgba(3,10,20,.5);opacity:0;transform:translateY(-10px);pointer-events:none;
+    transition:opacity .22s ease,transform .22s ease;}
+  .nav-links.open{opacity:1;transform:translateY(0);pointer-events:auto;}
+  .nav-links a{width:100%;min-height:44px;padding:0 14px;font-size:14.5px;}
+  .nav-links a.nav-cta{margin:6px 0 0;justify-content:center;min-height:46px;}
+}
+
+@media (max-width: 900px) {
       html { scroll-padding-top: 84px; }
       .nav {
         width: min(100% - 28px, 1180px);
@@ -774,7 +786,7 @@
         align-items: stretch;
         gap: 2px;
         padding: 12px 16px 20px;
-        background: rgba(5, 17, 32, 0.98);
+        background: #051120;
         border-bottom: 1px solid rgba(255, 255, 255, 0.12);
         box-shadow: 0 24px 50px rgba(3, 10, 20, 0.5);
         opacity: 0;
@@ -1363,6 +1375,7 @@
         <li><a href="index.html#capability">Возможности</a></li>
         <li><a class="active" href="categories.html">Категории</a></li>
         <li><a href="index.html#cases">Кейсы</a></li>
+        <li><a href="index.html#manager">Алия</a></li>
         <li><a href="index.html#process">Схема работы</a></li>
         <li><a href="index.html#contact">Контакты</a></li>
         <li><a class="nav-lang" href="https://www.hyjjls.cn/" hreflang="zh-CN" title="中文版">CN</a></li>
@@ -1765,6 +1778,36 @@
       if(bar) window.scrollTo({ top: bar.offsetTop - 76, behavior: 'smooth' });
     });
   }
+})();
+</script>
+<script>
+(function () {
+  var t = document.querySelector('.nav-toggle');
+  var m = document.querySelector('.nav-links');
+  if (!t || !m) return;
+  function close() {
+    m.classList.remove('open');
+    t.classList.remove('open');
+    t.setAttribute('aria-expanded', 'false');
+    t.setAttribute('aria-label', 'Открыть меню');
+  }
+  t.addEventListener('click', function (e) {
+    e.stopPropagation();
+    var open = m.classList.toggle('open');
+    t.classList.toggle('open', open);
+    t.setAttribute('aria-expanded', open ? 'true' : 'false');
+    t.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+  });
+  var links = m.querySelectorAll('a');
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', close);
+  }
+  document.addEventListener('click', function (e) {
+    if (!m.contains(e.target) && !t.contains(e.target)) close();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') close();
+  });
 })();
 </script>
 </body>

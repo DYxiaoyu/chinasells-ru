@@ -741,7 +741,19 @@
       flex-wrap: wrap;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width:1180px){
+  .nav{width:min(100% - 28px,1180px);height:64px;padding:0;}
+  .nav-toggle{display:inline-flex;}
+  .nav-links{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:2px;
+    padding:12px 16px 20px;background:#051120;border-bottom:1px solid rgba(255,255,255,.12);
+    box-shadow:0 24px 50px rgba(3,10,20,.5);opacity:0;transform:translateY(-10px);pointer-events:none;
+    transition:opacity .22s ease,transform .22s ease;}
+  .nav-links.open{opacity:1;transform:translateY(0);pointer-events:auto;}
+  .nav-links a{width:100%;min-height:44px;padding:0 14px;font-size:14.5px;}
+  .nav-links a.nav-cta{margin:6px 0 0;justify-content:center;min-height:46px;}
+}
+
+@media (max-width: 900px) {
       html { scroll-padding-top: 84px; }
       .nav {
         width: min(100% - 28px, 1180px);
@@ -762,7 +774,7 @@
         align-items: stretch;
         gap: 2px;
         padding: 12px 16px 20px;
-        background: rgba(5, 17, 32, 0.98);
+        background: #051120;
         border-bottom: 1px solid rgba(255, 255, 255, 0.12);
         box-shadow: 0 24px 50px rgba(3, 10, 20, 0.5);
         opacity: 0;
@@ -889,7 +901,7 @@
       }
 
       .hero h1 {
-        font-size: 33px;
+        font-size: 28px;
       }
 
       .hero-actions {
@@ -902,7 +914,7 @@
       }
 
       .hero-proof {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
       }
 
       .cases-home-grid {
@@ -928,11 +940,11 @@
       }
 
       .proof-item {
-        padding: 20px;
+        padding: 12px 10px;
       }
 
       .proof-number {
-        font-size: 26px;
+        font-size: 17px;
       }
 
       .process-step {
@@ -1155,6 +1167,9 @@
   color:var(--gold-2);font-size:11.5px;font-weight:700;letter-spacing:.1px;text-decoration:none;
   transition:background .2s ease,border-color .2s ease,color .2s ease;}
 .hp-foot a:hover{background:rgba(215,168,79,.13);border-color:var(--gold);color:#fff;text-decoration:none;}
+.hp-avatar{display:none;position:absolute;top:14px;right:14px;width:84px;height:84px;border-radius:50%;
+  object-fit:cover;z-index:4;border:2px solid rgba(242,199,109,.85);
+  box-shadow:0 10px 26px rgba(3,10,20,.5),0 0 0 6px rgba(215,168,79,.07);}
 
 /* ===================== Aliya IP · detail ===================== */
 .aliya-sec{position:relative;overflow:hidden;padding:100px 0;color:#fff;
@@ -1228,9 +1243,14 @@
   border:1px solid rgba(242,199,109,.5);}
 
 @media (max-width:1080px){
-  .hero-grid{grid-template-columns:1fr;}
+  .hero-grid{grid-template-columns:1fr;grid-template-rows:none;gap:0;}
+  .hero-left{display:contents;}
+  .hero-content{grid-column:1;grid-row:1;}
+  .hero-person{grid-column:1;grid-row:2;}
+  .hero-proof{grid-column:1;grid-row:3;width:min(780px,100%);margin-top:20px;}
   .hero-person-photo,.hero-person-glow{display:none;}
-  .hero-person-card{margin-top:30px;}
+  .hero-person-card{margin-top:18px;padding:18px 112px 18px 20px;}
+  .hp-avatar{display:block;}
   .aliya-inner{grid-template-columns:1fr;gap:34px;}
   .aliya-photo{max-width:320px;}
   .aliya-name{font-size:34px;}
@@ -1238,13 +1258,27 @@
   .cat-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
 }
 @media (max-width:640px){
+  .hero{padding:84px 0 32px;}
+  .hero-proof{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:18px;}
+  .proof-item{padding:12px 10px;}
+  .proof-number{font-size:17px;}
+  .proof-label{margin-top:8px;padding-top:0;font-size:10.5px;line-height:1.4;}
+  .hero-actions{flex-direction:row;flex-wrap:wrap;gap:10px;}
+  .hero-actions .btn{width:auto;flex:1 1 0;min-width:0;padding-left:10px;padding-right:10px;font-size:13px;}
   .aliya-sec{padding:64px 0;}
   .aliya-list{grid-template-columns:1fr;gap:18px;}
   .aliya-name{font-size:29px;}
   .cat-grid{grid-template-columns:1fr;}
   .cat-more{padding:22px 20px;}
   .cat-more .btn{width:100%;}
-  .hero-person-card{margin-top:24px;}
+  .hero-person-card{margin-top:14px;padding:15px 92px 15px 16px;}
+  .hp-avatar{width:64px;height:64px;top:12px;right:12px;border-width:2px;box-shadow:0 6px 18px rgba(3,10,20,.45);}
+  .hp-kicker{font-size:9px;letter-spacing:1.5px;gap:6px;}
+  .hp-kicker::before{width:12px;}
+  .hp-name{font-size:22px;margin-top:7px;}
+  .hp-role{font-size:11px;margin-top:5px;line-height:1.45;}
+  .hp-foot{margin-top:12px;gap:6px;}
+  .hp-foot a{padding:6px 11px;font-size:10.5px;}
 }
 </style>
 
@@ -1333,6 +1367,7 @@
         <li><a href="#capability">Возможности</a></li>
         <li><a href="categories.html">Категории</a></li>
         <li><a href="#cases">Кейсы</a></li>
+        <li><a href="index.html#manager">Алия</a></li>
         <li><a href="#process">Схема работы</a></li>
         <li><a href="#contact">Контакты</a></li>
         <li><a class="nav-lang" href="https://www.hyjjls.cn/" hreflang="zh-CN" title="中文版">CN</a></li>
@@ -1355,7 +1390,6 @@
             <a class="btn btn-secondary" href="about.html">О компании</a>
           </div>
         </div>
-
         <div class="hero-proof" aria-label="Ключевые показатели">
           <div class="proof-item">
             <span class="proof-number">10+</span>
@@ -1378,6 +1412,8 @@
                  alt="Алия — заместитель генерального директора China Sells" width="380" height="548" decoding="async">
           </div>
           <div class="hero-person-card">
+            <img class="hp-avatar" src="img/aliya-avatar.webp" srcset="img/aliya-avatar.webp 1x, img/aliya-avatar@2x.webp 2x"
+                 alt="Алия" width="84" height="84" loading="lazy" decoding="async">
             <span class="hp-kicker">Личный менеджер</span>
             <strong class="hp-name">Алия</strong>
             <span class="hp-role">Заместитель генерального директора</span>

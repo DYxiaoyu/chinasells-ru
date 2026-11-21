@@ -1295,21 +1295,6 @@
   .hp-foot{margin-top:12px;gap:6px;}
   .hp-foot a{padding:6px 6px;font-size:10.5px;}
 }
-/* ===================== 深浅过渡带 ===================== */
-.seam{height:132px;position:relative;z-index:2;pointer-events:none;}
-.seam-to-dark{background:linear-gradient(180deg,rgba(9,32,60,0) 0%,rgba(9,32,60,.14) 18%,rgba(9,32,60,.4) 44%,rgba(9,32,60,.72) 70%,rgba(9,32,60,.93) 88%,#0a2240 100%);}
-.seam-to-light{background:linear-gradient(180deg,#0a2240 0%,rgba(9,32,60,.94) 26%,rgba(9,32,60,.72) 50%,rgba(9,32,60,.4) 72%,rgba(9,32,60,.15) 88%,rgba(9,32,60,0) 100%);}
-@media (max-width:900px){.seam{height:96px;}}
-/* 内部深色卡（品类汇总条）与上下浅色区的衔接 */
-.cat-more{position:relative;}
-.cat-more::before{content:"";position:absolute;left:-1px;right:-1px;bottom:100%;height:44px;
-  background:linear-gradient(180deg,rgba(9,32,60,0) 0%,rgba(9,32,60,.5) 55%,#0a2240 100%);pointer-events:none;}
-.cat-more::after{content:"";position:absolute;left:-1px;right:-1px;top:100%;height:44px;
-  background:linear-gradient(180deg,#0a2240 0%,rgba(9,32,60,.5) 45%,rgba(9,32,60,0) 100%);pointer-events:none;}
-/* 页脚深色与上方浅色区的衔接 */
-.footer{position:relative;}
-.footer::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:76px;pointer-events:none;
-  background:linear-gradient(180deg,rgba(5,13,24,0) 0%,rgba(5,13,24,.4) 38%,rgba(5,13,24,.78) 70%,#050d18 100%);}
 /* ===================== 统一排版节奏（移动端） ===================== */
 @media (max-width: 900px) {
   .hero-proof { background: rgba(6,20,38,.62); border-color: rgba(255,255,255,.14); }
@@ -1542,7 +1527,6 @@ html.motion .reveal-line.is-in { transform: scaleX(1); }
       </div>
     </section>
 
-    <div class="seam seam-to-light" aria-hidden="true"></div>
     <section class="section" id="about">
       <div class="container">
         <div class="about-home">
@@ -1839,7 +1823,6 @@ html.motion .reveal-line.is-in { transform: scaleX(1); }
         </div>
       </div>
     </section>
-<div class="seam seam-to-dark" aria-hidden="true"></div>
 <section class="aliya-sec" id="manager">
       <div class="container">
         <div class="aliya-inner">
@@ -1951,7 +1934,6 @@ html.motion .reveal-line.is-in { transform: scaleX(1); }
       </div>
     </section>
 
-    <div class="seam seam-to-light" aria-hidden="true"></div>
     <section class="section" id="contact">
       <div class="container">
         <div class="contact-band">

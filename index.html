@@ -823,7 +823,6 @@
         font-size: 16px;
       }
 
-      .hero-proof,
       .capability-grid,
       .section-head,
       .about-home,
@@ -849,12 +848,23 @@
       }
 
       .hero-proof {
-        margin-top: 46px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-top: 40px;
+      }
+
+      .proof-item {
+        padding: 18px 16px;
+      }
+
+      .proof-number {
+        font-size: 22px;
       }
 
       .proof-label {
-        margin-top: 14px;
+        margin-top: 10px;
         padding-top: 0;
+        font-size: 12.5px;
+        line-height: 1.5;
       }
 
       .capability-grid {
@@ -1250,7 +1260,7 @@
   .hero-proof{grid-column:1;grid-row:3;width:min(780px,100%);margin-top:20px;}
   .hero-person-glow{display:none;}
   .hero-person-photo{display:block;width:188px;margin-left:auto;margin-right:6px;}
-  .hero-person-photo img{filter:drop-shadow(0 14px 30px rgba(0,0,0,.42));}
+  .hero-person-photo img{filter:drop-shadow(0 14px 30px rgba(0,0,0,.42));-webkit-mask-image:linear-gradient(to bottom,#000 87%,rgba(0,0,0,0) 100%);mask-image:linear-gradient(to bottom,#000 87%,rgba(0,0,0,0) 100%);}
   .hero-person-card{margin-top:-60px;padding:20px;}
   .hero-person-card::after{display:none;}
   .hp-avatar{display:none;}
@@ -1274,8 +1284,8 @@
   .cat-grid{grid-template-columns:1fr;}
   .cat-more{padding:22px 20px;}
   .cat-more .btn{width:100%;}
-  .hero-person-photo{width:158px;margin-right:2px;}
-  .hero-person-card{margin-top:-52px;padding:16px;}
+  .hero-person-photo{position:absolute;width:104px;bottom:10px;right:8px;margin:0;z-index:4;}
+  .hero-person-card{margin-top:0;padding:16px 122px 16px 16px;min-height:186px;}
   .hp-kicker{font-size:9px;letter-spacing:1.5px;gap:6px;}
   .hp-kicker::before{width:12px;}
   .hp-name{font-size:22px;margin-top:7px;}

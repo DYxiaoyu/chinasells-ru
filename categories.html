@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Категории поставок из Китая — каталог направлений | CHINA SELLS</title>
-  <meta name="description" content="Каталог категорий закупок из Китая: одежда и обувь, домашний текстиль, товары для дома, электроника, мебель, инструмент, медтехника, упаковка, авто. Подбор фабрики, инспекция и доставка в Россию.">
-  <meta name="keywords" content="поставки из Китая, категории товаров, оптом из Китая, текстиль из Китая, электроинструмент из Китая, каталог поставок">
+  <meta name="description" content="Каталог категорий закупок из Китая: 16 направлений и 172 подкатегории — одежда, текстиль, товары для дома, электроника, мебель, инструмент, медтехника, упаковка, авто, детские товары, зоотовары, косметика, СИЗ, канцелярия, стройматериалы. Подбор фабрики, инспекция и доставка в Россию.">
+  <meta name="keywords" content="поставки из Китая, категории товаров, оптом из Китая, текстиль из Китая, электроинструмент из Китая, спецодежда из Китая, детские товары из Китая, каталог поставок">
   <link rel="canonical" href="https://chinasells.ru/categories.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Категории поставок из Китая — каталог направлений | CHINA SELLS">
-  <meta property="og:description" content="Десять направлений закупок из Китая с подбором фабрики, инспекцией партии и доставкой в Россию.">
+  <meta property="og:description" content="Шестнадцать направлений закупок из Китая с подбором фабрики, инспекцией партии и доставкой в Россию.">
   <meta property="og:url" content="https://chinasells.ru/categories.html">
   <meta property="og:image" content="https://chinasells.ru/img/cat-clothing.webp">
   <link rel="alternate" hreflang="ru" href="https://chinasells.ru/categories.html">
@@ -1298,6 +1298,37 @@
   .cat-subs{gap:6px;}
   .sub-pill{font-size:12px;padding:6px 10px;}
 }
+
+/* ===================== search ===================== */
+.cat-search{padding:30px 0 24px;background:#f3f5f9;border-bottom:1px solid #e3e7ee;}
+.cs-box{position:relative;display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #dfe4ec;border-radius:10px;padding:0 16px;height:58px;box-shadow:0 8px 22px rgba(8,20,38,.05);transition:border-color .18s,box-shadow .18s;}
+.cs-box:focus-within{border-color:var(--gold,#d7a84f);box-shadow:0 10px 28px rgba(215,168,79,.16);}
+.cs-box .cs-ico{flex:0 0 auto;width:19px;height:19px;stroke:#8b96a6;stroke-width:2;fill:none;}
+#catSearch{flex:1 1 auto;border:0;outline:0;background:transparent;font:inherit;font-size:15.5px;height:100%;color:var(--ink,#081426);}
+#catSearch::placeholder{color:#9aa4b3;}
+#catSearch::-webkit-search-cancel-button{display:none;}
+#catSearchClear{flex:0 0 auto;width:28px;height:28px;border:0;border-radius:50%;background:#edf1f6;color:#5b6678;font-size:15px;line-height:1;cursor:pointer;display:none;align-items:center;justify-content:center;}
+#catSearchClear.is-on{display:flex;}
+.cs-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 18px;margin-top:13px;}
+.cs-tags{display:flex;flex-wrap:wrap;align-items:center;gap:7px;font-size:12.5px;color:#7c8797;}
+.cs-tags button{border:1px solid #dfe4ec;background:#fff;color:#0a3563;font:inherit;font-size:12.5px;padding:5px 10px;border-radius:6px;cursor:pointer;transition:.16s;}
+.cs-tags button:hover{border-color:var(--gold,#d7a84f);color:var(--gold,#d7a84f);}
+.cs-count{font-size:13px;font-weight:700;color:var(--navy,#071f3b);display:none;}
+.cs-count.is-on{display:block;}
+.cs-empty{display:none;margin-top:16px;background:#fff;border:1px solid #e6eaf1;border-left:3px solid var(--gold,#d7a84f);border-radius:8px;padding:15px 18px;font-size:14px;color:#46536b;line-height:1.8;}
+.cs-empty.is-on{display:block;}
+.cs-empty b{color:var(--ink,#081426);}
+.cs-empty a{display:inline-block;margin-top:9px;color:var(--gold,#d7a84f);font-weight:800;text-decoration:none;}
+.cat-block.is-off{display:none;}
+.sub-pill.is-off{display:none;}
+.sub-pill.is-hit{border-color:var(--gold,#d7a84f);background:rgba(215,168,79,.12);color:#7a5c1e;font-weight:700;}
+.cat-jump.is-off{display:none;}
+@media (max-width:640px){
+  .cat-search{padding:22px 0 18px;}
+  .cs-box{height:50px;padding:0 13px;}
+  #catSearch{font-size:14px;}
+  .cs-tags{font-size:12px;}
+}
 </style>
 
 </head>
@@ -1334,13 +1365,33 @@
     </nav>
   </header>
 
-  <main>
+    <main>
     <section class="cat-hero">
       <div class="container">
         <div class="breadcrumb"><a href="index.html">Главная</a> · Категории</div>
         <h1>Категории поставок из Китая</h1>
-        <p>Десять направлений, по которым мы ведём закупки: от домашнего текстиля и одежды до электроинструмента, медтехники и автотоваров. Внутри каждого направления — десятки подкатегорий. Подбираем фабрику под конкретную позицию, проверяем партию до оплаты и доставляем на склад в России.</p>
-        <div class="cat-jump"><a href="#clothing">Одежда и обувь</a><a href="#textile">Домашний текстиль и ткани</a><a href="#home">Товары для дома</a><a href="#electronics">Электроника и бытовая техника</a><a href="#furniture">Мебель и фурнитура</a><a href="#sport">Спорт, фитнес и реабилитация</a><a href="#tools">Инструмент и оборудование</a><a href="#medical">Медицина и уход</a><a href="#packaging">Упаковка и расходники</a><a href="#auto">Авто и мото</a></div>
+        <p>16 направлений и 172 подкатегории — от домашнего текстиля и одежды до спецодежды, детских товаров и стройматериалов. Подбираем фабрику под конкретную позицию, проверяем партию до оплаты и доставляем на склад в России.</p>
+        <div class="cat-jump"><a href="#clothing">Одежда и обувь</a><a href="#textile">Домашний текстиль и ткани</a><a href="#home">Товары для дома</a><a href="#electronics">Электроника и бытовая техника</a><a href="#furniture">Мебель и фурнитура</a><a href="#sport">Спорт, фитнес и реабилитация</a><a href="#tools">Инструмент и оборудование</a><a href="#medical">Медицина и уход</a><a href="#packaging">Упаковка и расходники</a><a href="#auto">Авто и мото</a><a href="#kids">Детские товары и товары для мам</a><a href="#pets">Товары для животных</a><a href="#beauty">Косметика и личная гигиена</a><a href="#ppe">Спецодежда и СИЗ</a><a href="#office">Офис и канцелярия</a><a href="#building">Стройматериалы и отделка</a></div>
+      </div>
+    </section>
+
+    <section class="cat-search">
+      <div class="container">
+        <div class="cs-box">
+          <svg class="cs-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+          <input id="catSearch" type="search" autocomplete="off" spellcheck="false"
+                 placeholder="Что нужно закупить? Например: постельное бельё, дрель, коляска…"
+                 aria-label="Поиск по категориям и товарам">
+          <button id="catSearchClear" type="button" aria-label="Очистить">✕</button>
+        </div>
+        <div class="cs-row">
+          <div class="cs-tags"><span>Часто ищут:</span><button type="button" data-q="постельное бельё">постельное бельё</button><button type="button" data-q="электроинструмент">электроинструмент</button><button type="button" data-q="коляска">коляска</button><button type="button" data-q="спецодежда">спецодежда</button><button type="button" data-q="плитка">плитка</button><button type="button" data-q="корм для кошек">корм для кошек</button></div>
+          <div id="catSearchCount" class="cs-count"></div>
+        </div>
+        <div id="catEmpty" class="cs-empty">
+          <b>По этому запросу ничего не нашлось.</b> Каталог не ограничивает ассортимент — берём и другие позиции под запрос. Опишите товар, объём и требования, подберём фабрику.
+          <a href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Отправить запрос →</a>
+        </div>
       </div>
     </section>
 
@@ -1357,12 +1408,11 @@
           <div class="cat-body">
             <h2>Одежда и обувь</h2>
             <p>Женская, мужская и детская одежда, спортивные линейки, обувь и бельё. Работаем как с готовыми моделями фабрик, так и с OEM-производством под вашим брендом — с подбором тканей и фурнитуры.</p>
-            <div class="cat-subs"><span class="sub-pill">Женская одежда</span><span class="sub-pill">Мужская одежда</span><span class="sub-pill">Детская одежда</span><span class="sub-pill">Спортивная одежда</span><span class="sub-pill">Обувь</span><span class="sub-pill">Нижнее бельё и носки</span><span class="sub-pill">Аксессуары</span></div>
+            <div class="cat-subs"><span class="sub-pill" data-k="women clothing платье блузка юбка">Женская одежда</span><span class="sub-pill" data-k="men clothing рубашка брюки костюм">Мужская одежда</span><span class="sub-pill" data-k="kids clothing комбинезон">Детская одежда</span><span class="sub-pill" data-k="sportswear спортивный костюм леггинсы">Спортивная одежда</span><span class="sub-pill" data-k="outerwear пальто плащ">Верхняя одежда</span><span class="sub-pill" data-k="footwear shoes кроссовки ботинки туфли сапоги">Обувь</span><span class="sub-pill" data-k="underwear socks трусы бюстгальтер носки">Нижнее бельё и носки</span><span class="sub-pill" data-k="loungewear homewear пижама халат">Домашняя одежда</span><span class="sub-pill" data-k="knitwear свитер кардиган футболка">Трикотаж</span><span class="sub-pill" data-k="denim jeans джинсы">Джинсовая одежда</span><span class="sub-pill" data-k="jackets puffer down куртка пуховик">Куртки и пуховики</span><span class="sub-pill" data-k="hats caps шапка кепка">Головные уборы</span><span class="sub-pill" data-k="accessories belts bags коврик чехол">Аксессуары</span></div>
             <a class="cat-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Запросить цену и образцы →</a>
           </div>
         </div>
       </div>
-
       <div class="cat-block" id="textile">
         <div class="cat-row is-reverse">
           <div class="cat-thumb">
@@ -1373,12 +1423,11 @@
           <div class="cat-body">
             <h2>Домашний текстиль и ткани</h2>
             <p>Прямая работа с ткацкими фабриками Наньтуна: постельное бельё, полотенца, пледы, подушки и шторы. Кастомизация рисунка, размера и упаковки — от пробной партии до регулярных поставок.</p>
-            <div class="cat-subs"><span class="sub-pill">Постельное бельё</span><span class="sub-pill">Полотенца</span><span class="sub-pill">Пледы и одеяла</span><span class="sub-pill">Подушки</span><span class="sub-pill">Шторы и тюль</span><span class="sub-pill">Ткани и материалы</span><span class="sub-pill">Кухонный текстиль</span></div>
+            <div class="cat-subs"><span class="sub-pill" data-k="bedding bed linen простыня наволочка пододеяльник">Постельное бельё</span><span class="sub-pill" data-k="towels полотенце">Полотенца</span><span class="sub-pill" data-k="blankets throws плед одеяло">Пледы и одеяла</span><span class="sub-pill" data-k="pillows подушка">Подушки</span><span class="sub-pill" data-k="mattresses матрас">Матрасы</span><span class="sub-pill" data-k="curtains tulle штора жалюзи">Шторы и тюль</span><span class="sub-pill" data-k="table linen скатерть">Скатерти и салфетки</span><span class="sub-pill" data-k="kitchen textile прихватка фартук">Кухонный текстиль</span><span class="sub-pill" data-k="fabrics rolls ткань">Ткани и материалы</span><span class="sub-pill" data-k="carpets rugs ковер">Ковры</span><span class="sub-pill" data-k="bedspreads покрывало">Покрывала</span><span class="sub-pill" data-k="textile trims accessories молния пуговицы">Фурнитура для текстиля</span></div>
             <a class="cat-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Запросить цену и образцы →</a>
           </div>
         </div>
       </div>
-
       <div class="cat-block" id="home">
         <div class="cat-row">
           <div class="cat-thumb">
@@ -1389,12 +1438,11 @@
           <div class="cat-body">
             <h2>Товары для дома</h2>
             <p>Посуда, кухонные принадлежности, системы хранения, товары для уборки и декора. Керамика, стекло, силикон, дерево и бамбук — с проверкой на пищевой контакт и соответствие нормам.</p>
-            <div class="cat-subs"><span class="sub-pill">Посуда</span><span class="sub-pill">Кухонные принадлежности</span><span class="sub-pill">Хранение и органайзеры</span><span class="sub-pill">Уборка и бытовая химия</span><span class="sub-pill">Декор и текстиль для дома</span><span class="sub-pill">Товары для ванной</span></div>
+            <div class="cat-subs"><span class="sub-pill" data-k="tableware dishes чашка тарелка кастрюля">Посуда</span><span class="sub-pill" data-k="kitchenware utensils нож терка лопатка">Кухонные принадлежности</span><span class="sub-pill" data-k="storage organizers контейнер коробка">Хранение и органайзеры</span><span class="sub-pill" data-k="cleaning household chemicals швабра средство">Уборка и бытовая химия</span><span class="sub-pill" data-k="home decor ваза свеча">Декор и текстиль для дома</span><span class="sub-pill" data-k="bathroom accessories полка крючок">Товары для ванной</span><span class="sub-pill" data-k="shelves racks стеллаж полка">Стеллажи и полки</span><span class="sub-pill" data-k="mirrors зеркало">Зеркала</span><span class="sub-pill" data-k="bins buckets мусорка ведро">Мусорные баки и вёдра</span><span class="sub-pill" data-k="laundry supplies корзина">Товары для стирки</span><span class="sub-pill" data-k="home fragrance diffusers диффузор">Ароматы для дома</span><span class="sub-pill" data-k="garden supplies горшок лейка">Садовые товары</span></div>
             <a class="cat-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Запросить цену и образцы →</a>
           </div>
         </div>
       </div>
-
       <div class="cat-block" id="electronics">
         <div class="cat-row is-reverse">
           <div class="cat-thumb">
@@ -1405,12 +1453,11 @@
           <div class="cat-body">
             <h2>Электроника и бытовая техника</h2>
             <p>Мелкая бытовая техника, аудио, освещение, умные устройства и аксессуары. Проверяем сборку и тесты на фабрике, комплектуем документы и сертификаты под рынок России.</p>
-            <div class="cat-subs"><span class="sub-pill">Бытовая техника</span><span class="sub-pill">Мелкая техника</span><span class="sub-pill">Аудио и наушники</span><span class="sub-pill">Освещение и лампы</span><span class="sub-pill">Умные устройства</span><span class="sub-pill">Аксессуары и зарядки</span></div>
+            <div class="cat-subs"><span class="sub-pill" data-k="home appliances холодильник стиральная">Бытовая техника</span><span class="sub-pill" data-k="small appliances блендер чайник микроволновка">Мелкая техника</span><span class="sub-pill" data-k="audio headphones колонка наушники">Аудио и наушники</span><span class="sub-pill" data-k="lighting lamps лампа люстра">Освещение и лампы</span><span class="sub-pill" data-k="smart home devices датчик камера">Умные устройства</span><span class="sub-pill" data-k="chargers accessories зарядка">Аксессуары и зарядки</span><span class="sub-pill" data-k="cables adapters кабель адаптер">Кабели и адаптеры</span><span class="sub-pill" data-k="computer peripherals мышь клавиатура">Компьютерная периферия</span><span class="sub-pill" data-k="tv monitors телевизор монитор">Телевизоры и мониторы</span><span class="sub-pill" data-k="smartwatch trackers часы фитнес-браслет">Смарт-часы и трекеры</span><span class="sub-pill" data-k="power banks supply павербанк аккумулятор">Источники питания</span><span class="sub-pill" data-k="kitchen electronics мультиварка">Электроника для кухни</span></div>
             <a class="cat-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Запросить цену и образцы →</a>
           </div>
         </div>
       </div>
-
       <div class="cat-block" id="furniture">
         <div class="cat-row">
           <div class="cat-thumb">
@@ -1421,12 +1468,11 @@
           <div class="cat-body">
             <h2>Мебель и фурнитура</h2>
             <p>Корпусная и мягкая мебель, офисные линейки, комплектующие и фурнитура. Контроль конструкции, покрытия и механизмов, независимая инспекция перед отгрузкой.</p>
-            <div class="cat-subs"><span class="sub-pill">Корпусная мебель</span><span class="sub-pill">Мягкая мебель</span><span class="sub-pill">Офисная мебель</span><span class="sub-pill">Комплектующие</span><span class="sub-pill">Мебельная фурнитура</span><span class="sub-pill">Дверная фурнитура</span></div>
+            <div class="cat-subs"><span class="sub-pill" data-k="cabinet furniture шкаф комод">Корпусная мебель</span><span class="sub-pill" data-k="sofa upholstered диван кресло">Мягкая мебель</span><span class="sub-pill" data-k="office furniture офисный стол">Офисная мебель</span><span class="sub-pill" data-k="kitchen furniture гарнитур">Мебель для кухни</span><span class="sub-pill" data-k="garden furniture садовый">Садовая мебель</span><span class="sub-pill" data-k="tables chairs стол стул">Столы и стулья</span><span class="sub-pill" data-k="furniture parts детали">Комплектующие</span><span class="sub-pill" data-k="furniture hardware петля направляющие">Мебельная фурнитура</span><span class="sub-pill" data-k="door hardware замок ручка">Дверная фурнитура</span><span class="sub-pill" data-k="shelving cabinets стеллаж">Стеллажи и шкафы</span><span class="sub-pill" data-k="mirror glass зеркало">Зеркала и стекло</span></div>
             <a class="cat-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Запросить цену и образцы →</a>
           </div>
         </div>
       </div>
-
       <div class="cat-block" id="sport">
         <div class="cat-row is-reverse">
           <div class="cat-thumb">
@@ -1437,12 +1483,11 @@
           <div class="cat-body">
             <h2>Спорт, фитнес и реабилитация</h2>
             <p>Тренажёры, фитнес-аксессуары, туристическое снаряжение и оборудование для восстановления. Подбираем фабрику под конкретный вид нагрузки и требования к материалам.</p>
-            <div class="cat-subs"><span class="sub-pill">Тренажёры</span><span class="sub-pill">Фитнес-аксессуары</span><span class="sub-pill">Туризм и кемпинг</span><span class="sub-pill">Реабилитация</span><span class="sub-pill">Спортивные аксессуары</span></div>
+            <div class="cat-subs"><span class="sub-pill" data-k="gym equipment trainers тренажер беговая дорожка">Тренажёры</span><span class="sub-pill" data-k="fitness accessories гантели коврик">Фитнес-аксессуары</span><span class="sub-pill" data-k="camping outdoor палатка спальник">Туризм и кемпинг</span><span class="sub-pill" data-k="rehab recovery ходунки">Реабилитация</span><span class="sub-pill" data-k="sports accessories мяч">Спортивные аксессуары</span><span class="sub-pill" data-k="bikes scooters велосипед самокат">Велосипеды и самокаты</span><span class="sub-pill" data-k="yoga pilates mats коврик">Йога и пилатес</span><span class="sub-pill" data-k="martial arts boxing груша перчатки">Единоборства</span><span class="sub-pill" data-k="winter sports ski лыжи сноуборд">Зимний спорт</span><span class="sub-pill" data-k="swimming pool очки шапочка">Плавание</span><span class="sub-pill" data-k="camp cookware котелок">Туристическая посуда</span></div>
             <a class="cat-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Запросить цену и образцы →</a>
           </div>
         </div>
       </div>
-
       <div class="cat-block" id="tools">
         <div class="cat-row">
           <div class="cat-thumb">
@@ -1453,12 +1498,11 @@
           <div class="cat-body">
             <h2>Инструмент и оборудование</h2>
             <p>Электроинструмент, ручной инструмент, оснастка и расходники, станки. Приоритетное направление — работаем с производителями уровня Dongcheng, проверяем партию до оплаты.</p>
-            <div class="cat-subs"><span class="sub-pill">Электроинструмент</span><span class="sub-pill">Ручной инструмент</span><span class="sub-pill">Оснастка и расходники</span><span class="sub-pill">Станки и оборудование</span><span class="sub-pill">Сварочное оборудование</span><span class="sub-pill">Измерительный инструмент</span></div>
+            <div class="cat-subs"><span class="sub-pill" data-k="power tools drill дрель шуруповерт перфоратор болгарка">Электроинструмент</span><span class="sub-pill" data-k="hand tools wrench отвертка ключ молоток">Ручной инструмент</span><span class="sub-pill" data-k="tooling consumables сверло диск">Оснастка и расходники</span><span class="sub-pill" data-k="machinery machine станок">Станки и оборудование</span><span class="sub-pill" data-k="welding сварка инвертор">Сварочное оборудование</span><span class="sub-pill" data-k="measuring tools рулетка уровень">Измерительный инструмент</span><span class="sub-pill" data-k="garden tools газонокосилка триммер">Садовая техника</span><span class="sub-pill" data-k="compressors pumps компрессор насос">Компрессоры и насосы</span><span class="sub-pill" data-k="generators генератор">Генераторы</span><span class="sub-pill" data-k="cleaning equipment пылесос">Клининговое оборудование</span><span class="sub-pill" data-k="fasteners screws саморез болт гайка">Крепёж</span></div>
             <a class="cat-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Запросить цену и образцы →</a>
           </div>
         </div>
       </div>
-
       <div class="cat-block" id="medical">
         <div class="cat-row is-reverse">
           <div class="cat-thumb">
@@ -1469,12 +1513,11 @@
           <div class="cat-body">
             <h2>Медицина и уход</h2>
             <p>Медтехника для дома, реабилитационное оборудование, товары ухода и расходные материалы. Проверяем комплектацию, документы и соответствие требованиям для ввоза.</p>
-            <div class="cat-subs"><span class="sub-pill">Медтехника для дома</span><span class="sub-pill">Реабилитация</span><span class="sub-pill">Уход и гигиена</span><span class="sub-pill">Расходные материалы</span><span class="sub-pill">Диагностика</span></div>
+            <div class="cat-subs"><span class="sub-pill" data-k="home medical devices тонометр глюкометр">Медтехника для дома</span><span class="sub-pill" data-k="rehab equipment ходунки">Реабилитация</span><span class="sub-pill" data-k="care hygiene">Уход и гигиена</span><span class="sub-pill" data-k="medical consumables шприц">Расходные материалы</span><span class="sub-pill" data-k="diagnostics monitor термометр">Диагностика</span><span class="sub-pill" data-k="orthopedics braces бандаж корсет">Ортопедия</span><span class="sub-pill" data-k="medical furniture кушетка">Медмебель</span><span class="sub-pill" data-k="lab equipment">Лабораторное оборудование</span><span class="sub-pill" data-k="dressings bandage бинт пластырь">Перевязочные материалы</span><span class="sub-pill" data-k="disinfection antiseptic антисептик">Дезинфекция</span></div>
             <a class="cat-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Запросить цену и образцы →</a>
           </div>
         </div>
       </div>
-
       <div class="cat-block" id="packaging">
         <div class="cat-row">
           <div class="cat-thumb">
@@ -1485,12 +1528,11 @@
           <div class="cat-body">
             <h2>Упаковка и расходники</h2>
             <p>Картонная тара, гибкая упаковка, стрейч-плёнка, скотч и одноразовая посуда. Помогаем с брендированной упаковкой под ваш логотип и требования маркетплейсов.</p>
-            <div class="cat-subs"><span class="sub-pill">Картонная тара</span><span class="sub-pill">Гибкая упаковка</span><span class="sub-pill">Стрейч и скотч</span><span class="sub-pill">Одноразовая посуда</span><span class="sub-pill">Брендированная упаковка</span></div>
+            <div class="cat-subs"><span class="sub-pill" data-k="cardboard boxes коробка гофрокороб">Картонная тара</span><span class="sub-pill" data-k="flexible packaging pouches пакет дойпак">Гибкая упаковка</span><span class="sub-pill" data-k="stretch film tape стрейч скотч">Стрейч и скотч</span><span class="sub-pill" data-k="disposable tableware стакан вилка">Одноразовая посуда</span><span class="sub-pill" data-k="branded packaging">Брендированная упаковка</span><span class="sub-pill" data-k="bags shoppers пакет">Пакеты и сумки</span><span class="sub-pill" data-k="bubble wrap">Пузырчатая плёнка</span><span class="sub-pill" data-k="labels stickers этикетка">Этикетки и стикеры</span><span class="sub-pill" data-k="trays containers лоток">Лотки и контейнеры</span><span class="sub-pill" data-k="packing machines">Упаковочные машины</span></div>
             <a class="cat-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Запросить цену и образцы →</a>
           </div>
         </div>
       </div>
-
       <div class="cat-block" id="auto">
         <div class="cat-row is-reverse">
           <div class="cat-thumb">
@@ -1501,7 +1543,97 @@
           <div class="cat-body">
             <h2>Авто и мото</h2>
             <p>Аксессуары, тюнинг, расходники, электроника и инструмент для СТО. Подбираем позиции под конкретные марки и модели, контролируем совместимость и комплектацию.</p>
-            <div class="cat-subs"><span class="sub-pill">Аксессуары</span><span class="sub-pill">Тюнинг</span><span class="sub-pill">Расходники</span><span class="sub-pill">Электроника для авто</span><span class="sub-pill">Инструмент для СТО</span></div>
+            <div class="cat-subs"><span class="sub-pill" data-k="car accessories коврик чехол">Аксессуары</span><span class="sub-pill" data-k="tuning">Тюнинг</span><span class="sub-pill" data-k="car consumables filters фильтр масло">Расходники</span><span class="sub-pill" data-k="car electronics dashcam регистратор">Электроника для авто</span><span class="sub-pill" data-k="garage tools домкрат">Инструмент для СТО</span><span class="sub-pill" data-k="car chemicals">Автохимия</span><span class="sub-pill" data-k="tires wheels rims шина диск">Шины и диски</span><span class="sub-pill" data-k="spare parts">Запчасти</span><span class="sub-pill" data-k="moto gear helmet шлем">Мотоэкипировка</span><span class="sub-pill" data-k="ev charger">Зарядные станции для EV</span></div>
+            <a class="cat-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Запросить цену и образцы →</a>
+          </div>
+        </div>
+      </div>
+      <div class="cat-block" id="kids">
+        <div class="cat-row">
+          <div class="cat-thumb">
+            <img src="img/cat-kids.webp" srcset="img/cat-kids.webp 1x, img/cat-kids@2x.webp 2x"
+                 alt="Детские товары и товары для мам — поставки из Китая" width="760" height="506" loading="lazy" decoding="async">
+            <span class="cat-index">11</span>
+          </div>
+          <div class="cat-body">
+            <h2>Детские товары и товары для мам</h2>
+            <p>Коляски, автокресла, детская мебель, питание и игрушки, товары для мам. Проверяем сертификаты соответствия и материалы, с которыми ребёнок контактирует напрямую — для этой категории это обязательное условие.</p>
+            <div class="cat-subs"><span class="sub-pill" data-k="strollers car seats коляска автокресло">Коляски и автокресла</span><span class="sub-pill" data-k="kids furniture кроватка стульчик">Детская мебель</span><span class="sub-pill" data-k="feeding bottles бутылочка соска">Питание и бутылочки</span><span class="sub-pill" data-k="toys blocks игрушка конструктор">Игрушки и конструкторы</span><span class="sub-pill" data-k="diapers hygiene подгузники">Подгузники и гигиена</span><span class="sub-pill" data-k="maternity">Товары для беременных</span><span class="sub-pill" data-k="educational sets">Развивающие наборы</span><span class="sub-pill" data-k="school supplies рюкзак пенал">Школьные товары</span><span class="sub-pill" data-k="kids textile">Детский текстиль</span><span class="sub-pill" data-k="baby monitors радионяня">Радионяни и мониторы</span></div>
+            <a class="cat-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Запросить цену и образцы →</a>
+          </div>
+        </div>
+      </div>
+      <div class="cat-block" id="pets">
+        <div class="cat-row is-reverse">
+          <div class="cat-thumb">
+            <img src="img/cat-pets.webp" srcset="img/cat-pets.webp 1x, img/cat-pets@2x.webp 2x"
+                 alt="Товары для животных — поставки из Китая" width="760" height="506" loading="lazy" decoding="async">
+            <span class="cat-index">12</span>
+          </div>
+          <div class="cat-body">
+            <h2>Товары для животных</h2>
+            <p>Корма, аксессуары для собак и кошек, лежаки, переноски и средства ухода. Работаем с фабриками, у которых есть собственные линейки и опыт упаковки под требования маркетплейсов.</p>
+            <div class="cat-subs"><span class="sub-pill" data-k="pet food treats корм">Корма и лакомства</span><span class="sub-pill" data-k="dog accessories поводок ошейник">Аксессуары для собак</span><span class="sub-pill" data-k="cat accessories когтеточка">Аксессуары для кошек</span><span class="sub-pill" data-k="pet beds houses лежанка">Лежаки и домики</span><span class="sub-pill" data-k="pet carriers переноска">Переноски</span><span class="sub-pill" data-k="pet toys">Игрушки для животных</span><span class="sub-pill" data-k="grooming brush щетка">Уход и груминг</span><span class="sub-pill" data-k="cat litter наполнитель">Наполнители</span><span class="sub-pill" data-k="pet cages клетка">Вольеры и клетки</span><span class="sub-pill" data-k="pet bowls feeders миска поилка">Миски и поилки</span></div>
+            <a class="cat-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Запросить цену и образцы →</a>
+          </div>
+        </div>
+      </div>
+      <div class="cat-block" id="beauty">
+        <div class="cat-row">
+          <div class="cat-thumb">
+            <img src="img/cat-beauty.webp" srcset="img/cat-beauty.webp 1x, img/cat-beauty@2x.webp 2x"
+                 alt="Косметика и личная гигиена — поставки из Китая" width="760" height="506" loading="lazy" decoding="async">
+            <span class="cat-index">13</span>
+          </div>
+          <div class="cat-body">
+            <h2>Косметика и личная гигиена</h2>
+            <p>Уход за лицом и телом, декоративная косметика, средства для волос и инструменты. Подбираем производителя под формулу и упаковку, помогаем с документами и регистрацией для ввоза.</p>
+            <div class="cat-subs"><span class="sub-pill" data-k="face care skincare крем сыворотка">Уход за лицом</span><span class="sub-pill" data-k="body care lotion лосьон скраб">Уход за телом</span><span class="sub-pill" data-k="makeup cosmetics тени тушь помада">Декоративная косметика</span><span class="sub-pill" data-k="hair care shampoo шампунь">Средства для волос</span><span class="sub-pill" data-k="nail care">Маникюр и педикюр</span><span class="sub-pill" data-k="perfume fragrance духи">Парфюмерия</span><span class="sub-pill" data-k="beauty tools brushes кисть спонж">Косметические инструменты</span><span class="sub-pill" data-k="cosmetic packaging флакон">Упаковка для косметики</span><span class="sub-pill" data-k="hygiene products">Средства гигиены</span><span class="sub-pill" data-k="masks patches">Маски и патчи</span></div>
+            <a class="cat-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Запросить цену и образцы →</a>
+          </div>
+        </div>
+      </div>
+      <div class="cat-block" id="ppe">
+        <div class="cat-row is-reverse">
+          <div class="cat-thumb">
+            <img src="img/cat-ppe.webp" srcset="img/cat-ppe.webp 1x, img/cat-ppe@2x.webp 2x"
+                 alt="Спецодежда и СИЗ — поставки из Китая" width="760" height="506" loading="lazy" decoding="async">
+            <span class="cat-index">14</span>
+          </div>
+          <div class="cat-body">
+            <h2>Спецодежда и СИЗ</h2>
+            <p>Спецодежда, защита головы, глаз, рук, ног и дыхания. Для этой категории обязательны сертификаты и маркировка по ТР ТС — проверяем их до оплаты партии.</p>
+            <div class="cat-subs"><span class="sub-pill" data-k="workwear uniform спецовка комбинезон">Спецодежда</span><span class="sub-pill" data-k="helmets head protection каска">Защита головы</span><span class="sub-pill" data-k="goggles face shield очки щиток">Защита глаз и лица</span><span class="sub-pill" data-k="gloves hand protection перчатки">Защита рук</span><span class="sub-pill" data-k="safety boots сапоги">Защита ног</span><span class="sub-pill" data-k="respirator mask респиратор маска">Дыхательная защита</span><span class="sub-pill" data-k="ear protection наушники">Защита слуха</span><span class="sub-pill" data-k="fall protection harness страховка">Средства от падения</span><span class="sub-pill" data-k="hi-vis vests жилет">Сигнальные жилеты</span><span class="sub-pill" data-k="first aid kits аптечка">Аптечки</span></div>
+            <a class="cat-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Запросить цену и образцы →</a>
+          </div>
+        </div>
+      </div>
+      <div class="cat-block" id="office">
+        <div class="cat-row">
+          <div class="cat-thumb">
+            <img src="img/cat-office.webp" srcset="img/cat-office.webp 1x, img/cat-office@2x.webp 2x"
+                 alt="Офис и канцелярия — поставки из Китая" width="760" height="506" loading="lazy" decoding="async">
+            <span class="cat-index">15</span>
+          </div>
+          <div class="cat-body">
+            <h2>Офис и канцелярия</h2>
+            <p>Бумага, письменные принадлежности, папки, офисная техника и организация рабочего места. Хорошо работает как дополнение к основной поставке — консолидируем в один контейнер.</p>
+            <div class="cat-subs"><span class="sub-pill" data-k="paper notebooks блокнот бумага">Бумага и блокноты</span><span class="sub-pill" data-k="pens pencils ручка карандаш">Ручки и карандаши</span><span class="sub-pill" data-k="folders archive папка">Папки и архивы</span><span class="sub-pill" data-k="office supplies степлер клей">Офисные принадлежности</span><span class="sub-pill" data-k="shredders laminators шредер ламинатор">Шредеры и ламинаторы</span><span class="sub-pill" data-k="boards flipcharts доска">Доски и флипчарты</span><span class="sub-pill" data-k="desk organizers органайзер">Органайзеры для стола</span><span class="sub-pill" data-k="stamps seals печать">Штемпели и печати</span><span class="sub-pill" data-k="stationery sets">Канцелярские наборы</span><span class="sub-pill" data-k="printing paper бумага">Бумага для печати</span></div>
+            <a class="cat-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Запросить цену и образцы →</a>
+          </div>
+        </div>
+      </div>
+      <div class="cat-block" id="building">
+        <div class="cat-row is-reverse">
+          <div class="cat-thumb">
+            <img src="img/cat-building.webp" srcset="img/cat-building.webp 1x, img/cat-building@2x.webp 2x"
+                 alt="Стройматериалы и отделка — поставки из Китая" width="760" height="506" loading="lazy" decoding="async">
+            <span class="cat-index">16</span>
+          </div>
+          <div class="cat-body">
+            <h2>Стройматериалы и отделка</h2>
+            <p>Плитка и керамогранит, напольные покрытия, краски, сантехника и электрика. Возим образцы до заказа, проверяем партию на бой и геометрию, считаем объём под контейнер.</p>
+            <div class="cat-subs"><span class="sub-pill" data-k="tiles porcelain плитка керамогранит">Плитка и керамогранит</span><span class="sub-pill" data-k="flooring">Напольные покрытия</span><span class="sub-pill" data-k="laminate parquet ламинат паркет">Ламинат и паркет</span><span class="sub-pill" data-k="wallpaper обои">Обои</span><span class="sub-pill" data-k="paints varnishes краска лак">Краски и лаки</span><span class="sub-pill" data-k="plumbing sanitary смеситель раковина">Сантехника</span><span class="sub-pill" data-k="electrical cable кабель розетка">Электрика и кабель</span><span class="sub-pill" data-k="fasteners metal">Крепёж и метизы</span><span class="sub-pill" data-k="doors windows дверь окно">Двери и окна</span><span class="sub-pill" data-k="waterproofing гидроизоляция">Гидроизоляция</span></div>
             <a class="cat-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Запросить цену и образцы →</a>
           </div>
         </div>
@@ -1522,6 +1654,7 @@
     </section>
   </main>
 
+
 <footer class="footer">
     <div class="footer-inner">
       <span>© 2026 Huiying Jujin (Jiangsu) International Trade Co., Ltd. Все права защищены.</span>
@@ -1529,5 +1662,88 @@
     </div>
   </footer>
 
+
+<script>
+(function(){
+  var input = document.getElementById('catSearch');
+  if(!input) return;
+  var clearBtn = document.getElementById('catSearchClear');
+  var countEl  = document.getElementById('catSearchCount');
+  var emptyEl  = document.getElementById('catEmpty');
+  var jump     = document.querySelector('.cat-jump');
+  var bar      = document.querySelector('.cat-search');
+  var blocks   = Array.prototype.slice.call(document.querySelectorAll('.cat-block'));
+
+  function norm(s){
+    return (s||'').toLowerCase().replace(/ё/g,'е').replace(/[^\u0430-\u044f\u04d1a-z0-9\s\-]/g,' ')
+           .replace(/\s+/g,' ').trim();
+  }
+
+  function stem(w){
+    var e = ['ами','ями','ого','его','ому','ему','ыми','ими','ов','ев','ей','ой','ий','ый','ая','ое','ые','ых','ам','ям','ах','ях','а','я','ы','и','е','о','у','ю','ь'];
+    for(var i=0;i<e.length;i++){
+      if(w.length > e[i].length + 3 && w.slice(w.length - e[i].length) === e[i]) return w.slice(0, w.length - e[i].length);
+    }
+    return w;
+  }
+
+  function reset(){
+    blocks.forEach(function(b){
+      b.classList.remove('is-off');
+      var ps = b.querySelectorAll('.sub-pill');
+      for(var i=0;i<ps.length;i++){ ps[i].classList.remove('is-off','is-hit'); }
+    });
+    if(jump) jump.classList.remove('is-off');
+    countEl.textContent=''; countEl.classList.remove('is-on');
+    emptyEl.classList.remove('is-on');
+    clearBtn.classList.remove('is-on');
+  }
+
+  function run(){
+    var v = norm(input.value);
+    if(!v){ reset(); return; }
+    var vs = v.length >= 5 ? stem(v) : '';
+    clearBtn.classList.add('is-on');
+    if(jump) jump.classList.add('is-off');
+    var nb = 0, np = 0;
+    blocks.forEach(function(b){
+      var t = norm(b.querySelector('h2').textContent);
+      var hitTitle = t.indexOf(v) > -1 || (vs && t.indexOf(vs) > -1);
+      var local = 0;
+      var ps = b.querySelectorAll('.sub-pill');
+      for(var i=0;i<ps.length;i++){
+        var p = ps[i];
+        var txt = norm(p.textContent) + ' ' + norm(p.getAttribute('data-k'));
+        var hit = hitTitle || txt.indexOf(v) > -1 || (vs && txt.indexOf(vs) > -1);
+        p.classList.toggle('is-off', !hit);
+        p.classList.toggle('is-hit', hit && !hitTitle);
+        if(hit) local++;
+      }
+      var show = local > 0;
+      b.classList.toggle('is-off', !show);
+      if(show){ nb++; np += local; }
+    });
+    countEl.classList.add('is-on');
+    countEl.textContent = 'Найдено ' + np + ' позиц. в ' + nb + ' категориях';
+    emptyEl.classList.toggle('is-on', nb === 0);
+  }
+
+  input.addEventListener('input', run);
+  input.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){ input.value=''; reset(); }
+  });
+  clearBtn.addEventListener('click', function(){ input.value=''; reset(); input.focus(); });
+
+  var tags = document.querySelectorAll('.cs-tags button');
+  for(var k=0;k<tags.length;k++){
+    tags[k].addEventListener('click', function(){
+      input.value = this.getAttribute('data-q');
+      run();
+      input.focus();
+      if(bar) window.scrollTo({ top: bar.offsetTop - 76, behavior: 'smooth' });
+    });
+  }
+})();
+</script>
 </body>
 </html>

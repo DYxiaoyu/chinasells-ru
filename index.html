@@ -1248,9 +1248,12 @@
   .hero-content{grid-column:1;grid-row:1;}
   .hero-person{grid-column:1;grid-row:2;}
   .hero-proof{grid-column:1;grid-row:3;width:min(780px,100%);margin-top:20px;}
-  .hero-person-photo,.hero-person-glow{display:none;}
-  .hero-person-card{margin-top:18px;padding:18px 112px 18px 20px;}
-  .hp-avatar{display:block;}
+  .hero-person-glow{display:none;}
+  .hero-person-photo{display:block;width:188px;margin-left:auto;margin-right:6px;}
+  .hero-person-photo img{filter:drop-shadow(0 14px 30px rgba(0,0,0,.42));}
+  .hero-person-card{margin-top:-60px;padding:20px;}
+  .hero-person-card::after{display:none;}
+  .hp-avatar{display:none;}
   .aliya-inner{grid-template-columns:1fr;gap:34px;}
   .aliya-photo{max-width:320px;}
   .aliya-name{font-size:34px;}
@@ -1271,8 +1274,8 @@
   .cat-grid{grid-template-columns:1fr;}
   .cat-more{padding:22px 20px;}
   .cat-more .btn{width:100%;}
-  .hero-person-card{margin-top:14px;padding:15px 92px 15px 16px;}
-  .hp-avatar{width:64px;height:64px;top:12px;right:12px;border-width:2px;box-shadow:0 6px 18px rgba(3,10,20,.45);}
+  .hero-person-photo{width:158px;margin-right:2px;}
+  .hero-person-card{margin-top:-52px;padding:16px;}
   .hp-kicker{font-size:9px;letter-spacing:1.5px;gap:6px;}
   .hp-kicker::before{width:12px;}
   .hp-name{font-size:22px;margin-top:7px;}
@@ -1419,6 +1422,7 @@
             <span class="hp-role">Заместитель генерального директора</span>
             <div class="hp-foot">
               <a href="mailto:aliya@chinasells.ru">aliya@chinasells.ru</a>
+              <a href="https://wa.me/8619895947232" target="_blank" rel="noopener noreferrer">WhatsApp</a>
               <a href="https://t.me/aliyachinabiz" target="_blank" rel="noopener noreferrer">Telegram</a>
             </div>
           </div>

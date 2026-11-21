@@ -1189,6 +1189,17 @@
 .cat-card p{margin:0;flex:1;color:var(--muted);font-size:11.5px;line-height:1.7;}
 .cat-arrow{margin-top:12px;color:#c9d3e0;font-size:13px;transition:color .2s ease,transform .2s ease;}
 .cat-card:hover .cat-arrow{color:var(--gold);transform:translateX(3px);}
+.cat-omitted{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;
+  margin-top:1px;padding:20px 24px;background:#fff;border:1px dashed #ccd5e2;border-top:0;}
+.cat-omitted-plus{flex:0 0 auto;display:grid;place-items:center;width:34px;height:34px;
+  border-radius:50%;border:1px solid rgba(215,168,79,.55);color:var(--gold);font-size:19px;font-weight:700;line-height:1;}
+.cat-omitted > div{flex:1 1 300px;min-width:0;}
+.cat-omitted p{margin:0;color:var(--ink);font-size:13.5px;line-height:1.7;}
+.cat-omitted p strong{font-weight:800;}
+.cat-omitted .cat-omitted-note{display:block;margin-top:5px;color:var(--muted);font-size:12px;line-height:1.7;}
+.cat-omitted-link{flex:0 0 auto;color:var(--navy);font-size:12.5px;font-weight:700;text-decoration:none;
+  border-bottom:1px solid rgba(215,168,79,.55);padding-bottom:2px;transition:color .2s ease,border-color .2s ease;}
+.cat-omitted-link:hover{color:var(--gold);border-color:var(--gold);}
 .cat-more{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px;
   margin-top:36px;padding:26px 32px;border:1px solid rgba(255,255,255,.1);
   background:linear-gradient(120deg,#071f3b,#0b315c);box-shadow:var(--shadow);}
@@ -1472,7 +1483,7 @@
         </div>
 
         <div class="party-note">
-          <strong>Договор с российским юрлицом</strong>: OOO «SILK TEKS» и OOO «DREAMPOINT» — принимаем оплату в рублях, размещаем товар на локальном складе и доставляем по России.
+          <strong>Работаем через российское юрлицо</strong>: принимаем оплату в рублях, размещаем товар на локальном складе и доставляем по России. Реквизиты стороны договора и полный пакет документов передаём до подписания.
         </div>
       </div>
     </section>
@@ -1484,7 +1495,7 @@
             <div class="section-kicker">Категории продукции</div>
             <h2 class="section-title">Что мы закупаем и поставляем</h2>
           </div>
-          <p class="section-copy">Работаем по десяти основным направлениям — от домашнего текстиля до электроинструмента и медтехники. Внутри каждого направления десятки подкатегорий: подбираем фабрику под конкретную позицию, а не «что есть на складе». Список не является ограничением.</p>
+          <p class="section-copy">Работаем по всем направлениям, которые нужны вашему бизнесу — от домашнего текстиля до инструмента, медтехники и стройматериалов. Внутри каждого направления десятки подкатегорий: подбираем фабрику под конкретную позицию, а не «что есть на складе». Ниже — основные направления, но перечень не ограничивает ассортимент.</p>
         </div>
 
         <div class="cat-grid">
@@ -1579,10 +1590,19 @@
           </a>
         </div>
 
+        <div class="cat-omitted">
+          <span class="cat-omitted-plus" aria-hidden="true">+</span>
+          <div>
+            <p><strong>И это не весь список.</strong> Детские товары и товары для мам, зоотовары, косметика и личная гигиена, спецодежда и СИЗ, офис и канцелярия, стройматериалы и отделка — тоже в работе.</p>
+            <span class="cat-omitted-note">Нет вашей позиции в перечне? Опишите товар и объём — подберём фабрику под запрос, даже если направления здесь нет.</span>
+          </div>
+          <a class="cat-omitted-link" href="categories.html">Все направления →</a>
+        </div>
+
         <div class="cat-more">
           <div>
             <p>16 категорий · 172 подкатегории</p>
-            <span>Не нашли нужную позицию? Подробный каталог направлений — на отдельной странице. Берём в работу и другие товары под запрос.</span>
+            <span>Полный каталог — 16 направлений и 172 подкатегории. Подбираем фабрику под конкретную позицию, а не «что есть на складе».</span>
           </div>
           <a class="btn btn-primary" href="categories.html">Смотреть все категории</a>
         </div>

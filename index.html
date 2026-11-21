@@ -1254,12 +1254,14 @@
   .hero-grid{grid-template-columns:1fr;grid-template-rows:none;gap:0;}
   .hero-left{display:contents;}
   .hero-content{grid-column:1;grid-row:1;}
-  .hero-person{grid-column:1;grid-row:2;}
-  .hero-proof{grid-column:1;grid-row:3;width:min(780px,100%);margin-top:20px;}
+  .hero{padding-top:104px;padding-bottom:44px;}
+  .hero-content{grid-column:1;grid-row:1;}
+  .hero-person{grid-column:1;grid-row:2;position:relative;margin-top:18px;}
+  .hero-proof{grid-column:1;grid-row:3;width:min(780px,100%);margin-top:16px;}
   .hero-person-glow{display:none;}
-  .hero-person-photo{display:block;width:188px;margin-left:auto;margin-right:6px;}
-  .hero-person-photo img{filter:drop-shadow(0 14px 30px rgba(0,0,0,.42));}
-  .hero-person-card{margin-top:-60px;padding:20px;}
+  .hero-person-photo{position:absolute;width:168px;right:8px;bottom:8px;margin:0;z-index:4;}
+  .hero-person-photo img{filter:drop-shadow(0 12px 26px rgba(0,0,0,.4));}
+  .hero-person-card{margin-top:0;padding:18px 190px 18px 18px;min-height:222px;}
   .hero-person-card::after{display:none;}
   .hp-avatar{display:none;}
   .aliya-inner{grid-template-columns:1fr;gap:34px;}

@@ -1135,11 +1135,14 @@
   background:radial-gradient(circle,rgba(215,168,79,.30),rgba(215,168,79,0) 68%);pointer-events:none;z-index:1;}
 .hero-person-photo{position:relative;z-index:2;width:min(318px,100%);margin-left:auto;}
 .hero-person-photo img{display:block;width:100%;height:auto;filter:drop-shadow(0 24px 44px rgba(0,0,0,.45));}
-.hero-person-card{position:relative;z-index:3;margin-top:-96px;padding:17px 18px 19px;
+.hero-person-card{position:relative;z-index:3;margin-top:-84px;padding:17px 18px 19px;
   border:1px solid rgba(255,255,255,.14);border-left:2px solid var(--gold);
   background:linear-gradient(140deg,rgba(6,22,42,.93),rgba(7,31,59,.76));
   -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
   box-shadow:0 18px 44px rgba(3,10,20,.45);}
+.hero-person-card::before{content:"";position:absolute;left:-2px;right:-2px;bottom:100%;height:56px;
+  background:linear-gradient(to top,rgba(7,31,59,.82),rgba(7,31,59,.34) 45%,rgba(7,31,59,0));
+  pointer-events:none;}
 .hp-kicker{display:block;color:var(--gold-2);font-size:10.5px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;}
 .hp-name{display:block;margin-top:6px;font-size:26px;line-height:1.1;font-weight:800;letter-spacing:-.4px;color:#fff;}
 .hp-role{display:block;margin-top:5px;color:rgba(255,255,255,.82);font-size:12px;line-height:1.5;}
@@ -1191,15 +1194,20 @@
 .cat-card:hover .cat-arrow{color:var(--gold);transform:translateX(3px);}
 .cat-omitted{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;
   margin-top:1px;padding:20px 24px;background:#fff;border:1px dashed #ccd5e2;border-top:0;}
-.cat-omitted-plus{flex:0 0 auto;display:grid;place-items:center;width:34px;height:34px;
-  border-radius:50%;border:1px solid rgba(215,168,79,.55);color:var(--gold);font-size:19px;font-weight:700;line-height:1;}
+.cat-omitted-plus{flex:0 0 auto;display:grid;place-items:center;width:40px;height:40px;
+  border-radius:50%;border:1px solid rgba(215,168,79,.55);background:rgba(215,168,79,.07);color:var(--gold);}
+.cat-omitted-plus svg{width:21px;height:21px;stroke:currentColor;stroke-width:1.6;fill:none;}
 .cat-omitted > div{flex:1 1 300px;min-width:0;}
 .cat-omitted p{margin:0;color:var(--ink);font-size:13.5px;line-height:1.7;}
 .cat-omitted p strong{font-weight:800;}
 .cat-omitted .cat-omitted-note{display:block;margin-top:5px;color:var(--muted);font-size:12px;line-height:1.7;}
-.cat-omitted-link{flex:0 0 auto;color:var(--navy);font-size:12.5px;font-weight:700;text-decoration:none;
-  border-bottom:1px solid rgba(215,168,79,.55);padding-bottom:2px;transition:color .2s ease,border-color .2s ease;}
-.cat-omitted-link:hover{color:var(--gold);border-color:var(--gold);}
+.cat-omitted-link{flex:0 0 auto;display:inline-flex;align-items:center;gap:9px;
+  background:linear-gradient(135deg,#0b315c,#071f3b);color:#fff;font-size:14px;font-weight:800;
+  padding:13px 22px;text-decoration:none;border:1px solid rgba(215,168,79,.4);
+  box-shadow:0 10px 24px rgba(6,22,42,.18);transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease;}
+.cat-omitted-link::after{content:"→";font-weight:700;color:var(--gold-2);transition:transform .2s ease;}
+.cat-omitted-link:hover{border-color:var(--gold);box-shadow:0 14px 30px rgba(6,22,42,.26);transform:translateY(-1px);}
+.cat-omitted-link:hover::after{transform:translateX(3px);}
 .cat-more{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px;
   margin-top:36px;padding:26px 32px;border:1px solid rgba(255,255,255,.1);
   background:linear-gradient(120deg,#071f3b,#0b315c);box-shadow:var(--shadow);}
@@ -1591,12 +1599,12 @@
         </div>
 
         <div class="cat-omitted">
-          <span class="cat-omitted-plus" aria-hidden="true">+</span>
+          <span class="cat-omitted-plus" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7.5" height="7.5" rx="1.6"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.6"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.6"/><path d="M17.25 13.6v7.3M13.6 17.25h7.3"/></svg></span>
           <div>
             <p><strong>И это не весь список.</strong> Детские товары и товары для мам, зоотовары, косметика и личная гигиена, спецодежда и СИЗ, офис и канцелярия, стройматериалы и отделка — тоже в работе.</p>
             <span class="cat-omitted-note">Нет вашей позиции в перечне? Опишите товар и объём — подберём фабрику под запрос, даже если направления здесь нет.</span>
           </div>
-          <a class="cat-omitted-link" href="categories.html">Все направления →</a>
+          <a class="cat-omitted-link" href="categories.html">Все направления</a>
         </div>
 
         <div class="cat-more">

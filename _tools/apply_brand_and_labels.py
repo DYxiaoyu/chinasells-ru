@@ -9,7 +9,7 @@ MARKER = 'brand-contact-20261123'
 
 CSS = """
 .brand-mark{object-fit:contain;filter:drop-shadow(0 1px 3px rgba(0,0,0,.22))}
-.hero-person-card .hp-label{color:rgba(255,255,255,.48);font-size:8px;line-height:1;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.hero-person-card .hp-label{color:rgba(255,255,255,.56);font-size:8px;line-height:1;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
 .hero-person-card .hp-label::after{content:":";margin-right:4px}
 .hero-person-card .hp-foot a:hover .hp-label{color:rgba(255,255,255,.78)}
 """
@@ -61,3 +61,4 @@ for name in PAGES:
 
     path.write_text(text, encoding='utf-8')
     print(name, 'ok')
+

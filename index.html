@@ -3,1483 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>China Sells — поставки из Китая под ключ | Партнёр для бизнеса</title>
-  <meta name="description" content="China Sells — подбор производителей в Китае, инспекция фабрик и образцов, контракты, сертификация, логистика и таможня. Поставки для оптовых и корпоративных покупателей из России.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='6'%20fill='%23071f3b'/%3E%3Cpath%20d='M16%206%20L26%2016%20L16%2026%20L6%2016%20Z'%20fill='%23d7a84f'/%3E%3C/svg%3E">
-  <style>
-    :root {
-      --ink: #081426;
-      --navy: #071f3b;
-      --navy-2: #0b315c;
-      --blue: #14508f;
-      --gold: #d7a84f;
-      --gold-2: #f2c76d;
-      --paper: #f6f8fb;
-      --line: #dfe6ef;
-      --muted: #66758a;
-      --white: #ffffff;
-      --shadow: 0 24px 70px rgba(6, 24, 45, 0.12);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 90px;
-    }
-
-    body {
-      min-width: 320px;
-      color: var(--ink);
-      background: var(--paper);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .site-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 20;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-      background: rgba(5, 17, 32, 0.88);
-      backdrop-filter: blur(18px);
-    }
-
-    .nav {
-      width: min(1180px, calc(100% - 40px));
-      height: 72px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 28px;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      color: var(--white);
-      font-weight: 700;
-      letter-spacing: 0;
-      white-space: nowrap;
-    }
-
-    .brand-mark {
-      width: 38px;
-      height: 38px;
-      flex: 0 0 auto;
-      display: block;
-    }
-
-    .brand strong {
-      display: block;
-      font-size: 18px;
-      letter-spacing: 0.5px;
-    }
-
-    .brand strong em {
-      font-style: normal;
-      color: var(--gold-2);
-    }
-
-    .brand small {
-      display: block;
-      color: rgba(255, 255, 255, 0.58);
-      font-size: 10.5px;
-      font-weight: 500;
-      letter-spacing: 0.4px;
-      text-transform: uppercase;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      display: inline-flex;
-      align-items: center;
-      min-height: 38px;
-      padding: 0 14px;
-      border-radius: 4px;
-      color: rgba(255, 255, 255, 0.74);
-      font-size: 14px;
-      transition: color 0.2s ease, background 0.2s ease;
-      white-space: nowrap;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--white);
-      background: rgba(255, 255, 255, 0.1);
-    }
-
-    .nav-links a.nav-cta {
-      margin-left: 10px;
-      padding: 0 18px;
-      color: #fff;
-      font-weight: 600;
-      border-radius: 4px;
-      background: linear-gradient(120deg, #B45309 0%, #D97706 100%);
-      box-shadow: 0 2px 10px rgba(217, 119, 6, 0.35);
-      transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
-    }
-
-    .nav-links a.nav-cta:hover,
-    .nav-links a.nav-cta.active {
-      color: #fff;
-      background: linear-gradient(120deg, #B45309 0%, #D97706 100%);
-      filter: brightness(1.08);
-      box-shadow: 0 4px 14px rgba(217, 119, 6, 0.45);
-      transform: translateY(-1px);
-    }
-
-    .nav-toggle {
-      display: none;
-      align-items: center;
-      justify-content: center;
-      width: 44px;
-      height: 44px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 6px;
-      background: rgba(255, 255, 255, 0.06);
-      color: var(--gold-2);
-      cursor: pointer;
-    }
-
-    .nav-toggle .icon-close {
-      display: none;
-    }
-
-    .nav-toggle.open .icon-menu {
-      display: none;
-    }
-
-    .nav-toggle.open .icon-close {
-      display: block;
-    }
-
-    .hero {
-      min-height: 760px;
-      padding: 148px 0 104px;
-      color: var(--white);
-      background:
-        linear-gradient(90deg, rgba(5, 15, 30, 0.96) 0%, rgba(7, 31, 59, 0.84) 40%, rgba(7, 31, 59, 0.24) 70%, rgba(7, 31, 59, 0.1) 100%),
-        linear-gradient(180deg, rgba(5, 15, 30, 0.18), rgba(5, 15, 30, 0.72)),
-        url("img/ru-hero.webp") right bottom / cover no-repeat;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 72px;
-      background: linear-gradient(180deg, rgba(246, 248, 251, 0), var(--paper));
-      pointer-events: none;
-    }
-
-    .container {
-      width: min(1180px, calc(100% - 40px));
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-content {
-      width: min(720px, 100%);
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 26px;
-      color: var(--gold-2);
-      font-size: 13.5px;
-      font-weight: 700;
-      letter-spacing: 0.6px;
-      text-transform: uppercase;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 42px;
-      height: 1px;
-      background: var(--gold-2);
-      flex: 0 0 auto;
-    }
-
-    .hero h1 {
-      max-width: 700px;
-      font-size: 56px;
-      line-height: 1.1;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-    }
-
-    .hero h1 span {
-      color: var(--gold-2);
-    }
-
-    .hero-lead {
-      max-width: 620px;
-      margin-top: 24px;
-      color: rgba(255, 255, 255, 0.78);
-      font-size: 18px;
-      line-height: 1.85;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 14px;
-      margin-top: 40px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 0 24px;
-      border-radius: 4px;
-      font-size: 15px;
-      font-weight: 700;
-      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-    }
-
-    .btn-primary {
-      background: var(--gold);
-      color: #121821;
-      box-shadow: 0 16px 38px rgba(215, 168, 79, 0.24);
-    }
-
-    .btn-secondary {
-      border: 1px solid rgba(255, 255, 255, 0.32);
-      color: var(--white);
-      background: rgba(255, 255, 255, 0.06);
-    }
-
-    .hero-proof {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      width: min(780px, 100%);
-      margin-top: 72px;
-      background: rgba(255, 255, 255, 0.16);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-    }
-
-    .proof-item {
-      display: flex;
-      flex-direction: column;
-      padding: 26px 24px;
-      background: rgba(6, 22, 42, 0.74);
-    }
-
-    .proof-number {
-      display: block;
-      color: var(--gold-2);
-      font-size: 30px;
-      line-height: 1.12;
-      font-weight: 800;
-      letter-spacing: -0.3px;
-    }
-
-    .proof-label {
-      margin-top: auto;
-      padding-top: 16px;
-      display: block;
-      color: rgba(255, 255, 255, 0.68);
-      font-size: 13px;
-      line-height: 1.5;
-    }
-
-    .section {
-      padding: 96px 0;
-      background: var(--paper);
-    }
-
-    .section-white {
-      background: var(--white);
-    }
-
-    .section-dark {
-      color: var(--white);
-      background:
-        linear-gradient(135deg, rgba(7, 31, 59, 0.97), rgba(8, 20, 38, 0.98)),
-        url("img/ru-hero.webp") center bottom / cover no-repeat;
-    }
-
-    .section-head {
-      display: grid;
-      grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.65fr);
-      align-items: end;
-      gap: 48px;
-      margin-bottom: 44px;
-    }
-
-    .section-kicker {
-      color: var(--gold);
-      font-size: 12.5px;
-      font-weight: 800;
-      letter-spacing: 0.8px;
-      text-transform: uppercase;
-    }
-
-    .section-title {
-      margin-top: 10px;
-      color: var(--ink);
-      font-size: 35px;
-      line-height: 1.2;
-      font-weight: 800;
-      letter-spacing: -0.4px;
-    }
-
-    .section-dark .section-title,
-    .section-dark .section-copy {
-      color: var(--white);
-    }
-
-    .section-copy {
-      color: var(--muted);
-      font-size: 15.5px;
-      line-height: 1.9;
-    }
-
-    .capability-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      border-top: 1px solid var(--line);
-      border-left: 1px solid var(--line);
-      background: var(--white);
-      box-shadow: var(--shadow);
-    }
-
-    .capability-card {
-      min-height: 264px;
-      padding: 32px 28px;
-      border-right: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      background: var(--white);
-    }
-
-    .capability-icon {
-      width: 44px;
-      height: 44px;
-      margin-bottom: 32px;
-      color: var(--gold);
-    }
-
-    .capability-icon svg,
-    .icon svg {
-      width: 100%;
-      height: 100%;
-    }
-
-    .capability-card h3 {
-      color: var(--ink);
-      font-size: 18.5px;
-      margin-bottom: 14px;
-    }
-
-    .capability-card p {
-      color: var(--muted);
-      font-size: 13.5px;
-      line-height: 1.85;
-    }
-
-    .process-layout {
-      display: grid;
-      grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1fr);
-      gap: 56px;
-      align-items: start;
-    }
-
-    .supplier-panel {
-      padding: 34px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.13);
-    }
-
-    .supplier-panel h3 {
-      color: var(--gold-2);
-      font-size: 21px;
-      margin-bottom: 22px;
-    }
-
-    .supplier-row {
-      padding: 20px 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
-    }
-
-    .supplier-row strong {
-      display: block;
-      color: var(--white);
-      font-size: 16px;
-      margin-bottom: 6px;
-    }
-
-    .supplier-row span {
-      color: rgba(255, 255, 255, 0.68);
-      font-size: 13.5px;
-      line-height: 1.8;
-    }
-
-    .process-list {
-      display: grid;
-      gap: 1px;
-      background: rgba(255, 255, 255, 0.13);
-      border: 1px solid rgba(255, 255, 255, 0.13);
-    }
-
-    .process-step {
-      display: grid;
-      grid-template-columns: 76px 1fr;
-      min-height: 104px;
-      background: rgba(5, 17, 32, 0.62);
-    }
-
-    .process-num {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-right: 1px solid rgba(255, 255, 255, 0.13);
-      color: var(--gold-2);
-      font-size: 21px;
-      font-weight: 800;
-    }
-
-    .process-text {
-      padding: 24px 28px;
-      color: rgba(255, 255, 255, 0.82);
-      font-size: 15px;
-      line-height: 1.7;
-    }
-
-    .contact-band {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 360px;
-      gap: 46px;
-      align-items: stretch;
-      padding: 54px;
-      background: var(--navy);
-      color: var(--white);
-      box-shadow: var(--shadow);
-    }
-
-    .contact-band .section-kicker {
-      color: var(--gold-2);
-    }
-
-    .contact-band h2 {
-      margin-top: 10px;
-      font-size: 32px;
-      line-height: 1.22;
-      margin-bottom: 18px;
-    }
-
-    .contact-band p {
-      max-width: 620px;
-      color: rgba(255, 255, 255, 0.68);
-      font-size: 15.5px;
-      line-height: 1.9;
-    }
-
-    .contact-list {
-      display: grid;
-      gap: 1px;
-      background: rgba(255, 255, 255, 0.14);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      align-content: start;
-    }
-
-    .contact-item {
-      padding: 18px 20px;
-      background: rgba(255, 255, 255, 0.06);
-    }
-
-    .contact-label {
-      display: block;
-      color: var(--gold-2);
-      font-size: 11.5px;
-      font-weight: 800;
-      letter-spacing: 0.8px;
-      margin-bottom: 5px;
-      text-transform: uppercase;
-    }
-
-    .contact-value {
-      display: block;
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 14px;
-      line-height: 1.65;
-      word-break: break-word;
-    }
-
-    .contact-value a:hover {
-      color: var(--gold-2);
-    }
-
-    .about-home {
-      display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
-      gap: 56px;
-      align-items: start;
-    }
-
-    .about-home-text .section-title {
-      margin-bottom: 22px;
-    }
-
-    .about-home-text p {
-      margin-bottom: 16px;
-    }
-
-    .text-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 12px;
-      color: var(--gold);
-      font-size: 14.5px;
-      font-weight: 700;
-    }
-
-    .text-link::after {
-      content: "→";
-    }
-
-    .about-metrics {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1px;
-      background: var(--line);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-    }
-
-    .about-metric {
-      padding: 26px 24px;
-      background: var(--white);
-    }
-
-    .about-metric strong {
-      display: block;
-      color: var(--gold);
-      font-size: 27px;
-      font-weight: 800;
-      line-height: 1.05;
-    }
-
-    .about-metric span {
-      display: block;
-      margin-top: 10px;
-      color: var(--muted);
-      font-size: 12.5px;
-      line-height: 1.6;
-    }
-
-    .cases-home-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 18px;
-    }
-
-    .case-mini {
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      background: var(--white);
-      border: 1px solid var(--line);
-      box-shadow: 0 14px 40px rgba(6, 24, 45, 0.08);
-    }
-
-    .case-mini img {
-      display: block;
-      width: 100%;
-      height: 128px;
-      object-fit: cover;
-    }
-
-    .case-mini-body {
-      display: flex;
-      flex: 1;
-      flex-direction: column;
-      padding: 18px 16px 20px;
-    }
-
-    .case-mini h3 {
-      margin-bottom: 6px;
-      color: var(--ink);
-      font-size: 15.5px;
-    }
-
-    .case-mini-tag {
-      margin-bottom: 10px;
-      color: var(--gold);
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .case-mini p {
-      color: var(--muted);
-      font-size: 12.5px;
-      line-height: 1.75;
-    }
-
-    .cases-more {
-      margin-top: 40px;
-      text-align: center;
-    }
-
-    .offer-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid var(--line);
-      border-left: 1px solid var(--line);
-      background: var(--white);
-      box-shadow: var(--shadow);
-    }
-
-    .offer-card {
-      padding: 26px 26px 28px;
-      border-right: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      background: var(--white);
-    }
-
-    .offer-icon {
-      width: 38px;
-      height: 38px;
-      margin-bottom: 18px;
-      color: var(--gold);
-    }
-
-    .offer-icon svg {
-      width: 100%;
-      height: 100%;
-    }
-
-    .offer-card h3 {
-      margin-bottom: 8px;
-      color: var(--ink);
-      font-size: 16.5px;
-    }
-
-    .offer-card p {
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.75;
-    }
-
-    .offer-card-wide {
-      grid-column: 1 / -1;
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      padding: 24px 28px;
-      border-right: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      background: var(--white);
-    }
-
-    .offer-card-wide .offer-icon {
-      flex-shrink: 0;
-      margin-bottom: 0;
-    }
-
-    .offer-card-wide h3 {
-      margin-bottom: 6px;
-    }
-
-    .offer-card-wide p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.75;
-    }
-
-    .footer {
-      padding: 16px 0;
-      background: #050d18;
-      color: rgba(255, 255, 255, 0.52);
-      font-size: 12px;
-      line-height: 1.7;
-    }
-
-    .footer-inner {
-      width: min(1180px, calc(100% - 40px));
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width:1180px){
-  .nav{width:min(100% - 28px,1180px);height:64px;padding:0;}
-  .nav-toggle{display:inline-flex;}
-  .nav-links{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:2px;
-    padding:12px 16px 20px;background:#051120;border-bottom:1px solid rgba(255,255,255,.12);
-    box-shadow:0 24px 50px rgba(3,10,20,.5);opacity:0;transform:translateY(-10px);pointer-events:none;
-    transition:opacity .22s ease,transform .22s ease;}
-  .nav-links.open{opacity:1;transform:translateY(0);pointer-events:auto;}
-  .nav-links a{width:100%;min-height:44px;padding:0 14px;font-size:14.5px;}
-  .nav-links a.nav-cta{margin:6px 0 0;justify-content:center;min-height:46px;}
-}
-
-@media (max-width: 900px) {
-      html { scroll-padding-top: 84px; }
-      .nav {
-        width: min(100% - 28px, 1180px);
-        height: 64px;
-        padding: 0;
-      }
-
-      .nav-toggle {
-        display: inline-flex;
-      }
-
-      .nav-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 2px;
-        padding: 12px 16px 20px;
-        background: #051120;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-        box-shadow: 0 24px 50px rgba(3, 10, 20, 0.5);
-        opacity: 0;
-        transform: translateY(-10px);
-        pointer-events: none;
-        transition: opacity 0.22s ease, transform 0.22s ease;
-      }
-
-      .nav-links.open {
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: auto;
-      }
-
-      .nav-links a {
-        width: 100%;
-        min-height: 46px;
-        padding: 0 14px;
-        font-size: 15px;
-      }
-
-      .nav-links a.nav-cta {
-        margin: 6px 0 0;
-        justify-content: center;
-        min-height: 48px;
-      }
-
-      .hero {
-        min-height: auto;
-        padding: 104px 0 56px;
-        background:
-          linear-gradient(180deg, rgba(5, 15, 30, 0.96) 0%, rgba(7, 31, 59, 0.84) 56%, rgba(7, 31, 59, 0.62) 100%),
-          url("img/ru-hero.webp") 68% bottom / cover no-repeat;
-      }
-
-      .container {
-        width: min(100% - 28px, 1180px);
-      }
-
-      .hero h1 {
-        font-size: 40px;
-        letter-spacing: -0.3px;
-      }
-
-      .hero-lead {
-        font-size: 16px;
-      }
-
-      .capability-grid,
-      .section-head,
-      .about-home,
-      .process-layout,
-      .contact-band {
-        grid-template-columns: 1fr;
-      }
-
-      .cases-home-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .offer-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .case-mini:last-child {
-        grid-column: 1 / -1;
-      }
-
-      .case-mini:last-child img {
-        height: 170px;
-      }
-
-      .hero-proof {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        margin-top: 40px;
-      }
-
-      .proof-item {
-        padding: 18px 16px;
-      }
-
-      .proof-number {
-        font-size: 22px;
-      }
-
-      .proof-label {
-        margin-top: 10px;
-        padding-top: 0;
-        font-size: 12.5px;
-        line-height: 1.5;
-      }
-
-      .capability-grid {
-        border-left: none;
-        grid-template-columns: 1fr;
-      }
-
-      .capability-card {
-        border-left: 1px solid var(--line);
-      }
-
-      .section {
-        padding: 68px 0;
-      }
-
-      .section-title {
-        font-size: 31px;
-      }
-
-      .capability-card {
-        min-height: auto;
-      }
-
-      .contact-band {
-        padding: 34px 24px;
-      }
-
-      .contact-band h2 {
-        font-size: 28px;
-      }
-    }
-
-    @media (max-width: 560px) {
-      .brand strong {
-        font-size: 15px;
-      }
-
-      .brand small {
-        display: none;
-      }
-
-      .nav-links {
-        padding: 10px 14px 18px;
-      }
-
-      .hero h1 {
-        font-size: 28px;
-      }
-
-      .hero-actions {
-        align-items: stretch;
-        flex-direction: column;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .hero-proof {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-
-      .cases-home-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .offer-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .offer-card-wide {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 14px;
-      }
-
-      .case-mini:last-child {
-        grid-column: auto;
-      }
-
-      .case-mini:last-child img {
-        height: 128px;
-      }
-
-      .proof-item {
-        padding: 12px 10px;
-      }
-
-      .proof-number {
-        font-size: 17px;
-      }
-
-      .process-step {
-        grid-template-columns: 58px 1fr;
-      }
-
-      .process-text {
-        padding: 18px;
-        font-size: 14px;
-      }
-
-      .contact-band h2 {
-        font-size: 26px;
-      }
-
-      .about-metric strong {
-        font-size: 22px;
-      }
-    }
-  
-    /* ==== 优化：返回顶部 ==== */
-    .to-top {
-      position: fixed;
-      right: 24px;
-      bottom: 24px;
-      z-index: 60;
-      width: 46px;
-      height: 46px;
-      border: 0;
-      border-radius: 50%;
-      background: var(--navy);
-      color: var(--gold-2);
-      font-size: 16px;
-      font-weight: 800;
-      cursor: pointer;
-      box-shadow: 0 10px 26px rgba(6, 24, 45, 0.28);
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(10px);
-      transition: opacity .25s ease, transform .25s ease, visibility .25s;
-    }
-
-    .to-top.show {
-      opacity: 1;
-      visibility: visible;
-      transform: none;
-    }
-
-    .to-top:hover {
-      background: var(--blue);
-    }
-
-    @media (max-width: 560px) {
-      .to-top {
-        right: 16px;
-        bottom: 16px;
-        width: 42px;
-        height: 42px;
-      }
-    }
-  
-    /* ==== Обновление: стили новых блоков ==== */
-    .cred-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px;
-      margin-top: 34px;
-    }
-
-    .cred-card {
-      padding: 26px 24px 28px;
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-top: 3px solid var(--gold);
-      box-shadow: 0 12px 34px rgba(6, 24, 45, 0.06);
-    }
-
-    .cred-card h3 {
-      margin-bottom: 10px;
-      color: var(--ink);
-      font-size: 17px;
-      line-height: 1.45;
-    }
-
-    .cred-card p {
-      color: var(--muted);
-      font-size: 13.5px;
-      line-height: 1.8;
-    }
-
-    .party-note {
-      margin-top: 20px;
-      padding: 16px 20px;
-      background: rgba(215, 168, 79, 0.08);
-      border-left: 3px solid var(--gold);
-      color: var(--muted);
-      font-size: 13.5px;
-      line-height: 1.8;
-    }
-
-    .party-note strong {
-      color: var(--ink);
-    }
-
-    .social-strip {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 22px;
-    }
-
-    .social-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      padding: 11px 18px;
-      border: 1px solid var(--line);
-      background: var(--white);
-      color: var(--ink);
-      font-size: 13.5px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: border-color .2s, color .2s, transform .2s;
-    }
-
-    .social-link:hover {
-      border-color: var(--gold);
-      color: var(--blue);
-      transform: translateY(-2px);
-    }
-
-    .social-link svg {
-      width: 15px;
-      height: 15px;
-      color: var(--gold);
-    }
-
-    .social-note {
-      margin-top: 14px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .value-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
-      margin-top: 36px;
-    }
-
-    .value-card {
-      padding: 30px 26px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-    }
-
-    .value-card h3 {
-      margin-bottom: 12px;
-      color: var(--gold-2);
-      font-size: 18px;
-    }
-
-    .value-card p {
-      color: rgba(255, 255, 255, 0.78);
-      font-size: 14px;
-      line-height: 1.85;
-    }
-
-    @media (max-width: 900px) {
-      .cred-grid,
-      .value-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  
-    /* ==== 语言切换 ==== */
-    .nav-links a.nav-lang {
-      margin-left: 8px;
-      min-height: 30px;
-      padding: 0 12px;
-      border: 1px solid rgba(255, 255, 255, 0.28);
-      border-radius: 999px;
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.8px;
-    }
-
-    .nav-links a.nav-lang:hover,
-    .nav-links a.nav-lang.active {
-      color: var(--gold-2);
-      border-color: var(--gold);
-      background: rgba(215, 168, 79, 0.14);
-    }
-  /* ===================== Aliya IP · hero ===================== */
-.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:26px;align-items:center;}
-.hero-left{min-width:0;}
-.hero-person{position:relative;align-self:end;}
-.hero-person-glow{position:absolute;right:-60px;bottom:-20px;width:330px;height:330px;border-radius:50%;
-  background:radial-gradient(circle,rgba(215,168,79,.30),rgba(215,168,79,0) 68%);pointer-events:none;z-index:1;}
-.hero-person-photo{position:relative;z-index:2;width:min(318px,100%);margin-left:auto;}
-.hero-person-photo img{display:block;width:100%;height:auto;filter:drop-shadow(0 24px 44px rgba(0,0,0,.45));}
-.hero-person-card{position:relative;z-index:3;margin-top:-84px;padding:20px 22px 22px;border-radius:16px;
-  border:1px solid rgba(255,255,255,.07);
-  background:linear-gradient(155deg,rgba(6,22,42,.7) 0%,rgba(7,31,59,.9) 58%,rgba(6,22,42,.95) 100%);
-  -webkit-backdrop-filter:blur(14px) saturate(125%);backdrop-filter:blur(14px) saturate(125%);
-  box-shadow:0 26px 60px rgba(3,10,20,.5),inset 0 1px 0 rgba(255,255,255,.07);}
-.hero-person-card::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;border-radius:16px 16px 0 0;
-  background:linear-gradient(90deg,rgba(215,168,79,0),rgba(215,168,79,.8) 18%,rgba(242,199,109,.95) 52%,rgba(215,168,79,0));}
-.hp-kicker{display:flex;align-items:center;gap:8px;color:var(--gold-2);font-size:10px;font-weight:800;letter-spacing:2.1px;text-transform:uppercase;}
-.hp-kicker::before{content:"";width:16px;height:1.5px;background:linear-gradient(90deg,var(--gold),rgba(215,168,79,0));}
-.hp-name{display:block;margin-top:9px;font-size:27px;line-height:1.05;font-weight:800;letter-spacing:-.6px;color:#fff;}
-.hp-role{display:block;margin-top:7px;color:rgba(255,255,255,.72);font-size:12px;line-height:1.55;letter-spacing:.2px;}
-.hp-foot{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:17px;}
-.hp-foot a{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:7px 10px;border-radius:999px;white-space:nowrap;
-  background:rgba(255,255,255,.055);border:1px solid rgba(215,168,79,.26);
-  color:var(--gold-2);font-size:11px;font-weight:700;letter-spacing:.1px;text-decoration:none;
-  transition:background .2s ease,border-color .2s ease,color .2s ease;}
-.hp-foot a:first-child{grid-column:1 / -1;}
-.hp-foot a:hover{background:rgba(215,168,79,.13);border-color:var(--gold);color:#fff;text-decoration:none;}
-.hp-avatar{display:none;position:absolute;top:14px;right:14px;width:84px;height:84px;border-radius:50%;
-  object-fit:cover;z-index:4;border:2px solid rgba(242,199,109,.85);
-  box-shadow:0 10px 26px rgba(3,10,20,.5),0 0 0 6px rgba(215,168,79,.07);}
-
-/* ===================== Aliya IP · detail ===================== */
-.aliya-sec{position:relative;overflow:hidden;padding:100px 0;color:#fff;
-  background:radial-gradient(1100px 480px at 80% 8%,rgba(215,168,79,.16),rgba(215,168,79,0) 62%),
-             linear-gradient(155deg,#061a33 0%,#050f1e 55%,#07223f 100%);}
-.aliya-inner{display:grid;grid-template-columns:360px minmax(0,1fr);gap:64px;align-items:center;}
-.aliya-photo{position:relative;}
-.aliya-ring{position:absolute;z-index:1;left:52%;top:44%;width:400px;height:400px;margin:-200px 0 0 -200px;
-  border-radius:50%;border:1px solid rgba(215,168,79,.26);}
-.aliya-ring-2{width:500px;height:500px;margin:-250px 0 0 -250px;border-color:rgba(215,168,79,.13);}
-.aliya-photo img{position:relative;z-index:2;display:block;width:100%;height:auto;
-  filter:drop-shadow(0 30px 60px rgba(0,0,0,.5));}
-.aliya-tag{position:absolute;z-index:3;left:0;top:20px;bottom:auto;padding:9px 14px;border-left:2px solid var(--gold);
-  background:rgba(6,22,42,.82);color:var(--gold-2);font-size:10.5px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;}
-.aliya-copy{min-width:0;}
-.aliya-kicker{color:var(--gold-2);font-size:12.5px;font-weight:800;letter-spacing:.9px;text-transform:uppercase;}
-.aliya-name{margin-top:12px;font-size:44px;line-height:1.04;font-weight:800;letter-spacing:-1px;color:#fff;}
-.aliya-role{margin-top:10px;color:var(--gold-2);font-size:14px;font-weight:700;}
-.aliya-lead{margin-top:18px;max-width:640px;color:rgba(255,255,255,.74);font-size:15.5px;line-height:1.9;}
-.aliya-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 30px;margin-top:34px;}
-.aliya-item{display:grid;grid-template-columns:24px minmax(0,1fr);gap:10px;}
-.aliya-num{padding-top:3px;color:var(--gold);font-size:11px;font-weight:800;letter-spacing:.6px;}
-.aliya-item h4{margin:0 0 6px;font-size:15px;color:#fff;}
-.aliya-item p{margin:0;color:rgba(255,255,255,.60);font-size:13px;line-height:1.75;}
-.aliya-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:36px;}
-.aliya-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;}
-.aliya-chip{display:inline-flex;align-items:center;gap:7px;padding:8px 13px;border:1px solid rgba(255,255,255,.18);
-  border-radius:999px;color:rgba(255,255,255,.86);font-size:12.5px;font-weight:600;text-decoration:none;
-  transition:border-color .2s ease,color .2s ease,background .2s ease;}
-.aliya-chip:hover{border-color:var(--gold);color:var(--gold-2);background:rgba(215,168,79,.08);}
-
-/* ===================== categories overview ===================== */
-.cat-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;
-  background:var(--line);border:1px solid var(--line);box-shadow:var(--shadow);}
-.cat-card{display:flex;flex-direction:column;padding:24px 20px 20px;background:var(--white);
-  text-decoration:none;transition:background .2s ease;}
-.cat-card:hover{background:#fbfcfe;}
-.cat-ico{width:34px;height:34px;margin-bottom:16px;color:var(--gold);}
-.cat-ico svg{width:100%;height:100%;}
-.cat-card h3{margin:0 0 8px;font-size:14.5px;line-height:1.35;color:var(--ink);}
-.cat-card p{margin:0;flex:1;color:var(--muted);font-size:11.5px;line-height:1.7;}
-.cat-arrow{margin-top:12px;color:#c9d3e0;font-size:13px;transition:color .2s ease,transform .2s ease;}
-.cat-card:hover .cat-arrow{color:var(--gold);transform:translateX(3px);}
-.cat-omitted{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;
-  margin-top:1px;padding:20px 24px;background:#fff;border:1px dashed #ccd5e2;border-top:0;}
-.cat-omitted-plus{flex:0 0 auto;display:grid;place-items:center;width:40px;height:40px;
-  border-radius:50%;border:1px solid rgba(215,168,79,.55);background:rgba(215,168,79,.07);color:var(--gold);}
-.cat-omitted-plus svg{width:21px;height:21px;stroke:currentColor;stroke-width:1.6;fill:none;}
-.cat-omitted > div{flex:1 1 300px;min-width:0;}
-.cat-omitted p{margin:0;color:var(--ink);font-size:13.5px;line-height:1.7;}
-.cat-omitted p strong{font-weight:800;}
-.cat-omitted .cat-omitted-note{display:block;margin-top:5px;color:var(--muted);font-size:12px;line-height:1.7;}
-.cat-omitted-link{flex:0 0 auto;display:inline-flex;align-items:center;gap:9px;
-  background:linear-gradient(135deg,#0b315c,#071f3b);color:#fff;font-size:14px;font-weight:800;
-  padding:13px 22px;text-decoration:none;border:1px solid rgba(215,168,79,.4);
-  box-shadow:0 10px 24px rgba(6,22,42,.18);transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease;}
-.cat-omitted-link::after{content:"→";font-weight:700;color:var(--gold-2);transition:transform .2s ease;}
-.cat-omitted-link:hover{border-color:var(--gold);box-shadow:0 14px 30px rgba(6,22,42,.26);transform:translateY(-1px);}
-.cat-omitted-link:hover::after{transform:translateX(3px);}
-.cat-more{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px;
-  margin-top:36px;padding:26px 32px;border:1px solid rgba(255,255,255,.1);
-  background:linear-gradient(120deg,#071f3b,#0b315c);box-shadow:var(--shadow);}
-.cat-more p{margin:0;color:rgba(255,255,255,.9);font-size:15px;font-weight:700;}
-.cat-more span{display:block;margin-top:5px;color:rgba(255,255,255,.58);font-size:12.5px;font-weight:400;}
-
-/* ===================== case card clickable ===================== */
-.case-mini{position:relative;text-decoration:none;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;}
-.case-mini:hover{transform:translateY(-4px);box-shadow:0 24px 52px rgba(6,24,45,.18);border-color:rgba(215,168,79,.6);}
-.case-mini::after{content:"";position:absolute;top:12px;right:12px;width:28px;height:28px;border-radius:50%;
-  background:rgba(6,22,42,.88) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f2c76d'><path d='M8 5v14l11-7z'/></svg>") center/13px no-repeat;
-  border:1px solid rgba(242,199,109,.5);}
-
-@media (max-width:1080px){
-  .hero-grid{grid-template-columns:1fr;grid-template-rows:none;gap:0;}
-  .hero-left{display:contents;}
-  .hero-content{grid-column:1;grid-row:1;}
-  .hero{padding-top:104px;padding-bottom:44px;}
-  .hero-content{grid-column:1;grid-row:1;}
-  .hero-person{grid-column:1;grid-row:2;position:relative;margin-top:18px;}
-  .hero-proof{grid-column:1;grid-row:3;width:min(780px,100%);margin-top:16px;}
-  .hero-person-glow{display:none;}
-  .hero-person-photo{position:absolute;width:168px;right:8px;bottom:8px;margin:0;z-index:4;}
-  .hero-person-photo img{filter:drop-shadow(0 12px 26px rgba(0,0,0,.4));}
-  .hero-person-card{margin-top:0;padding:18px 190px 18px 18px;min-height:222px;}
-  .hero-person-card::after{display:none;}
-  .hp-avatar{display:none;}
-  .aliya-inner{grid-template-columns:1fr;gap:34px;}
-  .aliya-photo{max-width:320px;}
-  .aliya-name{font-size:34px;}
-  .aliya-ring,.aliya-ring-2{display:none;}
-  .cat-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
-}
-@media (max-width:640px){
-  .hero{padding:84px 0 32px;}
-  .hero-proof{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:18px;}
-  .proof-item{padding:12px 10px;}
-  .proof-number{font-size:17px;}
-  .proof-label{margin-top:8px;padding-top:0;font-size:10.5px;line-height:1.4;}
-  .hero-actions{flex-direction:row;flex-wrap:wrap;gap:10px;}
-  .hero-actions .btn{width:auto;flex:1 1 0;min-width:0;padding-left:10px;padding-right:10px;font-size:13px;}
-  .aliya-sec{padding:64px 0;}
-  .aliya-list{grid-template-columns:1fr;gap:18px;}
-  .aliya-name{font-size:29px;}
-  .cat-grid{grid-template-columns:1fr;}
-  .cat-more{padding:22px 20px;}
-  .cat-more .btn{width:100%;}
-  .hero-person-photo{position:absolute;width:104px;bottom:10px;right:8px;margin:0;z-index:4;}
-  .hero-person-photo img{-webkit-mask-image:linear-gradient(to bottom,#000 90%,rgba(0,0,0,0) 100%);
-    mask-image:linear-gradient(to bottom,#000 90%,rgba(0,0,0,0) 100%);}
-  .hero-person-card{margin-top:18px;padding:16px 122px 16px 16px;min-height:184px;}
-  .hp-kicker{font-size:9px;letter-spacing:1.5px;gap:6px;}
-  .hp-kicker::before{width:12px;}
-  .hp-name{font-size:22px;margin-top:7px;}
-  .hp-role{font-size:11px;margin-top:5px;line-height:1.45;}
-  .hp-foot{margin-top:12px;gap:6px;}
-  .hp-foot a{padding:6px 6px;font-size:10.5px;}
-}
-/* ===================== 统一排版节奏（移动端） ===================== */
-@media (max-width: 900px) {
-  .hero-proof { background: rgba(6,20,38,.62); border-color: rgba(255,255,255,.14); }
-  .proof-item { background: rgba(6,20,38,.5); }
-  .section-kicker { font-size: 11px; line-height: 1.4; letter-spacing: .14em; }
-  .section-title,
-  .contact-band h2,
-  .about-home-text .section-title {
-    margin-top: 10px;
-    font-size: 25px;
-    line-height: 1.24;
-    letter-spacing: -.3px;
-  }
-  .hero h1 { font-size: 29px; line-height: 1.16; letter-spacing: -.4px; }
-  .hero-lead,
-  .section-copy { margin-top: 14px; font-size: 15px; line-height: 1.68; }
-  .section-copy + .section-copy { margin-top: 12px; }
-  .section-head { margin-bottom: 26px; gap: 10px; }
-  .text-link { display: inline-block; margin-top: 20px; font-size: 14px; }
-  .capability-card { padding: 22px 18px; min-height: auto; }
-  .capability-icon { width: 30px; height: 30px; margin-bottom: 14px; }
-  .capability-card h3 { margin-bottom: 8px; font-size: 16px; line-height: 1.35; }
-  .capability-card p { font-size: 13px; line-height: 1.68; }
-  .about-metric { padding: 20px 18px; }
-  .about-metric strong { font-size: 24px; line-height: 1.1; }
-  .about-metric span { margin-top: 8px; font-size: 12px; line-height: 1.55; }
-  .case-mini-body { padding: 16px 14px 18px; }
-  .case-mini h3 { margin-bottom: 6px; font-size: 15px; line-height: 1.35; }
-  .case-mini p { font-size: 12.5px; line-height: 1.65; }
-  .cat-card { padding: 18px 16px 16px; }
-  .cat-ico { width: 28px; height: 28px; margin-bottom: 12px; }
-  .cat-card h3 { margin-bottom: 6px; font-size: 15px; line-height: 1.35; }
-  .cat-card p { font-size: 12.5px; line-height: 1.62; }
-  .aliya-lead { margin-top: 14px; font-size: 14px; line-height: 1.68; }
-  .aliya-item h4 { margin-bottom: 6px; font-size: 15px; line-height: 1.35; }
-  .aliya-item p { font-size: 12.5px; line-height: 1.65; }
-  .supplier-panel { padding: 24px 20px; }
-  .supplier-panel h3 { margin-bottom: 14px; font-size: 18px; line-height: 1.3; }
-  .supplier-row { padding: 16px 0; }
-  .supplier-row strong { margin-bottom: 4px; font-size: 15px; }
-  .supplier-row span { font-size: 12.5px; line-height: 1.65; }
-  .process-step { grid-template-columns: 58px 1fr; }
-  .process-text { padding: 18px; }
-  .process-text h3 { font-size: 15.5px; line-height: 1.35; }
-  .process-text p { margin-top: 6px; font-size: 12.5px; line-height: 1.65; }
-}
-
-/* ===================== 进场动效（滚动触发） ===================== */
-html.motion .reveal {
-  opacity: 0;
-  transform: translate3d(0, 24px, 0);
-  transition: opacity .8s cubic-bezier(.16,.84,.24,1), transform .8s cubic-bezier(.16,.84,.24,1);
-  will-change: opacity, transform;
-}
-html.motion .reveal.is-in { opacity: 1; transform: none; }
-html.motion .reveal-img { overflow: hidden; }
-html.motion .reveal-img img {
-  transform: scale(1.05);
-  transition: transform 1.1s cubic-bezier(.16,.84,.24,1);
-}
-html.motion .reveal-img.is-in img { transform: scale(1); }
-html.motion .reveal-line {
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform .9s cubic-bezier(.16,.84,.24,1);
-}
-html.motion .reveal-line.is-in { transform: scaleX(1); }
-@media (prefers-reduced-motion: reduce) {
-  html.motion .reveal { opacity: 1; transform: none; transition: none; }
-  html.motion .reveal-img img { transform: none; transition: none; }
-  html.motion .reveal-line { transform: none; transition: none; }
-}
-
-/* ---- 移动端补丁：品类块强制单列、统计格紧凑 ---- */
-@media (max-width:900px){
-  .cat-row, .cat-row.is-reverse { grid-template-columns: minmax(0,1fr) !important; gap: 26px !important; }
-  .cat-row.is-reverse .cat-thumb { order: 0 !important; }
-  .stat-cell { padding: 18px 16px; }
-  .stat-cell b { font-size: 30px; }
-  .stat-cell small { margin-top: 8px; font-size: 12.5px; line-height: 1.55; }
-}</style>
-<!--white-test:start-->
-<style id="white-test">
-/* 白底试验：Aliya / 流程 / 联系 三块 */
-#manager.aliya-sec{color:var(--ink);
- background:radial-gradient(900px 440px at 14% 46%,rgba(215,168,79,.13),rgba(215,168,79,0) 62%),#fff;}
-#manager .aliya-kicker{color:var(--gold);}
-#manager .aliya-name{color:var(--ink);}
-#manager .aliya-role{color:var(--blue);}
-#manager .aliya-lead{color:var(--muted);}
-#manager .aliya-item h4{color:var(--ink);}
-#manager .aliya-item p{color:var(--muted);}
-#manager .aliya-tag{position:static;display:inline-block;margin-top:16px;background:rgba(9,32,60,.05);color:var(--ink);}
-#manager .aliya-ring{border-color:rgba(9,32,60,.09);}
-#manager .aliya-ring-2{border-color:rgba(215,168,79,.18);}
-#manager .aliya-photo img{filter:drop-shadow(0 18px 40px rgba(9,32,60,.26));}
-#manager .btn-secondary{color:var(--ink);border-color:rgba(9,32,60,.22);background:transparent;}
-#manager .btn-secondary:hover{color:var(--blue);border-color:var(--gold);}
-#manager .aliya-chip{color:#20334a;border-color:rgba(9,32,60,.18);}
-#manager .aliya-chip:hover{color:var(--blue);border-color:var(--gold);background:rgba(215,168,79,.1);}
-
-#process{color:var(--ink);background:#fff;}
-#process .section-title{color:var(--ink);}
-#process .section-copy{color:var(--muted);}
-#process .supplier-panel{background:#f6f8fb;border-color:var(--line);}
-#process .process-layout{align-items:stretch;}
-#process .supplier-panel{display:flex;flex-direction:column;justify-content:space-between;}
-#process .supplier-panel h3{color:var(--blue);}
-#process .supplier-row{border-top-color:var(--line);}
-#process .supplier-row strong{color:var(--ink);}
-#process .supplier-row span{color:var(--muted);}
-#process .process-list{background:var(--line);border-color:var(--line);}
-#process .process-step{background:#fff;}
-#process .process-num{border-right-color:var(--line);color:var(--gold);}
-#process .process-text{color:#46556a;}
-
-#contact .contact-band{background:#fff;color:var(--ink);border:1px solid var(--line);}
-#contact .contact-band h2{color:var(--ink);}
-#contact .contact-band p{color:var(--muted);}
-#contact .contact-list{background:var(--line);border-color:var(--line);}
-#contact .contact-item{background:#f6f8fb;}
-#contact .contact-label{color:var(--gold);}
-#contact .contact-value{color:var(--ink);}#contact .contact-value{color:var(--ink);}
-
-#manager.aliya-sec{padding-top:76px;padding-bottom:60px;}
-#process{padding-top:72px;padding-bottom:72px;}
-#contact{background:#fff;}
-@media (max-width:640px){
- #manager.aliya-sec{padding:44px 0;}
- #process{padding:56px 0;}
-}
-</style>
-<!--white-test:end-->
-
-
-
-
-
-
-  <!-- ==== 优化：性能预连接 ==== -->
-  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  <!-- ==== 优化：SEO 元信息 ==== -->
-  <meta name="description" content="China Sells — подбор производителей в Китае, инспекция фабрик и образцов, контракты, сертификация, логистика и таможня. Поставки для оптовых и корпоративных покупателей из России.">
+  <title>China Sells — поставки из Китая под ключ | Каталог направлений и заявка</title>
+  <meta name="description" content="China Sells: локальные закупки в Китае, подбор фабрик, инспекция партий, документы и логистика в Россию. Каталог направлений, MOQ и сроки — по запросу.">
   <link rel="canonical" href="https://chinasells.ru/">
   <link rel="alternate" hreflang="ru" href="https://chinasells.ru/">
   <link rel="alternate" hreflang="x-default" href="https://www.hyjjls.cn/">
   <link rel="alternate" hreflang="zh-CN" href="https://www.hyjjls.cn/">
+  <meta name="theme-color" content="#0d1b28">
+  <link rel="icon" href="img/logo-hyjj.png">
+  <link rel="preload" href="css/site-2026.css" as="style">
+  <link rel="stylesheet" href="css/site-2026.css">
+
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="China Sells">
   <meta property="og:title" content="China Sells — поставки из Китая под ключ">
-  <meta property="og:description" content="China Sells — подбор производителей в Китае, инспекция фабрик и образцов, контракты, сертификация, логистика и таможня. Поставки для оптовых и корпоративных покупателей из России.">
+  <meta property="og:description" content="Подбор фабрик, инспекция партий, документы и логистика в Россию. Каталог направлений и заявка за 2 минуты.">
   <meta property="og:url" content="https://chinasells.ru/">
   <meta property="og:image" content="https://chinasells.ru/img/ru-hero.jpg">
   <meta property="og:locale" content="ru_RU">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="China Sells — поставки из Китая под ключ">
-  <meta name="twitter:description" content="China Sells — подбор производителей в Китае, инспекция фабрик и образцов, контракты, сертификация, логистика и таможня. Поставки для оптовых и корпоративных покупателей из России.">
+  <meta name="twitter:description" content="Подбор фабрик, инспекция, документы и логистика в Россию.">
   <meta name="twitter:image" content="https://chinasells.ru/img/ru-hero.jpg">
 
-  <!-- ==== 优化：结构化数据 ==== -->
   <script type="application/ld+json">
   {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://chinasells.ru/#organization",
-  "name": "China Sells",
-  "alternateName": "Huiying Jujin (Jiangsu) International Trade Co., Ltd.",
-  "url": "https://chinasells.ru/",
-  "logo": "https://chinasells.ru/logo.png",
-  "description": "Поставки из Китая под ключ: подбор производителей, инспекция фабрик, контракты, сертификация, логистика и таможня.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Наньтун",
-    "addressRegion": "Цзянсу",
-    "addressCountry": "CN"
-  },
-  "areaServed": ["RU", "CN"]
-}
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://chinasells.ru/#organization",
+    "name": "China Sells",
+    "alternateName": "Huiying Jujin (Jiangsu) International Trade Co., Ltd.",
+    "url": "https://chinasells.ru/",
+    "logo": "https://chinasells.ru/img/logo-hyjj.png",
+    "description": "Поставки из Китая под ключ: подбор производителей, инспекция фабрик, контракты, сертификация, логистика и таможня.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Наньтун",
+      "addressRegion": "Цзянсу",
+      "addressCountry": "CN"
+    },
+    "areaServed": ["RU", "CN"]
+  }
   </script>
 
-  <!-- ==== Google tag (gtag.js)：Google Ads + GA4 ==== -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18539818418"></script>
-  <!-- Google tag (AW-18539353293) -->
   <script async src="https://www.googletagmanager.com/gtm.js?id=AW-18539353293"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -1490,844 +57,426 @@ html.motion .reveal-line.is-in { transform: scaleX(1); }
       'linker': { 'domains': ['hyjjls.cn','www.hyjjls.cn','chinasells.ru','www.chinasells.ru','hyjj.shop'] },
       'cookie_flags': 'SameSite=None;Secure'
     });
-    /* TODO GA4：拿到 G- 衡量 ID 后，将下面一行取消注释并替换 ID
-    gtag('config', 'G-XXXXXXXXXX', { 'linker': { 'domains': ['hyjjls.cn','www.hyjjls.cn','chinasells.ru','www.chinasells.ru','hyjj.shop'] } });
-    */
   </script>
-<!--warm-home-20261123:start-->
-<style id="warm-home-20261123">
-:root{
-  --paper:#f2eee5;
-  --white:#fffdf7;
-  --ink:#0b1a26;
-  --navy:#071a2b;
-  --line:#dcd4c5;
-  --muted:#656d6b;
-  --gold:#b98732;
-  --gold-2:#e2b969;
-}
-html,body{background:var(--paper);color:var(--ink)}
-.section-white{background:var(--white)}
-section.section:not(.section-white):not(.section-dark){background:var(--paper)}
-.hero::after{background:linear-gradient(180deg,rgba(242,238,229,0),var(--paper))}
-.v2-cats .cat-search,.cat-search{background:#f2eee5;border-color:#ded6c6}
-.cat-search .cs-box,.cs-box{border-color:#ded6c6}
-
-#offer{background:var(--paper);border-bottom:1px solid var(--line)}
-.cat-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;counter-reset:cat;border:0;background:none;box-shadow:none}
-.cat-card{position:relative;display:flex;flex-direction:column;padding:0;overflow:hidden;counter-increment:cat;
-  border:1px solid var(--line);background:var(--white);text-decoration:none;
-  transition:transform .24s ease,box-shadow .24s ease,border-color .24s ease;box-shadow:none}
-.cat-photo{position:relative;aspect-ratio:4/3;overflow:hidden;background:#d9d2c4}
-.cat-photo img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .55s cubic-bezier(.2,.7,.2,1)}
-.cat-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,26,43,.02),rgba(7,26,43,.3));pointer-events:none}
-.cat-card::before{content:counter(cat,decimal-leading-zero);position:absolute;z-index:2;left:12px;top:12px;display:grid;place-items:center;
-  min-width:30px;height:22px;padding:0 6px;background:rgba(7,26,43,.86);border:1px solid rgba(226,185,105,.55);
-  color:var(--gold-2);font-size:9.5px;letter-spacing:.12em;font-weight:800}
-.cat-ico{display:none}
-.cat-card h3{margin:0;padding:18px 17px 0;color:var(--ink);font-size:14px;line-height:1.36}
-.cat-card p{flex:1;margin:0;padding:7px 17px 0;color:var(--muted);font-size:11px;line-height:1.68}
-.cat-arrow{margin:0;padding:15px 17px 17px;color:var(--gold);font-size:14px}
-.cat-card:hover{transform:translateY(-4px);border-color:rgba(185,135,50,.62);box-shadow:0 18px 42px rgba(10,24,36,.11);background:var(--white)}
-.cat-card:hover .cat-photo img{transform:scale(1.045)}
-.cat-card:hover .cat-arrow{transform:translateX(4px)}
-.cat-omitted{margin-top:16px;padding:22px 26px;background:var(--white);border:1px dashed #c8bdab}
-.cat-omitted-plus{border-color:rgba(185,135,50,.55);background:rgba(185,135,50,.07);color:var(--gold)}
-.cat-omitted p{color:var(--ink)}
-.cat-omitted .cat-omitted-note{color:var(--muted)}
-
-#cases{background:var(--white);border-bottom:1px solid var(--line)}
-.cases-home-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;counter-reset:case}
-.case-mini{position:relative;counter-increment:case;border:1px solid var(--line);background:var(--white);box-shadow:none}
-.case-mini::before{content:counter(case,decimal-leading-zero);position:absolute;z-index:3;left:12px;top:12px;display:grid;place-items:center;
-  min-width:30px;height:22px;padding:0 6px;background:rgba(7,26,43,.86);border:1px solid rgba(226,185,105,.5);
-  color:var(--gold-2);font-size:9.5px;letter-spacing:.12em;font-weight:800}
-.case-mini img{height:190px}
-.case-mini:first-child{grid-column:span 2;flex-direction:row;min-height:330}
-.case-mini:first-child img{width:58%;height:100%;min-height:330;flex:0 0 58%}
-.case-mini:first-child .case-mini-body{width:42%;padding:30px 28px;justify-content:center}
-.case-mini:first-child h3{font-size:24px;line-height:1.2;letter-spacing:-.03em}
-.case-mini:first-child p{font-size:13.5px;line-height:1.8}
-.case-mini h3{font-size:15px;line-height:1.3;color:var(--ink)}
-.case-mini-tag{color:var(--gold);font-size:9.5px;letter-spacing:.08em;font-weight:800}
-.case-mini p{color:var(--muted);font-size:12px;line-height:1.7}
-.case-mini::after{display:none!important}
-.case-mini:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(10,24,36,.1);border-color:rgba(185,135,50,.55)}
-
-@media(max-width:1080px){
-  .cat-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .cases-home-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .case-mini:first-child{grid-column:span 2}
-  .case-mini:last-child{grid-column:auto}
-}
-@media(max-width:720px){
-  .cat-grid{grid-template-columns:1fr 1fr;gap:10px}
-  .cat-card h3{font-size:13px;padding:14px 13px 0}
-  .cat-card p{padding:6px 13px 0;font-size:10.5px}
-  .cat-card::before{left:9px;top:9px;min-width:27px;height:20px}
-  .cases-home-grid{grid-template-columns:1fr}
-  .case-mini:first-child{grid-column:auto;flex-direction:column;min-height:0}
-  .case-mini:first-child img{width:100%;height:190px;min-height:0;flex:none}
-  .case-mini:first-child .case-mini-body{width:100%;padding:20px 16px 22px}
-  .case-mini:first-child h3{font-size:18px}
-}
-</style>
-<!--warm-home-20261123:end-->
-<!--brand-contact-20261123:start-->
-<style id="brand-contact-20261123">
-.brand-mark{object-fit:contain;filter:drop-shadow(0 1px 3px rgba(0,0,0,.22))}
-.hero-person-card .hp-label{color:rgba(255,255,255,.56);font-size:8px;line-height:1;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
-.hero-person-card .hp-label::after{content:":";margin-right:4px}
-.hero-person-card .hp-foot a:hover .hp-label{color:rgba(255,255,255,.78)}
-</style>
-<!--brand-contact-20261123:end-->
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav" aria-label="Основная навигация">
-      <a class="brand" href="index.html">
-        <img class="brand-mark" src="img/logo-hyjj.png" srcset="img/logo-hyjj.png 1x, img/logo-hyjj@2x.png 2x" alt="China Sells" width="160" height="160" decoding="async" fetchpriority="high">
-        <span>
-          <strong>CHINA <em>SELLS</em></strong>
-          <small>Найдём · Проверим · Доставим</small>
-        </span>
-      </a>
-      <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="navMenu">
-        <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
-      </button>
-      <ul class="nav-links" id="navMenu">
-        <li><a class="active" href="#hero">Главная</a></li>
-        <li><a href="about.html">О компании</a></li>
-        <li><a href="#capability">Возможности</a></li>
-        <li><a href="categories.html">Категории</a></li>
-        <li><a href="#cases">Кейсы</a></li>
-        <li><a href="index.html#manager">Алия</a></li>
-        <li><a href="#process">Схема работы</a></li>
-        <li><a href="#contact">Контакты</a></li>
-        <li><a class="nav-lang" href="https://www.hyjjls.cn/" hreflang="zh-CN" title="中文版">CN</a></li>
-        <li><a class="nav-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Оставить заявку</a></li>
-      </ul>
+
+<header class="ix-header">
+  <div class="ix-bar">
+    <a class="ix-brand" href="index.html" aria-label="China Sells — главная">
+      <img src="img/logo-hyjj.png" srcset="img/logo-hyjj.png 1x, img/logo-hyjj@2x.png 2x" alt="China Sells" width="74" height="74" fetchpriority="high">
+      <span><b>CHINA <em>SELLS</em></b><small>Найдём · Проверим · Доставим</small></span>
+    </a>
+    <nav class="ix-nav" aria-label="Основная навигация">
+      <a class="active" href="index.html">Главная</a>
+      <a href="about.html">О компании</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="cases.html">Кейсы</a>
+      <a href="index.html#manager">Алия</a>
+      <a href="#process">Схема работы</a>
+      <a href="#footer">Контакты</a>
+      <a class="lang" href="https://www.hyjjls.cn/" hreflang="zh-CN" title="Китайская версия">CN</a>
+      <a class="cta" href="#brief">Оставить заявку</a>
     </nav>
-  </header>
+    <button class="ix-burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+  </div>
+  <div class="ix-mobile" id="mobileMenu">
+    <a href="about.html">О компании</a>
+    <a href="catalog.html">Каталог</a>
+    <a href="cases.html">Кейсы</a>
+    <a href="index.html#manager">Алия</a>
+    <a href="#process">Схема работы</a>
+    <a href="#footer">Контакты</a>
+    <a href="https://www.hyjjls.cn/" hreflang="zh-CN">中文版</a>
+    <a class="cta" href="#brief">Оставить заявку</a>
+  </div>
+</header>
 
-  <main>
-    <section class="hero" id="hero">
-      <div class="container">
-        <div class="hero-grid">
-        <div class="hero-left">
-        <div class="hero-content">
-          <div class="eyebrow">Поставки из Китая под ключ</div>
-          <h1>Ваш надёжный партнёр для <span>бизнеса с Китаем</span></h1>
-          <p class="hero-lead">Опираясь на локальные закупки в Китае, собственную сеть в России и опыт трансграничного исполнения, мы ведём полный цикл: подбор поставщиков, переговоры, инспекцию фабрик и товаров, сертификацию документов, логистику и таможенное оформление.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Оставить заявку</a>
-            <a class="btn btn-secondary" href="about.html">О компании</a>
-          </div>
-        </div>
-        <div class="hero-proof" aria-label="Ключевые показатели">
-          <div class="proof-item">
-            <span class="proof-number">10+</span>
-            <span class="proof-label">лет опыта в домашнем текстиле и трансграничной торговле</span>
-          </div>
-          <div class="proof-item">
-            <span class="proof-number">10 000 м²<br>+ 3000 м²</span>
-            <span class="proof-label">собственных складских площадей в России</span>
-          </div>
-          <div class="proof-item">
-            <span class="proof-number">200+</span>
-            <span class="proof-label">специалистов команды на рынке России</span>
-          </div>
-        </div>
-        </div>
-        <aside class="hero-person" aria-label="Заместитель генерального директора">
-          <div class="hero-person-glow" aria-hidden="true"></div>
-          <div class="hero-person-photo">
-            <img src="img/aliya-hero.webp" srcset="img/aliya-hero.webp 1x, img/aliya-hero@2x.webp 2x"
-                 alt="Алия — заместитель генерального директора China Sells" width="380" height="548" decoding="async">
-          </div>
-          <div class="hero-person-card">
-            <img class="hp-avatar" src="img/aliya-avatar.webp" srcset="img/aliya-avatar.webp 1x, img/aliya-avatar@2x.webp 2x"
-                 alt="Алия" width="84" height="84" loading="lazy" decoding="async">
-            <span class="hp-kicker">Ваш человек в компании</span>
-            <strong class="hp-name">Алия</strong>
-            <span class="hp-role">Заместитель генерального директора</span>
-            <div class="hp-foot">
-              <a href="mailto:aliya@chinasells.ru"><span class="hp-label">Почта</span>aliya@chinasells.ru</a>
-              <a href="https://wa.me/8619895947232" target="_blank" rel="noopener noreferrer"><span class="hp-label">Мессенджер</span>WhatsApp</a>
-              <a href="https://t.me/aliyachinabiz" target="_blank" rel="noopener noreferrer"><span class="hp-label">Мессенджер</span>Telegram</a>
-              <a href="https://www.youtube.com/@aliya.chinabiz" target="_blank" rel="noopener noreferrer"><span class="hp-label">Соцсети</span>YouTube</a>
-              <a href="https://www.tiktok.com/@aliya.chinabiz" target="_blank" rel="noopener noreferrer"><span class="hp-label">Соцсети</span>TikTok</a>
-              <a href="https://vk.com/aliya.chinabiz" target="_blank" rel="noopener noreferrer"><span class="hp-label">Соцсети</span>VK</a>
-              <a href="https://www.instagram.com/aliya.chinabiz" target="_blank" rel="noopener noreferrer"><span class="hp-label">Соцсети</span>Instagram</a>
-            </div>
-          </div>
-        </aside>
-        </div>
+<main>
+
+  <section class="ix-hero" id="hero">
+    <div class="ix-hero-copy">
+      <div class="kicker">Поставки из Китая под ключ</div>
+      <h1>Ваш надёжный партнёр для <span>бизнеса с Китаем</span></h1>
+      <p class="ix-hero-lead">Локальные закупки в Китае, собственная сеть в России и полный цикл: подбор фабрик, переговоры, инспекция, документы, логистика и таможня.</p>
+      <div class="ix-hero-actions">
+        <a class="btn btn-red" href="#brief">Подобрать поставщика</a>
+        <a class="btn btn-ghost-dark" href="catalog.html">Смотреть каталог</a>
       </div>
-    </section>
-
-    <section class="section" id="about">
-      <div class="container">
-        <div class="about-home">
-          <div class="about-home-text">
-            <div class="section-kicker">О компании</div>
-            <h2 class="section-title">Кросс-бордерный поставщик из Наньтуна — торговля с Россией</h2>
-            <p class="section-copy">Huiying Jujin (Jiangsu) International Trade Co., Ltd. расположена в Наньтуне, провинция Цзянсу, с офисами в Китае и России. Мы обеспечиваем постоянную поддержку на всех этапах: закупки, переговоры, производство, инспекция, документы, логистика и складирование.</p>
-            <p class="section-copy">Команда имеет 10-летний опыт в отрасли домашнего текстиля и расширила ассортимент от текстиля до электроники, оборудования и других категорий. Мы работаем по контрактам с российскими компаниями и поддерживаем расчёты в рублях, снижая барьеры коммуникации и платежей.</p>
-            <a class="text-link" href="about.html">Подробнее о компании</a>
-          </div>
-
-          <div class="about-metrics">
-            <div class="about-metric">
-              <strong>60 млн ¥</strong>
-              <span>годовой оборот домашнего текстиля</span>
-            </div>
-            <div class="about-metric">
-              <strong>300 млн ¥</strong>
-              <span>годовой объём закупок российского онлайн-магазина</span>
-            </div>
-            <div class="about-metric">
-              <strong>600+</strong>
-              <span>всего обслужено клиентов</span>
-            </div>
-            <div class="about-metric">
-              <strong>~100</strong>
-              <span>стабильные активные клиенты в год</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-white" id="capability">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker">Инфраструктура</div>
-            <h2 class="section-title">Локальные ресурсы для трансграничной торговли</h2>
-          </div>
-          <p class="section-copy">Мы не просто сводим стороны, а участвуем в ключевых узлах — закупках, производстве, контроле качества, документах, складировании и доставке, помогая снижать расходы на коммуникацию и риски исполнения.</p>
-        </div>
-
-        <div class="capability-grid">
-          <article class="capability-card">
-            <div class="capability-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-8h6v8"/><path d="M3 8h18"/></svg>
-            </div>
-            <h3>Команды в двух странах</h3>
-            <p>Китайская команда отвечает за подбор поставщиков, инспекцию фабрик и контроль производства, российская — за локальную коммуникацию, склад и работу с рынком.</p>
-          </article>
-          <article class="capability-card">
-            <div class="capability-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19h16"/><path d="M4 15h16"/><path d="M6 15V5h12v10"/><path d="M8 9h8"/><path d="M8 12h8"/></svg>
-            </div>
-            <h3>Склад и исполнение</h3>
-            <p>Собственные склады в России поддерживают хранение товаров, распределение заказов и локальную доставку, повышая предсказуемость цепочки.</p>
-          </article>
-          <article class="capability-card">
-            <div class="capability-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M5 7h14"/><path d="M5 17h14"/><path d="M7 7c0 4 10 4 10 0"/><path d="M7 17c0-4 10-4 10 0"/></svg>
-            </div>
-            <h3>Комплаенс и рубли</h3>
-            <p>Работаем по контрактам с российскими компаниями, поддерживаем расчёты в рублях и помогаем с договорами, сертификатами и таможенными документами.</p>
-          </article>
-          <article class="capability-card">
-            <div class="capability-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 7 8 20l-5-5"/><path d="M16 7h5v5"/></svg>
-            </div>
-            <h3>Площадки и продвижение</h3>
-            <p>Имеем опыт работы на Ozon и Wildberries, а также партнёров в Беларуси и ресурсы для контентного продвижения.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-white" id="guarantee">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker">Гарантии и документы</div>
-            <h2 class="section-title">Работаем официально: документы, статусы, локальные юрлица</h2>
-          </div>
-          <p class="section-copy">До сделки показываем регистрационные данные, сертификаты и статусы на площадках. Договор можно заключить с российским юрлицом — с оплатой в рублях и понятной отчётностью.</p>
-        </div>
-
-        <div class="cred-grid">
-          <article class="cred-card">
-            <h3>Уставный капитал 10 млн юаней</h3>
-            <p>Зарегистрированная компания с подтверждённым капиталом. Работаем по договору, с прозрачными условиями предоплаты и постоплаты.</p>
-          </article>
-          <article class="cred-card">
-            <h3>Право на экспорт и импорт</h3>
-            <p>Самостоятельно оформляем таможню, сертификацию и возврат НДС — без лишних посредников в цепочке.</p>
-          </article>
-          <article class="cred-card">
-            <h3>Член совета продавцов Ozon</h3>
-            <p>Участвуем в обсуждении правил площадки и первыми видим изменения в логистике, комиссиях и продвижении.</p>
-          </article>
-          <article class="cred-card">
-            <h3>Статус проверенного продавца</h3>
-            <p>Действующие магазины на Ozon и Wildberries с историей продаж, отзывами и стабильным оборотом.</p>
-          </article>
-        </div>
-
-        <div class="party-note">
-          <strong>Работаем через российское юрлицо</strong>: принимаем оплату в рублях, размещаем товар на локальном складе и доставляем по России. Реквизиты стороны договора и полный пакет документов передаём до подписания.
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="offer">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker">Категории продукции</div>
-            <h2 class="section-title">Что мы закупаем и поставляем</h2>
-          </div>
-          <p class="section-copy">Работаем по всем направлениям, которые нужны вашему бизнесу — от домашнего текстиля до инструмента, медтехники и стройматериалов. Внутри каждого направления десятки подкатегорий: подбираем фабрику под конкретную позицию, а не «что есть на складе». Ниже — основные направления, но перечень не ограничивает ассортимент.</p>
-        </div>
-
-        <div class="cat-grid">
-          <a class="cat-card" href="categories.html#clothing">
-            <div class="cat-photo"><img src="img/cat-clothing.webp" alt="Одежда и обувь" width="380" height="285" loading="lazy" decoding="async"></div>
-            <div class="cat-ico">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
-            </div>
-            <h3>Одежда и обувь</h3>
-            <p>Женская · Мужская · Детская · Обувь</p>
-            <span class="cat-arrow" aria-hidden="true">→</span>
-          </a>
-
-          <a class="cat-card" href="categories.html#textile">
-            <div class="cat-photo"><img src="img/cat-textile.webp" alt="Домашний текстиль и ткани" width="380" height="285" loading="lazy" decoding="async"></div>
-            <div class="cat-ico">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 9h18M9 4v16"/></svg>
-            </div>
-            <h3>Домашний текстиль</h3>
-            <p>Постельное · Полотенца · Пледы · Шторы</p>
-            <span class="cat-arrow" aria-hidden="true">→</span>
-          </a>
-
-          <a class="cat-card" href="categories.html#home">
-            <div class="cat-photo"><img src="img/cat-home.webp" alt="Товары для дома" width="380" height="285" loading="lazy" decoding="async"></div>
-            <div class="cat-ico">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h12v9a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3z"/><path d="M16 10h2a2 2 0 0 1 0 4h-2"/></svg>
-            </div>
-            <h3>Товары для дома</h3>
-            <p>Посуда · Хранение · Кухня · Декор</p>
-            <span class="cat-arrow" aria-hidden="true">→</span>
-          </a>
-
-          <a class="cat-card" href="categories.html#electronics">
-            <div class="cat-photo"><img src="img/cat-electronics.webp" alt="Электроника и бытовая техника" width="380" height="285" loading="lazy" decoding="async"></div>
-            <div class="cat-ico">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-            </div>
-            <h3>Электроника и техника</h3>
-            <p>Бытовая техника · Гаджеты · Освещение</p>
-            <span class="cat-arrow" aria-hidden="true">→</span>
-          </a>
-
-          <a class="cat-card" href="categories.html#furniture">
-            <div class="cat-photo"><img src="img/cat-furniture.webp" alt="Мебель и фурнитура" width="380" height="285" loading="lazy" decoding="async"></div>
-            <div class="cat-ico">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3"/><path d="M3 15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-4a2 2 0 0 0-4 0v1H7v-1a2 2 0 0 0-4 0z"/><path d="M6 17v3M18 17v3"/></svg>
-            </div>
-            <h3>Мебель и фурнитура</h3>
-            <p>Корпусная · Мягкая · Фурнитура</p>
-            <span class="cat-arrow" aria-hidden="true">→</span>
-          </a>
-
-          <a class="cat-card" href="categories.html#sport">
-            <div class="cat-photo"><img src="img/cat-sport.webp" alt="Спорт и фитнес" width="380" height="285" loading="lazy" decoding="async"></div>
-            <div class="cat-ico">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 7v10M17.5 7v10M3 10v4M21 10v4M6.5 12h11"/></svg>
-            </div>
-            <h3>Спорт и фитнес</h3>
-            <p>Тренажёры · Туризм · Реабилитация</p>
-            <span class="cat-arrow" aria-hidden="true">→</span>
-          </a>
-
-          <a class="cat-card" href="categories.html#tools">
-            <div class="cat-photo"><img src="img/cat-tools.webp" alt="Инструмент и оборудование" width="380" height="285" loading="lazy" decoding="async"></div>
-            <div class="cat-ico">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4a5 5 0 0 1 5 5l-3 1-1-1-9 9-3-3 9-9-1-1z"/><path d="m5 15 4 4"/></svg>
-            </div>
-            <h3>Инструмент и оборудование</h3>
-            <p>Электроинструмент · Ручной · Оснастка</p>
-            <span class="cat-arrow" aria-hidden="true">→</span>
-          </a>
-
-          <a class="cat-card" href="categories.html#medical">
-            <div class="cat-photo"><img src="img/cat-medical.webp" alt="Медицина и уход" width="380" height="285" loading="lazy" decoding="async"></div>
-            <div class="cat-ico">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>
-            </div>
-            <h3>Медицина и уход</h3>
-            <p>Медтехника · Реабилитация · Гигиена</p>
-            <span class="cat-arrow" aria-hidden="true">→</span>
-          </a>
-
-          <a class="cat-card" href="categories.html#packaging">
-            <div class="cat-photo"><img src="img/cat-packaging.webp" alt="Упаковка и расходники" width="380" height="285" loading="lazy" decoding="async"></div>
-            <div class="cat-ico">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 7.7 4.73a2 2 0 0 0 2 0L20.7 7"/></svg>
-            </div>
-            <h3>Упаковка и расходники</h3>
-            <p>Тара · Упаковка · Одноразовые</p>
-            <span class="cat-arrow" aria-hidden="true">→</span>
-          </a>
-
-          <a class="cat-card" href="categories.html#auto">
-            <div class="cat-photo"><img src="img/cat-auto.webp" alt="Авто и мото" width="380" height="285" loading="lazy" decoding="async"></div>
-            <div class="cat-ico">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 15l1.6-5h12.8L21 15"/><rect x="3" y="15" width="18" height="4" rx="1.5"/><path d="M7 19v2M17 19v2"/><path d="M8 15h8"/></svg>
-            </div>
-            <h3>Авто и мото</h3>
-            <p>Аксессуары · Тюнинг · Расходники</p>
-            <span class="cat-arrow" aria-hidden="true">→</span>
-          </a>
-        </div>
-
-        <div class="cat-omitted">
-          <span class="cat-omitted-plus" aria-hidden="true"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7.5" height="7.5" rx="1.6"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.6"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.6"/><path d="M17.25 13.6v7.3M13.6 17.25h7.3"/></svg></span>
-          <div>
-            <p><strong>И это не весь список.</strong> Детские товары и товары для мам, зоотовары, косметика и личная гигиена, спецодежда и СИЗ, офис и канцелярия, стройматериалы и отделка — тоже в работе.</p>
-            <span class="cat-omitted-note">Нет вашей позиции в перечне? Опишите товар и объём — подберём фабрику под запрос, даже если направления здесь нет.</span>
-          </div>
-          <a class="cat-omitted-link" href="categories.html">Все направления</a>
-        </div>
-
-        <div class="cat-more">
-          <div>
-            <p>16 категорий · 172 подкатегории</p>
-            <span>Полный каталог — 16 направлений и 172 подкатегории. Подбираем фабрику под конкретную позицию, а не «что есть на складе».</span>
-          </div>
-          <a class="btn btn-primary" href="categories.html">Смотреть все категории</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="cases">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker">Кейсы сотрудничества</div>
-            <h2 class="section-title">Партнёрство с ведущими производителями — проверяемые кейсы</h2>
-          </div>
-          <p class="section-copy">Все партнёры расположены в промышленном поясе Наньтуна, обладают реальными производственными мощностями, авторитетной сертификацией и отслеживаемой историей проектов в пяти ключевых категориях.</p>
-        </div>
-
-        <div class="cases-home-grid">
-          <a class="case-mini" href="https://www.youtube.com/@aliya.chinabiz" target="_blank" rel="noopener noreferrer">
-            <img src="img/case-ironman.jpg" srcset="img/case-ironman.jpg 1x, img/case-ironman@2x.jpg 2x" alt="Производственная база Nantong Ironman — спортивное оборудование" loading="lazy" decoding="async" width="800" height="533">
-            <div class="case-mini-body">
-              <h3>Наньтун Ironman</h3>
-              <span class="case-mini-tag">Спортивное оборудование</span>
-              <p>Территория 260 му, более 500 патентов, поставки на военные, зимние и национальные игры.</p>
-            </div>
-          </a>
-
-          <a class="case-mini" href="https://www.youtube.com/@aliya.chinabiz" target="_blank" rel="noopener noreferrer">
-            <img src="img/case-fumei.jpg" srcset="img/case-fumei.jpg 1x, img/case-fumei@2x.jpg 2x" alt="Шоурум Nantong Fumei — головные уборы" loading="lazy" decoding="async" width="800" height="300">
-            <div class="case-mini-body">
-              <h3>Наньтун Фумэй</h3>
-              <span class="case-mini-tag">Головные уборы</span>
-              <p>Пять баз, мощность 10 млн изделий в год, поставки вязаных шапок на Олимпиаду в Пекине.</p>
-            </div>
-          </a>
-
-          <a class="case-mini" href="https://www.youtube.com/@aliya.chinabiz" target="_blank" rel="noopener noreferrer">
-            <img src="img/case-goldensun.jpg" srcset="img/case-goldensun.jpg 1x, img/case-goldensun@2x.jpg 2x" alt="Штаб-квартира Jiangsu Golden Sun — текстильные технологии" loading="lazy" decoding="async" width="800" height="450">
-            <div class="case-mini-body">
-              <h3>Golden Sun</h3>
-              <span class="case-mini-tag">Домашний текстиль</span>
-              <p>Девять категорий, тысячи тканей, более 200 патентов, национальный центр промышленного дизайна.</p>
-            </div>
-          </a>
-
-          <a class="case-mini" href="https://www.youtube.com/@aliya.chinabiz" target="_blank" rel="noopener noreferrer">
-            <img src="img/case-sanrun.jpg" srcset="img/case-sanrun.jpg 1x, img/case-sanrun@2x.jpg 2x" alt="Парк Jiangsu Sanrun Garment Group" loading="lazy" decoding="async" width="800" height="450">
-            <div class="case-mini-body">
-              <h3>Цзянсу Санжунь</h3>
-              <span class="case-mini-tag">Женская одежда</span>
-              <p>96 собственных линий, фабрики в нескольких странах, аудиты UL, SGS и BV.</p>
-            </div>
-          </a>
-
-          <a class="case-mini" href="https://www.youtube.com/@aliya.chinabiz" target="_blank" rel="noopener noreferrer">
-            <img src="img/case-dongcheng.jpg" srcset="img/case-dongcheng.jpg 1x, img/case-dongcheng@2x.jpg 2x" alt="Цех автоматической сварки Jiangsu Dongcheng — электроинструмент" loading="lazy" decoding="async" width="800" height="375">
-            <div class="case-mini-body">
-           
-    
-   <h3>Цзянсу Дунчэн</h3>
-              <span class="case-mini-tag">Электроинструмент</span>
-              <p>Более 700 моделей, свыше 3300 патентов, индивидуальные решения полного цикла.</p>
-            </div>
-          </a>
-        </div>
-
-        <div class="cases-more">
-          <a class="btn btn-primary" href="cases.html">Смотреть все кейсы</a>
-        </div>
-      </div>
-    </section>
-<section class="aliya-sec" id="manager">
-      <div class="container">
-        <div class="aliya-inner">
-          <div class="aliya-photo">
-            <div class="aliya-ring aliya-ring-2" aria-hidden="true"></div>
-            <div class="aliya-ring" aria-hidden="true"></div>
-            <img src="img/aliya.webp" srcset="img/aliya.webp 1x, img/aliya@2x.webp 2x"
-                 alt="Алия — личный менеджер по закупкам в Китае" width="620" height="895" loading="lazy" decoding="async">
-            <span class="aliya-tag">Ваш человек в цепочке</span>
-          </div>
-
-          <div class="aliya-copy">
-            <div class="aliya-kicker">Ваш персональный менеджер</div>
-            <h2 class="aliya-name">Алия</h2>
-            <div class="aliya-role">Заместитель генерального директора</div>
-            <p class="aliya-lead">Один ответственный человек на весь цикл — от подбора фабрики до приёмки на складе. Я согласую цену и сроки, проверяю партию до оплаты и держу вас в курсе на каждом этапе. Вам не нужно пересказывать задачу новому сотруднику: заказ ведёт один человек.</p>
-
-            <div class="aliya-list">
-              <div class="aliya-item">
-                <span class="aliya-num">01</span>
-                <div>
-                  <h4>Подбор фабрик и переговоры</h4>
-                  <p>Сравниваю 3–5 производителей, беру образцы, согласовываю цену, сроки и минимальную партию.</p>
-                </div>
-              </div>
-              <div class="aliya-item">
-                <span class="aliya-num">02</span>
-                <div>
-                  <h4>Инспекция и контроль качества</h4>
-                  <p>Проверяю партию на фабрике до оплаты: материалы, размеры, дефекты и упаковку.</p>
-                </div>
-              </div>
-              <div class="aliya-item">
-                <span class="aliya-num">03</span>
-                <div>
-                  <h4>Контракт, сертификация, таможня</h4>
-                  <p>Договор, документы, сертификаты соответствия и таможенное оформление под рынок России.</p>
-                </div>
-              </div>
-              <div class="aliya-item">
-                <span class="aliya-num">04</span>
-                <div>
-                  <h4>Логистика и приёмка на складе</h4>
-                  <p>Консолидация груза, маршрут, расчёты в рублях и приёмка на собственном складе в России.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="aliya-actions">
-              <a class="btn btn-primary" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Оставить заявку</a>
-              <a class="btn btn-secondary" href="https://t.me/aliyachinabiz" target="_blank" rel="noreferrer">Написать в Telegram</a>
-            </div>
-            <div class="aliya-chips">
-              <a class="aliya-chip" href="mailto:aliya@chinasells.ru">✉ aliya@chinasells.ru</a>
-              <a class="aliya-chip" href="https://wa.me/8619895947232" target="_blank" rel="noreferrer">WhatsApp +86 198 9594 7232</a>
-              <a class="aliya-chip" href="https://t.me/aliyachinabiz" target="_blank" rel="noreferrer">Telegram @aliyachinabiz</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-dark" id="process">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker">Схема работы</div>
-            <h2 class="section-title">Как мы ведём ваш заказ — от запроса до поставки</h2>
-          </div>
-          <p class="section-copy">China Sells берёт на себя не просто посредничество, а полную координацию: проработку запроса, инспекцию фабрики, переговоры, контракт и исполнение поставки.</p>
-        </div>
-
-        <div class="process-layout">
-          <aside class="supplier-panel">
-            <h3>Что мы берём на себя</h3>
-            <div class="supplier-row">
-              <strong>Подбор и проверка поставщиков</strong>
-              <span>Сравниваем фабрики по цене, качеству и срокам, проверяем документы и репутацию, отбираем образцы.</span>
-            </div>
-            <div class="supplier-row">
-              <strong>Контроль производства</strong>
-              <span>Проводим выездную инспекцию, предоставляем фото и видео-отчёты или прямую трансляцию с производства.</span>
-            </div>
-            <div class="supplier-row">
-              <strong>Логистика и документы</strong>
-              <span>Организуем доставку, таможенное оформление, сертификацию и расчёты в рублях.</span>
-            </div>
-          </aside>
-
-          <div class="process-list">
-            <div class="process-step">
-              <div class="process-num">01</div>
-              <div class="process-text">Фиксируем требования: продукция, количество, сроки и бюджет, схема закупки</div>
-            </div>
-            <div class="process-step">
-              <div class="process-num">02</div>
-              <div class="process-text">Подбираем поставщика: сравнение фабрик, первичные переговоры и отбор образцов</div>
-            </div>
-            <div class="process-step">
-              <div class="process-num">03</div>
-              <div class="process-text">Контроль и контракт: инспекция фабрики и образцов, согласование договора и сертификатов</div>
-            </div>
-            <div class="process-step">
-              <div class="process-num">04</div>
-              <div class="process-text">Логистика и доставка: таможня, сертификация и доставка на ваш склад или на наш склад в России</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="contact-band">
-          <div>
-            <div class="section-kicker">Контакты</div>
-            <h2>Передайте задачу нам — начнём с цепочки поставок</h2>
-            <p>Независимо от того, оптовый ли вы покупатель, корпоративный клиент или бренд, выходящий на рынок России, — обсудите с нами направление продукции, масштаб заказа и формат сотрудничества.</p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Оставить заявку</a>
-              <a class="btn btn-secondary" href="https://wa.me/8619895947232" target="_blank" rel="noreferrer">Написать в WhatsApp</a>
-              <a class="btn btn-secondary" href="https://t.me/aliyachinabiz" target="_blank" rel="noreferrer">Telegram</a>
-            </div>
-          </div>
-
-          <div class="contact-list">
-            <div class="contact-item">
-              <span class="contact-label">WhatsApp</span>
-              <span class="contact-value"><a href="https://wa.me/8619895947232" target="_blank" rel="noreferrer">+86 198 9594 7232</a></span>
-            </div>
-            <div class="contact-item">
-              <span class="contact-label">Telegram</span>
-              <span class="contact-value"><a href="https://t.me/aliyachinabiz" target="_blank" rel="noreferrer">@aliyachinabiz</a></span>
-            </div>
-            <div class="contact-item">
-              <span class="contact-label">Email</span>
-              <span class="contact-value"><a href="mailto:hello@chinasells.ru">hello@chinasells.ru</a></span>
-            </div>
-            <div class="contact-item">
-              <span class="contact-label">Алия · личный менеджер</span>
-              <span class="contact-value"><a href="mailto:aliya@chinasells.ru">aliya@chinasells.ru</a></span>
-            </div>
-            <div class="contact-item">
-              <span class="contact-label">Адрес</span>
-              <span class="contact-value">Международный торговый центр, офис 3606, ул. Чунчуань, д. 88, уличный комитет Вэньфэн, район Чунчуань, г. Наньтун, провинция Цзянсу, Китай</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section section-white" id="social">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="section-kicker">Соцсети</div>
-            <h2 class="section-title">Показываем производство и логистику изнутри</h2>
-          </div>
-          <p class="section-copy">Видео с фабрик, обзоры партий, отзывы покупателей и рабочие будни команды — в наших аккаунтах.</p>
-        </div>
-
-        <div class="social-strip">
-          <a class="social-link" href="https://www.youtube.com/@aliya.chinabiz" target="_blank" rel="noopener noreferrer" title="YouTube: @aliya.chinabiz">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 5h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h3"/><path d="M12 3v9"/><path d="M9 9l3 3 3-3"/></svg>
-            YouTube
-          </a>
-          <a class="social-link" href="https://www.tiktok.com/@aliya.chinabiz" target="_blank" rel="noopener noreferrer" title="TikTok: @aliya.chinabiz">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19a3 3 0 1 0 3-3V4c.6 2.4 2.2 4 4.8 4.3"/></svg>
-            TikTok
-          </a>
-          <a class="social-link" href="https://vk.com/aliya.chinabiz" target="_blank" rel="noopener noreferrer" title="VK: @aliya.chinabiz">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7c1 6 3.5 9 7 9h1V7"/><path d="M12 7v9c3 0 5.5-2.5 7-5"/></svg>
-            VK
-          </a>
-          <a class="social-link" href="https://www.instagram.com/aliya.chinabiz" target="_blank" rel="noopener noreferrer" title="Instagram: @aliya.chinabiz">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1"/></svg>
-            Instagram
-          </a>
-        </div>
-        <p class="social-note">Единый аккаунт: @aliya.chinabiz</p>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <span>© 2026 Huiying Jujin (Jiangsu) International Trade Co., Ltd. Все права защищены.</span>
-      <span>China Sells — надёжный партнёр для бизнеса с Китаем</span>
+      <div class="ix-hero-meta"><i></i>Наньтун, Цзянсу · офисы в Китае и России</div>
     </div>
-  </footer>
+    <div class="ix-hero-media">
+      <img src="img/work/warehouse.webp" alt="Логистика и консолидация грузов China Sells" width="900" height="1200" fetchpriority="high">
+      <div class="ix-hero-caption"><i></i>Логистика и консолидация</div>
+      <aside class="ix-contact" aria-label="Контакты Алии">
+        <div class="ix-contact-head">
+          <img src="img/aliya-avatar.webp" srcset="img/aliya-avatar.webp 1x, img/aliya-avatar@2x.webp 2x" alt="Алия" width="80" height="80" loading="lazy">
+          <div><strong>Алия</strong><span>Заместитель генерального директора</span></div>
+        </div>
+        <div class="ix-contact-grid">
+          <a href="mailto:aliya@chinasells.ru"><b>Почта</b><span>aliya@chinasells.ru</span></a>
+          <a href="https://wa.me/8619895947232" target="_blank" rel="noopener noreferrer"><b>Мессенджер</b><span>WhatsApp</span></a>
+          <a href="https://t.me/aliyachinabiz" target="_blank" rel="noopener noreferrer"><b>Мессенджер</b><span>Telegram</span></a>
+          <a href="https://www.youtube.com/@aliya.chinabiz" target="_blank" rel="noopener noreferrer"><b>Соцсети</b><span>YouTube</span></a>
+        </div>
+      </aside>
+    </div>
+  </section>
 
-  <script>
-    const sections = document.querySelectorAll("section[id]");
-    const navLinks = document.querySelectorAll(".nav-links a[href^='#']");
-    const navTargets = {};
-    navLinks.forEach(function (link) {
-      navTargets[link.getAttribute("href")] = true;
-    });
+  <section class="ix-figures" aria-label="Ключевые показатели">
+    <div class="ix-figures-inner">
+      <div class="ix-fig"><strong>10+</strong><span>лет опыта в текстиле и трансграничной торговле</span></div>
+      <div class="ix-fig"><strong>10 000 м²<br>+ 3000 м²</strong><span>собственных складских площадей в России</span></div>
+      <div class="ix-fig"><strong>200+</strong><span>специалистов команды на рынке России</span></div>
+      <div class="ix-fig"><strong>60 млн ¥</strong><span>годовой оборот домашнего текстиля</span></div>
+    </div>
+  </section>
 
-    const navToggle = document.querySelector(".nav-toggle");
-    const navMenu = document.querySelector(".nav-links");
-    navToggle.addEventListener("click", function () {
-      const open = navMenu.classList.toggle("open");
-      navToggle.classList.toggle("open", open);
-      navToggle.setAttribute("aria-expanded", open);
-      navToggle.setAttribute("aria-label", open ? "Закрыть меню" : "Открыть меню");
-    });
-    navMenu.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        navMenu.classList.remove("open");
-        navToggle.classList.remove("open");
-        navToggle.setAttribute("aria-expanded", "false");
-      });
-    });
+  <section class="ix-cap" id="capability">
+    <div class="container ix-cap-inner">
+      <div class="ix-cap-left">
+        <div>
+          <div class="kicker">Локальные ресурсы</div>
+          <h2>Не просто сводим стороны</h2>
+          <p>Участвуем в ключевых узлах: закупках, производстве, контроле качества, документах, складе и доставке — чтобы снижать расходы на коммуникацию и риски исполнения.</p>
+          <a class="ix-text-link" href="about.html">О компании →</a>
+        </div>
+        <img src="img/work/tools-inspection.webp" alt="Инспекция электроинструмента на производстве" width="800" height="500" loading="lazy">
+      </div>
+      <div class="ix-cap-rows">
+        <a class="ix-cap-row" href="about.html">
+          <span class="idx">01</span>
+          <div><h3>Команды в Китае и России</h3><p>Китайская команда подбирает фабрики, проверяет производство и качество. Российская — держит склад, документы и коммуникацию с рынком.</p></div>
+          <span class="arr">→</span>
+        </a>
+        <a class="ix-cap-row" href="about.html">
+          <span class="idx">02</span>
+          <div><h3>Склад и исполнение</h3><p>Собственные склады в России: хранение, распределение заказов и локальная доставка. Консолидируем партии из разных фабрик в один поток.</p></div>
+          <span class="arr">→</span>
+        </a>
+        <a class="ix-cap-row" href="about.html">
+          <span class="idx">03</span>
+          <div><h3>Комплиенс и расчёты</h3><p>Договоры с российскими юрлицами, оплата в рублях, сертификация и таможенное оформление под рынок России.</p></div>
+          <span class="arr">→</span>
+        </a>
+        <a class="ix-cap-row" href="about.html">
+          <span class="idx">04</span>
+          <div><h3>Площадки и продвижение</h3><p>Опыт работы на Ozon и Wildberries, партнёры в Беларуси, контент и продвижение для выхода товара на рынок.</p></div>
+          <span class="arr">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    window.addEventListener("scroll", function () {
-      let current = "hero";
-      sections.forEach(function (section) {
-        if (!navTargets["#" + section.id]) {
-          return;
-        }
-        if (window.scrollY >= section.offsetTop - 120) {
-          current = section.id;
-        }
-      });
+  <section class="ix-catalog" id="catalog">
+    <div class="ix-catalog-head">
+      <div>
+        <div class="kicker on-dark">Каталог направлений</div>
+        <h2>Что мы закупаем и поставляем</h2>
+        <p>16 направлений и 172 подкатегории. Подбираем фабрику под конкретную позицию, а не «что есть на складе».</p>
+      </div>
+      <div class="ix-chips" aria-label="Быстрый фильтр">
+        <a class="ix-chip on" href="catalog.html">Все</a>
+        <a class="ix-chip" href="catalog.html?cat=textile">Текстиль</a>
+        <a class="ix-chip" href="catalog.html?cat=tools">Инструмент</a>
+        <a class="ix-chip" href="catalog.html?cat=medical">Медицина</a>
+        <a class="ix-chip" href="catalog.html?cat=home">Дом</a>
+        <a class="ix-chip" href="catalog.html?cat=packaging">Упаковка</a>
+      </div>
+    </div>
+    <div class="ix-rail" id="catalogRail">
+      <article class="ix-pcard">
+        <div class="ph"><img src="img/cat-textile.webp" alt="Домашний текстиль" width="552" height="428" loading="lazy"><span class="tag">Textile</span></div>
+        <div class="bd">
+          <h3>Домашний текстиль</h3>
+          <p class="sub">Постельное · Полотенца · Пледы · Шторы</p>
+          <div class="meta"><span>MOQ и срок — по запросу</span><span class="price">Цена по запросу</span></div>
+          <div class="acts">
+            <a class="go" href="catalog.html?cat=textile">Смотреть →</a>
+            <button class="ix-add" type="button" data-add data-id="textile" data-title="Домашний текстиль" data-cat="Текстиль" data-img="img/cat-textile.webp">+ В запрос</button>
+          </div>
+        </div>
+      </article>
+      <article class="ix-pcard">
+        <div class="ph"><img src="img/cat-tools.webp" alt="Электроинструмент и оборудование" width="552" height="428" loading="lazy"><span class="tag">Tools</span></div>
+        <div class="bd">
+          <h3>Инструмент и оборудование</h3>
+          <p class="sub">Электроинструмент · Ручной · Оснастка</p>
+          <div class="meta"><span>MOQ и срок — по запросу</span><span class="price">Цена по запросу</span></div>
+          <div class="acts">
+            <a class="go" href="catalog.html?cat=tools">Смотреть →</a>
+            <button class="ix-add" type="button" data-add data-id="tools" data-title="Инструмент и оборудование" data-cat="Инструмент" data-img="img/cat-tools.webp">+ В запрос</button>
+          </div>
+        </div>
+      </article>
+      <article class="ix-pcard">
+        <div class="ph"><img src="img/cat-medical.webp" alt="Медицина и уход" width="552" height="428" loading="lazy"><span class="tag">Medical</span></div>
+        <div class="bd">
+          <h3>Медицина и уход</h3>
+          <p class="sub">Медтехника · Реабилитация · Гигиена</p>
+          <div class="meta"><span>MOQ и срок — по запросу</span><span class="price">Цена по запросу</span></div>
+          <div class="acts">
+            <a class="go" href="catalog.html?cat=medical">Смотреть →</a>
+            <button class="ix-add" type="button" data-add data-id="medical" data-title="Медицина и уход" data-cat="Медицина" data-img="img/cat-medical.webp">+ В запрос</button>
+          </div>
+        </div>
+      </article>
+      <article class="ix-pcard">
+        <div class="ph"><img src="img/cat-home.webp" alt="Товары для дома" width="552" height="428" loading="lazy"><span class="tag">Home</span></div>
+        <div class="bd">
+          <h3>Товары для дома</h3>
+          <p class="sub">Посуда · Хранение · Кухня · Декор</p>
+          <div class="meta"><span>MOQ и срок — по запросу</span><span class="price">Цена по запросу</span></div>
+          <div class="acts">
+            <a class="go" href="catalog.html?cat=home">Смотреть →</a>
+            <button class="ix-add" type="button" data-add data-id="home" data-title="Товары для дома" data-cat="Дом" data-img="img/cat-home.webp">+ В запрос</button>
+          </div>
+        </div>
+      </article>
+      <article class="ix-pcard">
+        <div class="ph"><img src="img/cat-packaging.webp" alt="Упаковка и расходники" width="552" height="428" loading="lazy"><span class="tag">Packaging</span></div>
+        <div class="bd">
+          <h3>Упаковка и расходники</h3>
+          <p class="sub">Тара · Упаковка · Одноразовые</p>
+          <div class="meta"><span>MOQ и срок — по запросу</span><span class="price">Цена по запросу</span></div>
+          <div class="acts">
+            <a class="go" href="catalog.html?cat=packaging">Смотреть →</a>
+            <button class="ix-add" type="button" data-add data-id="packaging" data-title="Упаковка и расходники" data-cat="Упаковка" data-img="img/cat-packaging.webp">+ В запрос</button>
+          </div>
+        </div>
+      </article>
+      <article class="ix-pcard">
+        <div class="ph"><img src="img/cat-furniture.webp" alt="Мебель и фурнитура" width="552" height="428" loading="lazy"><span class="tag">Furniture</span></div>
+        <div class="bd">
+          <h3>Мебель и фурнитура</h3>
+          <p class="sub">Корпусная · Мягкая · Фурнитура</p>
+          <div class="meta"><span>MOQ и срок — по запросу</span><span class="price">Цена по запросу</span></div>
+          <div class="acts">
+            <a class="go" href="catalog.html?cat=furniture">Смотреть →</a>
+            <button class="ix-add" type="button" data-add data-id="furniture" data-title="Мебель и фурнитура" data-cat="Мебель" data-img="img/cat-furniture.webp">+ В запрос</button>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="ix-catalog-foot">
+      <span class="note">16 направлений · 172 подкатегории</span>
+      <div class="ix-arrows">
+        <button class="ix-arrow" type="button" data-rail-prev aria-label="Прокрутить каталог влево">←</button>
+        <button class="ix-arrow" type="button" data-rail-next aria-label="Прокрутить каталог вправо">→</button>
+        <a class="ix-arrow" href="catalog.html" aria-label="Открыть весь каталог">↗</a>
+      </div>
+    </div>
+  </section>
 
-      navLinks.forEach(function (link) {
-        link.classList.toggle("active", link.getAttribute("href") === "#" + current);
-      });
-    });
+  <section class="ix-process" id="process">
+    <div class="ix-process-copy">
+      <div class="kicker">Схема работы</div>
+      <h2>Как проходит заказ — от запроса до склада</h2>
+      <p>Один менеджер ведёт задачу: фиксирует требования, сравнивает фабрики, проверяет партию до оплаты и доводит груз до вашего или нашего склада.</p>
+      <div class="ix-steps">
+        <div class="ix-step">
+          <span class="no">01</span>
+          <div><h3>Фиксируем задачу</h3><p>Продукция, количество, бюджет, сроки и схема закупки. Проверяем, что запрос выполним на фабрике, а не только в переписке.</p><span class="side">Старт</span></div>
+        </div>
+        <div class="ix-step">
+          <span class="no">02</span>
+          <div><h3>Подбираем фабрику</h3><p>Сравниваем несколько производителей по цене, срокам и качеству, запрашиваем образцы и подтверждаем условия.</p><span class="side">Несколько фабрик</span></div>
+        </div>
+        <div class="ix-step">
+          <span class="no">03</span>
+          <div><h3>Проверяем партию</h3><p>Инспекция до оплаты: материалы, размеры, дефекты, упаковка. Фото- и видеоотчёт с фиксацией выборки.</p><span class="side">До оплаты</span></div>
+        </div>
+        <div class="ix-step">
+          <span class="no">04</span>
+          <div><h3>Логистика и документы</h3><p>Консолидация, таможня, сертификация и доставка на ваш склад или на наш склад в России. Расчёты в рублях.</p><span class="side">Под ключ</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="ix-process-media">
+      <img src="img/work/packing.webp" alt="Консолидация и упаковка партии перед отгрузкой" width="900" height="1200" loading="lazy">
+      <div class="ix-doc">
+        <span class="demo">ДЕМО</span>
+        <img src="docs/inspection-report-preview.webp" alt="Пример отчёта об инспекции" width="480" height="680" loading="lazy">
+        <div class="row"><span>Отчёт об инспекции</span><a href="docs/inspection-report-sample.pdf" target="_blank" rel="noopener noreferrer">PDF</a></div>
+      </div>
+      <div class="ix-process-caption"><b>Консолидация</b><span>Собираем партии с разных фабрик в один груз</span></div>
+    </div>
+  </section>
 
-    document.querySelectorAll('a[href^="mailto:"]').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var email = btn.getAttribute('href').replace('mailto:', '');
-        if (navigator.clipboard) {
-          navigator.clipboard.writeText(email).then(function () {
-            showToast('Email скопирован: ' + email);
-          });
-        }
-      });
-    });
+  <section class="ix-cases" id="cases">
+    <div class="container">
+      <div class="ix-cases-head">
+        <div>
+          <div class="kicker">Кейсы сотрудничества</div>
+          <h2>Партнёры с производством, а не посредники</h2>
+        </div>
+        <a class="ix-text-link" href="cases.html">Все кейсы →</a>
+      </div>
+      <div class="ix-case-grid">
+        <a class="ix-case-big" href="cases.html">
+          <img src="img/case-dongcheng.jpg" srcset="img/case-dongcheng.jpg 1x, img/case-dongcheng@2x.jpg 2x" alt="Цех автоматической сварки Jiangsu Dongcheng — электроинструмент" width="800" height="375" loading="lazy">
+          <div class="over">
+            <div class="num">Кейс 01 · Электроинструмент</div>
+            <h3>Цзянсу Дунчэн</h3>
+            <p>Более 700 моделей, свыше 3300 патентов, индивидуальные решения полного цикла. Производственная база в Наньтуне.</p>
+            <span class="chip">Наньтун · производство</span>
+          </div>
+        </a>
+        <a class="ix-case-sm" href="cases.html">
+          <div class="ph"><img src="img/case-fumei.jpg" srcset="img/case-fumei.jpg 1x, img/case-fumei@2x.jpg 2x" alt="Шоурум Nantong Fumei — головные уборы" width="800" height="300" loading="lazy"></div>
+          <div class="tx"><span class="tag">Головные уборы</span><h3>Наньтун Фумэй</h3><p>Пять баз, 10 млн изделий в год, поставки на Олимпиаду в Пекине.</p><span class="go">Смотреть →</span></div>
+        </a>
+        <a class="ix-case-sm" href="cases.html">
+          <div class="ph"><img src="img/case-sanrun.jpg" srcset="img/case-sanrun.jpg 1x, img/case-sanrun@2x.jpg 2x" alt="Парк Jiangsu Sanrun Garment Group" width="800" height="450" loading="lazy"></div>
+          <div class="tx"><span class="tag">Женская одежда</span><h3>Цзянсу Санжунь</h3><p>96 собственных линий, фабрики в нескольких странах, аудиты UL, SGS и BV.</p><span class="go">Смотреть →</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    function showToast(msg) {
-      var t = document.createElement('div');
-      t.textContent = msg;
-      t.style.cssText = 'position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.85);color:#fff;padding:10px 18px;border-radius:8px;font-size:13px;z-index:9999;max-width:90%;text-align:center;';
-      document.body.appendChild(t);
-      setTimeout(function () { t.remove(); }, 3000);
-    }
-  </script>
+  <section class="ix-proof" aria-label="Производство и контроль">
+    <div class="ix-proof-head">
+      <div class="kicker on-dark">Факты, а не обещания</div>
+      <a class="ix-text-link" href="https://www.youtube.com/@aliya.chinabiz" target="_blank" rel="noopener noreferrer">Смотреть производство →</a>
+    </div>
+    <div class="ix-proof-strip">
+      <div class="ix-proof-item"><img src="img/work/tools-inspection.webp" alt="Контроль качества электроинструмента" width="800" height="500" loading="lazy"><div class="cap"><b>Контроль</b><span>Проверка инструмента до оплаты</span></div></div>
+      <div class="ix-proof-item"><img src="img/work/warehouse.webp" alt="Склад и консолидация" width="800" height="500" loading="lazy"><div class="cap"><b>Склад</b><span>Консолидация партий и отгрузка</span></div></div>
+      <div class="ix-proof-item"><img src="img/case-ironman.jpg" srcset="img/case-ironman.jpg 1x, img/case-ironman@2x.jpg 2x" alt="Производственная база Ironman" width="800" height="533" loading="lazy"><div class="cap"><b>Производство</b><span>Спортивное оборудование</span></div></div>
+      <div class="ix-proof-item"><img src="img/work/textile-inspection.webp" alt="Проверка текстильной партии" width="800" height="500" loading="lazy"><div class="cap"><b>Текстиль</b><span>Замеры и проверка партии</span></div></div>
+    </div>
+  </section>
 
-  <button class="to-top" type="button" aria-label="返回顶部" title="返回顶部">
-    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
-  </button>
+  <section class="ix-brief" id="brief">
+    <div class="container ix-brief-grid">
+      <div class="ix-brief-copy">
+        <div class="kicker">Заявка за 2 минуты</div>
+        <h2>Опишите задачу — <span>вернёмся с фабрикой, ценой и сроком</span></h2>
+        <p>Не нужно готовить полное ТЗ. Достаточно продукта, объёма и срока — остальное уточним в переписке.</p>
+        <div class="ix-brief-points">
+          <div class="ix-brief-point"><b>01</b><span>Подберём фабрики под задачу под ваш продукт и рынок сбыта.</span></div>
+          <div class="ix-brief-point"><b>02</b><span>Проверим образцы, MOQ, упаковку и условия до оплаты.</span></div>
+          <div class="ix-brief-point"><b>03</b><span>Согласуем цену, срок, логистику и документы под Россию.</span></div>
+        </div>
+        <div class="ix-manager" id="manager">
+          <img src="img/aliya-avatar.webp" srcset="img/aliya-avatar.webp 1x, img/aliya-avatar@2x.webp 2x" alt="Алия — заместитель генерального директора" width="108" height="108" loading="lazy">
+          <div>
+            <strong>Алия</strong>
+            <span>Заместитель генерального директора · ведёт заказ от запроса до склада</span>
+            <div class="ix-manager-links">
+              <a href="mailto:aliya@chinasells.ru">aliya@chinasells.ru</a>
+              <a href="https://wa.me/8619895947232" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              <a href="https://t.me/aliyachinabiz" target="_blank" rel="noopener noreferrer">Telegram</a>
+            </div>
+          </div>
+        </div>
+        <div class="ix-brief-note">Первый ответ — в рабочее время. Без автоматических рассылок и скрытых подписок.</div>
+      </div>
+      <form class="ix-form" id="briefForm" novalidate>
+        <div class="ix-form-head"><strong>Короткая заявка</strong><span>Без регистрации</span></div>
+        <div class="ix-fields">
+          <div class="ix-field full">
+            <label for="briefProduct">Что ищем</label>
+            <input id="briefProduct" name="product" type="text" placeholder="Например: постельное бельё 200×220" required>
+          </div>
+          <div class="ix-field">
+            <label for="briefQty">Количество</label>
+            <input id="briefQty" name="qty" type="text" placeholder="500 комплектов" required>
+          </div>
+          <div class="ix-field">
+            <label for="briefBudget">Бюджет на единицу</label>
+            <input id="briefBudget" name="budget" type="text" placeholder="до 1 200 ¥ / шт.">
+          </div>
+          <div class="ix-field">
+            <label for="briefDeadline">Срок</label>
+            <input id="briefDeadline" name="deadline" type="text" placeholder="до конца декабря">
+          </div>
+          <div class="ix-field">
+            <label for="briefChannel">Куда отправить</label>
+            <select id="briefChannel" name="channel">
+              <option value="whatsapp">WhatsApp</option>
+              <option value="telegram">Telegram</option>
+              <option value="email">Почта</option>
+            </select>
+          </div>
+          <div class="ix-field full">
+            <label for="briefContact">Ваш контакт</label>
+            <input id="briefContact" name="contact" type="text" placeholder="Телефон, email или @username">
+          </div>
+        </div>
+        <div class="ix-form-actions">
+          <button class="btn btn-red" type="submit">Сформировать заявку</button>
+          <span class="hint">Откроется выбранный канал с готовым текстом — проверите и отправите сами.</span>
+        </div>
+        <div class="ix-preview">
+          <div class="lab">Предпросмотр заявки</div>
+          <div class="ix-preview-text" id="briefPreview">Заполните продукт и количество — здесь появится готовый текст.</div>
+          <div class="ix-copy-row"><span></span><button class="ix-copy" type="button" id="briefCopy">Скопировать текст</button></div>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
 
-  <script>
-    /* ==== 优化：返回顶部 ==== */
-    (function () {
-      var btn = document.querySelector('.to-top');
-      if (!btn) return;
-      function toggle() { btn.classList.toggle('show', window.pageYOffset > 600); }
-      window.addEventListener('scroll', toggle, { passive: true });
-      toggle();
-      btn.addEventListener('click', function () {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    })();
-  </script>
+<footer class="ix-footer" id="footer">
+  <div class="container">
+    <div class="ix-footer-top">
+      <div>
+        <div class="ix-footer-brand">
+          <img src="img/logo-hyjj.png" srcset="img/logo-hyjj.png 1x, img/logo-hyjj@2x.png 2x" alt="China Sells" width="90" height="90" loading="lazy">
+          <b>CHINA <em>SELLS</em></b>
+        </div>
+        <p>Huiying Jujin (Jiangsu) International Trade Co., Ltd. Закупки, инспекция, документы и логистика между Китаем и Россией.</p>
+      </div>
+      <div>
+        <h4>Компания</h4>
+        <div class="links">
+          <a href="about.html">О компании</a>
+          <a href="cases.html">Кейсы</a>
+          <a href="index.html#manager">Алия</a>
+          <a href="index.html#process">Схема работы</a>
+        </div>
+      </div>
+      <div>
+        <h4>Каталог</h4>
+        <div class="links">
+          <a href="catalog.html?cat=textile">Домашний текстиль</a>
+          <a href="catalog.html?cat=tools">Инструмент</a>
+          <a href="catalog.html?cat=medical">Медицина</a>
+          <a href="catalog.html">Все направления</a>
+        </div>
+      </div>
+      <div class="contact-links">
+        <h4>Контакты</h4>
+        <div class="links">
+          <a href="mailto:aliya@chinasells.ru"><span>Почта</span>aliya@chinasells.ru</a>
+          <a href="https://wa.me/8619895947232" target="_blank" rel="noopener noreferrer"><span>WA</span>+86 198 9594 7232</a>
+          <a href="https://t.me/aliyachinabiz" target="_blank" rel="noopener noreferrer"><span>TG</span>@aliyachinabiz</a>
+          <a href="https://www.youtube.com/@aliya.chinabiz" target="_blank" rel="noopener noreferrer"><span>YT</span>@aliya.chinabiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="ix-footer-bottom">
+      <span>© 2026 Huiying Jujin (Jiangsu) International Trade Co., Ltd.</span>
+      <span>Наньтун, Цзянсу · офисы в Китае и России</span>
+    </div>
+  </div>
+  <div class="ix-endbar"></div>
+</footer>
 
-  <script>
-    /* ==== 优化：行为埋点（表单入口 / 联系方式） ==== */
-    document.addEventListener('click', function (e) {
-      var a = e.target && e.target.closest ? e.target.closest('a') : null;
-      if (!a || typeof gtag !== 'function') return;
-      var href = a.getAttribute('href') || '';
-      var label = (a.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 40);
-      if (href.indexOf('hyjj.shop') > -1) {
-        gtag('event', 'enquiry_entry_click', { event_category: 'lead', event_label: label || href, link_url: href });
-      } else if (href.indexOf('tel:') === 0) {
-        gtag('event', 'contact', { event_category: 'contact', method: 'phone' });
-      } else if (href.indexOf('mailto:') === 0) {
-        gtag('event', 'contact', { event_category: 'contact', method: 'email' });
-      } else if (/(wa\.me|whatsapp|t\.me|telegram|vk\.com|instagram|youtube|tiktok)/i.test(href)) {
-        gtag('event', 'contact', { event_category: 'contact', method: 'social', link_url: href });
-      }
-    }, false);
-  </script>
+<div class="ix-inquiry" id="inquiryBar" aria-live="polite">
+  <div class="ix-inq-left">
+    <span class="ix-inq-count" id="inquiryCount">0</span>
+    <div class="ix-inq-copy"><strong>Направления в запросе</strong><span id="inquiryTitles">Выберите карточки каталога</span></div>
+    <div class="ix-inq-thumbs" id="inquiryThumbs"></div>
+  </div>
+  <div class="ix-inq-actions">
+    <button class="ix-inq-clear" type="button" id="inquiryClear">Очистить</button>
+    <button class="btn btn-red" type="button" id="inquirySend">Отправить запрос</button>
+  </div>
+</div>
+<div class="ix-toast" id="toast" role="status"></div>
 
-  <!-- ==== 滚动进场动效 ==== -->
-  <script>
-  (function () {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    if (!('IntersectionObserver' in window)) return;
-    var root = document.documentElement;
-
-    var blocks = [
-      '.section-head',
-      '.about-home-text',
-      '.about-metrics',
-      '.capability-grid',
-      '.process-layout',
-      '.aliya-photo',
-      '.aliya-copy',
-      '.cat-grid',
-      '.cat-more',
-      '.cases-home-grid',
-      '.contact-band',
-      '.hero-proof'
-    ];
-    var staggerParents = [
-      '.capability-grid',
-      '.about-metrics',
-      '.cases-home-grid',
-      '.cat-grid',
-      '.process-list'
-    ];
-
-    blocks.forEach(function (sel) {
-      document.querySelectorAll(sel).forEach(function (el) {
-        if (el.classList.contains('reveal')) return;
-        el.classList.add('reveal');
-      });
-    });
-
-    staggerParents.forEach(function (sel) {
-      document.querySelectorAll(sel).forEach(function (parent) {
-        Array.prototype.forEach.call(parent.children, function (child, i) {
-          child.classList.add('reveal');
-          child.style.transitionDelay = (i * 0.07).toFixed(2) + 's';
-        });
-      });
-    });
-
-    document.querySelectorAll('.cases-home-grid, .case-mini')
-      .forEach(function (el) { el.classList.add('reveal-img'); });
-
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-in');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
-
-    root.classList.add('motion');
-    document.querySelectorAll('.reveal, .reveal-img').forEach(function (el) {
-      io.observe(el);
-    });
-    setTimeout(function () {
-      document.querySelectorAll('.reveal:not(.is-in), .reveal-img:not(.is-in)').forEach(function (el) {
-        el.classList.add('is-in');
-      });
-    }, 2200);
-  })();
-  </script>
+<script src="js/site-2026.js" defer></script>
 </body>
 </html>

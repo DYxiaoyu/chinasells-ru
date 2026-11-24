@@ -213,10 +213,11 @@
     var fQty = $('#briefQty');
     var fBudget = $('#briefBudget');
     var fDeadline = $('#briefDeadline');
-    var fChannel = $('#briefChannel');
     var fContact = $('#briefContact');
     var preview = $('#briefPreview');
     var copyBtn = $('#briefCopy');
+    var waBtn = $('#briefWhatsApp');
+    var FORM_URL = 'https://hyjj.shop/enquiry';
 
     function val(el, fallback) {
       var v = el && el.value ? el.value.trim() : '';
@@ -267,33 +268,49 @@
       });
     }
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
+    function needsBrief() {
       var product = fProduct ? fProduct.value.trim() : '';
       var qty = fQty ? fQty.value.trim() : '';
       if (!product || !qty) {
         toast('Заполните продукт и количество');
         if (!product && fProduct) fProduct.focus();
         else if (!qty && fQty) fQty.focus();
-        return;
+        return false;
       }
+      return true;
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!needsBrief()) return;
       var text = buildText();
-      var channel = fChannel ? fChannel.value : 'whatsapp';
-      track('generate_lead', { channel: channel, product: product });
-      if (channel === 'email') {
-        window.location.href = 'mailto:aliya@chinasells.ru?subject=' +
-          encodeURIComponent('Заявка с сайта China Sells: ' + product) +
-          '&body=' + encodeURIComponent(text);
-      } else if (channel === 'telegram') {
-        copyText(text).then(function () {
-          window.open('https://t.me/aliyachinabiz', '_blank', 'noopener');
-          toast('Текст скопирован — вставьте его в Telegram');
-        }).catch(function () {
-          window.open('https://t.me/aliyachinabiz', '_blank', 'noopener');
-        });
-      } else {
-        window.open('https://wa.me/' + WA_PHONE + '?text=' + encodeURIComponent(text), '_blank', 'noopener');
-      }
+      var product = fProduct.value.trim();
+      track('generate_lead', { channel: 'form', product: product });
+      var params = new URLSearchParams({
+        product: product,
+        qty: val(fQty),
+        budget: val(fBudget),
+        deadline: val(fDeadline),
+        contact: val(fContact),
+        source: 'chinasells'
+      });
+      var win = window.open(FORM_URL + '?' + params.toString(), '_blank');
+      if (win) win.opener = null;
+      copyText(text).then(function () {
+        toast('Форма открыта. Текст скопирован — вставьте его в форму.');
+      }).catch(function () {
+        toast('Форма открыта. Текст заявки — в предпросмотре ниже.');
+      });
+      if (!win) toast('Разрешите всплывающие окна или откройте hyjj.shop/enquiry');
     });
+
+    if (waBtn) {
+      waBtn.addEventListener('click', function () {
+        if (!needsBrief()) return;
+        var text = buildText();
+        track('generate_lead', { channel: 'whatsapp', product: fProduct.value.trim() });
+        window.open('https://wa.me/' + WA_PHONE + '?text=' + encodeURIComponent(text), '_blank', 'noopener');
+      });
+    }
   }
 })();

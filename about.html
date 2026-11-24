@@ -3,972 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>О компании — China Sells | Поставки из Китая для бизнеса в России</title>
-  <meta name="description" content="China Sells — компания с офисами в Китае и России: закупки, переговоры, инспекция фабрик, сертификация, логистика и склад. Полный цикл поставок из Китая.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='6'%20fill='%23071f3b'/%3E%3Cpath%20d='M16%206%20L26%2016%20L16%2026%20L6%2016%20Z'%20fill='%23d7a84f'/%3E%3C/svg%3E">
-  <style>
-    :root {
-      --ink: #081426;
-      --navy: #071f3b;
-      --blue: #14508f;
-      --gold: #d7a84f;
-      --gold-2: #f2c76d;
-      --paper: #f6f8fb;
-      --line: #dfe6ef;
-      --muted: #66758a;
-      --white: #ffffff;
-      --shadow: 0 24px 70px rgba(6, 24, 45, 0.12);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      min-width: 320px;
-      color: var(--ink);
-      background: var(--paper);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .site-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 20;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-      background: rgba(5, 17, 32, 0.88);
-      backdrop-filter: blur(18px);
-    }
-
-    .nav {
-      width: min(1180px, calc(100% - 40px));
-      height: 72px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 28px;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      color: var(--white);
-      font-weight: 700;
-      white-space: nowrap;
-    }
-
-    .brand-mark {
-      width: 38px;
-      height: 38px;
-      flex: 0 0 auto;
-      display: block;
-    }
-
-    .brand strong {
-      display: block;
-      font-size: 18px;
-      letter-spacing: 0.5px;
-    }
-
-    .brand strong em {
-      font-style: normal;
-      color: var(--gold-2);
-    }
-
-    .brand small {
-      display: block;
-      color: rgba(255, 255, 255, 0.58);
-      font-size: 10.5px;
-      font-weight: 500;
-      letter-spacing: 0.4px;
-      text-transform: uppercase;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      display: inline-flex;
-      align-items: center;
-      min-height: 38px;
-      padding: 0 14px;
-      border-radius: 4px;
-      color: rgba(255, 255, 255, 0.74);
-      font-size: 14px;
-      transition: color 0.2s ease, background 0.2s ease;
-      white-space: nowrap;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--white);
-      background: rgba(255, 255, 255, 0.1);
-    }
-
-    .nav-links a.nav-cta {
-      margin-left: 10px;
-      padding: 0 18px;
-      color: #fff;
-      font-weight: 600;
-      border-radius: 4px;
-      background: linear-gradient(120deg, #B45309 0%, #D97706 100%);
-      box-shadow: 0 2px 10px rgba(217, 119, 6, 0.35);
-      transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
-    }
-
-    .nav-links a.nav-cta:hover,
-    .nav-links a.nav-cta.active {
-      color: #fff;
-      background: linear-gradient(120deg, #B45309 0%, #D97706 100%);
-      filter: brightness(1.08);
-      box-shadow: 0 4px 14px rgba(217, 119, 6, 0.45);
-      transform: translateY(-1px);
-    }
-
-    .nav-toggle {
-      display: none;
-      align-items: center;
-      justify-content: center;
-      width: 44px;
-      height: 44px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 6px;
-      background: rgba(255, 255, 255, 0.06);
-      color: var(--gold-2);
-      cursor: pointer;
-    }
-
-    .nav-toggle .icon-close {
-      display: none;
-    }
-
-    .nav-toggle.open .icon-menu {
-      display: none;
-    }
-
-    .nav-toggle.open .icon-close {
-      display: block;
-    }
-
-    .page-hero {
-      position: relative;
-      padding: 156px 0 92px;
-      color: var(--white);
-      background:
-        linear-gradient(90deg, rgba(5, 15, 30, 0.96) 0%, rgba(7, 31, 59, 0.84) 40%, rgba(7, 31, 59, 0.24) 70%, rgba(7, 31, 59, 0.1) 100%),
-        linear-gradient(180deg, rgba(5, 15, 30, 0.18), rgba(5, 15, 30, 0.72)),
-        url("img/ru-hero.webp") right 50% / cover no-repeat;
-    }
-
-    .container {
-      width: min(1180px, calc(100% - 40px));
-      margin: 0 auto;
-    }
-
-    .page-hero-content {
-      width: min(720px, 100%);
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 26px;
-      color: var(--gold-2);
-      font-size: 13.5px;
-      font-weight: 700;
-      letter-spacing: 0.6px;
-      text-transform: uppercase;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 42px;
-      height: 1px;
-      background: var(--gold-2);
-      flex: 0 0 auto;
-    }
-
-    .page-hero h1 {
-      font-size: 48px;
-      line-height: 1.12;
-      font-weight: 800;
-      letter-spacing: -0.6px;
-    }
-
-    .page-hero p {
-      max-width: 640px;
-      margin-top: 22px;
-      color: rgba(255, 255, 255, 0.78);
-      font-size: 17.5px;
-      line-height: 1.9;
-    }
-
-    .section {
-      padding: 60px 0;
-    }
-
-    section.section:not(.section-white):not(.section-dark) {
-      background: linear-gradient(180deg, #ffffff 0%, #f6f8fb 15%, #f6f8fb 85%, #ffffff 100%);
-    }
-
-    .section-white {
-      background: var(--white);
-    }
-
-    .section-dark {
-      color: var(--white);
-      background: linear-gradient(180deg, #071f3b 0%, #0a2a4e 50%, #071f3b 100%);
-    }
-
-    .intro-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-      gap: 64px;
-      align-items: start;
-    }
-
-    .section-kicker {
-      color: var(--gold);
-      font-size: 12.5px;
-      font-weight: 800;
-      letter-spacing: 0.8px;
-      text-transform: uppercase;
-    }
-
-    .section-title {
-      margin-top: 10px;
-      margin-bottom: 24px;
-      color: var(--ink);
-      font-size: 34px;
-      line-height: 1.2;
-      font-weight: 800;
-      letter-spacing: -0.4px;
-    }
-
-    .section-dark .section-title {
-      color: var(--white);
-    }
-
-    .body-copy {
-      margin-top: 18px;
-      display: grid;
-      gap: 12px;
-      color: #3e4c5f;
-      font-size: 14.5px;
-      line-height: 1.85;
-    }
-
-    .body-copy strong {
-      color: var(--ink);
-      font-weight: 800;
-    }
-
-    .metric-panel {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      background: var(--white);
-      border-top: 1px solid var(--line);
-      border-left: 1px solid var(--line);
-      box-shadow: var(--shadow);
-    }
-
-    .metric {
-      padding: 20px 18px;
-      border-right: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .metric strong {
-      display: block;
-      color: var(--blue);
-      font-size: 21px;
-      line-height: 1.15;
-      margin-bottom: 10px;
-      word-break: break-word;
-    }
-
-    .metric span {
-      display: block;
-      color: var(--muted);
-      font-size: 12.5px;
-      line-height: 1.6;
-    }
-
-    .capability-table {
-      display: grid;
-      grid-template-columns: 300px 1fr;
-      border-top: 1px solid var(--line);
-      border-left: 1px solid var(--line);
-      background: var(--white);
-      box-shadow: var(--shadow);
-    }
-
-    .capability-row {
-      display: contents;
-    }
-
-    .capability-name,
-    .capability-desc {
-      padding: 18px 22px;
-      border-right: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .capability-name {
-      color: var(--ink);
-      font-size: 16.5px;
-      font-weight: 800;
-      background: #fbfcfe;
-      line-height: 1.45;
-    }
-
-    .capability-desc {
-      color: #405066;
-      font-size: 14px;
-      line-height: 1.8;
-    }
-
-    .timeline {
-      display: grid;
-      gap: 1px;
-      margin-top: 44px;
-      background: rgba(255, 255, 255, 0.13);
-      border: 1px solid rgba(255, 255, 255, 0.13);
-    }
-
-    .timeline-step {
-      display: grid;
-      grid-template-columns: 92px 1fr;
-      background: rgba(255, 255, 255, 0.06);
-    }
-
-    .timeline-index {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-right: 1px solid rgba(255, 255, 255, 0.13);
-      color: var(--gold-2);
-      font-size: 21px;
-      font-weight: 800;
-    }
-
-    .timeline-text {
-      padding: 24px 30px;
-    }
-
-    .timeline-text strong {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--white);
-      font-size: 17px;
-    }
-
-    .timeline-text span {
-      display: block;
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 14px;
-      line-height: 1.8;
-    }
-
-    .problem-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid var(--line);
-      border-left: 1px solid var(--line);
-      background: var(--white);
-      box-shadow: var(--shadow);
-    }
-
-    .problem {
-      padding: 24px 22px;
-      border-right: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .problem h3 {
-      color: var(--ink);
-      font-size: 16.5px;
-      margin-bottom: 10px;
-      line-height: 1.4;
-    }
-
-    .problem p {
-      color: var(--muted);
-      font-size: 13.5px;
-      line-height: 1.75;
-    }
-
-    .faq-list {
-      max-width: 940px;
-      margin: 44px auto 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .faq-item {
-      display: grid;
-      grid-template-columns: 320px 1fr;
-      gap: 24px;
-      padding: 20px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .faq-item h3 {
-      font-size: 16px;
-      color: var(--ink);
-      line-height: 1.5;
-    }
-
-    .faq-item p {
-      color: var(--muted);
-      font-size: 14.5px;
-      line-height: 1.85;
-    }
-
-    .cta {
-      padding: 58px;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 32px;
-      align-items: center;
-      color: var(--white);
-      background:
-        linear-gradient(135deg, rgba(7, 31, 59, 0.97), rgba(8, 20, 38, 0.97)),
-        url("img/ru-hero.webp") center bottom / cover no-repeat;
-      box-shadow: var(--shadow);
-    }
-
-    .cta h2 {
-      font-size: 30px;
-      line-height: 1.24;
-      margin-bottom: 12px;
-    }
-
-    .cta p {
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 15.5px;
-      line-height: 1.8;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 0 24px;
-      border-radius: 4px;
-      font-size: 15px;
-      font-weight: 700;
-      transition: transform 0.2s ease;
-      white-space: nowrap;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-    }
-
-    .btn-primary {
-      background: var(--gold);
-      color: #121821;
-      box-shadow: 0 16px 38px rgba(215, 168, 79, 0.24);
-    }
-
-    .footer {
-      padding: 16px 0;
-      background: #050d18;
-      color: rgba(255, 255, 255, 0.52);
-      font-size: 12px;
-      line-height: 1.7;
-    }
-
-    .footer-inner {
-      width: min(1180px, calc(100% - 40px));
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width:1180px){
-  .nav{width:min(100% - 28px,1180px);height:64px;padding:0;}
-  .nav-toggle{display:inline-flex;}
-  .nav-links{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:2px;
-    padding:12px 16px 20px;background:#051120;border-bottom:1px solid rgba(255,255,255,.12);
-    box-shadow:0 24px 50px rgba(3,10,20,.5);opacity:0;transform:translateY(-10px);pointer-events:none;
-    transition:opacity .22s ease,transform .22s ease;}
-  .nav-links.open{opacity:1;transform:translateY(0);pointer-events:auto;}
-  .nav-links a{width:100%;min-height:44px;padding:0 14px;font-size:14.5px;}
-  .nav-links a.nav-cta{margin:6px 0 0;justify-content:center;min-height:46px;}
-}
-
-@media (max-width: 900px) {
-      .nav {
-        width: min(100% - 28px, 1180px);
-        height: 64px;
-        padding: 0;
-      }
-
-      .nav-toggle {
-        display: inline-flex;
-      }
-
-      .nav-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 2px;
-        padding: 12px 16px 20px;
-        background: #051120;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-        box-shadow: 0 24px 50px rgba(3, 10, 20, 0.5);
-        opacity: 0;
-        transform: translateY(-10px);
-        pointer-events: none;
-        transition: opacity 0.22s ease, transform 0.22s ease;
-      }
-
-      .nav-links.open {
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: auto;
-      }
-
-      .nav-links a {
-        width: 100%;
-        min-height: 46px;
-        padding: 0 14px;
-        font-size: 15px;
-      }
-
-      .nav-links a.nav-cta {
-        margin: 6px 0 0;
-        justify-content: center;
-        min-height: 48px;
-      }
-
-      .container {
-        width: min(100% - 28px, 1180px);
-      }
-
-      .page-hero {
-        padding: 104px 0 70px;
-        background:
-          linear-gradient(180deg, rgba(5, 15, 30, 0.96) 0%, rgba(7, 31, 59, 0.84) 56%, rgba(7, 31, 59, 0.62) 100%),
-          url("img/ru-hero.webp") 68% bottom / cover no-repeat;
-      }
-
-      .page-hero h1 {
-        font-size: 38px;
-        letter-spacing: -0.3px;
-      }
-
-      .page-hero p {
-        font-size: 16px;
-      }
-
-      .intro-grid,
-      .capability-table,
-      .problem-grid,
-      .faq-item,
-      .cta {
-        grid-template-columns: 1fr;
-      }
-
-      .section {
-        padding: 52px 0;
-      }
-
-      .section-title {
-        font-size: 30px;
-      }
-
-      .capability-name,
-      .capability-desc {
-        padding: 14px 18px;
-      }
-
-      .capability-name {
-        border-bottom: none;
-      }
-
-      .faq-item {
-        gap: 8px;
-      }
-
-      .cta {
-        padding: 36px 24px;
-      }
-
-      .cta h2 {
-        font-size: 26px;
-      }
-    }
-
-    @media (max-width: 560px) {
-      .brand strong {
-        font-size: 15px;
-      }
-
-      .brand small {
-        display: none;
-      }
-
-      .nav-links {
-        padding: 10px 14px 18px;
-      }
-
-      .page-hero h1 {
-        font-size: 32px;
-      }
-
-      .metric-panel {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .timeline-step {
-        grid-template-columns: 58px 1fr;
-      }
-
-      .timeline-text {
-        padding: 18px 20px;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .cta {
-        text-align: left;
-      }
-    }
-  
-    /* ==== 优化：返回顶部 ==== */
-    .to-top {
-      position: fixed;
-      right: 24px;
-      bottom: 24px;
-      z-index: 60;
-      width: 46px;
-      height: 46px;
-      border: 0;
-      border-radius: 50%;
-      background: var(--navy);
-      color: var(--gold-2);
-      font-size: 16px;
-      font-weight: 800;
-      cursor: pointer;
-      box-shadow: 0 10px 26px rgba(6, 24, 45, 0.28);
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(10px);
-      transition: opacity .25s ease, transform .25s ease, visibility .25s;
-    }
-
-    .to-top.show {
-      opacity: 1;
-      visibility: visible;
-      transform: none;
-    }
-
-    .to-top:hover {
-      background: var(--blue);
-    }
-
-    @media (max-width: 560px) {
-      .to-top {
-        right: 16px;
-        bottom: 16px;
-        width: 42px;
-        height: 42px;
-      }
-    }
-  
-    /* ==== Обновление: стили новых блоков ==== */
-    .cred-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px;
-      margin-top: 34px;
-    }
-
-    .cred-card {
-      padding: 26px 24px 28px;
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-top: 3px solid var(--gold);
-      box-shadow: 0 12px 34px rgba(6, 24, 45, 0.06);
-    }
-
-    .cred-card h3 {
-      margin-bottom: 10px;
-      color: var(--ink);
-      font-size: 17px;
-      line-height: 1.45;
-    }
-
-    .cred-card p {
-      color: var(--muted);
-      font-size: 13.5px;
-      line-height: 1.8;
-    }
-
-    .party-note {
-      margin-top: 20px;
-      padding: 16px 20px;
-      background: rgba(215, 168, 79, 0.08);
-      border-left: 3px solid var(--gold);
-      color: var(--muted);
-      font-size: 13.5px;
-      line-height: 1.8;
-    }
-
-    .party-note strong {
-      color: var(--ink);
-    }
-
-    .social-strip {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 22px;
-    }
-
-    .social-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      padding: 11px 18px;
-      border: 1px solid var(--line);
-      background: var(--white);
-      color: var(--ink);
-      font-size: 13.5px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: border-color .2s, color .2s, transform .2s;
-    }
-
-    .social-link:hover {
-      border-color: var(--gold);
-      color: var(--blue);
-      transform: translateY(-2px);
-    }
-
-    .social-link svg {
-      width: 15px;
-      height: 15px;
-      color: var(--gold);
-    }
-
-    .social-note {
-      margin-top: 14px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .value-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
-      margin-top: 36px;
-    }
-
-    .value-card {
-      padding: 30px 26px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-    }
-
-    .value-card h3 {
-      margin-bottom: 12px;
-      color: var(--gold-2);
-      font-size: 18px;
-    }
-
-    .value-card p {
-      color: rgba(255, 255, 255, 0.78);
-      font-size: 14px;
-      line-height: 1.85;
-    }
-
-    @media (max-width: 900px) {
-      .cred-grid,
-      .value-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  
-    /* ==== 语言切换 ==== */
-    .nav-links a.nav-lang {
-      margin-left: 8px;
-      min-height: 30px;
-      padding: 0 12px;
-      border: 1px solid rgba(255, 255, 255, 0.28);
-      border-radius: 999px;
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.8px;
-    }
-
-    .nav-links a.nav-lang:hover,
-    .nav-links a.nav-lang.active {
-      color: var(--gold-2);
-      border-color: var(--gold);
-      background: rgba(215, 168, 79, 0.14);
-    }
-  /* ===================== 统一排版节奏（移动端） ===================== */
-@media (max-width: 900px) {
-  .hero-proof { background: rgba(6,20,38,.62); border-color: rgba(255,255,255,.14); }
-  .proof-item { background: rgba(6,20,38,.5); }
-  .section-kicker { font-size: 11px; line-height: 1.4; letter-spacing: .14em; }
-  .section-title,
-  .contact-band h2,
-  .about-home-text .section-title {
-    margin-top: 10px;
-    font-size: 25px;
-    line-height: 1.24;
-    letter-spacing: -.3px;
-  }
-  .hero h1 { font-size: 29px; line-height: 1.16; letter-spacing: -.4px; }
-  .hero-lead,
-  .section-copy { margin-top: 14px; font-size: 15px; line-height: 1.68; }
-  .section-copy + .section-copy { margin-top: 12px; }
-  .section-head { margin-bottom: 26px; gap: 10px; }
-  .text-link { display: inline-block; margin-top: 20px; font-size: 14px; }
-  .capability-card { padding: 22px 18px; min-height: auto; }
-  .capability-icon { width: 30px; height: 30px; margin-bottom: 14px; }
-  .capability-card h3 { margin-bottom: 8px; font-size: 16px; line-height: 1.35; }
-  .capability-card p { font-size: 13px; line-height: 1.68; }
-  .about-metric { padding: 20px 18px; }
-  .about-metric strong { font-size: 24px; line-height: 1.1; }
-  .about-metric span { margin-top: 8px; font-size: 12px; line-height: 1.55; }
-  .case-mini-body { padding: 16px 14px 18px; }
-  .case-mini h3 { margin-bottom: 6px; font-size: 15px; line-height: 1.35; }
-  .case-mini p { font-size: 12.5px; line-height: 1.65; }
-  .cat-card { padding: 18px 16px 16px; }
-  .cat-ico { width: 28px; height: 28px; margin-bottom: 12px; }
-  .cat-card h3 { margin-bottom: 6px; font-size: 15px; line-height: 1.35; }
-  .cat-card p { font-size: 12.5px; line-height: 1.62; }
-  .aliya-lead { margin-top: 14px; font-size: 14px; line-height: 1.68; }
-  .aliya-item h4 { margin-bottom: 6px; font-size: 15px; line-height: 1.35; }
-  .aliya-item p { font-size: 12.5px; line-height: 1.65; }
-  .supplier-panel { padding: 24px 20px; }
-  .supplier-panel h3 { margin-bottom: 14px; font-size: 18px; line-height: 1.3; }
-  .supplier-row { padding: 16px 0; }
-  .supplier-row strong { margin-bottom: 4px; font-size: 15px; }
-  .supplier-row span { font-size: 12.5px; line-height: 1.65; }
-  .process-step { grid-template-columns: 58px 1fr; }
-  .process-text { padding: 18px; }
-  .process-text h3 { font-size: 15.5px; line-height: 1.35; }
-  .process-text p { margin-top: 6px; font-size: 12.5px; line-height: 1.65; }
-}
-
-/* ===================== 进场动效（滚动触发） ===================== */
-html.motion .reveal {
-  opacity: 0;
-  transform: translate3d(0, 24px, 0);
-  transition: opacity .8s cubic-bezier(.16,.84,.24,1), transform .8s cubic-bezier(.16,.84,.24,1);
-  will-change: opacity, transform;
-}
-html.motion .reveal.is-in { opacity: 1; transform: none; }
-html.motion .reveal-img { overflow: hidden; }
-html.motion .reveal-img img {
-  transform: scale(1.05);
-  transition: transform 1.1s cubic-bezier(.16,.84,.24,1);
-}
-html.motion .reveal-img.is-in img { transform: scale(1); }
-html.motion .reveal-line {
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform .9s cubic-bezier(.16,.84,.24,1);
-}
-html.motion .reveal-line.is-in { transform: scaleX(1); }
-@media (prefers-reduced-motion: reduce) {
-  html.motion .reveal { opacity: 1; transform: none; transition: none; }
-  html.motion .reveal-img img { transform: none; transition: none; }
-  html.motion .reveal-line { transform: none; transition: none; }
-}
-
-/* ---- 移动端补丁：品类块强制单列、统计格紧凑 ---- */
-@media (max-width:900px){
-  .cat-row, .cat-row.is-reverse { grid-template-columns: minmax(0,1fr) !important; gap: 26px !important; }
-  .cat-row.is-reverse .cat-thumb { order: 0 !important; }
-  .stat-cell { padding: 18px 16px; }
-  .stat-cell b { font-size: 30px; }
-  .stat-cell small { margin-top: 8px; font-size: 12.5px; line-height: 1.55; }
-}</style>
-
-  <!-- ==== 优化：性能预连接 ==== -->
-  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-
-  <!-- ==== 优化：SEO 元信息 ==== -->
-  <meta name="description" content="China Sells — компания с офисами в Китае и России: закупки, контроль качества, документы, логистика и складские мощности 13 000 м² в России.">
+  <title>О компании China Sells — закупки, инспекция и поставки из Китая</title>
+  <meta name="description" content="China Sells: офисы в Китае и России, 10 лет опыта, закупки и развитие поставщиков, инспекция фабрик, сертификация, логистика и локальный склад в России.">
   <link rel="canonical" href="https://chinasells.ru/about.html">
   <link rel="alternate" hreflang="ru" href="https://chinasells.ru/about.html">
-  <link rel="alternate" hreflang="x-default" href="https://www.hyjjls.cn/about.html">
-  <link rel="alternate" hreflang="zh-CN" href="https://www.hyjjls.cn/about.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.hyjjls.cn/">
+  <link rel="alternate" hreflang="zh-CN" href="https://www.hyjjls.cn/">
+  <meta name="theme-color" content="#0d1b28">
+  <link rel="icon" href="img/logo-hyjj.png">
+  <link rel="preload" href="css/site-2026.css" as="style">
+  <link rel="stylesheet" href="css/site-2026.css">
+
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="China Sells">
-  <meta property="og:title" content="О компании — China Sells">
-  <meta property="og:description" content="China Sells — компания с офисами в Китае и России: закупки, контроль качества, документы, логистика и складские мощности 13 000 м² в России.">
+  <meta property="og:title" content="О компании China Sells">
+  <meta property="og:description" content="10 лет в отрасли, офисы в Китае и России, полный цикл трансграничных поставок — от закупки до склада.">
   <meta property="og:url" content="https://chinasells.ru/about.html">
-  <meta property="og:image" content="https://chinasells.ru/img/ru-hero.jpg">
+  <meta property="og:image" content="https://chinasells.ru/img/work/warehouse.webp">
   <meta property="og:locale" content="ru_RU">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="О компании — China Sells">
-  <meta name="twitter:description" content="China Sells — компания с офисами в Китае и России: закупки, контроль качества, документы, логистика и складские мощности 13 000 м² в России.">
-  <meta name="twitter:image" content="https://chinasells.ru/img/ru-hero.jpg">
+  <meta name="twitter:title" content="О компании China Sells">
+  <meta name="twitter:description" content="Закупки, инспекция, документы и логистика между Китаем и Россией.">
+  <meta name="twitter:image" content="https://chinasells.ru/img/work/warehouse.webp">
 
-  <!-- ==== 优化：结构化数据 ==== -->
   <script type="application/ld+json">
   {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://chinasells.ru/#organization",
-  "name": "China Sells",
-  "alternateName": "Huiying Jujin (Jiangsu) International Trade Co., Ltd.",
-  "url": "https://chinasells.ru/",
-  "logo": "https://chinasells.ru/logo.png",
-  "description": "Поставки из Китая под ключ: подбор производителей, инспекция фабрик, контракты, сертификация, логистика и таможня.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Наньтун",
-    "addressRegion": "Цзянсу",
-    "addressCountry": "CN"
-  },
-  "areaServed": ["RU", "CN"]
-}
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "url": "https://chinasells.ru/about.html",
+    "name": "О компании China Sells",
+    "mainEntity": {
+      "@type": "Organization",
+      "@id": "https://chinasells.ru/#organization",
+      "name": "China Sells",
+      "alternateName": "Huiying Jujin (Jiangsu) International Trade Co., Ltd.",
+      "url": "https://chinasells.ru/",
+      "logo": "https://chinasells.ru/img/logo-hyjj.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Наньтун",
+        "addressRegion": "Цзянсу",
+        "addressCountry": "CN"
+      },
+      "areaServed": ["RU", "CN"]
+    }
+  }
   </script>
 
-  <!-- ==== Google tag (gtag.js)：Google Ads + GA4 ==== -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18539818418"></script>
-  <!-- Google tag (AW-18539353293) -->
   <script async src="https://www.googletagmanager.com/gtm.js?id=AW-18539353293"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -979,429 +61,254 @@ html.motion .reveal-line.is-in { transform: scaleX(1); }
       'linker': { 'domains': ['hyjjls.cn','www.hyjjls.cn','chinasells.ru','www.chinasells.ru','hyjj.shop'] },
       'cookie_flags': 'SameSite=None;Secure'
     });
-    /* TODO GA4：拿到 G- 衡量 ID 后，将下面一行取消注释并替换 ID
-    gtag('config', 'G-XXXXXXXXXX', { 'linker': { 'domains': ['hyjjls.cn','www.hyjjls.cn','chinasells.ru','www.chinasells.ru','hyjj.shop'] } });
-    */
   </script>
-<!--warm-palette-20261123:start-->
-<style id="warm-palette-20261123">
-:root{
-  --paper:#f2eee5;
-  --white:#fffdf7;
-  --ink:#0b1a26;
-  --navy:#071a2b;
-  --line:#dcd4c5;
-  --muted:#656d6b;
-  --gold:#b98732;
-  --gold-2:#e2b969;
-}
-html,body{background:var(--paper);color:var(--ink)}
-.section-white{background:var(--white)}
-section.section:not(.section-white):not(.section-dark){background:var(--paper)}
-.hero::after{background:linear-gradient(180deg,rgba(242,238,229,0),var(--paper))}
-.v2-cats .cat-search,.cat-search{background:#f2eee5;border-color:#ded6c6}
-.cat-search .cs-box,.cs-box{border-color:#ded6c6}
-</style>
-<!--warm-palette-20261123:end-->
-<!--brand-contact-20261123:start-->
-<style id="brand-contact-20261123">
-.brand-mark{object-fit:contain;filter:drop-shadow(0 1px 3px rgba(0,0,0,.22))}
-.hero-person-card .hp-label{color:rgba(255,255,255,.56);font-size:8px;line-height:1;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
-.hero-person-card .hp-label::after{content:":";margin-right:4px}
-.hero-person-card .hp-foot a:hover .hp-label{color:rgba(255,255,255,.78)}
-</style>
-<!--brand-contact-20261123:end-->
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav" aria-label="Основная навигация">
-      <a class="brand" href="index.html">
-        <img class="brand-mark" src="img/logo-hyjj.png" srcset="img/logo-hyjj.png 1x, img/logo-hyjj@2x.png 2x" alt="China Sells" width="160" height="160" decoding="async" fetchpriority="high">
-        <span>
-          <strong>CHINA <em>SELLS</em></strong>
-          <small>Найдём · Проверим · Доставим</small>
-        </span>
-      </a>
-      <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="navMenu">
-        <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-        <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
-      </button>
-      <ul class="nav-links" id="navMenu">
-        <li><a href="index.html">Главная</a></li>
-        <li><a class="active" href="about.html">О компании</a></li>
-        <li><a href="index.html#capability">Возможности</a></li>
-        <li><a href="categories.html">Категории</a></li>
-        <li><a href="cases.html">Кейсы</a></li>
-        <li><a href="index.html#manager">Алия</a></li>
-        <li><a href="index.html#process">Схема работы</a></li>
-        <li><a href="index.html#contact">Контакты</a></li>
-        <li><a class="nav-lang" href="https://www.hyjjls.cn/" hreflang="zh-CN" title="中文版">CN</a></li>
-        <li><a class="nav-cta" href="https://hyjj.shop/enquiry" target="_blank" rel="noreferrer">Оставить заявку</a></li>
-      </ul>
+
+<header class="ix-header">
+  <div class="ix-bar">
+    <a class="ix-brand" href="index.html" aria-label="China Sells — главная">
+      <img src="img/logo-hyjj.png" srcset="img/logo-hyjj.png 1x, img/logo-hyjj@2x.png 2x" alt="China Sells" width="74" height="74" fetchpriority="high">
+      <span><b>CHINA <em>SELLS</em></b><small>Найдём · Проверим · Доставим</small></span>
+    </a>
+    <nav class="ix-nav" aria-label="Основная навигация">
+      <a href="index.html">Главная</a>
+      <a class="active" href="about.html">О компании</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="cases.html">Кейсы</a>
+      <a href="index.html#manager">Алия</a>
+      <a href="index.html#process">Схема работы</a>
+      <a href="index.html#footer">Контакты</a>
+      <a class="lang" href="https://www.hyjjls.cn/" hreflang="zh-CN" title="Китайская версия">CN</a>
+      <a class="cta" href="index.html#brief">Оставить заявку</a>
     </nav>
-  </header>
+    <button class="ix-burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileMenu">☰</button>
+  </div>
+  <div class="ix-mobile" id="mobileMenu">
+    <a href="index.html">Главная</a>
+    <a href="about.html">О компании</a>
+    <a href="catalog.html">Каталог</a>
+    <a href="cases.html">Кейсы</a>
+    <a href="index.html#manager">Алия</a>
+    <a href="index.html#process">Схема работы</a>
+    <a href="index.html#footer">Контакты</a>
+    <a href="https://www.hyjjls.cn/" hreflang="zh-CN">中文版</a>
+    <a class="cta" href="index.html#brief">Оставить заявку</a>
+  </div>
+</header>
 
-  <main>
-    <section class="page-hero">
-      <div class="container">
-        <div class="page-hero-content">
-          <div class="eyebrow">О компании China Sells</div>
-          <h1>Работаем в Китае и России — от закупки до поставки.</h1>
-          <p>China Sells специализируется на поставках из Китая: реальные локальные ресурсы, устойчивый отбор поставщиков и опыт полного цикла помогают клиентам быстрее закрывать закупки и выводить товар на рынок.</p>
+<main>
+
+  <section class="ix-page-hero">
+    <div class="ix-page-hero-grid">
+      <div>
+        <div class="kicker">О компании China Sells</div>
+        <h1>Работаем в Китае и России — от закупки до поставки.</h1>
+        <p class="lead">China Sells специализируется на поставках из Китая: локальные ресурсы, устойчивый отбор поставщиков и опыт полного цикла помогают клиентам быстрее закрывать закупки и выводить товар на рынок.</p>
+        <div class="ix-page-meta">
+          <span><b>10 лет</b> в отрасли</span>
+          <span><b>60 млн ¥</b> оборот текстиля</span>
+          <span><b>2 офиса</b> Китай и Россия</span>
         </div>
       </div>
-    </section>
-
-    <section class="section section-white">
-      <div class="container intro-grid">
-        <div>
-          <div class="section-kicker">Профиль компании</div>
-          <h2 class="section-title">От опыта в домашнем текстиле — к полному циклу трансграничных поставок</h2>
-          <div class="body-copy">
-            <p><strong>China Sells</strong> — компания, специализирующаяся на торговле с Китаем, с офисами в Китае и России. Мы обеспечиваем постоянную поддержку на всех этапах: закупки, переговоры, производство, инспекция, документы, логистика и складирование.</p>
-            <p>Команда имеет 10-летний опыт в отрасли домашнего текстиля и расширила ассортимент до тканей, электроники и оборудования — помогаем находить надёжных производителей с подходящей ценой, сроками и качеством.</p>
-            <p>Работаем по контрактам с российскими компаниями, предоставляем полные данные и юридический адрес, поддерживаем расчёты в рублях — это снижает барьеры коммуникации и платежей.</p>
-          </div>
-        </div>
-
-        <aside class="metric-panel" aria-label="Ключевые показатели">
-          <div class="metric">
-            <strong>60 млн ¥</strong>
-            <span>годовой оборот домашнего текстиля</span>
-          </div>
-          <div class="metric">
-            <strong>300 млн ¥</strong>
-            <span>годовой объём закупок российского онлайн-магазина</span>
-          </div>
-          <div class="metric">
-            <strong>600+</strong>
-            <span>всего обслужено клиентов</span>
-          </div>
-          <div class="metric">
-            <strong>~100</strong>
-            <span>стабильные активные клиенты в год</span>
-          </div>
-          <div class="metric">
-            <strong>100 тыс.+</strong>
-            <span>подушек в месяц — мощность собственного завода в России</span>
-          </div>
-          <div class="metric">
-            <strong>10 000 м²<br>+ 3000 м²</strong>
-            <span>собственные складские площади в России</span>
-          </div>
-        </aside>
+      <div class="ix-page-hero-media">
+        <img src="img/work/warehouse.webp" alt="Склад и консолидация грузов China Sells" width="900" height="1200" fetchpriority="high">
+        <span class="cap"><i></i>Наньтун · Цзянсу</span>
       </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-kicker">Услуги</div>
-        <h2 class="section-title">Наши продукты и услуги</h2>
-
-        <div class="capability-table">
-          <div class="capability-row">
-            <div class="capability-name">Закупки и развитие поставщиков</div>
-            <div class="capability-desc">По запросу клиента находим в Китае надёжных производителей, сравниваем цены, условия, сроки и базу качества, формируем исполнимый план закупки.</div>
-          </div>
-          <div class="capability-row">
-            <div class="capability-name">Переговоры и работа с контрактом</div>
-            <div class="capability-desc">Представляем интересы клиента в переговорах с фабрикой: цена, сроки, качество, детали договора и дальнейшее производственное взаимодействие — без языковых и региональных издержек.</div>
-          </div>
-          <div class="capability-row">
-            <div class="capability-name">Инспекция фабрик и товаров</div>
-            <div class="capability-desc">Перед отгрузкой проводим выездную инспекцию фабрики и товара, предоставляем фото, видео или прямую трансляцию реального производства.</div>
-          </div>
-          <div class="capability-row">
-            <div class="capability-name">Сертификация, таможня и логистика</div>
-            <div class="capability-desc">Помогаем с договорами, сертификатами соответствия и таможенными документами; организуем перевозку, оформление, сертификацию и доставку по всей России.</div>
-          </div>
-          <div class="capability-row">
-            <div class="capability-name">Локальный склад и онлайн-каналы</div>
-            <div class="capability-desc">Собственный склад в России позволяет хранить товар клиента; мы уже ведём локальный онлайн-магазин и готовим магазин прямой закупки.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-dark">
-      <div class="container">
-        <div class="section-kicker">Схема работы</div>
-        <h2 class="section-title">Прозрачный процесс, ключевые этапы под контролем</h2>
-
-        <div class="timeline">
-          <div class="timeline-step">
-            <div class="timeline-index">01</div>
-            <div class="timeline-text">
-              <strong>Запрос и требования</strong>
-              <span>Вы описываете товар, объём, сроки и бюджет — мы уточняем требования и фиксируем критерии приёмки.</span>
-            </div>
-          </div>
-          <div class="timeline-step">
-            <div class="timeline-index">02</div>
-            <div class="timeline-text">
-              <strong>Подбор фабрик и расчёт</strong>
-              <span>Отбираем производителей, сравниваем цены, сроки и качество, присылаем смету с разбивкой по статьям.</span>
-            </div>
-          </div>
-          <div class="timeline-step">
-            <div class="timeline-index">03</div>
-            <div class="timeline-text">
-              <strong>Образец и согласование</strong>
-              <span>Изготавливаем и отправляем образец, согласуем материал, цвет, упаковку и маркировку до старта партии.</span>
-            </div>
-          </div>
-          <div class="timeline-step">
-            <div class="timeline-index">04</div>
-            <div class="timeline-text">
-              <strong>Инспекция фабрики и партии</strong>
-              <span>Проверяем производство и готовую партию: фото, видео-отчёт или онлайн-трансляция с фабрики.</span>
-            </div>
-          </div>
-          <div class="timeline-step">
-            <div class="timeline-index">05</div>
-            <div class="timeline-text">
-              <strong>Контракт и контроль производства</strong>
-              <span>Заключаем договор и контролируем график производства, качество и статус готовности партии.</span>
-            </div>
-          </div>
-          <div class="timeline-step">
-            <div class="timeline-index">06</div>
-            <div class="timeline-text">
-              <strong>Логистика, таможня и доставка</strong>
-              <span>Оформляем документы и сертификаты, доставляем на ваш склад или размещаем на нашем складе в России.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-white">
-      <div class="container">
-        <div class="section-kicker">Преимущества</div>
-        <h2 class="section-title">Мы решаем реальные задачи трансграничной торговли</h2>
-
-        <div class="problem-grid">
-          <article class="problem">
-            <h3>Сомнения в выборе фабрики</h3>
-            <p>Выездная проверка, сравнение поставщиков и подтверждение образцов дают клиенту прямую картину реального производства.</p>
-          </article>
-          <article class="problem">
-            <h3>Языковой барьер с Китаем</h3>
-            <p>Берём на себя переговоры, согласование условий, контроль производства и решение спорных ситуаций, помогая получить более выгодные условия.</p>
-          </article>
-          <article class="problem">
-            <h3>Непонятная сертификация</h3>
-            <p>Помогаем с договорами, сертификатами соответствия и таможенными документами, снижая неопределённость исполнения.</p>
-          </article>
-          <article class="problem">
-            <h3>Сложная международная логистика</h3>
-            <p>Ведём всю цепочку от фабрики до склада в России и дальнейшей доставки — меньше контрагентов и издержек на координацию.</p>
-          </article>
-          <article class="problem">
-            <h3>Нужны расчёты в рублях</h3>
-            <p>Работаем по контрактам с российскими компаниями и поддерживаем расчёты в рублях — ближе к привычной практике местного бизнеса.</p>
-          </article>
-          <article class="problem">
-            <h3>Нет локального склада</h3>
-            <p>Собственный склад в России поддерживает хранение, перераспределение и дальнейшее исполнение заказов, создавая инфраструктуру для долгосрочной торговли.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-dark">
-      <div class="container">
-        <div class="section-kicker">Наш принцип</div>
-        <h2 class="section-title">Новая торговля — на доверии</h2>
-        <p class="section-copy">Сложность кросс-бордера не в поиске товара, а в доверии между сторонами. Мы открыто показываем стоимость, процесс и результат каждой сделки.</p>
-
-        <div class="value-grid">
-          <article class="value-card">
-            <h3>Прозрачная смета</h3>
-            <p>Закупка, логистика, таможня и хранение — отдельными строками. Без скрытых наценок и «сюрпризов» в счёте.</p>
-          </article>
-          <article class="value-card">
-            <h3>Проверяемый процесс</h3>
-            <p>Образцы, инспекции и погрузка фиксируются фото и видео — любой этап можно перепроверить и подтвердить.</p>
-          </article>
-          <article class="value-card">
-            <h3>Долгосрочный подход</h3>
-            <p>Работаем на повторные поставки, а не на одну сделку. Готовы вкладываться в долгое партнёрство.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-kicker">FAQ</div>
-        <h2 class="section-title">Частые вопросы</h2>
-
-        <div class="faq-list">
-          <div class="faq-item">
-            <h3>Какой минимальный объём заказа (MOQ)?</h3>
-            <p>Конкретный MOQ зависит от типа продукции и требований поставщика. Свяжитесь с нами для подробной информации.</p>
-          </div>
-          <div class="faq-item">
-            <h3>Каковы сроки поставки?</h3>
-            <p>Сроки зависят от типа продукции, объёма и расстояния; обычно это 2–8 недель.</p>
-          </div>
-          <div class="faq-item">
-            <h3>Что делать при проблемах с качеством?</h3>
-            <p>Мы проводим строгую инспекцию перед отгрузкой; при обнаружении проблем помогаем согласовать решение с фабрикой.</p>
-          </div>
-          <div class="faq-item">
-            <h3>Какие способы оплаты?</h3>
-            <p>Работаем по контрактам с российскими компаниями и поддерживаем расчёты в рублях. Условия обсуждаются под конкретный заказ и формат сотрудничества.</p>
-          </div>
-          <div class="faq-item">
-            <h3>Работаете ли с малым бизнесом и стартапами?</h3>
-            <p>Да, мы открыты для клиентов любого масштаба и подбираем решение под продукт, бюджет и этап заказа.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-white">
-      <div class="container">
-        <div class="cta">
-          <div>
-            <h2>Готовы начать сотрудничество?</h2>
-            <p>Отправьте запрос на закупку или материалы о продукции — поможем оценить дальнейшие шаги.</p>
-          </div>
-          <a class="btn btn-primary" href="https://wa.me/8619895947232" target="_blank" rel="noreferrer">Связаться</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <span>© 2026 Huiying Jujin (Jiangsu) International Trade Co., Ltd. Все права защищены.</span>
-      <span>China Sells — надёжный партнёр для бизнеса с Китаем</span>
     </div>
-  </footer>
-  <script>
-    var navToggle = document.querySelector(".nav-toggle");
-    var navMenu = document.querySelector(".nav-links");
-    navToggle.addEventListener("click", function () {
-      var open = navMenu.classList.toggle("open");
-      navToggle.classList.toggle("open", open);
-      navToggle.setAttribute("aria-expanded", open);
-      navToggle.setAttribute("aria-label", open ? "Закрыть меню" : "Открыть меню");
-    });
-    navMenu.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        navMenu.classList.remove("open");
-        navToggle.classList.remove("open");
-        navToggle.setAttribute("aria-expanded", "false");
-      });
-    });
-  </script>
+  </section>
 
-  <button class="to-top" type="button" aria-label="返回顶部" title="返回顶部">
-    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
-  </button>
+  <section class="ix-about-stats" aria-label="Ключевые показатели">
+    <div class="ix-about-stats-inner">
+      <div class="ix-stat"><strong>60 млн ¥</strong><span>годовой оборот домашнего текстиля</span></div>
+      <div class="ix-stat"><strong>300 млн ¥</strong><span>годовой объём закупок российского онлайн-магазина</span></div>
+      <div class="ix-stat"><strong>600+</strong><span>всего обслужено клиентов</span></div>
+      <div class="ix-stat"><strong>~100</strong><span>стабильные активные клиенты в год</span></div>
+      <div class="ix-stat"><strong>100 тыс.+</strong><span>подушек в месяц — мощность собственного завода в России</span></div>
+      <div class="ix-stat"><strong>10 000 м²<br>+ 3000 м²</strong><span>собственные складские площади в России</span></div>
+    </div>
+  </section>
 
-  <script>
-    /* ==== 优化：返回顶部 ==== */
-    (function () {
-      var btn = document.querySelector('.to-top');
-      if (!btn) return;
-      function toggle() { btn.classList.toggle('show', window.pageYOffset > 600); }
-      window.addEventListener('scroll', toggle, { passive: true });
-      toggle();
-      btn.addEventListener('click', function () {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    })();
-  </script>
+  <section class="ix-about-profile">
+    <div class="ix-about-profile-grid">
+      <div>
+        <div class="kicker">Профиль компании</div>
+        <h2>От опыта в домашнем текстиле — к полному циклу трансграничных поставок</h2>
+        <p><strong>China Sells</strong> — компания, специализирующаяся на торговле с Китаем, с офисами в Китае и России. Мы обеспечиваем постоянную поддержку на всех этапах: закупки, переговоры, производство, инспекция, документы, логистика и складирование.</p>
+        <p>Команда имеет 10-летний опыт в отрасли домашнего текстиля и расширила ассортимент до тканей, электроники и оборудования — помогаем находить надёжных производителей с подходящей ценой, сроками и качеством.</p>
+        <p>Работаем по контрактам с российскими компаниями, предоставляем полные данные и юридический адрес, поддерживаем расчёты в рублях — это снижает барьеры коммуникации и платежей.</p>
+      </div>
+      <aside class="ix-about-side">
+        <img src="img/work/textile-inspection.webp" alt="Проверка текстильной партии на производстве" width="800" height="500" loading="lazy">
+        <div class="cap">Проверка партии до отгрузки</div>
+        <div class="ix-about-quote">«Сложность кросс-бордера не в поиске товара, а в доверии между сторонами. Мы открыто показываем стоимость, процесс и результат каждой сделки».</div>
+      </aside>
+    </div>
+  </section>
 
-  <script>
-    /* ==== 优化：行为埋点（表单入口 / 联系方式） ==== */
-    document.addEventListener('click', function (e) {
-      var a = e.target && e.target.closest ? e.target.closest('a') : null;
-      if (!a || typeof gtag !== 'function') return;
-      var href = a.getAttribute('href') || '';
-      var label = (a.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 40);
-      if (href.indexOf('hyjj.shop') > -1) {
-        gtag('event', 'enquiry_entry_click', { event_category: 'lead', event_label: label || href, link_url: href });
-      } else if (href.indexOf('tel:') === 0) {
-        gtag('event', 'contact', { event_category: 'contact', method: 'phone' });
-      } else if (href.indexOf('mailto:') === 0) {
-        gtag('event', 'contact', { event_category: 'contact', method: 'email' });
-      } else if (/(wa\.me|whatsapp|t\.me|telegram|vk\.com|instagram|youtube|tiktok)/i.test(href)) {
-        gtag('event', 'contact', { event_category: 'contact', method: 'social', link_url: href });
-      }
-    }, false);
-  </script>
-<!-- ==== 滚动进场动效 ==== -->
-  <script>
-  (function () {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    if (!('IntersectionObserver' in window)) return;
-    var root = document.documentElement;
+  <section class="ix-services">
+    <div class="container">
+      <div class="ix-section-head">
+        <div class="txt">
+          <div class="kicker">Услуги</div>
+          <h2>Наши продукты и услуги</h2>
+        </div>
+        <p>От первого запроса до товара на складе в России — один ответственный контур вместо десятка подрядчиков.</p>
+      </div>
+      <div class="ix-service-list">
+        <div class="ix-service-row">
+          <div class="idx">01</div>
+          <div><h3>Закупки и развитие поставщиков</h3><p>По запросу клиента находим в Китае надёжных производителей, сравниваем цены, условия, сроки и базу качества, формируем исполнимый план закупки.</p></div>
+        </div>
+        <div class="ix-service-row">
+          <div class="idx">02</div>
+          <div><h3>Переговоры и работа с контрактом</h3><p>Представляем интересы клиента в переговорах с фабрикой: цена, сроки, качество, детали договора и дальнейшее производственное взаимодействие — без языковых и региональных издержек.</p></div>
+        </div>
+        <div class="ix-service-row">
+          <div class="idx">03</div>
+          <div><h3>Инспекция фабрик и товаров</h3><p>Перед отгрузкой проводим выездную инспекцию фабрики и товара, предоставляем фото, видео или прямую трансляцию реального производства.</p></div>
+        </div>
+        <div class="ix-service-row">
+          <div class="idx">04</div>
+          <div><h3>Сертификация, таможня и логистика</h3><p>Помогаем с договорами, сертификатами соответствия и таможенными документами; организуем перевозку, оформление, сертификацию и доставку по всей России.</p></div>
+        </div>
+        <div class="ix-service-row">
+          <div class="idx">05</div>
+          <div><h3>Локальный склад и онлайн-каналы</h3><p>Собственный склад в России позволяет хранить товар клиента; мы уже ведём локальный онлайн-магазин и готовим магазин прямой закупки.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    var blocks = [
-      '.section-head',
-      '.about-home-text',
-      '.about-metrics',
-      '.capability-grid',
-      '.process-layout',
-      '.aliya-photo',
-      '.aliya-copy',
-      '.cat-grid',
-      '.cat-more',
-      '.cases-home-grid',
-      '.contact-band',
-      '.hero-proof'
-    ];
-    var staggerParents = [
-      '.capability-grid',
-      '.about-metrics',
-      '.cases-home-grid',
-      '.cat-grid',
-      '.process-list'
-    ];
+  <section class="ix-about-process">
+    <div class="ix-about-process-grid">
+      <div class="ix-about-process-copy">
+        <div class="kicker on-dark">Схема работы</div>
+        <h2>Прозрачный процесс, ключевые этапы под контролем</h2>
+        <p>На каждом этапе понятно, что происходит, кто отвечает и какой следующий шаг. Без «мы работаем» без статуса и сроков.</p>
+        <a class="ix-text-link on-dark" href="index.html#brief">Обсудить задачу →</a>
+      </div>
+      <div class="ix-about-steps">
+        <div class="ix-about-step"><div class="no">01</div><div><h3>Запрос и требования</h3><p>Вы описываете товар, объём, сроки и бюджет — мы уточняем требования и фиксируем критерии приёмки.</p></div></div>
+        <div class="ix-about-step"><div class="no">02</div><div><h3>Подбор фабрик и расчёт</h3><p>Отбираем производителей, сравниваем цены, сроки и качество, присылаем смету с разбивкой по статьям.</p></div></div>
+        <div class="ix-about-step"><div class="no">03</div><div><h3>Образец и согласование</h3><p>Изготавливаем и отправляем образец, согласуем материал, цвет, упаковку и маркировку до старта партии.</p></div></div>
+        <div class="ix-about-step"><div class="no">04</div><div><h3>Инспекция фабрики и партии</h3><p>Проверяем производство и готовую партию: фото, видео-отчёт или онлайн-трансляция с фабрики.</p></div></div>
+        <div class="ix-about-step"><div class="no">05</div><div><h3>Контракт и контроль производства</h3><p>Заключаем договор и контролируем график производства, качество и статус готовности партии.</p></div></div>
+        <div class="ix-about-step"><div class="no">06</div><div><h3>Логистика, таможня и доставка</h3><p>Оформляем документы и сертификаты, доставляем на ваш склад или размещаем на нашем складе в России.</p></div></div>
+      </div>
+    </div>
+  </section>
 
-    blocks.forEach(function (sel) {
-      document.querySelectorAll(sel).forEach(function (el) {
-        if (el.classList.contains('reveal')) return;
-        el.classList.add('reveal');
-      });
-    });
+  <section class="ix-problems">
+    <div class="container">
+      <div class="ix-section-head">
+        <div class="txt">
+          <div class="kicker">Преимущества</div>
+          <h2>Мы решаем реальные задачи трансграничной торговли</h2>
+        </div>
+        <p>Не продаём «логистику» и «закупки» по отдельности — закрываем те узкие места, где сделки чаще всего ломаются.</p>
+      </div>
+      <div class="ix-problem-list">
+        <div class="ix-problem"><div class="no">01</div><div><h3>Сомнения в выборе фабрики</h3><p>Выездная проверка, сравнение поставщиков и подтверждение образцов дают клиенту прямую картину реального производства.</p></div></div>
+        <div class="ix-problem"><div class="no">02</div><div><h3>Языковой барьер с Китаем</h3><p>Берём на себя переговоры, согласование условий, контроль производства и решение спорных ситуаций, помогая получить более выгодные условия.</p></div></div>
+        <div class="ix-problem"><div class="no">03</div><div><h3>Непонятная сертификация</h3><p>Помогаем с договорами, сертификатами соответствия и таможенными документами, снижая неопределённость исполнения.</p></div></div>
+        <div class="ix-problem"><div class="no">04</div><div><h3>Сложная международная логистика</h3><p>Ведём всю цепочку от фабрики до склада в России и дальнейшей доставки — меньше контрагентов и издержек на координацию.</p></div></div>
+        <div class="ix-problem"><div class="no">05</div><div><h3>Нужны расчёты в рублях</h3><p>Работаем по контрактам с российскими компаниями и поддерживаем расчёты в рублях — ближе к привычной практике местного бизнеса.</p></div></div>
+        <div class="ix-problem"><div class="no">06</div><div><h3>Нет локального склада</h3><p>Собственный склад в России поддерживает хранение, перераспределение и дальнейшее исполнение заказов, создавая инфраструктуру для долгосрочной торговли.</p></div></div>
+      </div>
+    </div>
+  </section>
 
-    staggerParents.forEach(function (sel) {
-      document.querySelectorAll(sel).forEach(function (parent) {
-        Array.prototype.forEach.call(parent.children, function (child, i) {
-          child.classList.add('reveal');
-          child.style.transitionDelay = (i * 0.07).toFixed(2) + 's';
-        });
-      });
-    });
+  <section class="ix-values">
+    <div class="container">
+      <div class="kicker on-dark">Наш принцип</div>
+      <h2>Новая торговля — на доверии</h2>
+      <p class="lead">Сложность кросс-бордера не в поиске товара, а в доверии между сторонами. Мы открыто показываем стоимость, процесс и результат каждой сделки.</p>
+      <div class="ix-value-grid">
+        <div class="ix-value"><h3>Прозрачная смета</h3><p>Закупка, логистика, таможня и хранение — отдельными строками. Без скрытых наценок и «сюрпризов» в счёте.</p></div>
+        <div class="ix-value"><h3>Проверяемый процесс</h3><p>Образцы, инспекции и погрузка фиксируются фото и видео — любой этап можно перепроверить и подтвердить.</p></div>
+        <div class="ix-value"><h3>Долгосрочный подход</h3><p>Работаем на повторные поставки, а не на одну сделку. Готовы вкладываться в долгое партнёрство.</p></div>
+      </div>
+    </div>
+  </section>
 
-    document.querySelectorAll('.cases-home-grid, .case-mini')
-      .forEach(function (el) { el.classList.add('reveal-img'); });
+  <section class="ix-faq">
+    <div class="container">
+      <div class="kicker">FAQ</div>
+      <h2>Частые вопросы</h2>
+      <div class="ix-faq-list">
+        <details><summary>Какой минимальный объём заказа (MOQ)?</summary><p>Конкретный MOQ зависит от типа продукции и требований поставщика. Свяжитесь с нами для подробной информации — подберём фабрику и объём под ваш продукт.</p></details>
+        <details><summary>Каковы сроки поставки?</summary><p>Сроки зависят от типа продукции, объёма и расстояния; обычно это 2–8 недель. Точный график фиксируем до старта производства.</p></details>
+        <details><summary>Что делать при проблемах с качеством?</summary><p>Мы проводим строгую инспекцию перед отгрузкой; при обнаружении проблем помогаем согласовать решение с фабрикой — от замены партии до корректировки процесса.</p></details>
+        <details><summary>Какие способы оплаты?</summary><p>Работаем по контрактам с российскими компаниями и поддерживаем расчёты в рублях. Условия обсуждаются под конкретный заказ и формат сотрудничества.</p></details>
+        <details><summary>Работаете ли с малым бизнесом и стартапами?</summary><p>Да, мы открыты для клиентов любого масштаба и подбираем решение под продукт, бюджет и этап заказа.</p></details>
+      </div>
+    </div>
+  </section>
 
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-in');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+  <section class="ix-cta-band">
+    <div class="ix-cta-inner">
+      <div>
+        <h2>Готовы начать сотрудничество?</h2>
+        <p>Отправьте запрос на закупку или материалы о продукции — поможем оценить дальнейшие шаги.</p>
+      </div>
+      <a class="btn btn-ink" href="index.html#brief">Оставить заявку →</a>
+    </div>
+  </section>
 
-    root.classList.add('motion');
-    document.querySelectorAll('.reveal, .reveal-img').forEach(function (el) {
-      io.observe(el);
-    });
-    setTimeout(function () {
-      document.querySelectorAll('.reveal:not(.is-in), .reveal-img:not(.is-in)').forEach(function (el) {
-        el.classList.add('is-in');
-      });
-    }, 2200);
-  })();
-  </script>
+</main>
+
+<footer class="ix-footer" id="footer">
+  <div class="container">
+    <div class="ix-footer-top">
+      <div>
+        <div class="ix-footer-brand">
+          <img src="img/logo-hyjj.png" srcset="img/logo-hyjj.png 1x, img/logo-hyjj@2x.png 2x" alt="China Sells" width="90" height="90" loading="lazy">
+          <b>CHINA <em>SELLS</em></b>
+        </div>
+        <p>Huiying Jujin (Jiangsu) International Trade Co., Ltd. Закупки, инспекция, документы и логистика между Китаем и Россией.</p>
+      </div>
+      <div>
+        <h4>Компания</h4>
+        <div class="links">
+          <a href="about.html">О компании</a>
+          <a href="cases.html">Кейсы</a>
+          <a href="index.html#manager">Алия</a>
+          <a href="index.html#process">Схема работы</a>
+        </div>
+      </div>
+      <div>
+        <h4>Каталог</h4>
+        <div class="links">
+          <a href="catalog.html?cat=textile">Домашний текстиль</a>
+          <a href="catalog.html?cat=tools">Инструмент</a>
+          <a href="catalog.html?cat=medical">Медицина</a>
+          <a href="catalog.html">Все направления</a>
+        </div>
+      </div>
+      <div class="contact-links">
+        <h4>Контакты</h4>
+        <div class="links">
+          <a href="mailto:aliya@chinasells.ru"><span>Почта</span>aliya@chinasells.ru</a>
+          <a href="https://wa.me/8619895947232" target="_blank" rel="noopener noreferrer"><span>WA</span>+86 198 9594 7232</a>
+          <a href="https://t.me/aliyachinabiz" target="_blank" rel="noopener noreferrer"><span>TG</span>@aliyachinabiz</a>
+          <a href="https://www.instagram.com/aliya.chinabiz" target="_blank" rel="noopener noreferrer"><span>IG</span>@aliya.chinabiz</a>
+          <a href="https://www.youtube.com/@aliya.chinabiz" target="_blank" rel="noopener noreferrer"><span>YT</span>@aliya.chinabiz</a>
+          <a href="https://www.tiktok.com/@aliya.chinabiz" target="_blank" rel="noopener noreferrer"><span>TT</span>@aliya.chinabiz</a>
+          <a href="https://vk.com/aliya.chinabiz" target="_blank" rel="noopener noreferrer"><span>VK</span>@aliya.chinabiz</a>
+        </div>
+      </div>
+    </div>
+    <div class="ix-footer-bottom">
+      <span>© 2026 Huiying Jujin (Jiangsu) International Trade Co., Ltd.</span>
+      <span>Наньтун, Цзянсу · офисы в Китае и России</span>
+    </div>
+  </div>
+  <div class="ix-endbar"></div>
+</footer>
+
+<div class="ix-toast" id="toast" role="status"></div>
+
+<script src="js/site-2026.js" defer></script>
 </body>
 </html>

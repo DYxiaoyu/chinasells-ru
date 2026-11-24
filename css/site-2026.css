@@ -140,21 +140,21 @@ button{cursor:pointer}
 }
 .ix-hero-caption i{width:22px;height:1px;background:var(--gold)}
 .ix-contact{
-  position:absolute;right:28px;bottom:26px;z-index:6;width:430px;padding:20px 20px 18px;
+  position:absolute;right:28px;bottom:26px;z-index:6;width:470px;padding:22px 22px 20px;
   background:rgba(8,22,35,.9);border:1px solid rgba(255,255,255,.18);
   backdrop-filter:blur(12px);
 }
-.ix-contact-head{display:flex;align-items:center;gap:13px;margin-bottom:15px}
-.ix-contact-head img{width:48px;height:48px;border-radius:50%;object-fit:cover;object-position:center 18%;border:1px solid rgba(255,255,255,.36)}
-.ix-contact-head strong{display:block;font-size:16px;line-height:1.15}
-.ix-contact-head span{display:block;font-size:10.5px;color:rgba(255,255,255,.56);margin-top:4px}
-.ix-contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ix-contact-head{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.ix-contact-head img{width:54px;height:54px;border-radius:50%;object-fit:cover;object-position:center 18%;border:1px solid rgba(255,255,255,.36)}
+.ix-contact-head strong{display:block;font-size:18px;line-height:1.15}
+.ix-contact-head span{display:block;font-size:11.5px;color:rgba(255,255,255,.56);margin-top:4px}
+.ix-contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
 .ix-contact-grid a{
-  min-height:34px;border:1px solid rgba(255,255,255,.16);display:flex;align-items:center;gap:8px;
-  padding:0 9px;font-size:10.5px;color:rgba(255,255,255,.84);overflow:hidden;
+  min-height:38px;border:1px solid rgba(255,255,255,.16);display:flex;align-items:center;gap:9px;
+  padding:0 10px;font-size:11.5px;color:rgba(255,255,255,.84);overflow:hidden;
 }
 .ix-contact-grid a:hover{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.05)}
-.ix-contact-grid a b{font-size:7.5px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.42);font-weight:700;white-space:nowrap}
+.ix-contact-grid a b{font-size:8.5px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.42);font-weight:700;white-space:nowrap}
 .ix-contact-grid a span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ix-contact-grid a:last-child:nth-child(odd){grid-column:1/-1}
 
@@ -635,7 +635,7 @@ button{cursor:pointer}
   .ix-nav a.cta{padding:10px 12px;font-size:9.5px}
   .ix-brand small{display:none}
   .ix-hero-copy{padding-right:40px}
-  .ix-contact{width:390px}
+  .ix-contact{width:430px}
   .ix-cap-row{padding-left:0}
   .ix-cap-row:nth-child(n){padding-left:0}
 }
@@ -649,7 +649,7 @@ button{cursor:pointer}
   .ix-hero h1{font-size:clamp(38px,8vw,54px);max-width:720px}
   .ix-hero-media{min-height:430px;height:430px}
   .ix-hero-media::after{background:linear-gradient(0deg,rgba(13,27,40,.9),rgba(13,27,40,.05) 55%,rgba(13,27,40,.2))}
-  .ix-contact{right:18px;bottom:18px;width:min(400px,calc(100% - 36px))}
+  .ix-contact{right:18px;bottom:18px;width:min(430px,calc(100% - 36px))}
   .ix-hero-caption{left:18px;bottom:18px;display:none}
   .ix-figures-inner{width:calc(100% - 48px);grid-template-columns:1fr 1fr;min-height:0;padding:10px 0}
   .ix-fig{padding:20px 0 20px 18px;min-height:92px}
@@ -724,7 +724,8 @@ button{cursor:pointer}
   .ix-hero-actions .btn{flex:1 1 0;min-width:0;padding:0 10px;font-size:9px}
   .ix-hero-media{height:390px;min-height:390px}
   .ix-contact{left:14px;right:14px;bottom:14px;width:auto;padding:13px}
-  .ix-contact-grid a{font-size:9px;min-height:27px}
+  .ix-contact-grid a{font-size:9px;min-height:30px;gap:6px;padding:0 8px}
+  .ix-contact-grid a b{font-size:7px}
   .ix-figures-inner{grid-template-columns:1fr;padding:0}
   .ix-fig{min-height:0;padding:17px 0;border-left:0;border-bottom:1px solid var(--line)}
   .ix-fig:last-child{border-bottom:0}

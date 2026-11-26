@@ -292,7 +292,7 @@
         budget: val(fBudget),
         deadline: val(fDeadline),
         contact: val(fContact),
-        source: 'chinasells'
+        source: 'website_home_form'
       });
       var win = window.open(FORM_URL + '?' + params.toString(), '_blank');
       if (win) win.opener = null;

@@ -212,7 +212,7 @@
     var FORM_URL = 'https://hyjj.shop/quote';
     var API_URL = 'https://hyjj.shop/api/lead';
     var NATIVE_LEAD_FORM = true;
-    var SOURCE_RE = /^[a-z0-9_]{1,64}$/;
+    var SOURCE_RE = /^[a-z0-9_]{1,50}$/;
     var source = 'website_home_form';
     var qs = new URLSearchParams(window.location.search);
     var qsSource = (qs.get('source') || '').trim();
@@ -268,8 +268,8 @@
     }
 
     function clearAllErrors() {
-      [[fName, '#briefNameErr'], [fPhone, '#briefPhoneErr'], [fProduct, '#briefProductErr'],
-        [fQty, '#briefQtyErr'], [fRequirement, '#briefRequirementErr']].forEach(function (pair) {
+      [[fName, '#briefNameErr'], [fPhone, '#briefPhoneErr'],
+        [fRequirement, '#briefRequirementErr']].forEach(function (pair) {
         clearErr(pair[0], pair[0] ? $(pair[1]) : null);
       });
       if (errorBox) { errorBox.hidden = true; errorBox.textContent = ''; }
@@ -297,12 +297,10 @@
       } else {
         clearErr(fPhone, $('#briefPhoneErr'));
       }
-      var okProduct = required(fProduct, $('#briefProductErr'), 'Укажите, что ищете');
-      var okQty = required(fQty, $('#briefQtyErr'), 'Укажите количество');
       var okRequirement = required(fRequirement, $('#briefRequirementErr'), 'Опишите вашу потребность');
 
       if (first) first.focus();
-      return okName && okPhone && okProduct && okQty && okRequirement;
+      return okName && okPhone && okRequirement;
     }
 
     function payload() {
@@ -327,10 +325,10 @@
     function updateFallbackLink() {
       if (!fallbackLink) return;
       var p = new URLSearchParams();
-      p.set('product', val(fProduct));
-      p.set('qty', val(fQty));
-      p.set('budget', val(fBudget));
-      p.set('deadline', val(fDeadline));
+      [['product', val(fProduct)], ['qty', val(fQty)],
+        ['budget', val(fBudget)], ['deadline', val(fDeadline)]].forEach(function (pair) {
+        if (pair[1]) p.set(pair[0], pair[1]);
+      });
       p.set('source', source);
       fallbackLink.href = FORM_URL + '?' + p.toString();
     }

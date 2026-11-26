@@ -206,111 +206,236 @@
     }
   }
 
-  /* ---------- brief form ---------- */
+  /* ---------- brief form: native lead submit ---------- */
   var form = $('#briefForm');
   if (form) {
+    var FORM_URL = 'https://hyjj.shop/quote';
+    var API_URL = 'https://hyjj.shop/api/lead';
+    var NATIVE_LEAD_FORM = true;
+    var SOURCE_RE = /^[a-z0-9_]{1,64}$/;
+    var source = 'website_home_form';
+    var qs = new URLSearchParams(window.location.search);
+    var qsSource = (qs.get('source') || '').trim();
+    if (qsSource && SOURCE_RE.test(qsSource)) source = qsSource;
+
+    var fName = $('#briefName');
+    var fPhone = $('#briefPhone');
     var fProduct = $('#briefProduct');
     var fQty = $('#briefQty');
     var fBudget = $('#briefBudget');
     var fDeadline = $('#briefDeadline');
-    var fContact = $('#briefContact');
-    var preview = $('#briefPreview');
-    var copyBtn = $('#briefCopy');
-    var waBtn = $('#briefWhatsApp');
-    var FORM_URL = 'https://hyjj.shop/quote';
+    var fTelegram = $('#briefTelegram');
+    var fWhatsapp = $('#briefWhatsapp');
+    var fEmail = $('#briefEmail');
+    var fCompany = $('#briefCompany');
+    var fAddress = $('#briefAddress');
+    var fRequirement = $('#briefRequirement');
+    var fHp = $('#briefHp');
+    var body = $('#briefBody');
+    var success = $('#briefSuccess');
+    var againBtn = $('#briefAgain');
+    var submitBtn = $('#briefSubmit');
+    var errorBox = $('#briefFormError');
+    var fallback = $('#briefFallback');
+    var fallbackLink = fallback ? fallback.querySelector('a') : null;
 
-    function val(el, fallback) {
-      var v = el && el.value ? el.value.trim() : '';
-      return v || fallback || '';
-    }
-    function buildText() {
-      var lines = [];
-      lines.push('Заявка с сайта China Sells');
-      lines.push('Что ищем: ' + val(fProduct, '—'));
-      lines.push('Количество: ' + val(fQty, '—'));
-      lines.push('Бюджет на единицу: ' + val(fBudget, 'обсудим'));
-      lines.push('Срок: ' + val(fDeadline, 'обсудим'));
-      lines.push('Контакт: ' + val(fContact, 'уточним в переписке'));
-      return lines.join('\n');
-    }
-    function updatePreview() {
-      if (!preview) return;
-      var has = fProduct && fProduct.value.trim();
-      preview.textContent = has ? buildText() : 'Заполните продукт и количество — здесь появится готовый текст.';
-    }
-    [fProduct, fQty, fBudget, fDeadline, fContact].forEach(function (el) {
-      if (el) el.addEventListener('input', updatePreview);
+    ['product', 'qty', 'budget', 'deadline'].forEach(function (key) {
+      var el = { product: fProduct, qty: fQty, budget: fBudget, deadline: fDeadline }[key];
+      var v = qs.get(key);
+      if (el && v) el.value = v.slice(0, 240);
     });
-    updatePreview();
 
-    function copyText(text) {
-      if (navigator.clipboard && window.isSecureContext) {
-        return navigator.clipboard.writeText(text);
-      }
-      return new Promise(function (resolve, reject) {
-        try {
-          var ta = document.createElement('textarea');
-          ta.value = text;
-          ta.style.position = 'fixed';
-          ta.style.opacity = '0';
-          document.body.appendChild(ta);
-          ta.select();
-          document.execCommand('copy');
-          document.body.removeChild(ta);
-          resolve();
-        } catch (e) { reject(e); }
-      });
-    }
-    if (copyBtn) {
-      copyBtn.addEventListener('click', function () {
-        copyText(buildText()).then(function () { toast('Текст заявки скопирован'); })
-          .catch(function () { toast('Не удалось скопировать — выделите текст вручную'); });
-      });
+    function val(el) {
+      return el && el.value ? el.value.trim() : '';
     }
 
-    function needsBrief() {
-      var product = fProduct ? fProduct.value.trim() : '';
-      var qty = fQty ? fQty.value.trim() : '';
-      if (!product || !qty) {
-        toast('Заполните продукт и количество');
-        if (!product && fProduct) fProduct.focus();
-        else if (!qty && fQty) fQty.focus();
-        return false;
+    function fieldOf(el) {
+      return el ? el.closest('.ix-field') : null;
+    }
+
+    function setErr(el, errEl, msg) {
+      var field = fieldOf(el);
+      if (field) field.classList.add('invalid');
+      if (el) el.setAttribute('aria-invalid', 'true');
+      if (errEl) errEl.textContent = msg;
+    }
+
+    function clearErr(el, errEl) {
+      var field = fieldOf(el);
+      if (field) field.classList.remove('invalid');
+      if (el) el.removeAttribute('aria-invalid');
+      if (errEl) errEl.textContent = '';
+    }
+
+    function clearAllErrors() {
+      [[fName, '#briefNameErr'], [fPhone, '#briefPhoneErr'], [fProduct, '#briefProductErr'],
+        [fQty, '#briefQtyErr'], [fRequirement, '#briefRequirementErr']].forEach(function (pair) {
+        clearErr(pair[0], pair[0] ? $(pair[1]) : null);
+      });
+      if (errorBox) { errorBox.hidden = true; errorBox.textContent = ''; }
+      if (fallback) fallback.hidden = true;
+    }
+
+    function validate() {
+      var first = null;
+      function required(el, errEl, msg) {
+        if (!val(el)) {
+          setErr(el, errEl, msg);
+          if (!first) first = el;
+          return false;
+        }
+        clearErr(el, errEl);
+        return true;
       }
-      return true;
+
+      var okName = required(fName, $('#briefNameErr'), 'Укажите имя');
+      var phone = val(fPhone).replace(/\s/g, '');
+      var okPhone = /^\+?[0-9\s\-]{7,20}$/.test(phone);
+      if (!okPhone) {
+        setErr(fPhone, $('#briefPhoneErr'), 'Укажите корректный телефон');
+        if (!first) first = fPhone;
+      } else {
+        clearErr(fPhone, $('#briefPhoneErr'));
+      }
+      var okProduct = required(fProduct, $('#briefProductErr'), 'Укажите, что ищете');
+      var okQty = required(fQty, $('#briefQtyErr'), 'Укажите количество');
+      var okRequirement = required(fRequirement, $('#briefRequirementErr'), 'Опишите вашу потребность');
+
+      if (first) first.focus();
+      return okName && okPhone && okProduct && okQty && okRequirement;
+    }
+
+    function payload() {
+      return {
+        name: val(fName),
+        phone: val(fPhone),
+        whatsapp: val(fWhatsapp),
+        telegram: val(fTelegram),
+        email: val(fEmail),
+        company: val(fCompany),
+        address: val(fAddress),
+        product: val(fProduct),
+        qty: val(fQty),
+        budget: val(fBudget),
+        deadline: val(fDeadline),
+        requirement: val(fRequirement),
+        source: source,
+        formKey: 'website'
+      };
+    }
+
+    function updateFallbackLink() {
+      if (!fallbackLink) return;
+      var p = new URLSearchParams();
+      p.set('product', val(fProduct));
+      p.set('qty', val(fQty));
+      p.set('budget', val(fBudget));
+      p.set('deadline', val(fDeadline));
+      p.set('source', source);
+      fallbackLink.href = FORM_URL + '?' + p.toString();
+    }
+
+    function setBusy(busy) {
+      form.setAttribute('aria-busy', busy ? 'true' : 'false');
+      if (submitBtn) {
+        submitBtn.disabled = busy;
+        submitBtn.textContent = busy ? 'Отправка...' : 'Отправить заявку ↗';
+      }
+    }
+
+    function showError(msg) {
+      if (errorBox) {
+        errorBox.textContent = msg || 'Не удалось отправить заявку. Попробуйте ещё раз.';
+        errorBox.hidden = false;
+      }
+      updateFallbackLink();
+      if (fallback) fallback.hidden = false;
+    }
+
+    function showSuccess(withTrack) {
+      if (success) {
+        success.hidden = false;
+        success.focus();
+      }
+      if (body) body.hidden = true;
+      if (errorBox) errorBox.hidden = true;
+      if (fallback) fallback.hidden = true;
+      if (withTrack) {
+        track('generate_lead', {
+          channel: 'form',
+          form_key: 'website',
+          source: source,
+          product: val(fProduct)
+        });
+      }
+    }
+
+    function openExternal() {
+      updateFallbackLink();
+      if (fallbackLink) window.open(fallbackLink.href, '_blank', 'noopener');
+    }
+
+    if (againBtn) {
+      againBtn.addEventListener('click', function () {
+        form.reset();
+        clearAllErrors();
+        if (success) success.hidden = true;
+        if (body) body.hidden = false;
+        setBusy(false);
+        if (fName) fName.focus();
+      });
     }
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      if (!needsBrief()) return;
-      var text = buildText();
-      var product = fProduct.value.trim();
-      track('generate_lead', { channel: 'form', product: product });
-      var params = new URLSearchParams({
-        product: product,
-        qty: val(fQty),
-        budget: val(fBudget),
-        deadline: val(fDeadline),
-        contact: val(fContact),
-        source: 'website_home_form'
-      });
-      var win = window.open(FORM_URL + '?' + params.toString(), '_blank');
-      if (win) win.opener = null;
-      copyText(text).then(function () {
-        toast('Форма открыта. Поля подставятся автоматически; текст заявки скопирован.');
-      }).catch(function () {
-        toast('Форма открыта. Текст заявки — в предпросмотре ниже.');
-      });
-      if (!win) toast('Разрешите всплывающие окна или откройте hyjj.shop/quote');
-    });
+      clearAllErrors();
 
-    if (waBtn) {
-      waBtn.addEventListener('click', function () {
-        if (!needsBrief()) return;
-        var text = buildText();
-        track('generate_lead', { channel: 'whatsapp', product: fProduct.value.trim() });
-        window.open('https://wa.me/' + WA_PHONE + '?text=' + encodeURIComponent(text), '_blank', 'noopener');
+      if (fHp && fHp.value.trim()) {
+        showSuccess(false);
+        return;
+      }
+
+      if (!validate()) return;
+
+      if (!NATIVE_LEAD_FORM) {
+        openExternal();
+        return;
+      }
+
+      track('quote_form_submit', {
+        form_key: 'website',
+        source: source,
+        product: val(fProduct)
       });
-    }
+
+      setBusy(true);
+      var controller = typeof AbortController === 'function' ? new AbortController() : null;
+      var timer = controller ? setTimeout(function () { controller.abort(); }, 20000) : null;
+
+      fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload()),
+        credentials: 'omit',
+        signal: controller ? controller.signal : undefined
+      }).then(function (res) {
+        if (!res.ok) {
+          return res.json().catch(function () { return {}; }).then(function (data) {
+            throw new Error((data && data.message) || 'Не удалось отправить заявку. Попробуйте ещё раз.');
+          });
+        }
+        showSuccess(true);
+      }).catch(function (err) {
+        var msg = err && err.name === 'AbortError'
+          ? 'Превышено время ожидания. Попробуйте ещё раз или откройте форму.'
+          : (err && err.message && err.message !== 'Failed to fetch'
+            ? err.message
+            : 'Не удалось отправить заявку. Попробуйте ещё раз или откройте форму.');
+        showError(msg);
+      }).finally(function () {
+        if (timer) clearTimeout(timer);
+        setBusy(false);
+      });
+    });
   }
 })();

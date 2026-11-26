@@ -383,40 +383,89 @@
         <div class="ix-brief-note">Первый ответ — в рабочее время. Без автоматических рассылок и скрытых подписок.</div>
       </div>
       <form class="ix-form" id="briefForm" novalidate>
-        <div class="ix-form-head"><strong>Короткая заявка</strong><span>Без регистрации</span></div>
-        <div class="ix-fields">
-          <div class="ix-field full">
-            <label for="briefProduct">Что ищем</label>
-            <input id="briefProduct" name="product" type="text" placeholder="Например: постельное бельё 200×220" required>
+        <div class="ix-form-head"><strong>Короткая заявка</strong><span>Ответ в рабочее время</span></div>
+        <div id="briefBody">
+          <div class="ix-hp" aria-hidden="true">
+            <label for="briefHp">Website</label>
+            <input id="briefHp" name="website_hp" type="text" tabindex="-1" autocomplete="off">
           </div>
-          <div class="ix-field">
-            <label for="briefQty">Количество</label>
-            <input id="briefQty" name="qty" type="text" placeholder="500 комплектов" required>
+          <div class="ix-fields">
+            <div class="ix-field">
+              <label for="briefName">Имя <em>*</em></label>
+              <input id="briefName" name="name" type="text" placeholder="Ваше имя" autocomplete="name" required aria-describedby="briefNameErr">
+              <div class="ix-err" id="briefNameErr" aria-live="polite"></div>
+            </div>
+            <div class="ix-field">
+              <label for="briefPhone">Телефон <em>*</em></label>
+              <input id="briefPhone" name="phone" type="tel" inputmode="tel" placeholder="+7 900 000-00-00" autocomplete="tel" required aria-describedby="briefPhoneErr">
+              <div class="ix-err" id="briefPhoneErr" aria-live="polite"></div>
+            </div>
+            <div class="ix-field full">
+              <label for="briefProduct">Что ищем <em>*</em></label>
+              <input id="briefProduct" name="product" type="text" placeholder="Например: постельное бельё 200×220" autocomplete="off" required aria-describedby="briefProductErr">
+              <div class="ix-err" id="briefProductErr" aria-live="polite"></div>
+            </div>
+            <div class="ix-field">
+              <label for="briefQty">Количество <em>*</em></label>
+              <input id="briefQty" name="qty" type="text" placeholder="500 комплектов" autocomplete="off" required aria-describedby="briefQtyErr">
+              <div class="ix-err" id="briefQtyErr" aria-live="polite"></div>
+            </div>
+            <div class="ix-field">
+              <label for="briefBudget">Бюджет на единицу</label>
+              <input id="briefBudget" name="budget" type="text" placeholder="до 1 200 ¥ / шт." autocomplete="off">
+            </div>
+            <div class="ix-field">
+              <label for="briefDeadline">Срок</label>
+              <input id="briefDeadline" name="deadline" type="text" placeholder="до конца декабря" autocomplete="off">
+            </div>
+            <div class="ix-field">
+              <label for="briefTelegram">Telegram</label>
+              <input id="briefTelegram" name="telegram" type="text" placeholder="@username" autocomplete="off">
+            </div>
+            <div class="ix-field full">
+              <label for="briefRequirement">Описание потребности <em>*</em></label>
+              <textarea id="briefRequirement" name="requirement" rows="4" placeholder="Расскажите, что нужно: назначение, материалы, упаковка, документы..." required aria-describedby="briefRequirementErr"></textarea>
+              <div class="ix-err" id="briefRequirementErr" aria-live="polite"></div>
+            </div>
           </div>
-          <div class="ix-field">
-            <label for="briefBudget">Бюджет на единицу</label>
-            <input id="briefBudget" name="budget" type="text" placeholder="до 1 200 ¥ / шт.">
+          <details class="ix-extra">
+            <summary>Другие способы связи <span>необязательно</span></summary>
+            <div class="ix-fields">
+              <div class="ix-field">
+                <label for="briefWhatsapp">WhatsApp</label>
+                <input id="briefWhatsapp" name="whatsapp" type="tel" inputmode="tel" placeholder="+7 900 000-00-00" autocomplete="off">
+              </div>
+              <div class="ix-field">
+                <label for="briefEmail">Email</label>
+                <input id="briefEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email">
+              </div>
+              <div class="ix-field">
+                <label for="briefCompany">Компания</label>
+                <input id="briefCompany" name="company" type="text" placeholder="Название компании" autocomplete="organization">
+              </div>
+              <div class="ix-field">
+                <label for="briefAddress">Адрес</label>
+                <input id="briefAddress" name="address" type="text" placeholder="Город, страна" autocomplete="address-level2">
+              </div>
+            </div>
+          </details>
+          <div class="ix-form-actions">
+            <div class="ix-form-primary">
+              <button class="btn btn-red" id="briefSubmit" type="submit">Отправить заявку ↗</button>
+              <span class="hint">Один клик — заявка уходит напрямую. Ответим в рабочее время.</span>
+            </div>
           </div>
-          <div class="ix-field">
-            <label for="briefDeadline">Срок</label>
-            <input id="briefDeadline" name="deadline" type="text" placeholder="до конца декабря">
-          </div>
-          <div class="ix-field full">
-            <label for="briefContact">Ваш контакт</label>
-            <input id="briefContact" name="contact" type="text" placeholder="Телефон, email или @username">
+          <div class="ix-form-note">Поля со <em>*</em> обязательны. Данные используем только для ответа на заявку.</div>
+          <div class="ix-form-alert" id="briefFormError" role="alert" hidden></div>
+          <div class="ix-form-alert fallback" id="briefFallback" hidden>
+            <a href="https://hyjj.shop/quote?source=website_home_form" target="_blank" rel="noreferrer">Открыть форму на hyjj.shop/quote →</a>
           </div>
         </div>
-        <div class="ix-form-actions">
-          <div class="ix-form-primary">
-            <button class="btn btn-red" type="submit">Оставить заявку ↗</button>
-            <span class="hint">Откроется форма hyjj.shop/quote — поля подставятся автоматически, текст заявки тоже скопируется.</span>
-          </div>
-          <button class="ix-mini" id="briefWhatsApp" type="button" aria-label="Отправить заявку в WhatsApp" title="Отправить в WhatsApp">WhatsApp</button>
-        </div>
-        <div class="ix-preview">
-          <div class="lab">Предпросмотр заявки</div>
-          <div class="ix-preview-text" id="briefPreview">Заполните продукт и количество — здесь появится готовый текст.</div>
-          <div class="ix-copy-row"><span></span><button class="ix-copy" type="button" id="briefCopy">Скопировать текст</button></div>
+        <div class="ix-success" id="briefSuccess" tabindex="-1" hidden>
+          <div class="ix-success-mark">✓</div>
+          <strong>Заявка отправлена</strong>
+          <p>Мы свяжемся с вами в ближайшее рабочее время. Ничего больше заполнять не нужно.</p>
+          <button class="btn btn-ink" id="briefAgain" type="button">Отправить ещё одну</button>
         </div>
       </form>
     </div>

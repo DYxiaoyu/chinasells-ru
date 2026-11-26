@@ -217,7 +217,7 @@
     var preview = $('#briefPreview');
     var copyBtn = $('#briefCopy');
     var waBtn = $('#briefWhatsApp');
-    var FORM_URL = 'https://hyjj.shop/enquiry';
+    var FORM_URL = 'https://hyjj.shop/quote';
 
     function val(el, fallback) {
       var v = el && el.value ? el.value.trim() : '';
@@ -297,11 +297,11 @@
       var win = window.open(FORM_URL + '?' + params.toString(), '_blank');
       if (win) win.opener = null;
       copyText(text).then(function () {
-        toast('Форма открыта. Текст скопирован — вставьте его в форму.');
+        toast('Форма открыта. Поля подставятся автоматически; текст заявки скопирован.');
       }).catch(function () {
         toast('Форма открыта. Текст заявки — в предпросмотре ниже.');
       });
-      if (!win) toast('Разрешите всплывающие окна или откройте hyjj.shop/enquiry');
+      if (!win) toast('Разрешите всплывающие окна или откройте hyjj.shop/quote');
     });
 
     if (waBtn) {

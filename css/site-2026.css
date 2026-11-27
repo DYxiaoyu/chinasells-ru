@@ -359,9 +359,6 @@ button{cursor:pointer}
 .ix-manager img{width:54px;height:54px;border-radius:50%;object-fit:cover;object-position:center 18%;flex:0 0 54px;border:1px solid var(--line)}
 .ix-manager strong{display:block;font-size:13px;line-height:1.2}
 .ix-manager span{display:block;margin-top:4px;font-size:10px;line-height:1.5;color:var(--muted)}
-.ix-manager-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
-.ix-manager-links a{font-size:9px;border-bottom:1px solid #b8ad99;padding-bottom:2px;color:#4e483d}
-.ix-manager-links a:hover{color:var(--red);border-color:var(--red)}
 .ix-brief-note{margin-top:28px;padding-top:16px;border-top:1px solid var(--line);font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);line-height:1.7}
 .ix-brief-contacts{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);max-width:100%;scroll-margin-top:92px}
 .ix-brief-contacts-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px}

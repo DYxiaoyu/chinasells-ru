@@ -41,12 +41,4 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://chinasells.ru/categories.html"/>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.hyjjls.cn/"/>
   </url>
-  <url>
-    <loc>https://chinasells.ru/contacts.html</loc>
-    <lastmod>2026-11-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://chinasells.ru/contacts.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.hyjjls.cn/"/>
-  </url>
 </urlset>

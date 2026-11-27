@@ -154,23 +154,82 @@
     var filters = $all('.ix-filter');
     var search = $('#catSearch');
     var empty = $('#emptyState');
+    var countEl = $('#catCount');
+    var mobileBar = $('#mobileFilters');
     var activeFilter = 'all';
 
     function normalize(s) {
       return (s || '').toLowerCase().replace(/ё/g, 'е').replace(/[‐‑‎]/g, '-');
     }
-    function apply() {
+    function plural(n) {
+      var n10 = n % 10, n100 = n % 100;
+      if (n10 === 1 && n100 !== 11) return 'направление';
+      if (n10 >= 2 && n10 <= 4 && (n100 < 12 || n100 > 14)) return 'направления';
+      return 'направлений';
+    }
+    function cardCat(card) {
+      var a = card.querySelector('.ix-card-title');
+      var href = a ? (a.getAttribute('href') || '') : '';
+      return href.indexOf('#') !== -1 ? href.split('#')[1] : (card.getAttribute('data-cat') || '');
+    }
+    function syncMobile() {
+      if (!mobileBar) return;
+      $all('.ix-mfilter', mobileBar).forEach(function (b) {
+        var on = b.getAttribute('data-filter') === activeFilter;
+        b.classList.toggle('on', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+    }
+    function syncUrl() {
+      var p = new URLSearchParams(window.location.search);
+      if (activeFilter === 'all') p.delete('cat'); else p.set('cat', activeFilter);
+      if (search && search.value.trim()) p.set('q', search.value.trim()); else p.delete('q');
+      var qs = p.toString();
+      var next = window.location.pathname + (qs ? '?' + qs : '') + window.location.hash;
+      try { window.history.replaceState(null, '', next); } catch (e) {}
+    }
+    function apply(skipUrl) {
       var q = normalize(search ? search.value.trim() : '');
       var visible = 0;
       cards.forEach(function (card) {
-        var cat = card.getAttribute('data-cat') || '';
-        var hay = normalize(card.getAttribute('data-search') + ' ' + card.textContent);
+        var cat = cardCat(card);
+        var hay = normalize((card.getAttribute('data-search') || '') + ' ' + card.textContent);
         var ok = (activeFilter === 'all' || cat === activeFilter) && (!q || hay.indexOf(q) !== -1);
         card.hidden = !ok;
         if (ok) visible++;
       });
       if (empty) empty.hidden = visible > 0;
+      if (countEl) countEl.textContent = visible + ' ' + plural(visible);
+      syncMobile();
+      if (!skipUrl) syncUrl();
     }
+    function selectFilter(name) {
+      var found = filters.filter(function (b) { return b.getAttribute('data-filter') === name; })[0];
+      if (!found) return;
+      activeFilter = name;
+      filters.forEach(function (b) { b.classList.toggle('on', b === found); });
+      apply();
+      track('catalog_filter', { filter: activeFilter });
+    }
+
+    if (mobileBar && filters.length) {
+      filters.forEach(function (src) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'ix-mfilter';
+        b.setAttribute('data-filter', src.getAttribute('data-filter') || 'all');
+        b.setAttribute('aria-pressed', 'false');
+        b.textContent = src.textContent;
+        b.addEventListener('click', function () {
+          var name = b.getAttribute('data-filter');
+          var target = filters.filter(function (x) { return x.getAttribute('data-filter') === name; })[0];
+          if (target) target.click();
+          else selectFilter(name);
+        });
+        mobileBar.appendChild(b);
+      });
+    }
+
     filters.forEach(function (btn) {
       btn.addEventListener('click', function () {
         activeFilter = btn.getAttribute('data-filter') || 'all';
@@ -179,31 +238,35 @@
         track('catalog_filter', { filter: activeFilter });
       });
     });
+
     if (search) {
-      search.addEventListener('input', apply);
+      search.addEventListener('input', function () { apply(); });
       search.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') { search.value = ''; apply(); }
       });
     }
-    var params = new URLSearchParams(window.location.search);
-    var initial = params.get('cat');
-    if (initial) {
-      var found = filters.filter(function (b) { return b.getAttribute('data-filter') === initial; })[0];
-      if (found) {
-        activeFilter = initial;
-        filters.forEach(function (b) { b.classList.toggle('on', b === found); });
-      }
-    }
-    apply();
 
-    var filterToggle = $('#filterToggle');
-    var panel = $('#filterPanel');
-    if (filterToggle && panel) {
-      filterToggle.addEventListener('click', function () {
-        var open = panel.classList.toggle('open');
-        filterToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    $all('.ix-cat-chips button').forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        var q = chip.getAttribute('data-q') || '';
+        var name = chip.getAttribute('data-filter') || 'all';
+        if (search) search.value = q;
+        selectFilter(name);
+        if (search) search.focus();
+        track('catalog_quick_search', { query: q, filter: name });
       });
+    });
+
+    var params = new URLSearchParams(window.location.search);
+    var initial = params.get('cat') || 'all';
+    var found = filters.filter(function (b) { return b.getAttribute('data-filter') === initial; })[0];
+    if (found) {
+      activeFilter = initial;
+      filters.forEach(function (b) { b.classList.toggle('on', b === found); });
     }
+    var initialQ = params.get('q');
+    if (initialQ && search) search.value = initialQ;
+    apply(true);
   }
 
   /* ---------- brief form: native lead submit ---------- */

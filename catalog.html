@@ -1,10 +1,9 @@
-<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Каталог направлений — China Sells | Закупки из Китая под запрос</title>
-  <meta name="description" content="24 направления закупок из Китая: текстиль, одежда, инструмент, промышленное оборудование, электрика, медицина, дом, мебель, стройка, упаковка, HoReCa, сад и другие. MOQ, срок и цена — по запросу.">
+  <meta name="description" content="Каталог 24 направлений закупок из Китая: дом и текстиль, одежда, стройка и инженерия, оборудование, упаковка, HoReCa, авто, спорт, детские и зоотовары. MOQ, срок и цена — по запросу.">
   <link rel="canonical" href="https://chinasells.ru/catalog.html">
   <link rel="alternate" hreflang="ru" href="https://chinasells.ru/catalog.html">
   <link rel="alternate" hreflang="x-default" href="https://www.hyjjls.cn/">
@@ -34,7 +33,7 @@
     });
   </script>
 </head>
-<body class="catalog-v2">
+<body class="catalog-v3">
 
 <header class="ix-header">
   <div class="ix-bar">
@@ -67,371 +66,594 @@
 </header>
 
 <main>
-  <section class="ix-cat-hero">
-    <div class="container ix-cat-intro">
-      <div>
-        <div class="kicker">Каталог направлений</div>
-        <h1>Направления закупок, а не витрина склада</h1>
-        <p>24 направления и 96 ключевых товарных групп. Конкретные модели, MOQ, упаковку и сроки подбираем под ваш запрос и рынок сбыта. Цены не публикуем: они зависят от объёма, фабрики и спецификации.</p>
-      </div>
-      <div class="ix-search-wrap">
-        <label class="ix-search" for="catSearch">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg>
-          <input id="catSearch" type="search" placeholder="Найти направление или подкатегорию" autocomplete="off">
-        </label>
-        <button class="ix-filter-toggle" type="button" id="filterToggle" aria-label="Показать фильтры" aria-expanded="false">≡</button>
-        <div class="ix-cat-chips" aria-label="Частые запросы"><button type="button" data-q="постельное бельё" data-filter="textile">постельное бельё</button><button type="button" data-q="электроинструмент" data-filter="tools">электроинструмент</button><button type="button" data-q="медтехника" data-filter="medical">медтехника</button><button type="button" data-q="СИЗ" data-filter="ppe">СИЗ</button><button type="button" data-q="упаковка" data-filter="packaging">упаковка</button><button type="button" data-q="садовый инструмент" data-filter="garden">садовый инструмент</button></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="ix-cat-facts">
+  <section class="catx-hero">
     <div class="container">
-      <div class="ix-cat-stats">
-        <div class="ix-cat-stat"><b>24</b><span>направления</span></div>
-        <div class="ix-cat-stat"><b>96</b><span>товарных групп</span></div>
-        <div class="ix-cat-stat is-text"><b>до заказа</b><span>образец</span></div>
-        <div class="ix-cat-stat is-text"><b>до оплаты</b><span>инспекция</span></div>
+      <div class="catx-hero-grid">
+        <div class="catx-hero-copy">
+          <div class="kicker">Каталог · 24 направления</div>
+          <h1>Все направления закупок</h1>
+          <p>24 направления и 96 товарных групп, собранные в рабочий каталог. Сначала раздел, затем категория и подгруппы. Конкретные модели, MOQ и сроки подбираем под запрос.</p>
+        </div>
+        <div class="catx-search-side">
+          <label class="catx-search" for="catSearch">
+            <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 5 5"></path></svg>
+            <input id="catSearch" type="search" placeholder="Найти категорию или товар" autocomplete="off">
+          </label>
+          <div class="catx-chips" aria-label="Частые запросы">
+            <button type="button" data-q="постельное бельё" data-cat="textile">постельное бельё</button>
+            <button type="button" data-q="электроинструмент" data-cat="tools">электроинструмент</button>
+            <button type="button" data-q="медтехника" data-cat="medical">медтехника</button>
+            <button type="button" data-q="СИЗ" data-cat="ppe">СИЗ</button>
+            <button type="button" data-q="упаковка" data-cat="packaging">упаковка</button>
+          </div>
+        </div>
       </div>
-      <div class="ix-cat-flow">
-        <span><b>01</b> Выберите направление</span><i>→</i>
-        <span><b>02</b> Один запрос</span><i>→</i>
-        <span><b>03</b> Фабрика, цена, срок</span>
+      <div class="catx-stats">
+        <div class="catx-stat"><b>24</b><span>направления</span></div>
+        <div class="catx-stat"><b>96</b><span>товарных групп</span></div>
+        
+        <div class="catx-stat is-text"><b>до заказа</b><span>образец</span></div>
+        <div class="catx-stat is-text"><b>до оплаты</b><span>инспекция</span></div>
       </div>
     </div>
   </section>
 
-  <div class="ix-cat-layout">
-    <aside class="ix-filter-panel" id="filterPanel">
-      <div class="ix-filter-title"><span>Направления</span><span>24</span></div>
-      <div class="ix-filter-list">
-        <button class="ix-filter on" type="button" data-filter="all">Все направления</button>
-        <button class="ix-filter" type="button" data-filter="textile">Домашний текстиль</button>
-        <button class="ix-filter" type="button" data-filter="clothing">Одежда и обувь</button>
-        <button class="ix-filter" type="button" data-filter="bags">Сумки и кожгалантерея</button>
-        <button class="ix-filter" type="button" data-filter="tools">Инструмент и оборудование</button>
-        <button class="ix-filter" type="button" data-filter="industrial">Промышленное оборудование</button>
-        <button class="ix-filter" type="button" data-filter="electrical">Электрика и освещение</button>
-        <button class="ix-filter" type="button" data-filter="electronics">Электроника и техника</button>
-        <button class="ix-filter" type="button" data-filter="medical">Медицина и уход</button>
-        <button class="ix-filter" type="button" data-filter="home">Товары для дома</button>
-        <button class="ix-filter" type="button" data-filter="furniture">Мебель и фурнитура</button>
-        <button class="ix-filter" type="button" data-filter="building">Строительство и отделка</button>
-        <button class="ix-filter" type="button" data-filter="plumbing">Сантехника и инженерия</button>
-        <button class="ix-filter" type="button" data-filter="auto">Авто и мото</button>
-        <button class="ix-filter" type="button" data-filter="packaging">Упаковка и расходники</button>
-        <button class="ix-filter" type="button" data-filter="office">Офис и канцелярия</button>
-        <button class="ix-filter" type="button" data-filter="ppe">Спецодежда и СИЗ</button>
-        <button class="ix-filter" type="button" data-filter="garden">Сад и огород</button>
-        <button class="ix-filter" type="button" data-filter="chemistry">Бытовая химия и расходники</button>
-        <button class="ix-filter" type="button" data-filter="horeca">HoReCa и торговое оборудование</button>
-        <button class="ix-filter" type="button" data-filter="promo">Сувениры и промо</button>
-        <button class="ix-filter" type="button" data-filter="sport">Спорт и фитнес</button>
-        <button class="ix-filter" type="button" data-filter="beauty">Красота и гигиена</button>
-        <button class="ix-filter" type="button" data-filter="kids">Детские товары</button>
-        <button class="ix-filter" type="button" data-filter="pets">Товары для животных</button>
-      </div>
-      <div class="ix-filter-note">
-        <p>Нет вашей позиции в списке? Опишите товар и объём — подберём фабрику под запрос, даже если направления здесь нет.</p>
-        <a href="https://hyjj.shop/quote?source=website_catalog">Описать задачу →</a>
-      </div>
+  <div class="container">
+  <div class="catx-layout">
+    <aside class="catx-index">
+      <div class="catx-index-head"><span>Разделы</span><span>6</span></div>
+      <nav><a href="#g-home"><span>Дом, текстиль и расходники</span><em>5</em></a><a href="#g-fashion"><span>Одежда, обувь и красота</span><em>3</em></a><a href="#g-build"><span>Строительство, инженерия и СИЗ</span><em>4</em></a><a href="#g-industry"><span>Оборудование, инструмент и медицина</span><em>4</em></a><a href="#g-trade"><span>Упаковка, HoReCa, офис и промо</span><em>4</em></a><a href="#g-life"><span>Авто, спорт, дети и животные</span><em>4</em></a></nav>
+      <p class="catx-index-note">Нет нужной позиции? Опишите товар и объём — подберём фабрику вне каталога.</p>
+      <a class="catx-index-cta" href="https://hyjj.shop/quote?source=website_catalog">Описать задачу →</a>
     </aside>
 
-    <div class="ix-mobile-filter">
-      <div class="ix-mobile-filter-head"><span>Фильтр направлений</span><span>24 →</span></div>
-      <div class="ix-mobile-filters" id="mobileFilters" aria-label="Фильтр направлений"></div>
-    </div>
-
-    <div class="ix-grid" id="catalogGrid">
-      <div class="ix-cat-grid-head">
+    <div class="catx-main">
+      <div class="catx-toolbar">
         <strong id="catCount">24 направления</strong>
-        <span>Цены, MOQ и сроки — под запрос</span>
+        <button class="catx-all" type="button" id="catxAll">Развернуть все</button>
       </div>
+      <div id="catalogList">
+    <section class="catx-group" id="g-home">
+      <div class="catx-group-head">
+        <span class="no">01</span>
+        <h2>Дом, текстиль и расходники</h2>
+        <em>5 направлений</em>
+      </div>
+      <div class="catx-items">
+        <article class="catx-item" id="cat-textile" data-cat="textile" data-search="домашний текстиль постельное белье полотенца пледы шторы ткани">
+          <button class="catx-toggle" type="button" aria-expanded="false" aria-controls="panel-textile">
+            <span class="catx-thumb"><img src="img/cat-textile.webp" srcset="img/cat-textile.webp 1x, img/cat-textile@2x.webp 2x" alt="Домашний текстиль" width="160" height="120" loading="lazy" decoding="async"></span>
+            <span class="catx-name"><b>Домашний текстиль</b><small>Постельное · Полотенца · Пледы · Шторы</small></span>
+            <span class="catx-meta">4 группы</span>
+            <span class="catx-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="catx-panel" id="panel-textile" hidden>
+            <div class="catx-panel-grid">
+              <div class="catx-subset"><b>Что входит</b><div class="catx-tags"><span>Постельное</span><span>Полотенца</span><span>Пледы</span><span>Шторы</span></div></div>
+              <div class="catx-check"><b>Что проверяем</b><p>Плотность, состав, усадку после стирки, цвет и комплектность по размеру.</p></div>
+              <div class="catx-actions">
+                <a class="catx-detail" href="categories.html#textile">Подробнее →</a>
+                <a class="catx-go" href="https://hyjj.shop/quote?product=%D0%94%D0%BE%D0%BC%D0%B0%D1%88%D0%BD%D0%B8%D0%B9%20%D1%82%D0%B5%D0%BA%D1%81%D1%82%D0%B8%D0%BB%D1%8C&amp;source=website_product_textile">Обсудить</a>
+                <button class="catx-add" type="button" data-add data-id="textile" data-title="Домашний текстиль" data-cat="Текстиль" data-img="img/cat-textile.webp" aria-label="Добавить в запрос">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="catx-item" id="cat-home" data-cat="home" data-search="товары для дома посуда хранение кухня декор">
+          <button class="catx-toggle" type="button" aria-expanded="false" aria-controls="panel-home">
+            <span class="catx-thumb"><img src="img/cat-home.webp" srcset="img/cat-home.webp 1x, img/cat-home@2x.webp 2x" alt="Товары для дома" width="160" height="120" loading="lazy" decoding="async"></span>
+            <span class="catx-name"><b>Товары для дома</b><small>Посуда · Хранение · Кухня · Декор</small></span>
+            <span class="catx-meta">4 группы</span>
+            <span class="catx-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="catx-panel" id="panel-home" hidden>
+            <div class="catx-panel-grid">
+              <div class="catx-subset"><b>Что входит</b><div class="catx-tags"><span>Посуда</span><span>Хранение</span><span>Кухня</span><span>Декор</span></div></div>
+              <div class="catx-check"><b>Что проверяем</b><p>Комплектность, бой при перевозке, покрытие, запах и упаковку.</p></div>
+              <div class="catx-actions">
+                <a class="catx-detail" href="categories.html#home">Подробнее →</a>
+                <a class="catx-go" href="https://hyjj.shop/quote?product=%D0%A2%D0%BE%D0%B2%D0%B0%D1%80%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%BE%D0%BC%D0%B0&amp;source=website_product_home">Обсудить</a>
+                <button class="catx-add" type="button" data-add data-id="home" data-title="Товары для дома" data-cat="Дом" data-img="img/cat-home.webp" aria-label="Добавить в запрос">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="catx-item" id="cat-furniture" data-cat="furniture" data-search="мебель фурнитура корпусная мягкая">
+          <button class="catx-toggle" type="button" aria-expanded="false" aria-controls="panel-furniture">
+            <span class="catx-thumb"><img src="img/cat-furniture.webp" srcset="img/cat-furniture.webp 1x, img/cat-furniture@2x.webp 2x" alt="Мебель и фурнитура" width="160" height="120" loading="lazy" decoding="async"></span>
+            <span class="catx-name"><b>Мебель и фурнитура</b><small>Корпусная · Мягкая · Фурнитура · Столы</small></span>
+            <span class="catx-meta">4 группы</span>
+            <span class="catx-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="catx-panel" id="panel-furniture" hidden>
+            <div class="catx-panel-grid">
+              <div class="catx-subset"><b>Что входит</b><div class="catx-tags"><span>Корпусная</span><span>Мягкая</span><span>Фурнитура</span><span>Столы</span></div></div>
+              <div class="catx-check"><b>Что проверяем</b><p>Геометрию, покрытие, механизмы, фурнитуру и упаковку под перевозку.</p></div>
+              <div class="catx-actions">
+                <a class="catx-detail" href="categories.html#furniture">Подробнее →</a>
+                <a class="catx-go" href="https://hyjj.shop/quote?product=%D0%9C%D0%B5%D0%B1%D0%B5%D0%BB%D1%8C%20%D0%B8%20%D1%84%D1%83%D1%80%D0%BD%D0%B8%D1%82%D1%83%D1%80%D0%B0&amp;source=website_product_furniture">Обсудить</a>
+                <button class="catx-add" type="button" data-add data-id="furniture" data-title="Мебель и фурнитура" data-cat="Мебель" data-img="img/cat-furniture.webp" aria-label="Добавить в запрос">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="catx-item" id="cat-garden" data-cat="garden" data-search="сад огород садовый инструмент кашпо уличная мебель освещение">
+          <button class="catx-toggle" type="button" aria-expanded="false" aria-controls="panel-garden">
+            <span class="catx-thumb"><img src="img/cat-garden.webp" srcset="img/cat-garden.webp 1x, img/cat-garden@2x.webp 2x" alt="Сад и огород" width="160" height="120" loading="lazy" decoding="async"></span>
+            <span class="catx-name"><b>Сад и огород</b><small>Садовый инструмент · Кашпо · Уличная мебель · Освещение</small></span>
+            <span class="catx-meta">4 группы</span>
+            <span class="catx-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="catx-panel" id="panel-garden" hidden>
+            <div class="catx-panel-grid">
+              <div class="catx-subset"><b>Что входит</b><div class="catx-tags"><span>Садовый инструмент</span><span>Кашпо</span><span>Уличная мебель</span><span>Освещение</span></div></div>
+              <div class="catx-check"><b>Что проверяем</b><p>Материал, сборку, покрытие, нагрузку и упаковку.</p></div>
+              <div class="catx-actions">
+                <a class="catx-detail" href="categories.html#garden">Подробнее →</a>
+                <a class="catx-go" href="https://hyjj.shop/quote?product=%D0%A1%D0%B0%D0%B4%20%D0%B8%20%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4&amp;source=website_product_garden">Обсудить</a>
+                <button class="catx-add" type="button" data-add data-id="garden" data-title="Сад и огород" data-cat="Сад" data-img="img/cat-garden.webp" aria-label="Добавить в запрос">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="catx-item" id="cat-chemistry" data-cat="chemistry" data-search="бытовая химия чистящие средства автохимия хозтовары">
+          <button class="catx-toggle" type="button" aria-expanded="false" aria-controls="panel-chemistry">
+            <span class="catx-thumb"><img src="img/cat-chemistry.webp" srcset="img/cat-chemistry.webp 1x, img/cat-chemistry@2x.webp 2x" alt="Бытовая химия и расходники" width="160" height="120" loading="lazy" decoding="async"></span>
+            <span class="catx-name"><b>Бытовая химия и расходники</b><small>Бытовая химия · Чистящие средства · Автохимия · Хозтовары</small></span>
+            <span class="catx-meta">4 группы</span>
+            <span class="catx-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="catx-panel" id="panel-chemistry" hidden>
+            <div class="catx-panel-grid">
+              <div class="catx-subset"><b>Что входит</b><div class="catx-tags"><span>Бытовая химия</span><span>Чистящие средства</span><span>Автохимия</span><span>Хозтовары</span></div></div>
+              <div class="catx-check"><b>Что проверяем</b><p>Состав, концентрацию, маркировку, срок годности и тару.</p></div>
+              <div class="catx-actions">
+                <a class="catx-detail" href="categories.html#chemistry">Подробнее →</a>
+                <a class="catx-go" href="https://hyjj.shop/quote?product=%D0%91%D1%8B%D1%82%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%85%D0%B8%D0%BC%D0%B8%D1%8F%20%D0%B8%20%D1%80%D0%B0%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D0%B8%D0%BA%D0%B8&amp;source=website_product_chemistry">Обсудить</a>
+                <button class="catx-add" type="button" data-add data-id="chemistry" data-title="Бытовая химия и расходники" data-cat="Химия" data-img="img/cat-chemistry.webp" aria-label="Добавить в запрос">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
 
-      <article class="ix-grid-card" data-cat="textile" data-search="домашний текстиль постельное полотенца пледы шторы ткани">
-        <div class="ph"><img src="img/cat-textile.webp" srcset="img/cat-textile.webp 1x, img/cat-textile@2x.webp 2x" alt="Домашний текстиль" width="760" height="506" loading="lazy" decoding="async"><span class="tag">Textile</span></div>
-        <div class="bd">
-          <h3><a class="ix-card-title" href="categories.html#textile">Домашний текстиль<span>↗</span></a></h3>
-          <p class="sub">Постельное · Полотенца · Пледы · Шторы</p>
-          <div class="ix-card-check"><b>Что проверяем</b>Плотность, состав, усадку после стирки, цвет и комплектность по размеру.</div>
-          <a class="ix-card-detail" href="categories.html#textile">Подробнее →</a>
-          <div class="acts"><a class="go" href="https://hyjj.shop/quote?product=%D0%94%D0%BE%D0%BC%D0%B0%D1%88%D0%BD%D0%B8%D0%B9%20%D1%82%D0%B5%D0%BA%D1%81%D1%82%D0%B8%D0%BB%D1%8C&amp;source=website_product_textile">Обсудить</a><button class="add" type="button" data-add data-id="textile" data-title="Домашний текстиль" data-cat="Текстиль" data-img="img/cat-textile.webp" aria-label="Добавить в запрос">+</button></div>
-        </div>
-      </article>
+    <section class="catx-group" id="g-fashion">
+      <div class="catx-group-head">
+        <span class="no">02</span>
+        <h2>Одежда, обувь и красота</h2>
+        <em>3 направления</em>
+      </div>
+      <div class="catx-items">
+        <article class="catx-item" id="cat-clothing" data-cat="clothing" data-search="одежда обувь женская мужская детская">
+          <button class="catx-toggle" type="button" aria-expanded="false" aria-controls="panel-clothing">
+            <span class="catx-thumb"><img src="img/cat-clothing.webp" srcset="img/cat-clothing.webp 1x, img/cat-clothing@2x.webp 2x" alt="Одежда и обувь" width="160" height="120" loading="lazy" decoding="async"></span>
+            <span class="catx-name"><b>Одежда и обувь</b><small>Женская · Мужская · Детская · Обувь</small></span>
+            <span class="catx-meta">4 группы</span>
+            <span class="catx-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="catx-panel" id="panel-clothing" hidden>
+            <div class="catx-panel-grid">
+              <div class="catx-subset"><b>Что входит</b><div class="catx-tags"><span>Женская</span><span>Мужская</span><span>Детская</span><span>Обувь</span></div></div>
+              <div class="catx-check"><b>Что проверяем</b><p>Размерную сетку, посадку, ткань, швы, фурнитуру и соответствие образцу.</p></div>
+              <div class="catx-actions">
+                <a class="catx-detail" href="categories.html#clothing">Подробнее →</a>
+                <a class="catx-go" href="https://hyjj.shop/quote?product=%D0%9E%D0%B4%D0%B5%D0%B6%D0%B4%D0%B0%20%D0%B8%20%D0%BE%D0%B1%D1%83%D0%B2%D1%8C&amp;source=website_product_clothing">Обсудить</a>
+                <button class="catx-add" type="button" data-add data-id="clothing" data-title="Одежда и обувь" data-cat="Одежда" data-img="img/cat-clothing.webp" aria-label="Добавить в запрос">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="catx-item" id="cat-bags" data-cat="bags" data-search="сумки рюкзаки чемоданы кошельки ремни кожгалантерея">
+          <button class="catx-toggle" type="button" aria-expanded="false" aria-controls="panel-bags">
+            <span class="catx-thumb"><img src="img/cat-bags.webp" srcset="img/cat-bags.webp 1x, img/cat-bags@2x.webp 2x" alt="Сумки и кожгалантерея" width="160" height="120" loading="lazy" decoding="async"></span>
+            <span class="catx-name"><b>Сумки и кожгалантерея</b><small>Сумки · Рюкзаки · Кошельки · Ремни</small></span>
+            <span class="catx-meta">4 группы</span>
+            <span class="catx-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="catx-panel" id="panel-bags" hidden>
+            <div class="catx-panel-grid">
+              <div class="catx-subset"><b>Что входит</b><div class="catx-tags"><span>Сумки</span><span>Рюкзаки</span><span>Кошельки</span><span>Ремни</span></div></div>
+              <div class="catx-check"><b>Что проверяем</b><p>Материал, швы, фурнитуру, размеры и соответствие образцу.</p></div>
+              <div class="catx-actions">
+                <a class="catx-detail" href="categories.html#bags">Подробнее →</a>
+                <a class="catx-go" href="https://hyjj.shop/quote?product=%D0%A1%D1%83%D0%BC%D0%BA%D0%B8%20%D0%B8%20%D0%BA%D0%BE%D0%B6%D0%B3%D0%B0%D0%BB%D0%B0%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%8F&amp;source=website_product_bags">Обсудить</a>
+                <button class="catx-add" type="button" data-add data-id="bags" data-title="Сумки и кожгалантерея" data-cat="Сумки" data-img="img/cat-bags.webp" aria-label="Добавить в запрос">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="catx-item" id="cat-beauty" data-cat="beauty" data-search="красота гигиена косметика уход">
+          <button class="catx-toggle" type="button" aria-expanded="false" aria-controls="panel-beauty">
+            <span class="catx-thumb"><img src="img/cat-beauty.webp" srcset="img/cat-beauty.webp 1x, img/cat-beauty@2x.webp 2x" alt="Красота и гигиена" width="160" height="120" loading="lazy" decoding="async"></span>
+            <span class="catx-name"><b>Красота и гигиена</b><small>Косметика · Личная гигиена · Уход · Парфюмерия</small></span>
+            <span class="catx-meta">4 группы</span>
+            <span class="catx-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="catx-panel" id="panel-beauty" hidden>
+            <div class="catx-panel-grid">
+              <div class="catx-subset"><b>Что входит</b><div class="catx-tags"><span>Косметика</span><span>Личная гигиена</span><span>Уход</span><span>Парфюмерия</span></div></div>
+              <div class="catx-check"><b>Что проверяем</b><p>Состав, срок годности, консистенцию, упаковку и маркировку.</p></div>
+              <div class="catx-actions">
+                <a class="catx-detail" href="categories.html#beauty">Подробнее →</a>
+                <a class="catx-go" href="https://hyjj.shop/quote?product=%D0%9A%D1%80%D0%B0%D1%81%D0%BE%D1%82%D0%B0%20%D0%B8%20%D0%B3%D0%B8%D0%B3%D0%B8%D0%B5%D0%BD%D0%B0&amp;source=website_product_beauty">Обсудить</a>
+                <button class="catx-add" type="button" data-add data-id="beauty" data-title="Красота и гигиена" data-cat="Красота" data-img="img/cat-beauty.webp" aria-label="Добавить в запрос">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
 
-      <article class="ix-grid-card" data-cat="clothing" data-search="одежда обувь женская мужская детская">
-        <div class="ph"><img src="img/cat-clothing.webp" srcset="img/cat-clothing.webp 1x, img/cat-clothing@2x.webp 2x" alt="Одежда и обувь" width="760" height="506" loading="lazy" decoding="async"><span class="tag">Apparel</span></div>
-        <div class="bd">
-          <h3><a class="ix-card-title" href="categories.html#clothing">Одежда и обувь<span>↗</span></a></h3>
-          <p class="sub">Женская · Мужская · Детская · Обувь</p>
-          <div class="ix-card-check"><b>Что проверяем</b>Размерную сетку, посадку, ткань, швы, фурнитуру и соответствие образцу.</div>
-          <a class="ix-card-detail" href="categories.html#clothing">Подробнее →</a>
-          <div class="acts"><a class="go" href="https://hyjj.shop/quote?product=%D0%9E%D0%B4%D0%B5%D0%B6%D0%B4%D0%B0%20%D0%B8%20%D0%BE%D0%B1%D1%83%D0%B2%D1%8C&amp;source=website_product_clothing">Обсудить</a><button class="add" type="button" data-add data-id="clothing" data-title="Одежда и обувь" data-cat="Одежда" data-img="img/cat-clothing.webp" aria-label="Добавить в запрос">+</button></div>
-        </div>
-      </article>
+    <section class="catx-group" id="g-build">
+      <div class="catx-group-head">
+        <span class="no">03</span>
+        <h2>Строительство, инженерия и СИЗ</h2>
+        <em>4 направления</em>
+      </div>
+      <div class="catx-items">
+        <article class="catx-item" id="cat-building" data-cat="building" data-search="строительство отделка стройматериалы плитка сантехника электрика">
+          <button class="catx-toggle" type="button" aria-expanded="false" aria-controls="panel-building">
+            <span class="catx-thumb"><img src="img/cat-building.webp" srcset="img/cat-building.webp 1x, img/cat-building@2x.webp 2x" alt="Строительство и отделка" width="160" height="120" loading="lazy" decoding="async"></span>
+            <span class="catx-name"><b>Строительство и отделка</b><small>Стройматериалы · Отделка · Крепёж · Кровля</small></span>
+            <span class="catx-meta">4 группы</span>
+            <span class="catx-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="catx-panel" id="panel-building" hidden>
+            <div class="catx-panel-grid">
+              <div class="catx-subset"><b>Что входит</b><div class="catx-tags"><span>Стройматериалы</span><span>Отделка</span><span>Крепёж</span><span>Кровля</span></div></div>
+              <div class="catx-check"><b>Что проверяем</b><p>Геометрию, бой, влажность, партию и упаковку под контейнер.</p></div>
+              <div class="catx-actions">
+                <a class="catx-detail" href="categories.html#building">Подробнее →</a>
+                <a class="catx-go" href="https://hyjj.shop/quote?product=%D0%A1%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D1%82%D0%B2%D0%BE%20%D0%B8%20%D0%BE%D1%82%D0%B4%D0%B5%D0%BB%D0%BA%D0%B0&amp;source=website_product_building">Обсудить</a>
+                <button class="catx-add" type="button" data-add data-id="building" data-title="Строительство и отделка" data-cat="Стройка" data-img="img/cat-building.webp" aria-label="Добавить в запрос">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="catx-item" id="cat-plumbing" data-cat="plumbing" data-search="сантехника смесители трубы фитинги водонагреватели радиаторы">
+          <button class="catx-toggle" type="button" aria-expanded="false" aria-controls="panel-plumbing">
+            <span class="catx-thumb"><img src="img/cat-plumbing.webp" srcset="img/cat-plumbing.webp 1x, img/cat-plumbing@2x.webp 2x" alt="Сантехника и инженерия" width="160" height="120" loading="lazy" decoding="async"></span>
+            <span class="catx-name"><b>Сантехника и инженерия</b><small>Смесители · Трубы · Фитинги · Водонагреватели</small></span>
+            <span class="catx-meta">4 группы</span>
+            <span class="catx-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="catx-panel" id="panel-plumbing" hidden>
+            <div class="catx-panel-grid">
+              <div class="catx-subset"><b>Что входит</b><div class="catx-tags"><span>Смесители</span><span>Трубы</span><span>Фитинги</span><span>Водонагреватели</span></div></div>
+              <div class="catx-check"><b>Что проверяем</b><p>Геометрию, резьбу, покрытие, давление и комплектность.</p></div>
+              <div class="catx-actions">
+                <a class="catx-detail" href="categories.html#plumbing">Подробнее →</a>
+                <a class="catx-go" href="https://hyjj.shop/quote?product=%D0%A1%D0%B0%D0%BD%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0%20%D0%B8%20%D0%B8%D0%BD%D0%B6%D0%B5%D0%BD%D0%B5%D1%80%D0%B8%D1%8F&amp;source=website_product_plumbing">Обсудить</a>
+                <button class="catx-add" type="button" data-add data-id="plumbing" data-title="Сантехника и инженерия" data-cat="Сантехника" data-img="img/cat-plumbing.webp" aria-label="Добавить в запрос">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="catx-item" id="cat-electrical" data-cat="electrical" data-search="электрика кабель автоматы розетки выключатели освещение лампы">
+          <button class="catx-toggle" type="button" aria-expanded="false" aria-controls="panel-electrical">
+            <span class="catx-thumb"><img src="img/cat-electrical.webp" srcset="img/cat-electrical.webp 1x, img/cat-electrical@2x.webp 2x" alt="Электрика и освещение" width="160" height="120" loading="lazy" decoding="async"></span>
+            <span class="catx-name"><b>Электрика и освещение</b><small>Кабель · Автоматы · Розетки · Освещение</small></span>
+            <span class="catx-meta">4 группы</span>
+            <span class="catx-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="catx-panel" id="panel-electrical" hidden>
+            <div class="catx-panel-grid">
+              <div class="catx-subset"><b>Что входит</b><div class="catx-tags"><span>Кабель</span><span>Автоматы</span><span>Розетки</span><span>Освещение</span></div></div>
+              <div class="catx-check"><b>Что проверяем</b><p>Сечение, изоляцию, маркировку, сборку и упаковку.</p></div>
+              <div class="catx-actions">
+                <a class="catx-detail" href="categories.html#electrical">Подробнее →</a>
+                <a class="catx-go" href="https://hyjj.shop/quote?product=%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D0%BA%D0%B0%20%D0%B8%20%D0%BE%D1%81%D0%B2%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D0%B5&amp;source=website_product_electrical">Обсудить</a>
+                <button class="catx-add" type="button" data-add data-id="electrical" data-title="Электрика и освещение" data-cat="Электрика" data-img="img/cat-electrical.webp" aria-label="Добавить в запрос">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="catx-item" id="cat-ppe" data-cat="ppe" data-search="спецодежда сиз защита костюмы перчатки обувь">
+          <button class="catx-toggle" type="button" aria-expanded="false" aria-controls="panel-ppe">
+            <span class="catx-thumb"><img src="img/cat-ppe.webp" srcset="img/cat-ppe.webp 1x, img/cat-ppe@2x.webp 2x" alt="Спецодежда и СИЗ" width="160" height="120" loading="lazy" decoding="async"></span>
+            <span class="catx-name"><b>Спецодежда и СИЗ</b><small>Костюмы · Перчатки · Защитная обувь · Каски</small></span>
+            <span class="catx-meta">4 группы</span>
+            <span class="catx-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="catx-panel" id="panel-ppe" hidden>
+            <div class="catx-panel-grid">
+              <div class="catx-subset"><b>Что входит</b><div class="catx-tags"><span>Костюмы</span><span>Перчатки</span><span>Защитная обувь</span><span>Каски</span></div></div>
+              <div class="catx-check"><b>Что проверяем</b><p>Сертификаты ТР ТС, защитные свойства, размеры и маркировку.</p></div>
+              <div class="catx-actions">
+                <a class="catx-detail" href="categories.html#ppe">Подробнее →</a>
+                <a class="catx-go" href="https://hyjj.shop/quote?product=%D0%A1%D0%BF%D0%B5%D1%86%D0%BE%D0%B4%D0%B5%D0%B6%D0%B4%D0%B0%20%D0%B8%20%D0%A1%D0%98%D0%97&amp;source=website_product_ppe">Обсудить</a>
+                <button class="catx-add" type="button" data-add data-id="ppe" data-title="Спецодежда и СИЗ" data-cat="СИЗ" data-img="img/cat-ppe.webp" aria-label="Добавить в запрос">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
 
-      <article class="ix-grid-card" data-cat="bags" data-search="сумки рюкзаки чемоданы кошельки ремни кожгалантерея">
-        <div class="ph"><img src="img/cat-bags.webp" srcset="img/cat-bags.webp 1x, img/cat-bags@2x.webp 2x" alt="Сумки и кожгалантерея" width="760" height="506" loading="lazy" decoding="async"><span class="tag">Bags</span></div>
-        <div class="bd">
-          <h3><a class="ix-card-title" href="categories.html#bags">Сумки и кожгалантерея<span>↗</span></a></h3>
-          <p class="sub">Сумки · Рюкзаки · Кошельки · Ремни</p>
-          <div class="ix-card-check"><b>Что проверяем</b>Материал, швы, фурнитуру, размеры и соответствие образцу.</div>
-          <a class="ix-card-detail" href="categories.html#bags">Подробнее →</a>
-          <div class="acts"><a class="go" href="https://hyjj.shop/quote?product=%D0%A1%D1%83%D0%BC%D0%BA%D0%B8%20%D0%B8%20%D0%BA%D0%BE%D0%B6%D0%B3%D0%B0%D0%BB%D0%B0%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%8F&amp;source=website_product_bags">Обсудить</a><button class="add" type="button" data-add data-id="bags" data-title="Сумки и кожгалантерея" data-cat="Сумки" data-img="img/cat-bags.webp" aria-label="Добавить в запрос">+</button></div>
-        </div>
-      </article>
+    <section class="catx-group" id="g-industry">
+      <div class="catx-group-head">
+        <span class="no">04</span>
+        <h2>Оборудование, инструмент и медицина</h2>
+        <em>4 направления</em>
+      </div>
+      <div class="catx-items">
+        <article class="catx-item" id="cat-industrial" data-cat="industrial" data-search="промышленное оборудование станки насосы пищевое упаковочное компрессор">
+          <button class="catx-toggle" type="button" aria-expanded="false" aria-controls="panel-industrial">
+            <span class="catx-thumb"><img src="img/cat-industrial.webp" srcset="img/cat-industrial.webp 1x, img/cat-industrial@2x.webp 2x" alt="Промышленное оборудование" width="160" height="120" loading="lazy" decoding="async"></span>
+            <span class="catx-name"><b>Промышленное оборудование</b><small>Станки · Насосы · Пищевое · Упаковочное</small></span>
+            <span class="catx-meta">4 группы</span>
+            <span class="catx-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="catx-panel" id="panel-industrial" hidden>
+            <div class="catx-panel-grid">
+              <div class="catx-subset"><b>Что входит</b><div class="catx-tags"><span>Станки</span><span>Насосы</span><span>Пищевое</span><span>Упаковочное</span></div></div>
+              <div class="catx-check"><b>Что проверяем</b><p>Мощность, узлы, гидравлику, электрику, паспорт и упаковку под перевозку.</p></div>
+              <div class="catx-actions">
+                <a class="catx-detail" href="categories.html#industrial">Подробнее →</a>
+                <a class="catx-go" href="https://hyjj.shop/quote?product=%D0%9F%D1%80%D0%BE%D0%BC%D1%8B%D1%88%D0%BB%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5%20%D0%BE%D0%B1%D0%BE%D1%80%D1%83%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5&amp;source=website_product_industrial">Обсудить</a>
+                <button class="catx-add" type="button" data-add data-id="industrial" data-title="Промышленное оборудование" data-cat="Промоборудование" data-img="img/cat-industrial.webp" aria-label="Добавить в запрос">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="catx-item" id="cat-tools" data-cat="tools" data-search="инструмент оборудование электроинструмент ручной оснастка">
+          <button class="catx-toggle" type="button" aria-expanded="false" aria-controls="panel-tools">
+            <span class="catx-thumb"><img src="img/cat-tools.webp" srcset="img/cat-tools.webp 1x, img/cat-tools@2x.webp 2x" alt="Инструмент и оборудование" width="160" height="120" loading="lazy" decoding="async"></span>
+            <span class="catx-name"><b>Инструмент и оборудование</b><small>Электроинструмент · Ручной · Оснастка · Оснастка</small></span>
+            <span class="catx-meta">4 группы</span>
+            <span class="catx-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="catx-panel" id="panel-tools" hidden>
+            <div class="catx-panel-grid">
+              <div class="catx-subset"><b>Что входит</b><div class="catx-tags"><span>Электроинструмент</span><span>Ручной</span><span>Оснастка</span><span>Оснастка</span></div></div>
+              <div class="catx-check"><b>Что проверяем</b><p>Мощность, АКБ, запуск под нагрузкой, точность и маркировку.</p></div>
+              <div class="catx-actions">
+                <a class="catx-detail" href="categories.html#tools">Подробнее →</a>
+                <a class="catx-go" href="https://hyjj.shop/quote?product=%D0%98%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%20%D0%B8%20%D0%BE%D0%B1%D0%BE%D1%80%D1%83%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5&amp;source=website_product_tools">Обсудить</a>
+                <button class="catx-add" type="button" data-add data-id="tools" data-title="Инструмент и оборудование" data-cat="Инструмент" data-img="img/cat-tools.webp" aria-label="Добавить в запрос">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="catx-item" id="cat-electronics" data-cat="electronics" data-search="электроника техника бытовая гаджеты освещение">
+          <button class="catx-toggle" type="button" aria-expanded="false" aria-controls="panel-electronics">
+            <span class="catx-thumb"><img src="img/cat-electronics.webp" srcset="img/cat-electronics.webp 1x, img/cat-electronics@2x.webp 2x" alt="Электроника и техника" width="160" height="120" loading="lazy" decoding="async"></span>
+            <span class="catx-name"><b>Электроника и техника</b><small>Бытовая техника · Гаджеты · Освещение · Кабели</small></span>
+            <span class="catx-meta">4 группы</span>
+            <span class="catx-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="catx-panel" id="panel-electronics" hidden>
+            <div class="catx-panel-grid">
+              <div class="catx-subset"><b>Что входит</b><div class="catx-tags"><span>Бытовая техника</span><span>Гаджеты</span><span>Освещение</span><span>Кабели</span></div></div>
+              <div class="catx-check"><b>Что проверяем</b><p>Зарядку, АКБ, мощность, маркировку, комплектность и упаковку.</p></div>
+              <div class="catx-actions">
+                <a class="catx-detail" href="categories.html#electronics">Подробнее →</a>
+                <a class="catx-go" href="https://hyjj.shop/quote?product=%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%B8%D0%BA%D0%B0%20%D0%B8%20%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0&amp;source=website_product_electronics">Обсудить</a>
+                <button class="catx-add" type="button" data-add data-id="electronics" data-title="Электроника и техника" data-cat="Электроника" data-img="img/cat-electronics.webp" aria-label="Добавить в запрос">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="catx-item" id="cat-medical" data-cat="medical" data-search="медицина уход медтехника реабилитация гигиена">
+          <button class="catx-toggle" type="button" aria-expanded="false" aria-controls="panel-medical">
+            <span class="catx-thumb"><img src="img/cat-medical.webp" srcset="img/cat-medical.webp 1x, img/cat-medical@2x.webp 2x" alt="Медицина и уход" width="160" height="120" loading="lazy" decoding="async"></span>
+            <span class="catx-name"><b>Медицина и уход</b><small>Медтехника · Реабилитация · Гигиена · Расходники</small></span>
+            <span class="catx-meta">4 группы</span>
+            <span class="catx-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="catx-panel" id="panel-medical" hidden>
+            <div class="catx-panel-grid">
+              <div class="catx-subset"><b>Что входит</b><div class="catx-tags"><span>Медтехника</span><span>Реабилитация</span><span>Гигиена</span><span>Расходники</span></div></div>
+              <div class="catx-check"><b>Что проверяем</b><p>Сертификаты, точность измерений, комплектность и упаковку.</p></div>
+              <div class="catx-actions">
+                <a class="catx-detail" href="categories.html#medical">Подробнее →</a>
+                <a class="catx-go" href="https://hyjj.shop/quote?product=%D0%9C%D0%B5%D0%B4%D0%B8%D1%86%D0%B8%D0%BD%D0%B0%20%D0%B8%20%D1%83%D1%85%D0%BE%D0%B4&amp;source=website_product_medical">Обсудить</a>
+                <button class="catx-add" type="button" data-add data-id="medical" data-title="Медицина и уход" data-cat="Медицина" data-img="img/cat-medical.webp" aria-label="Добавить в запрос">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
 
-      <article class="ix-grid-card" data-cat="tools" data-search="инструмент оборудование электроинструмент ручной оснастка">
-        <div class="ph"><img src="img/cat-tools.webp" srcset="img/cat-tools.webp 1x, img/cat-tools@2x.webp 2x" alt="Инструмент и оборудование" width="760" height="506" loading="lazy" decoding="async"><span class="tag">Tools</span></div>
-        <div class="bd">
-          <h3><a class="ix-card-title" href="categories.html#tools">Инструмент и оборудование<span>↗</span></a></h3>
-          <p class="sub">Электроинструмент · Ручной · Оснастка</p>
-          <div class="ix-card-check"><b>Что проверяем</b>Мощность, АКБ, запуск под нагрузкой, точность и маркировку.</div>
-          <a class="ix-card-detail" href="categories.html#tools">Подробнее →</a>
-          <div class="acts"><a class="go" href="https://hyjj.shop/quote?product=%D0%98%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%20%D0%B8%20%D0%BE%D0%B1%D0%BE%D1%80%D1%83%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5&amp;source=website_product_tools">Обсудить</a><button class="add" type="button" data-add data-id="tools" data-title="Инструмент и оборудование" data-cat="Инструмент" data-img="img/cat-tools.webp" aria-label="Добавить в запрос">+</button></div>
-        </div>
-      </article>
+    <section class="catx-group" id="g-trade">
+      <div class="catx-group-head">
+        <span class="no">05</span>
+        <h2>Упаковка, HoReCa, офис и промо</h2>
+        <em>4 направления</em>
+      </div>
+      <div class="catx-items">
+        <article class="catx-item" id="cat-packaging" data-cat="packaging" data-search="упаковка расходники тара одноразовые плёнка коробки">
+          <button class="catx-toggle" type="button" aria-expanded="false" aria-controls="panel-packaging">
+            <span class="catx-thumb"><img src="img/cat-packaging.webp" srcset="img/cat-packaging.webp 1x, img/cat-packaging@2x.webp 2x" alt="Упаковка и расходники" width="160" height="120" loading="lazy" decoding="async"></span>
+            <span class="catx-name"><b>Упаковка и расходники</b><small>Тара · Упаковка · Одноразовые · Этикетки</small></span>
+            <span class="catx-meta">4 группы</span>
+            <span class="catx-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="catx-panel" id="panel-packaging" hidden>
+            <div class="catx-panel-grid">
+              <div class="catx-subset"><b>Что входит</b><div class="catx-tags"><span>Тара</span><span>Упаковка</span><span>Одноразовые</span><span>Этикетки</span></div></div>
+              <div class="catx-check"><b>Что проверяем</b><p>Плотность, размеры, качество печати и поведение при транспортировке.</p></div>
+              <div class="catx-actions">
+                <a class="catx-detail" href="categories.html#packaging">Подробнее →</a>
+                <a class="catx-go" href="https://hyjj.shop/quote?product=%D0%A3%D0%BF%D0%B0%D0%BA%D0%BE%D0%B2%D0%BA%D0%B0%20%D0%B8%20%D1%80%D0%B0%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D0%B8%D0%BA%D0%B8&amp;source=website_product_packaging">Обсудить</a>
+                <button class="catx-add" type="button" data-add data-id="packaging" data-title="Упаковка и расходники" data-cat="Упаковка" data-img="img/cat-packaging.webp" aria-label="Добавить в запрос">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="catx-item" id="cat-horeca" data-cat="horeca" data-search="horeca ресторан кухонное оборудование посуда бар торговое оборудование">
+          <button class="catx-toggle" type="button" aria-expanded="false" aria-controls="panel-horeca">
+            <span class="catx-thumb"><img src="img/cat-horeca.webp" srcset="img/cat-horeca.webp 1x, img/cat-horeca@2x.webp 2x" alt="HoReCa и торговое оборудование" width="160" height="120" loading="lazy" decoding="async"></span>
+            <span class="catx-name"><b>HoReCa и торговое оборудование</b><small>Кухонное оборудование · Посуда · Бар · Торговое</small></span>
+            <span class="catx-meta">4 группы</span>
+            <span class="catx-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="catx-panel" id="panel-horeca" hidden>
+            <div class="catx-panel-grid">
+              <div class="catx-subset"><b>Что входит</b><div class="catx-tags"><span>Кухонное оборудование</span><span>Посуда</span><span>Бар</span><span>Торговое</span></div></div>
+              <div class="catx-check"><b>Что проверяем</b><p>Мощность, нержавейку, узлы, комплектность и упаковку.</p></div>
+              <div class="catx-actions">
+                <a class="catx-detail" href="categories.html#horeca">Подробнее →</a>
+                <a class="catx-go" href="https://hyjj.shop/quote?product=HoReCa%20%D0%B8%20%D1%82%D0%BE%D1%80%D0%B3%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%BE%D0%B1%D0%BE%D1%80%D1%83%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5&amp;source=website_product_horeca">Обсудить</a>
+                <button class="catx-add" type="button" data-add data-id="horeca" data-title="HoReCa и торговое оборудование" data-cat="HoReCa" data-img="img/cat-horeca.webp" aria-label="Добавить в запрос">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="catx-item" id="cat-office" data-cat="office" data-search="офис канцелярия бумага офисные товары">
+          <button class="catx-toggle" type="button" aria-expanded="false" aria-controls="panel-office">
+            <span class="catx-thumb"><img src="img/cat-office.webp" srcset="img/cat-office.webp 1x, img/cat-office@2x.webp 2x" alt="Офис и канцелярия" width="160" height="120" loading="lazy" decoding="async"></span>
+            <span class="catx-name"><b>Офис и канцелярия</b><small>Канцелярия · Бумага · Офисные товары · Оргтехника</small></span>
+            <span class="catx-meta">4 группы</span>
+            <span class="catx-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="catx-panel" id="panel-office" hidden>
+            <div class="catx-panel-grid">
+              <div class="catx-subset"><b>Что входит</b><div class="catx-tags"><span>Канцелярия</span><span>Бумага</span><span>Офисные товары</span><span>Оргтехника</span></div></div>
+              <div class="catx-check"><b>Что проверяем</b><p>Плотность, размеры, комплектность и качество печати.</p></div>
+              <div class="catx-actions">
+                <a class="catx-detail" href="categories.html#office">Подробнее →</a>
+                <a class="catx-go" href="https://hyjj.shop/quote?product=%D0%9E%D1%84%D0%B8%D1%81%20%D0%B8%20%D0%BA%D0%B0%D0%BD%D1%86%D0%B5%D0%BB%D1%8F%D1%80%D0%B8%D1%8F&amp;source=website_product_office">Обсудить</a>
+                <button class="catx-add" type="button" data-add data-id="office" data-title="Офис и канцелярия" data-cat="Офис" data-img="img/cat-office.webp" aria-label="Добавить в запрос">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="catx-item" id="cat-promo" data-cat="promo" data-search="сувениры промо подарки сумки кружки канцелярия электроника">
+          <button class="catx-toggle" type="button" aria-expanded="false" aria-controls="panel-promo">
+            <span class="catx-thumb"><img src="img/cat-promo.webp" srcset="img/cat-promo.webp 1x, img/cat-promo@2x.webp 2x" alt="Сувениры и промо" width="160" height="120" loading="lazy" decoding="async"></span>
+            <span class="catx-name"><b>Сувениры и промо</b><small>Сумки · Кружки · Канцелярия · Электроника</small></span>
+            <span class="catx-meta">4 группы</span>
+            <span class="catx-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="catx-panel" id="panel-promo" hidden>
+            <div class="catx-panel-grid">
+              <div class="catx-subset"><b>Что входит</b><div class="catx-tags"><span>Сумки</span><span>Кружки</span><span>Канцелярия</span><span>Электроника</span></div></div>
+              <div class="catx-check"><b>Что проверяем</b><p>Плотность, печать, цвет, сборку и комплектность.</p></div>
+              <div class="catx-actions">
+                <a class="catx-detail" href="categories.html#promo">Подробнее →</a>
+                <a class="catx-go" href="https://hyjj.shop/quote?product=%D0%A1%D1%83%D0%B2%D0%B5%D0%BD%D0%B8%D1%80%D1%8B%20%D0%B8%20%D0%BF%D1%80%D0%BE%D0%BC%D0%BE&amp;source=website_product_promo">Обсудить</a>
+                <button class="catx-add" type="button" data-add data-id="promo" data-title="Сувениры и промо" data-cat="Промо" data-img="img/cat-promo.webp" aria-label="Добавить в запрос">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
 
-      <article class="ix-grid-card" data-cat="industrial" data-search="промышленное оборудование станки насосы пищевое упаковочное компрессор">
-        <div class="ph"><img src="img/cat-industrial.webp" srcset="img/cat-industrial.webp 1x, img/cat-industrial@2x.webp 2x" alt="Промышленное оборудование" width="760" height="506" loading="lazy" decoding="async"><span class="tag">Industrial</span></div>
-        <div class="bd">
-          <h3><a class="ix-card-title" href="categories.html#industrial">Промышленное оборудование<span>↗</span></a></h3>
-          <p class="sub">Станки · Насосы · Пищевое · Упаковочное</p>
-          <div class="ix-card-check"><b>Что проверяем</b>Мощность, узлы, гидравлику, электрику, паспорт и упаковку под перевозку.</div>
-          <a class="ix-card-detail" href="categories.html#industrial">Подробнее →</a>
-          <div class="acts"><a class="go" href="https://hyjj.shop/quote?product=%D0%9F%D1%80%D0%BE%D0%BC%D1%8B%D1%88%D0%BB%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5%20%D0%BE%D0%B1%D0%BE%D1%80%D1%83%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5&amp;source=website_product_industrial">Обсудить</a><button class="add" type="button" data-add data-id="industrial" data-title="Промышленное оборудование" data-cat="Промоборудование" data-img="img/cat-industrial.webp" aria-label="Добавить в запрос">+</button></div>
-        </div>
-      </article>
+    <section class="catx-group" id="g-life">
+      <div class="catx-group-head">
+        <span class="no">06</span>
+        <h2>Авто, спорт, дети и животные</h2>
+        <em>4 направления</em>
+      </div>
+      <div class="catx-items">
+        <article class="catx-item" id="cat-auto" data-cat="auto" data-search="авто мото аксессуары тюнинг расходники">
+          <button class="catx-toggle" type="button" aria-expanded="false" aria-controls="panel-auto">
+            <span class="catx-thumb"><img src="img/cat-auto.webp" srcset="img/cat-auto.webp 1x, img/cat-auto@2x.webp 2x" alt="Авто и мото" width="160" height="120" loading="lazy" decoding="async"></span>
+            <span class="catx-name"><b>Авто и мото</b><small>Аксессуары · Тюнинг · Расходники · Автоэлектроника</small></span>
+            <span class="catx-meta">4 группы</span>
+            <span class="catx-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="catx-panel" id="panel-auto" hidden>
+            <div class="catx-panel-grid">
+              <div class="catx-subset"><b>Что входит</b><div class="catx-tags"><span>Аксессуары</span><span>Тюнинг</span><span>Расходники</span><span>Автоэлектроника</span></div></div>
+              <div class="catx-check"><b>Что проверяем</b><p>Совместимость, крепёж, электрику и комплектность.</p></div>
+              <div class="catx-actions">
+                <a class="catx-detail" href="categories.html#auto">Подробнее →</a>
+                <a class="catx-go" href="https://hyjj.shop/quote?product=%D0%90%D0%B2%D1%82%D0%BE%20%D0%B8%20%D0%BC%D0%BE%D1%82%D0%BE&amp;source=website_product_auto">Обсудить</a>
+                <button class="catx-add" type="button" data-add data-id="auto" data-title="Авто и мото" data-cat="Авто" data-img="img/cat-auto.webp" aria-label="Добавить в запрос">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="catx-item" id="cat-sport" data-cat="sport" data-search="спорт фитнес тренажёры туризм реабилитация">
+          <button class="catx-toggle" type="button" aria-expanded="false" aria-controls="panel-sport">
+            <span class="catx-thumb"><img src="img/cat-sport.webp" srcset="img/cat-sport.webp 1x, img/cat-sport@2x.webp 2x" alt="Спорт и фитнес" width="160" height="120" loading="lazy" decoding="async"></span>
+            <span class="catx-name"><b>Спорт и фитнес</b><small>Тренажёры · Туризм · Реабилитация · Экипировка</small></span>
+            <span class="catx-meta">4 группы</span>
+            <span class="catx-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="catx-panel" id="panel-sport" hidden>
+            <div class="catx-panel-grid">
+              <div class="catx-subset"><b>Что входит</b><div class="catx-tags"><span>Тренажёры</span><span>Туризм</span><span>Реабилитация</span><span>Экипировка</span></div></div>
+              <div class="catx-check"><b>Что проверяем</b><p>Сварные швы, нагрузку, устойчивость, комплектность и маркировку.</p></div>
+              <div class="catx-actions">
+                <a class="catx-detail" href="categories.html#sport">Подробнее →</a>
+                <a class="catx-go" href="https://hyjj.shop/quote?product=%D0%A1%D0%BF%D0%BE%D1%80%D1%82%20%D0%B8%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81&amp;source=website_product_sport">Обсудить</a>
+                <button class="catx-add" type="button" data-add data-id="sport" data-title="Спорт и фитнес" data-cat="Спорт" data-img="img/cat-sport.webp" aria-label="Добавить в запрос">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="catx-item" id="cat-kids" data-cat="kids" data-search="детские товары дети мам игрушки">
+          <button class="catx-toggle" type="button" aria-expanded="false" aria-controls="panel-kids">
+            <span class="catx-thumb"><img src="img/cat-kids.webp" srcset="img/cat-kids.webp 1x, img/cat-kids@2x.webp 2x" alt="Детские товары" width="160" height="120" loading="lazy" decoding="async"></span>
+            <span class="catx-name"><b>Детские товары</b><small>Игрушки · Одежда · Товары для мам · Игрушки</small></span>
+            <span class="catx-meta">4 группы</span>
+            <span class="catx-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="catx-panel" id="panel-kids" hidden>
+            <div class="catx-panel-grid">
+              <div class="catx-subset"><b>Что входит</b><div class="catx-tags"><span>Игрушки</span><span>Одежда</span><span>Товары для мам</span><span>Игрушки</span></div></div>
+              <div class="catx-check"><b>Что проверяем</b><p>Сертификаты, материалы, мелкие детали, прочность и упаковку.</p></div>
+              <div class="catx-actions">
+                <a class="catx-detail" href="categories.html#kids">Подробнее →</a>
+                <a class="catx-go" href="https://hyjj.shop/quote?product=%D0%94%D0%B5%D1%82%D1%81%D0%BA%D0%B8%D0%B5%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D1%8B&amp;source=website_product_kids">Обсудить</a>
+                <button class="catx-add" type="button" data-add data-id="kids" data-title="Детские товары" data-cat="Дети" data-img="img/cat-kids.webp" aria-label="Добавить в запрос">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="catx-item" id="cat-pets" data-cat="pets" data-search="товары для животных зоотовары корм аксессуары">
+          <button class="catx-toggle" type="button" aria-expanded="false" aria-controls="panel-pets">
+            <span class="catx-thumb"><img src="img/cat-pets.webp" srcset="img/cat-pets.webp 1x, img/cat-pets@2x.webp 2x" alt="Товары для животных" width="160" height="120" loading="lazy" decoding="async"></span>
+            <span class="catx-name"><b>Товары для животных</b><small>Корм · Аксессуары · Уход · Игрушки</small></span>
+            <span class="catx-meta">4 группы</span>
+            <span class="catx-plus" aria-hidden="true">+</span>
+          </button>
+          <div class="catx-panel" id="panel-pets" hidden>
+            <div class="catx-panel-grid">
+              <div class="catx-subset"><b>Что входит</b><div class="catx-tags"><span>Корм</span><span>Аксессуары</span><span>Уход</span><span>Игрушки</span></div></div>
+              <div class="catx-check"><b>Что проверяем</b><p>Состав, запах, герметичность, маркировку и срок годности.</p></div>
+              <div class="catx-actions">
+                <a class="catx-detail" href="categories.html#pets">Подробнее →</a>
+                <a class="catx-go" href="https://hyjj.shop/quote?product=%D0%A2%D0%BE%D0%B2%D0%B0%D1%80%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%B6%D0%B8%D0%B2%D0%BE%D1%82%D0%BD%D1%8B%D1%85&amp;source=website_product_pets">Обсудить</a>
+                <button class="catx-add" type="button" data-add data-id="pets" data-title="Товары для животных" data-cat="Зоотовары" data-img="img/cat-pets.webp" aria-label="Добавить в запрос">+</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
 
-      <article class="ix-grid-card" data-cat="electrical" data-search="электрика кабель автоматы розетки выключатели освещение лампы">
-        <div class="ph"><img src="img/cat-electrical.webp" srcset="img/cat-electrical.webp 1x, img/cat-electrical@2x.webp 2x" alt="Электрика и освещение" width="760" height="506" loading="lazy" decoding="async"><span class="tag">Electrical</span></div>
-        <div class="bd">
-          <h3><a class="ix-card-title" href="categories.html#electrical">Электрика и освещение<span>↗</span></a></h3>
-          <p class="sub">Кабель · Автоматы · Розетки · Освещение</p>
-          <div class="ix-card-check"><b>Что проверяем</b>Сечение, изоляцию, маркировку, сборку и упаковку.</div>
-          <a class="ix-card-detail" href="categories.html#electrical">Подробнее →</a>
-          <div class="acts"><a class="go" href="https://hyjj.shop/quote?product=%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%B8%D0%BA%D0%B0%20%D0%B8%20%D0%BE%D1%81%D0%B2%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D0%B5&amp;source=website_product_electrical">Обсудить</a><button class="add" type="button" data-add data-id="electrical" data-title="Электрика и освещение" data-cat="Электрика" data-img="img/cat-electrical.webp" aria-label="Добавить в запрос">+</button></div>
-        </div>
-      </article>
-
-      <article class="ix-grid-card" data-cat="electronics" data-search="электроника техника бытовая гаджеты освещение">
-        <div class="ph"><img src="img/cat-electronics.webp" srcset="img/cat-electronics.webp 1x, img/cat-electronics@2x.webp 2x" alt="Электроника и техника" width="760" height="506" loading="lazy" decoding="async"><span class="tag">Electronics</span></div>
-        <div class="bd">
-          <h3><a class="ix-card-title" href="categories.html#electronics">Электроника и техника<span>↗</span></a></h3>
-          <p class="sub">Бытовая техника · Гаджеты · Освещение</p>
-          <div class="ix-card-check"><b>Что проверяем</b>Зарядку, АКБ, мощность, маркировку, комплектность и упаковку.</div>
-          <a class="ix-card-detail" href="categories.html#electronics">Подробнее →</a>
-          <div class="acts"><a class="go" href="https://hyjj.shop/quote?product=%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%B8%D0%BA%D0%B0%20%D0%B8%20%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0&amp;source=website_product_electronics">Обсудить</a><button class="add" type="button" data-add data-id="electronics" data-title="Электроника и техника" data-cat="Электроника" data-img="img/cat-electronics.webp" aria-label="Добавить в запрос">+</button></div>
-        </div>
-      </article>
-
-      <article class="ix-grid-card" data-cat="medical" data-search="медицина уход медтехника реабилитация гигиена">
-        <div class="ph"><img src="img/cat-medical.webp" srcset="img/cat-medical.webp 1x, img/cat-medical@2x.webp 2x" alt="Медицина и уход" width="760" height="506" loading="lazy" decoding="async"><span class="tag">Medical</span></div>
-        <div class="bd">
-          <h3><a class="ix-card-title" href="categories.html#medical">Медицина и уход<span>↗</span></a></h3>
-          <p class="sub">Медтехника · Реабилитация · Гигиена</p>
-          <div class="ix-card-check"><b>Что проверяем</b>Сертификаты, точность измерений, комплектность и упаковку.</div>
-          <a class="ix-card-detail" href="categories.html#medical">Подробнее →</a>
-          <div class="acts"><a class="go" href="https://hyjj.shop/quote?product=%D0%9C%D0%B5%D0%B4%D0%B8%D1%86%D0%B8%D0%BD%D0%B0%20%D0%B8%20%D1%83%D1%85%D0%BE%D0%B4&amp;source=website_product_medical">Обсудить</a><button class="add" type="button" data-add data-id="medical" data-title="Медицина и уход" data-cat="Медицина" data-img="img/cat-medical.webp" aria-label="Добавить в запрос">+</button></div>
-        </div>
-      </article>
-
-      <article class="ix-grid-card" data-cat="home" data-search="товары для дома посуда хранение кухня декор">
-        <div class="ph"><img src="img/cat-home.webp" srcset="img/cat-home.webp 1x, img/cat-home@2x.webp 2x" alt="Товары для дома" width="760" height="506" loading="lazy" decoding="async"><span class="tag">Home</span></div>
-        <div class="bd">
-          <h3><a class="ix-card-title" href="categories.html#home">Товары для дома<span>↗</span></a></h3>
-          <p class="sub">Посуда · Хранение · Кухня · Декор</p>
-          <div class="ix-card-check"><b>Что проверяем</b>Комплектность, бой при перевозке, покрытие, запах и упаковку.</div>
-          <a class="ix-card-detail" href="categories.html#home">Подробнее →</a>
-          <div class="acts"><a class="go" href="https://hyjj.shop/quote?product=%D0%A2%D0%BE%D0%B2%D0%B0%D1%80%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%BE%D0%BC%D0%B0&amp;source=website_product_home">Обсудить</a><button class="add" type="button" data-add data-id="home" data-title="Товары для дома" data-cat="Дом" data-img="img/cat-home.webp" aria-label="Добавить в запрос">+</button></div>
-        </div>
-      </article>
-
-      <article class="ix-grid-card" data-cat="furniture" data-search="мебель фурнитура корпусная мягкая">
-        <div class="ph"><img src="img/cat-furniture.webp" srcset="img/cat-furniture.webp 1x, img/cat-furniture@2x.webp 2x" alt="Мебель и фурнитура" width="760" height="506" loading="lazy" decoding="async"><span class="tag">Furniture</span></div>
-        <div class="bd">
-          <h3><a class="ix-card-title" href="categories.html#furniture">Мебель и фурнитура<span>↗</span></a></h3>
-          <p class="sub">Корпусная · Мягкая · Фурнитура</p>
-          <div class="ix-card-check"><b>Что проверяем</b>Геометрию, покрытие, механизмы, фурнитуру и упаковку под перевозку.</div>
-          <a class="ix-card-detail" href="categories.html#furniture">Подробнее →</a>
-          <div class="acts"><a class="go" href="https://hyjj.shop/quote?product=%D0%9C%D0%B5%D0%B1%D0%B5%D0%BB%D1%8C%20%D0%B8%20%D1%84%D1%83%D1%80%D0%BD%D0%B8%D1%82%D1%83%D1%80%D0%B0&amp;source=website_product_furniture">Обсудить</a><button class="add" type="button" data-add data-id="furniture" data-title="Мебель и фурнитура" data-cat="Мебель" data-img="img/cat-furniture.webp" aria-label="Добавить в запрос">+</button></div>
-        </div>
-      </article>
-
-      <article class="ix-grid-card" data-cat="building" data-search="строительство отделка стройматериалы плитка сантехника электрика">
-        <div class="ph"><img src="img/cat-building.webp" srcset="img/cat-building.webp 1x, img/cat-building@2x.webp 2x" alt="Строительство и отделка" width="760" height="506" loading="lazy" decoding="async"><span class="tag">Building</span></div>
-        <div class="bd">
-          <h3><a class="ix-card-title" href="categories.html#building">Строительство и отделка<span>↗</span></a></h3>
-          <p class="sub">Стройматериалы · Отделка · Крепёж</p>
-          <div class="ix-card-check"><b>Что проверяем</b>Геометрию, бой, влажность, партию и упаковку под контейнер.</div>
-          <a class="ix-card-detail" href="categories.html#building">Подробнее →</a>
-          <div class="acts"><a class="go" href="https://hyjj.shop/quote?product=%D0%A1%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D1%82%D0%B2%D0%BE%20%D0%B8%20%D0%BE%D1%82%D0%B4%D0%B5%D0%BB%D0%BA%D0%B0&amp;source=website_product_building">Обсудить</a><button class="add" type="button" data-add data-id="building" data-title="Строительство и отделка" data-cat="Стройка" data-img="img/cat-building.webp" aria-label="Добавить в запрос">+</button></div>
-        </div>
-      </article>
-
-      <article class="ix-grid-card" data-cat="plumbing" data-search="сантехника смесители трубы фитинги водонагреватели радиаторы">
-        <div class="ph"><img src="img/cat-plumbing.webp" srcset="img/cat-plumbing.webp 1x, img/cat-plumbing@2x.webp 2x" alt="Сантехника и инженерия" width="760" height="506" loading="lazy" decoding="async"><span class="tag">Plumbing</span></div>
-        <div class="bd">
-          <h3><a class="ix-card-title" href="categories.html#plumbing">Сантехника и инженерия<span>↗</span></a></h3>
-          <p class="sub">Смесители · Трубы · Фитинги · Водонагреватели</p>
-          <div class="ix-card-check"><b>Что проверяем</b>Геометрию, резьбу, покрытие, давление и комплектность.</div>
-          <a class="ix-card-detail" href="categories.html#plumbing">Подробнее →</a>
-          <div class="acts"><a class="go" href="https://hyjj.shop/quote?product=%D0%A1%D0%B0%D0%BD%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0%20%D0%B8%20%D0%B8%D0%BD%D0%B6%D0%B5%D0%BD%D0%B5%D1%80%D0%B8%D1%8F&amp;source=website_product_plumbing">Обсудить</a><button class="add" type="button" data-add data-id="plumbing" data-title="Сантехника и инженерия" data-cat="Сантехника" data-img="img/cat-plumbing.webp" aria-label="Добавить в запрос">+</button></div>
-        </div>
-      </article>
-
-      <article class="ix-grid-card" data-cat="auto" data-search="авто мото аксессуары тюнинг расходники">
-        <div class="ph"><img src="img/cat-auto.webp" srcset="img/cat-auto.webp 1x, img/cat-auto@2x.webp 2x" alt="Авто и мото" width="760" height="506" loading="lazy" decoding="async"><span class="tag">Auto</span></div>
-        <div class="bd">
-          <h3><a class="ix-card-title" href="categories.html#auto">Авто и мото<span>↗</span></a></h3>
-          <p class="sub">Аксессуары · Тюнинг · Расходники</p>
-          <div class="ix-card-check"><b>Что проверяем</b>Совместимость, крепёж, электрику и комплектность.</div>
-          <a class="ix-card-detail" href="categories.html#auto">Подробнее →</a>
-          <div class="acts"><a class="go" href="https://hyjj.shop/quote?product=%D0%90%D0%B2%D1%82%D0%BE%20%D0%B8%20%D0%BC%D0%BE%D1%82%D0%BE&amp;source=website_product_auto">Обсудить</a><button class="add" type="button" data-add data-id="auto" data-title="Авто и мото" data-cat="Авто" data-img="img/cat-auto.webp" aria-label="Добавить в запрос">+</button></div>
-        </div>
-      </article>
-
-      <article class="ix-grid-card" data-cat="packaging" data-search="упаковка расходники тара одноразовые плёнка коробки">
-        <div class="ph"><img src="img/cat-packaging.webp" srcset="img/cat-packaging.webp 1x, img/cat-packaging@2x.webp 2x" alt="Упаковка и расходники" width="760" height="506" loading="lazy" decoding="async"><span class="tag">Packaging</span></div>
-        <div class="bd">
-          <h3><a class="ix-card-title" href="categories.html#packaging">Упаковка и расходники<span>↗</span></a></h3>
-          <p class="sub">Тара · Упаковка · Одноразовые</p>
-          <div class="ix-card-check"><b>Что проверяем</b>Плотность, размеры, качество печати и поведение при транспортировке.</div>
-          <a class="ix-card-detail" href="categories.html#packaging">Подробнее →</a>
-          <div class="acts"><a class="go" href="https://hyjj.shop/quote?product=%D0%A3%D0%BF%D0%B0%D0%BA%D0%BE%D0%B2%D0%BA%D0%B0%20%D0%B8%20%D1%80%D0%B0%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D0%B8%D0%BA%D0%B8&amp;source=website_product_packaging">Обсудить</a><button class="add" type="button" data-add data-id="packaging" data-title="Упаковка и расходники" data-cat="Упаковка" data-img="img/cat-packaging.webp" aria-label="Добавить в запрос">+</button></div>
-        </div>
-      </article>
-
-      <article class="ix-grid-card" data-cat="office" data-search="офис канцелярия бумага офисные товары">
-        <div class="ph"><img src="img/cat-office.webp" srcset="img/cat-office.webp 1x, img/cat-office@2x.webp 2x" alt="Офис и канцелярия" width="760" height="506" loading="lazy" decoding="async"><span class="tag">Office</span></div>
-        <div class="bd">
-          <h3><a class="ix-card-title" href="categories.html#office">Офис и канцелярия<span>↗</span></a></h3>
-          <p class="sub">Канцелярия · Бумага · Офисные товары</p>
-          <div class="ix-card-check"><b>Что проверяем</b>Плотность, размеры, комплектность и качество печати.</div>
-          <a class="ix-card-detail" href="categories.html#office">Подробнее →</a>
-          <div class="acts"><a class="go" href="https://hyjj.shop/quote?product=%D0%9E%D1%84%D0%B8%D1%81%20%D0%B8%20%D0%BA%D0%B0%D0%BD%D1%86%D0%B5%D0%BB%D1%8F%D1%80%D0%B8%D1%8F&amp;source=website_product_office">Обсудить</a><button class="add" type="button" data-add data-id="office" data-title="Офис и канцелярия" data-cat="Офис" data-img="img/cat-office.webp" aria-label="Добавить в запрос">+</button></div>
-        </div>
-      </article>
-
-      <article class="ix-grid-card" data-cat="ppe" data-search="спецодежда сиз защита костюмы перчатки обувь">
-        <div class="ph"><img src="img/cat-ppe.webp" srcset="img/cat-ppe.webp 1x, img/cat-ppe@2x.webp 2x" alt="Спецодежда и СИЗ" width="760" height="506" loading="lazy" decoding="async"><span class="tag">PPE</span></div>
-        <div class="bd">
-          <h3><a class="ix-card-title" href="categories.html#ppe">Спецодежда и СИЗ<span>↗</span></a></h3>
-          <p class="sub">Костюмы · Перчатки · Защитная обувь</p>
-          <div class="ix-card-check"><b>Что проверяем</b>Сертификаты ТР ТС, защитные свойства, размеры и маркировку.</div>
-          <a class="ix-card-detail" href="categories.html#ppe">Подробнее →</a>
-          <div class="acts"><a class="go" href="https://hyjj.shop/quote?product=%D0%A1%D0%BF%D0%B5%D1%86%D0%BE%D0%B4%D0%B5%D0%B6%D0%B4%D0%B0%20%D0%B8%20%D0%A1%D0%98%D0%97&amp;source=website_product_ppe">Обсудить</a><button class="add" type="button" data-add data-id="ppe" data-title="Спецодежда и СИЗ" data-cat="СИЗ" data-img="img/cat-ppe.webp" aria-label="Добавить в запрос">+</button></div>
-        </div>
-      </article>
-
-      <article class="ix-grid-card" data-cat="garden" data-search="сад огород садовый инструмент кашпо уличная мебель освещение">
-        <div class="ph"><img src="img/cat-garden.webp" srcset="img/cat-garden.webp 1x, img/cat-garden@2x.webp 2x" alt="Сад и огород" width="760" height="506" loading="lazy" decoding="async"><span class="tag">Garden</span></div>
-        <div class="bd">
-          <h3><a class="ix-card-title" href="categories.html#garden">Сад и огород<span>↗</span></a></h3>
-          <p class="sub">Садовый инструмент · Кашпо · Уличная мебель · Освещение</p>
-          <div class="ix-card-check"><b>Что проверяем</b>Материал, сборку, покрытие, нагрузку и упаковку.</div>
-          <a class="ix-card-detail" href="categories.html#garden">Подробнее →</a>
-          <div class="acts"><a class="go" href="https://hyjj.shop/quote?product=%D0%A1%D0%B0%D0%B4%20%D0%B8%20%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4&amp;source=website_product_garden">Обсудить</a><button class="add" type="button" data-add data-id="garden" data-title="Сад и огород" data-cat="Сад" data-img="img/cat-garden.webp" aria-label="Добавить в запрос">+</button></div>
-        </div>
-      </article>
-
-      <article class="ix-grid-card" data-cat="chemistry" data-search="бытовая химия чистящие средства автохимия хозтовары">
-        <div class="ph"><img src="img/cat-chemistry.webp" srcset="img/cat-chemistry.webp 1x, img/cat-chemistry@2x.webp 2x" alt="Бытовая химия и расходники" width="760" height="506" loading="lazy" decoding="async"><span class="tag">Chemistry</span></div>
-        <div class="bd">
-          <h3><a class="ix-card-title" href="categories.html#chemistry">Бытовая химия и расходники<span>↗</span></a></h3>
-          <p class="sub">Бытовая химия · Чистящие средства · Автохимия · Хозтовары</p>
-          <div class="ix-card-check"><b>Что проверяем</b>Состав, концентрацию, маркировку, срок годности и тару.</div>
-          <a class="ix-card-detail" href="categories.html#chemistry">Подробнее →</a>
-          <div class="acts"><a class="go" href="https://hyjj.shop/quote?product=%D0%91%D1%8B%D1%82%D0%BE%D0%B2%D0%B0%D1%8F%20%D1%85%D0%B8%D0%BC%D0%B8%D1%8F%20%D0%B8%20%D1%80%D0%B0%D1%81%D1%85%D0%BE%D0%B4%D0%BD%D0%B8%D0%BA%D0%B8&amp;source=website_product_chemistry">Обсудить</a><button class="add" type="button" data-add data-id="chemistry" data-title="Бытовая химия и расходники" data-cat="Химия" data-img="img/cat-chemistry.webp" aria-label="Добавить в запрос">+</button></div>
-        </div>
-      </article>
-
-      <article class="ix-grid-card" data-cat="horeca" data-search="horeca ресторан кухонное оборудование посуда бар торговое оборудование">
-        <div class="ph"><img src="img/cat-horeca.webp" srcset="img/cat-horeca.webp 1x, img/cat-horeca@2x.webp 2x" alt="HoReCa и торговое оборудование" width="760" height="506" loading="lazy" decoding="async"><span class="tag">HoReCa</span></div>
-        <div class="bd">
-          <h3><a class="ix-card-title" href="categories.html#horeca">HoReCa и торговое оборудование<span>↗</span></a></h3>
-          <p class="sub">Кухонное оборудование · Посуда · Бар · Торговое</p>
-          <div class="ix-card-check"><b>Что проверяем</b>Мощность, нержавейку, узлы, комплектность и упаковку.</div>
-          <a class="ix-card-detail" href="categories.html#horeca">Подробнее →</a>
-          <div class="acts"><a class="go" href="https://hyjj.shop/quote?product=HoReCa%20%D0%B8%20%D1%82%D0%BE%D1%80%D0%B3%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%BE%D0%B1%D0%BE%D1%80%D1%83%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5&amp;source=website_product_horeca">Обсудить</a><button class="add" type="button" data-add data-id="horeca" data-title="HoReCa и торговое оборудование" data-cat="HoReCa" data-img="img/cat-horeca.webp" aria-label="Добавить в запрос">+</button></div>
-        </div>
-      </article>
-
-      <article class="ix-grid-card" data-cat="promo" data-search="сувениры промо подарки сумки кружки канцелярия электроника">
-        <div class="ph"><img src="img/cat-promo.webp" srcset="img/cat-promo.webp 1x, img/cat-promo@2x.webp 2x" alt="Сувениры и промо" width="760" height="506" loading="lazy" decoding="async"><span class="tag">Promo</span></div>
-        <div class="bd">
-          <h3><a class="ix-card-title" href="categories.html#promo">Сувениры и промо<span>↗</span></a></h3>
-          <p class="sub">Сумки · Кружки · Канцелярия · Электроника</p>
-          <div class="ix-card-check"><b>Что проверяем</b>Плотность, печать, цвет, сборку и комплектность.</div>
-          <a class="ix-card-detail" href="categories.html#promo">Подробнее →</a>
-          <div class="acts"><a class="go" href="https://hyjj.shop/quote?product=%D0%A1%D1%83%D0%B2%D0%B5%D0%BD%D0%B8%D1%80%D1%8B%20%D0%B8%20%D0%BF%D1%80%D0%BE%D0%BC%D0%BE&amp;source=website_product_promo">Обсудить</a><button class="add" type="button" data-add data-id="promo" data-title="Сувениры и промо" data-cat="Промо" data-img="img/cat-promo.webp" aria-label="Добавить в запрос">+</button></div>
-        </div>
-      </article>
-
-      <article class="ix-grid-card" data-cat="sport" data-search="спорт фитнес тренажёры туризм реабилитация">
-        <div class="ph"><img src="img/cat-sport.webp" srcset="img/cat-sport.webp 1x, img/cat-sport@2x.webp 2x" alt="Спорт и фитнес" width="760" height="506" loading="lazy" decoding="async"><span class="tag">Sport</span></div>
-        <div class="bd">
-          <h3><a class="ix-card-title" href="categories.html#sport">Спорт и фитнес<span>↗</span></a></h3>
-          <p class="sub">Тренажёры · Туризм · Реабилитация</p>
-          <div class="ix-card-check"><b>Что проверяем</b>Сварные швы, нагрузку, устойчивость, комплектность и маркировку.</div>
-          <a class="ix-card-detail" href="categories.html#sport">Подробнее →</a>
-          <div class="acts"><a class="go" href="https://hyjj.shop/quote?product=%D0%A1%D0%BF%D0%BE%D1%80%D1%82%20%D0%B8%20%D1%84%D0%B8%D1%82%D0%BD%D0%B5%D1%81&amp;source=website_product_sport">Обсудить</a><button class="add" type="button" data-add data-id="sport" data-title="Спорт и фитнес" data-cat="Спорт" data-img="img/cat-sport.webp" aria-label="Добавить в запрос">+</button></div>
-        </div>
-      </article>
-
-      <article class="ix-grid-card" data-cat="beauty" data-search="красота гигиена косметика уход">
-        <div class="ph"><img src="img/cat-beauty.webp" srcset="img/cat-beauty.webp 1x, img/cat-beauty@2x.webp 2x" alt="Красота и гигиена" width="760" height="506" loading="lazy" decoding="async"><span class="tag">Beauty</span></div>
-        <div class="bd">
-          <h3><a class="ix-card-title" href="categories.html#beauty">Красота и гигиена<span>↗</span></a></h3>
-          <p class="sub">Косметика · Личная гигиена · Уход</p>
-          <div class="ix-card-check"><b>Что проверяем</b>Состав, срок годности, консистенцию, упаковку и маркировку.</div>
-          <a class="ix-card-detail" href="categories.html#beauty">Подробнее →</a>
-          <div class="acts"><a class="go" href="https://hyjj.shop/quote?product=%D0%9A%D1%80%D0%B0%D1%81%D0%BE%D1%82%D0%B0%20%D0%B8%20%D0%B3%D0%B8%D0%B3%D0%B8%D0%B5%D0%BD%D0%B0&amp;source=website_product_beauty">Обсудить</a><button class="add" type="button" data-add data-id="beauty" data-title="Красота и гигиена" data-cat="Красота" data-img="img/cat-beauty.webp" aria-label="Добавить в запрос">+</button></div>
-        </div>
-      </article>
-
-      <article class="ix-grid-card" data-cat="kids" data-search="детские товары дети мам игрушки">
-        <div class="ph"><img src="img/cat-kids.webp" srcset="img/cat-kids.webp 1x, img/cat-kids@2x.webp 2x" alt="Детские товары" width="760" height="506" loading="lazy" decoding="async"><span class="tag">Kids</span></div>
-        <div class="bd">
-          <h3><a class="ix-card-title" href="categories.html#kids">Детские товары<span>↗</span></a></h3>
-          <p class="sub">Игрушки · Одежда · Товары для мам</p>
-          <div class="ix-card-check"><b>Что проверяем</b>Сертификаты, материалы, мелкие детали, прочность и упаковку.</div>
-          <a class="ix-card-detail" href="categories.html#kids">Подробнее →</a>
-          <div class="acts"><a class="go" href="https://hyjj.shop/quote?product=%D0%94%D0%B5%D1%82%D1%81%D0%BA%D0%B8%D0%B5%20%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D1%8B&amp;source=website_product_kids">Обсудить</a><button class="add" type="button" data-add data-id="kids" data-title="Детские товары" data-cat="Дети" data-img="img/cat-kids.webp" aria-label="Добавить в запрос">+</button></div>
-        </div>
-      </article>
-
-      <article class="ix-grid-card" data-cat="pets" data-search="товары для животных зоотовары корм аксессуары">
-        <div class="ph"><img src="img/cat-pets.webp" srcset="img/cat-pets.webp 1x, img/cat-pets@2x.webp 2x" alt="Товары для животных" width="760" height="506" loading="lazy" decoding="async"><span class="tag">Pets</span></div>
-        <div class="bd">
-          <h3><a class="ix-card-title" href="categories.html#pets">Товары для животных<span>↗</span></a></h3>
-          <p class="sub">Корм · Аксессуары · Уход</p>
-          <div class="ix-card-check"><b>Что проверяем</b>Состав, запах, герметичность, маркировку и срок годности.</div>
-          <a class="ix-card-detail" href="categories.html#pets">Подробнее →</a>
-          <div class="acts"><a class="go" href="https://hyjj.shop/quote?product=%D0%A2%D0%BE%D0%B2%D0%B0%D1%80%D1%8B%20%D0%B4%D0%BB%D1%8F%20%D0%B6%D0%B8%D0%B2%D0%BE%D1%82%D0%BD%D1%8B%D1%85&amp;source=website_product_pets">Обсудить</a><button class="add" type="button" data-add data-id="pets" data-title="Товары для животных" data-cat="Зоотовары" data-img="img/cat-pets.webp" aria-label="Добавить в запрос">+</button></div>
-        </div>
-      </article>
-
-
-      <div class="ix-empty" id="emptyState" hidden>
+      </div>
+      <div class="catx-empty" id="emptyState" hidden>
         <strong>Ничего не нашли</strong>
         <p>Опишите товар и объём — подберём фабрику под запрос, даже если направления здесь нет.</p>
-        <a href="https://hyjj.shop/quote?source=website_catalog">Описать задачу →</a>
+        <div><button type="button" id="catxReset">Сбросить поиск</button><a href="https://hyjj.shop/quote?source=website_catalog">Описать задачу →</a></div>
+      </div>
+      <div class="catx-missing">
+        <div><b>Нет нужного направления?</b><span>Каталог — это 24 базовых раздела, ассортимент шире. Опишите позицию, объём и требования.</span></div>
+        <a href="https://hyjj.shop/quote?source=website_catalog">Оставить заявку →</a>
       </div>
     </div>
   </div>
+  </div>
 
-  <section class="ix-cat-faq">
+  <section class="catx-faq">
     <div class="container">
-      <div class="ix-cat-faq-head">
+      <div class="catx-faq-head">
         <div class="kicker">Перед запросом</div>
         <h2>Что уточняют до заявки</h2>
       </div>
-      <div class="ix-cat-faq-grid">
-        <div class="ix-cat-faq-item"><b>01</b><h3>Можно ли сначала образец?</h3><p>Да. По большинству направлений согласуем образец до основной партии: проверить материал, размеры и упаковку.</p></div>
-        <div class="ix-cat-faq-item"><b>02</b><h3>Что входит в проверку?</h3><p>Сверяем спецификацию и образец, проверяем партию, маркировку, комплектность и упаковку. Отчёт — до оплаты.</p></div>
-        <div class="ix-cat-faq-item"><b>03</b><h3>Почему цена по запросу?</h3><p>Она зависит от объёма, фабрики, материала, упаковки и условий поставки. Одинаковая картинка может стоить по-разному.</p></div>
-        <div class="ix-cat-faq-item"><b>04</b><h3>Нет моей позиции в списке?</h3><p>Опишите товар и объём. Подберём фабрику вне 24 направлений и вернёмся с вариантами.</p></div>
+      <div class="catx-faq-grid">
+        <div><b>01</b><h3>Можно ли сначала образец?</h3><p>Да. По большинству направлений согласуем образец до основной партии: проверить материал, размеры и упаковку.</p></div>
+        <div><b>02</b><h3>Что входит в проверку?</h3><p>Сверяем спецификацию и образец, проверяем партию, маркировку, комплектность и упаковку. Отчёт — до оплаты.</p></div>
+        <div><b>03</b><h3>Почему цена по запросу?</h3><p>Она зависит от объёма, фабрики, материала, упаковки и условий поставки.</p></div>
+        <div><b>04</b><h3>Нет моей позиции?</h3><p>Опишите товар и объём. Подберём фабрику вне 24 направлений и вернёмся с вариантами.</p></div>
       </div>
     </div>
   </section>
@@ -500,4 +722,3 @@
 <script src="js/site-2026.js" defer></script>
 </body>
 </html>
-

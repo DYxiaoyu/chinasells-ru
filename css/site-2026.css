@@ -140,23 +140,25 @@ button{cursor:pointer}
 }
 .ix-hero-caption i{width:22px;height:1px;background:var(--gold)}
 .ix-contact{
-  position:absolute;right:28px;bottom:26px;z-index:6;width:470px;padding:22px 22px 20px;
-  background:rgba(8,22,35,.9);border:1px solid rgba(255,255,255,.18);
+  position:absolute;right:28px;bottom:26px;z-index:6;width:382px;padding:18px 18px 16px;
+  background:rgba(8,22,35,.92);border:1px solid rgba(255,255,255,.18);
   backdrop-filter:blur(12px);
 }
-.ix-contact-head{display:flex;align-items:center;gap:14px;margin-bottom:16px}
-.ix-contact-head img{width:54px;height:54px;border-radius:50%;object-fit:cover;object-position:center 18%;border:1px solid rgba(255,255,255,.36)}
-.ix-contact-head strong{display:block;font-size:18px;line-height:1.15}
-.ix-contact-head span{display:block;font-size:11.5px;color:rgba(255,255,255,.56);margin-top:4px}
-.ix-contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-.ix-contact-grid a{
-  min-height:38px;border:1px solid rgba(255,255,255,.16);display:flex;align-items:center;gap:9px;
-  padding:0 10px;font-size:11.5px;color:rgba(255,255,255,.84);overflow:hidden;
+.ix-contact-head{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.ix-contact-head img{width:46px;height:46px;border-radius:50%;object-fit:cover;object-position:center 18%;border:1px solid rgba(255,255,255,.36)}
+.ix-contact-head strong{display:block;font-size:16px;line-height:1.15}
+.ix-contact-head span{display:block;font-size:10.5px;color:rgba(255,255,255,.56);margin-top:4px}
+.ix-contact-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.ix-contact-actions a{
+  min-height:36px;border:1px solid rgba(255,255,255,.18);display:flex;align-items:center;justify-content:space-between;gap:6px;
+  padding:0 9px;font-size:10px;color:rgba(255,255,255,.86);overflow:hidden;
 }
-.ix-contact-grid a:hover{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.05)}
-.ix-contact-grid a b{font-size:8.5px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.42);font-weight:700;white-space:nowrap}
-.ix-contact-grid a span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.ix-contact-grid a:last-child:nth-child(odd){grid-column:1/-1}
+.ix-contact-actions a:hover{border-color:rgba(255,255,255,.55);background:rgba(255,255,255,.06)}
+.ix-contact-actions a b{font-size:8px;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.56);font-weight:700;white-space:nowrap}
+.ix-contact-actions a i{font-style:normal;font-size:10px;line-height:1;color:var(--gold-soft)}
+.ix-contact-more{display:inline-flex;align-items:center;gap:7px;margin-top:11px;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);border-bottom:1px solid rgba(255,255,255,.2);padding-bottom:2px}
+.ix-contact-more:hover{color:#fff;border-color:var(--gold-soft)}
+.ix-contact-more span{color:var(--gold-soft)}
 
 /* ---------- figures ---------- */
 .ix-figures{
@@ -438,6 +440,8 @@ button{cursor:pointer}
 .ix-footer .links a:hover{color:#fff;border-color:rgba(255,255,255,.5)}
 .ix-footer .contact-links a{display:flex;align-items:flex-start;gap:8px;line-height:1.5}
 .ix-footer .contact-links a span{color:rgba(255,255,255,.4);font-size:8px;letter-spacing:.08em;text-transform:uppercase;min-width:62px;padding-top:2px}
+.ix-footer .contact-links .ix-footer-more{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-soft);border-bottom:1px solid rgba(231,199,143,.35);padding-bottom:2px}
+.ix-footer .contact-links .ix-footer-more:hover{color:#fff;border-color:#fff}
 .ix-footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding:16px 0 18px;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .ix-footer-bottom span{font-size:8.5px;color:rgba(255,255,255,.38);letter-spacing:.02em}
 .ix-endbar{height:5px;background:var(--red)}
@@ -613,6 +617,7 @@ button{cursor:pointer}
 .ix-faq summary::after{content:"+";font-size:18px;line-height:1;color:var(--muted);font-weight:400}
 .ix-faq details[open] summary::after{content:"−"}
 .ix-faq details p{padding:0 32px 22px 0;font-size:12.5px;line-height:1.75;color:var(--muted);max-width:820px}
+.ix-faq details p a{color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:1px}
 
 .ix-cta-band{background:var(--red);color:#fff;padding:58px 0}
 .ix-cta-inner{width:min(1296px,calc(100% - 96px));margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:40px}
@@ -653,13 +658,57 @@ button{cursor:pointer}
 }
 .ix-case-profile:hover .ix-case-link{color:var(--ink);border-color:var(--ink)}
 
+/* ---------- contacts page ---------- */
+.ix-contact-page{padding:64px 0 60px;background:var(--paper)}
+.ix-contact-page .ix-section-head{margin-bottom:26px}
+.ix-contact-page-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--ink);border-left:1px solid var(--line)}
+.ix-contact-page-card{
+  position:relative;display:flex;flex-direction:column;min-height:166px;padding:23px 22px 20px;
+  background:var(--white);border-right:1px solid var(--line);border-bottom:1px solid var(--line);
+  transition:background .18s;
+}
+.ix-contact-page-card:first-child{box-shadow:inset 0 2px 0 var(--red)}
+.ix-contact-page-card:hover{background:var(--paper-2)}
+.ix-contact-page-card .label{font-size:8px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.ix-contact-page-card strong{margin-top:10px;font-size:17px;line-height:1.25;letter-spacing:-.02em;word-break:break-word}
+.ix-contact-page-card p{margin-top:9px;font-size:11px;line-height:1.55;color:var(--muted);max-width:250px}
+.ix-contact-page-card .go{margin-top:auto;padding-top:14px;font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
+.ix-contact-page-card:hover .go{color:var(--red)}
+.ix-contact-social-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:16px}
+.ix-contact-social-row .label{font-size:8px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-right:4px}
+.ix-contact-social-row a{display:inline-flex;align-items:center;gap:8px;height:30px;padding:0 10px;border:1px solid var(--line);background:var(--white);font-size:9.5px;color:var(--muted)}
+.ix-contact-social-row a b{font-size:8px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.ix-contact-social-row a:hover{border-color:var(--ink);color:var(--ink);background:var(--paper-2)}
+
+.ix-office-section{padding:64px 0;background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ix-office-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.ix-office-card{background:var(--white);border:1px solid var(--line);padding:26px 26px 22px}
+.ix-office-card .no{font-size:8px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.ix-office-card h3{font-size:22px;line-height:1.2;letter-spacing:-.025em;margin-top:8px}
+.ix-office-card .sub{margin-top:5px;font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.ix-office-card p{margin-top:14px;font-size:11.5px;line-height:1.65;color:var(--muted);max-width:430px}
+.ix-office-facts{margin-top:16px}
+.ix-office-facts div{display:grid;grid-template-columns:92px 1fr;gap:14px;padding:9px 0;border-top:1px solid var(--line-light)}
+.ix-office-facts dt{font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.ix-office-facts dd{font-size:11px;line-height:1.5;color:var(--ink)}
+.ix-office-note{margin-top:15px;padding-left:14px;border-left:2px solid var(--gold);font-size:10px;line-height:1.6;color:var(--muted);max-width:760px}
+
+.ix-company-section{padding:64px 0;background:var(--ink);color:#fff}
+.ix-company-grid{width:min(1296px,calc(100% - 96px));margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:start}
+.ix-company-section h2{font-size:34px;line-height:1.1;letter-spacing:-.032em;margin-top:15px;max-width:520px}
+.ix-company-section p{margin-top:15px;font-size:12px;line-height:1.7;color:rgba(255,255,255,.58);max-width:520px}
+.ix-company-facts{border-top:1px solid rgba(255,255,255,.18)}
+.ix-company-facts div{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.ix-company-facts dt{font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-soft)}
+.ix-company-facts dd{font-size:11.5px;line-height:1.55;color:rgba(255,255,255,.74)}
+
 /* ---------- responsive ---------- */
 @media (max-width:1180px){
   .ix-nav a{padding:8px 7px;font-size:11px}
   .ix-nav a.cta{padding:10px 12px;font-size:9.5px}
   .ix-brand small{display:none}
   .ix-hero-copy{padding-right:40px}
-  .ix-contact{width:430px}
+  .ix-contact{width:356px}
   .ix-cap-row{padding-left:0}
   .ix-cap-row:nth-child(n){padding-left:0}
 }
@@ -673,7 +722,7 @@ button{cursor:pointer}
   .ix-hero h1{font-size:clamp(38px,8vw,54px);max-width:720px}
   .ix-hero-media{min-height:430px;height:430px}
   .ix-hero-media::after{background:linear-gradient(0deg,rgba(13,27,40,.9),rgba(13,27,40,.05) 55%,rgba(13,27,40,.2))}
-  .ix-contact{right:18px;bottom:18px;width:min(430px,calc(100% - 36px))}
+  .ix-contact{right:18px;bottom:18px;width:min(382px,calc(100% - 36px))}
   .ix-hero-caption{left:18px;bottom:18px;display:none}
   .ix-figures-inner{width:calc(100% - 48px);grid-template-columns:1fr 1fr;min-height:0;padding:10px 0}
   .ix-fig{padding:20px 0 20px 18px;min-height:92px}
@@ -737,6 +786,11 @@ button{cursor:pointer}
   .ix-case-profile:nth-child(even) .media{order:0}
   .ix-case-profile:nth-child(even) .body{order:1}
   .ix-case-profile .body{padding:30px 24px}
+  .ix-contact-page{padding:50px 0 48px}
+  .ix-contact-page-card{min-height:150px;padding:20px 18px}
+  .ix-office-section{padding:50px 0}
+  .ix-company-section{padding:50px 0}
+  .ix-company-grid{width:calc(100% - 48px);gap:34px}
 }
 @media (max-width:640px){
   .ix-header .ix-bar{width:calc(100% - 28px)}
@@ -748,8 +802,12 @@ button{cursor:pointer}
   .ix-hero-actions .btn{flex:1 1 0;min-width:0;padding:0 10px;font-size:9px}
   .ix-hero-media{height:390px;min-height:390px}
   .ix-contact{left:14px;right:14px;bottom:14px;width:auto;padding:13px}
-  .ix-contact-grid a{font-size:9px;min-height:30px;gap:6px;padding:0 8px}
-  .ix-contact-grid a b{font-size:7px}
+  .ix-contact-head img{width:40px;height:40px}
+  .ix-contact-head strong{font-size:15px}
+  .ix-contact-actions{gap:5px}
+  .ix-contact-actions a{min-height:32px;padding:0 7px;font-size:9px}
+  .ix-contact-actions a b{font-size:7px}
+  .ix-contact-actions a i{font-size:8px}
   .ix-figures-inner{grid-template-columns:1fr;padding:0}
   .ix-fig{min-height:0;padding:17px 0;border-left:0;border-bottom:1px solid var(--line)}
   .ix-fig:last-child{border-bottom:0}
@@ -861,4 +919,19 @@ button{cursor:pointer}
   .ix-case-facts{grid-template-columns:1fr;gap:8px}
   .ix-case-facts li{grid-template-columns:68px 1fr;gap:10px}
   .ix-case-facts b,.ix-case-facts span{font-size:10px}
+  .ix-contact-page{padding:40px 0 42px}
+  .ix-contact-page-grid{grid-template-columns:1fr}
+  .ix-contact-page-card{min-height:0;padding:18px 16px}
+  .ix-contact-social-row{gap:6px}
+  .ix-contact-social-row a{height:28px;padding:0 8px;font-size:9px}
+  .ix-office-section{padding:42px 0}
+  .ix-office-grid{grid-template-columns:1fr}
+  .ix-office-card{padding:20px 18px}
+  .ix-office-card h3{font-size:20px}
+  .ix-office-facts div{grid-template-columns:80px 1fr;gap:10px}
+  .ix-company-section{padding:42px 0}
+  .ix-company-grid{width:calc(100% - 36px);grid-template-columns:1fr;gap:24px}
+  .ix-company-section h2{font-size:27px}
+  .ix-company-facts div{grid-template-columns:96px 1fr;gap:10px}
+  .ix-company-facts dd{font-size:10.5px}
 }
